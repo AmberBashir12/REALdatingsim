@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412dca171f510ae4a91e62bb794a7ff5, type: 3}
+  m_Name: NewChooseScene
+  m_EditorClassIdentifier: 
+  labels:
+  - text: sCp room
+    nextScene: {fileID: 11400000, guid: 4f50950c523e18d418c5b95518c52c82, type: 2}
+  - text: Sccor field
+    nextScene: {fileID: 11400000, guid: 6748a412f9f94c64a9efb76e7d83812e, type: 2}
+  - text: room 339
+    nextScene: {fileID: 11400000, guid: 7ea48e6e88ec51b42a11e25d6c8890ed, type: 2}
+  - text: garden
+    nextScene: {fileID: 11400000, guid: 0af992b21789b8248958e1368030a591, type: 2}
