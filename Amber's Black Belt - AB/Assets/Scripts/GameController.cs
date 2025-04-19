@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
     private IEnumerator SwitchScene(GameScene scene)
     {
         state = State.ANIMATE;
-        currentScene = scene;
+        currentScene = scene;  
         bottomBar.Hide();
         yield return new WaitForSeconds(1f);
         if (scene is StoryScene)

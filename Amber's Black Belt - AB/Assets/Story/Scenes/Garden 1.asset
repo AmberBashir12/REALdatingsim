@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
   m_Name: Garden 1
   m_EditorClassIdentifier: 
-  sentences: []
+  sentences:
+  - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
+    text: HEY YOU
+    actions: []
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: 'huh '
+    actions: []
   background: {fileID: 21300000, guid: d25cb78adbfb1b041aad17b6285537a4, type: 3}
   nextScene: {fileID: 0}

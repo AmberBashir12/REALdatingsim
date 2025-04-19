@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class SpriteSwitcher : MonoBehaviour
@@ -25,21 +26,31 @@ public class SpriteSwitcher : MonoBehaviour
         }
         else
         {
-            Image2.sprite = sprite;
+            Image2.sprite = sprite; 
             animator.SetTrigger("SwitchOne");
         }
         isSwitched = !isSwitched;
     }
-
     public void SetImage(Sprite sprite)
     {
-        if(!isSwitched)
+        if (!isSwitched)
         {
             Image1.sprite = sprite;
         }
         else
         {
             Image2.sprite = sprite;
+        }
+    }
+    public Sprite GetImage()
+    {
+        if(!isSwitched)
+        {
+            return Image1.sprite;
+        }
+        else
+        {
+            return Image2.sprite;
         }
     }
 

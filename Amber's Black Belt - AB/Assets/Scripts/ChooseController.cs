@@ -9,89 +9,80 @@ using UnityEditor.SearchService;
 public class ChooseController : MonoBehaviour
 {
 
-    public ChooseLabelController chooseLabelController;
+    public ChooseLabelController label;
     public GameController gameController;
     private RectTransform rectTransform;
     public Animator animator;
-    private float labelHeight = -1;
+    private float labelHeight = 70f;  // Fixed height for consistency
+    private CanvasGroup canvasGroup;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rectTransform = GetComponent<RectTransform>();
+        canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        canvasGroup.alpha = 0;  // Start invisible
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
 
     public void SetupChoose(ChooseScene scene)
     {
         DestroyLabels();
         animator.SetTrigger("Show");
-        for (int index = 0; index < scene.labels.Count; index++) 
-        { 
-            ChooseLabelController newLabel = Instantiate(chooseLabelController.gameObject, transform).GetComponent<ChooseLabelController>();
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
 
-            if(labelHeight == -1)
+        for (int i = 0; i < scene.labels.Count; i++) 
+        {
+            ChooseLabelController newLabel = Instantiate(label.gameObject, transform).GetComponent<ChooseLabelController>();
+            
+            // Enable the ChooseLabelController script
+            newLabel.enabled = true;
+            
+            // Enable the TextMeshPro component
+            TextMeshProUGUI tmpText = newLabel.GetComponent<TextMeshProUGUI>();
+            if (tmpText != null)
             {
-                labelHeight = newLabel.GetHeight();
+                tmpText.enabled = true;
             }
-
-            newLabel.Setup(scene.labels[index], this, CalculateLabelPosition(index, scene.labels.Count));
+            
+            float yPos = CalculateLabelPosition(scene.labels.Count, i);
+            newLabel.Setup(scene.labels[i], this, yPos);
         }
 
-
-        Vector2 size = rectTransform.sizeDelta;
-        size.y = (scene.labels.Count + 1) * labelHeight;
-        rectTransform.sizeDelta = size;
+        // Adjust container height based on number of choices
+        float totalHeight = (scene.labels.Count + 1) * labelHeight;
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, totalHeight);
     }
 
     public void PerformChoose(StoryScene scene)
     {
+        canvasGroup.alpha = 0;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
         gameController.PlayScene(scene);
         animator.SetTrigger("Hide");
     }
 
     private float CalculateLabelPosition(int labelCount, int labelIndex)
     {
-        if (labelCount % 2 == 0) 
-        {
-            if (labelIndex < labelCount / 2)
-            {
-                return labelHeight * (labelCount / 2 - labelIndex - 1) + labelHeight / 2;
-            }
-            else
-            {
-                return -1 * (labelHeight * (labelIndex - labelCount / 2) + labelHeight / 2);
-            }
-        }
-        else
-        {
-            if (labelIndex < labelCount / 2)
-            {
-                return labelHeight * (labelCount / 2 - labelIndex);
-            }
-            else if (labelIndex > labelCount / 2)
-            {
-                return -1 * (labelHeight * (labelIndex - labelCount / 2));
-            }
-            else
-            {
-                return 0;
-            }
-        }
+        float spacing = labelHeight * 1.2f; // Add 20% spacing between choices
+        float totalHeight = spacing * (labelCount - 1);
+        float startY = totalHeight / 2;
+        
+        return startY - (labelIndex * spacing);
     }
 
     private void DestroyLabels()
     {
-        foreach (Transform childTransform in transform) 
-        
+        foreach (Transform childTransform in transform)
         {
             Destroy(childTransform.gameObject);
-
         }
-
     }
-
-
 
     // Update is called once per frame
     void Update()
