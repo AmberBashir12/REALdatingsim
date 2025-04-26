@@ -18,7 +18,7 @@ public class SpriteController : MonoBehaviour
     {
         switcher.SetImage(sprite);
     }
-    public void show(Vector2 coords)
+    public void Show(Vector2 coords)
     {
         animator.SetTrigger("Show");
         rect.localPosition = coords;

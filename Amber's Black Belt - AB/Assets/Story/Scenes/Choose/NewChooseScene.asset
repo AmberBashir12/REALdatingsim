@@ -21,3 +21,5 @@ MonoBehaviour:
     nextScene: {fileID: 11400000, guid: 7ea48e6e88ec51b42a11e25d6c8890ed, type: 2}
   - text: garden
     nextScene: {fileID: 11400000, guid: 0af992b21789b8248958e1368030a591, type: 2}
+  - text: Hallway
+    nextScene: {fileID: 11400000, guid: 88bfb9b73fc99b4499b790c4b12a6fd3, type: 2}
