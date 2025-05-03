@@ -16,4 +16,4 @@ MonoBehaviour:
   textColor: {r: 0, g: 0.38947248, b: 1, a: 1}
   sprites:
   - {fileID: 21300000, guid: eabd46b6fb876784192268c8ea94d266, type: 3}
-  prefab: {fileID: 8969806734371789276, guid: bb0ce994878e0a4428caab08e310698a, type: 3}
+  prefab: {fileID: 9114057820567733106, guid: bb0ce994878e0a4428caab08e310698a, type: 3}
