@@ -24,10 +24,28 @@ MonoBehaviour:
   - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
     text: boy come inside now
     actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 400, y: 0}
+      moveSpeed: 0
     - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
       spriteIndex: 0
-      actionType: 0
+      actionType: 3
+      coords: {x: 400, y: 0}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: ok
+    actions:
+    - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 400, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 1
       coords: {x: 400, y: 0}
       moveSpeed: 0
   background: {fileID: 21300000, guid: dbcdd7fd899ffae459c18f2381aea204, type: 3}
-  nextScene: {fileID: 11400000, guid: 2251506e24779d3488908eed30ffba75, type: 2}
+  nextScene: {fileID: 11400000, guid: 88bfb9b73fc99b4499b790c4b12a6fd3, type: 2}

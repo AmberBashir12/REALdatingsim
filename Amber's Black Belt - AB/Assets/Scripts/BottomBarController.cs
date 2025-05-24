@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using JetBrains.Annotations;
+using System;
 
 public class BottomBarController : MonoBehaviour
 {
@@ -111,15 +112,21 @@ public class BottomBarController : MonoBehaviour
         switch (action.actionType)
         {
             case StoryScene.Sentence.Action.Type.APPEAR:
-                if (!sprites.ContainsKey(action.speaker))
+                try
                 {
-                    controller = Instantiate(action.speaker.prefab.gameObject, spritesPrefab.transform)
-                        .GetComponent<SpriteController>();
-                    sprites.Add(action.speaker, controller);
-                }
-                else
+                    if (!sprites.ContainsKey(action.speaker))
+                    {
+                        controller = Instantiate(action.speaker.prefab.gameObject, spritesPrefab.transform)
+                            .GetComponent<SpriteController>();
+                        sprites.Add(action.speaker, controller);
+                    }
+                    else
+                    {
+                        controller = sprites[action.speaker];
+                    }
+                } catch (UnassignedReferenceException)
                 {
-                    controller = sprites[action.speaker];
+                    Console.Error.WriteLine("hi");
                 }
                 controller.Setup(action.speaker.sprites[action.spriteIndex]);
                 controller.Show(action.coords);
