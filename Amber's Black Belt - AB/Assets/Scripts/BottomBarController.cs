@@ -16,7 +16,10 @@ public class BottomBarController : MonoBehaviour
     private Animator animator;
     public bool IsHidden = false;
 
-    public Dictionary<Speaker, SpriteController> sprites;
+    public Dictionary<Speaker, SpriteController> sprites = new Dictionary<Speaker, SpriteController>();
+
+    // public Speaker[] Speakers;
+    // public SpriteController[] SpriteControllers;
     public GameObject spritesPrefab;
 
     private enum State
@@ -26,7 +29,6 @@ public class BottomBarController : MonoBehaviour
 
     private void Start()
     {
-        sprites = new Dictionary<Speaker, SpriteController>();
         animator = GetComponent<Animator>();
     }
 
@@ -85,16 +87,14 @@ public class BottomBarController : MonoBehaviour
         state = State.PLAYING;
         int wordIndex = 0;
 
-        while (state != State.COMPLETED)
+        while (wordIndex < text.Length)
         {
             barText.text += text[wordIndex];
             yield return new WaitForSeconds(0.05f);
-            if (++wordIndex == text.Length)
-            {
-                state = State.COMPLETED;
-                break;
-            }
+            wordIndex++;
         }
+        
+        state = State.COMPLETED;
     }
 
     private void ActSpeakers()
@@ -102,6 +102,7 @@ public class BottomBarController : MonoBehaviour
         List<StoryScene.Sentence.Action> actions = currentScene.sentences[sentenceIndex].actions;
         for (int i = 0; i < actions.Count; i++)
         {
+            Debug.Log(i);
             ActSpeaker(actions[i]);
         }
     }
@@ -124,39 +125,60 @@ public class BottomBarController : MonoBehaviour
                     {
                         controller = sprites[action.speaker];
                     }
-                } catch (UnassignedReferenceException)
-                {
-                    Console.Error.WriteLine("hi");
+                    Debug.Log($"Speaker: {action.speaker}, Sprites: {action.speaker.sprites}, Index: {action.spriteIndex}");
+                    if (action.speaker.sprites == null || action.speaker.sprites.Count <= action.spriteIndex || action.speaker.sprites[action.spriteIndex] == null)
+                    {
+                        Debug.LogError("Sprite reference is missing or index is out of range!");
+                    }
+                    Debug.Log(action.speaker.sprites[0] == null);
+                    controller.Setup(action.speaker.sprites[0]);
+                    controller.Show(action.coords);
                 }
-                controller.Setup(action.speaker.sprites[action.spriteIndex]);
-                controller.Show(action.coords);
+                catch (UnassignedReferenceException)
+                {
+                    Debug.LogError($"Failed to instantiate sprite for speaker: {action.speaker.speakerName}. Make sure the prefab is assigned.");
+                }
+
                 return;
+
             case StoryScene.Sentence.Action.Type.MOVE:
-                if (!sprites.ContainsKey(action.speaker))
+                if (sprites.ContainsKey(action.speaker))
                 {
                     controller = sprites[action.speaker];
                     controller.Move(action.coords, action.moveSpeed);
                 }
-            break;
-        case StoryScene.Sentence.Action.Type.DISAPPEAR:
-            if (!sprites.ContainsKey(action.speaker))
-            {
-                controller = sprites[action.speaker];
-                controller.Hide();
-            }
-            break;
-        case StoryScene.Sentence.Action.Type.NONE:
-            if (!sprites.ContainsKey(action.speaker))
-            {
-                controller = sprites[action.speaker];
-            }
-                break;
-        }
-        if (controller != null)
-        {
-            controller.SwitchSprite(action.speaker.sprites[action.spriteIndex]);
-        }
+                else
+                {
+                    Debug.LogWarning($"Attempted to move non-existent sprite for speaker: {action.speaker.speakerName}");
+                }
+                return;
 
+            case StoryScene.Sentence.Action.Type.DISAPPEAR:
+                if (sprites.ContainsKey(action.speaker))
+                {
+                    controller = sprites[action.speaker];
+                    controller.Hide();
+                    sprites.Remove(action.speaker);
+                    Destroy(controller.gameObject);
+                }
+                else
+                {
+                    Debug.LogWarning($"Attempted to hide non-existent sprite for speaker: {action.speaker.speakerName}");
+                }
+                return;
+
+            case StoryScene.Sentence.Action.Type.NONE:
+                if (sprites.ContainsKey(action.speaker))
+                {
+                    controller = sprites[action.speaker];
+                    controller.SwitchSprite(action.speaker.sprites[action.spriteIndex]);
+                }
+                else
+                {
+                    Debug.LogWarning($"Attempted to switch sprite for non-existent speaker: {action.speaker.speakerName}");
+                }
+                return;
+        }
     }
 }
 
