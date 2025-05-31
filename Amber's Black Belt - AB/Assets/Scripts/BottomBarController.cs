@@ -131,7 +131,7 @@ public class BottomBarController : MonoBehaviour
                         Debug.LogError("Sprite reference is missing or index is out of range!");
                     }
                     Debug.Log(action.speaker.sprites[0] == null);
-                    controller.Setup(action.speaker.sprites[0]);
+                    controller.Setup(action.speaker.sprites[action.spriteIndex]);
                     controller.Show(action.coords);
                 }
                 catch (UnassignedReferenceException)

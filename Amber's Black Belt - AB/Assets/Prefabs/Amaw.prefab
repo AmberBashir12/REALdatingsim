@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -216242094393814555}
   - component: {fileID: 8591752406963688318}
   - component: {fileID: 9114057820567733106}
+  - component: {fileID: 4453227204096779295}
   m_Layer: 0
   m_Name: Amaw
   m_TagString: Untagged
@@ -80,6 +81,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322bb6eea9b2e8846bae309efebdcd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4453227204096779295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287801921131729252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f472e53b24ada864fa0944d8c94af684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSwitched: 0
+  Image1: {fileID: 4428995108676295967}
+  Image2: {fileID: 4428995108676295967}
 --- !u!1 &7187022001962321676
 GameObject:
   m_ObjectHideFlags: 0
