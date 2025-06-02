@@ -20,4 +20,4 @@ MonoBehaviour:
     text: 'huh '
     actions: []
   background: {fileID: 21300000, guid: d25cb78adbfb1b041aad17b6285537a4, type: 3}
-  nextScene: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: 7ea48e6e88ec51b42a11e25d6c8890ed, type: 2}

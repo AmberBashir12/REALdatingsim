@@ -1480,13 +1480,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1329605602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebe9c2b21bd0f044820ff731da87aa4, type: 3}
+  m_Script: {fileID: 11500000, guid: f472e53b24ada864fa0944d8c94af684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSwitched: 0
-  Image1: {fileID: 1779942701}
-  Image2: {fileID: 1224686885}
-  animator: {fileID: 0}
+  Image1: {fileID: 1224686885}
+  Image2: {fileID: 0}
 --- !u!95 &1329605604
 Animator:
   serializedVersion: 5
