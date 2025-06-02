@@ -2,6 +2,7 @@
 #     https://github.com/github/gitignore/blob/master/Unity.gitignore
 
 /Amber's Black Belt - AB/[Ll]ibrary/
+/Amber's Black Belt - AB/Logs/
 /[Uu]serSettings/
 [Tt]emp/
 [Oo]bj/
