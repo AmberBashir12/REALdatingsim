@@ -52,24 +52,50 @@ public class GameController : MonoBehaviour
     private IEnumerator SwitchScene(GameScene scene)
     {
         state = State.ANIMATE;
+
+        if (scene == null)
+        {
+            Debug.LogError($"Attempted to switch to a null scene. Current scene was '{currentScene?.name}'. Check 'nextScene' assignments in your StoryScene assets.");
+            if (bottomBar.IsHidden) // Ensure bottom bar is visible if we can't proceed
+            {
+                bottomBar.Show();
+            }
+            state = State.IDLE; // Revert to IDLE to allow player interaction or prevent soft lock
+            yield break; // Exit coroutine
+        }
+
         currentScene = scene;  
         bottomBar.Hide();
         yield return new WaitForSeconds(1f);
-        if (scene is StoryScene)
+
+        if (scene is StoryScene storyScene)
         {
-            StoryScene storyScene = scene as StoryScene;
+            if (storyScene.background == null) {
+                Debug.LogWarning($"StoryScene '{storyScene.name}' has no background assigned.");
+            }
             backgroundController.SwitchImage(storyScene.background);
+            
             yield return new WaitForSeconds(1f);
             bottomBar.Show();
             bottomBar.ClearText();
             yield return new WaitForSeconds(1f);
-            bottomBar.PlayScene(storyScene);
-            state = State.IDLE;
+            
+            bottomBar.PlayScene(storyScene); // PlayScene in BottomBarController will handle empty sentences
+            state = State.IDLE; // Reset state to IDLE
         }
-        else if (scene is ChooseScene) 
+        else if (scene is ChooseScene chooseScene) 
         {
             state = State.CHOOSE;
-            chooseController.SetupChoose(scene as ChooseScene); 
+            chooseController.SetupChoose(chooseScene); 
+        }
+        else
+        {
+            Debug.LogError($"Loaded scene '{scene.name}' is not a StoryScene or ChooseScene. Type: {scene.GetType()}. Cannot proceed.");
+            if (bottomBar.IsHidden)
+            {
+                bottomBar.Show();
+            }
+            state = State.IDLE; // Revert to IDLE
         }
     }
 }

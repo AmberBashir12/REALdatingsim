@@ -60,14 +60,64 @@ public class BottomBarController : MonoBehaviour
     {
         currentScene = scene;
         sentenceIndex = -1;
-        PlayNextSentence();
+
+        if (currentScene == null)
+        {
+            Debug.LogError("BottomBarController.PlayScene was called with a null scene.");
+            barText.text = "Error: Scene data is missing.";
+            personNameText.text = "";
+            state = State.COMPLETED; // Mark as completed to avoid getting stuck
+            return;
+        }
+
+        if (currentScene.sentences == null || currentScene.sentences.Count == 0)
+        {
+            Debug.LogWarning($"StoryScene '{currentScene.name}' has no sentences. Marking as completed.");
+            barText.text = ""; 
+            personNameText.text = ""; 
+            state = State.COMPLETED; // If no sentences, it's immediately completed.
+                                     // GameController will then check IsLastSentence.
+        }
+        else
+        {
+            PlayNextSentence();
+        }
     }
 
     public void PlayNextSentence()
     {
-        StartCoroutine(TypeText(currentScene.sentences[++sentenceIndex].text));
-        personNameText.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
-        personNameText.color = currentScene.sentences[sentenceIndex].speaker.textColor;
+        // Ensure currentScene and its sentences are valid before proceeding
+        if (currentScene == null || currentScene.sentences == null || currentScene.sentences.Count == 0)
+        {
+            Debug.LogError("PlayNextSentence called, but currentScene is null or has no sentences.");
+            state = State.COMPLETED; // Mark as completed to prevent getting stuck
+            return;
+        }
+
+        // Check if we are trying to play beyond the last sentence
+        if (sentenceIndex + 1 >= currentScene.sentences.Count)
+        {
+            Debug.LogWarning("PlayNextSentence called, but already at/past the last sentence. This should be handled by GameController.");
+            state = State.COMPLETED; // Ensure state is COMPLETED
+            return;
+        }
+
+        sentenceIndex++; // Increment sentenceIndex *before* using it
+
+        StartCoroutine(TypeText(currentScene.sentences[sentenceIndex].text));
+        
+        Speaker speaker = currentScene.sentences[sentenceIndex].speaker;
+        if (speaker != null)
+        {
+            personNameText.text = speaker.speakerName;
+            personNameText.color = speaker.textColor;
+        }
+        else
+        {
+            personNameText.text = ""; // Clear name if no speaker
+            // Optional: Log a warning if a speaker is expected but is null for this sentence
+            // Debug.LogWarning($"Sentence {sentenceIndex} in scene '{currentScene.name}' has a null speaker.");
+        }
         ActSpeakers();
     }
 
@@ -78,7 +128,12 @@ public class BottomBarController : MonoBehaviour
 
     public bool IsLastSentence()
     {
-        return sentenceIndex + 1 == currentScene.sentences.Count;
+        if (currentScene == null || currentScene.sentences == null)
+        {
+            // If scene or sentences are null, consider it as if there are no more sentences.
+            return true; 
+        }
+        return sentenceIndex + 1 >= currentScene.sentences.Count;
     }
 
     private IEnumerator TypeText(string text)
