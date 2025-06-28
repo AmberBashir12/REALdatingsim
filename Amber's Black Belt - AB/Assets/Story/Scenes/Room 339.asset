@@ -19,11 +19,16 @@ MonoBehaviour:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
       actionType: 1
-      coords: {x: 0, y: 0}
+      coords: {x: 400, y: 0}
       moveSpeed: 0
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: is anyone heres*cute*
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
   - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
     text: no you poo
     actions:

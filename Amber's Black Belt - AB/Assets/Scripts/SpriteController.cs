@@ -5,13 +5,13 @@ public class SpriteController : MonoBehaviour
 {
     private SpriteSwitcher switcher;
     private Animator animator;
-    private RectTransform rect;
+    private Transform rect;
 
     private void Awake()
     {
         switcher = GetComponent<SpriteSwitcher>();
         animator = GetComponent<Animator>();
-        rect = GetComponent<RectTransform>();
+        rect = GetComponent<Transform>();
     }
 
     public void Setup(Sprite sprite)
