@@ -1485,7 +1485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSwitched: 0
   Image1: {fileID: 1224686885}
-  Image2: {fileID: 0}
+  Image2: {fileID: 1779942701}
 --- !u!95 &1329605604
 Animator:
   serializedVersion: 5

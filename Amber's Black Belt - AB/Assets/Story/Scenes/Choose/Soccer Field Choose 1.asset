@@ -16,4 +16,4 @@ MonoBehaviour:
   - text: Stay
     nextScene: {fileID: 11400000, guid: a787fcf6da426f74b9ace39999c31039, type: 2}
   - text: Go explore
-    nextScene: {fileID: 0}
+    nextScene: {fileID: 11400000, guid: 6308f58002f79894885795cebe833932, type: 2}

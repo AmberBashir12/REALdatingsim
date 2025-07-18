@@ -30,7 +30,7 @@ public class StoryScene : GameScene
 
             public enum Type
             {
-                NONE, APPEAR, MOVE, DISAPPEAR
+                NONE, APPEAR, MOVE, DISAPPEAR, BOUNCE
             }
         }
     }

@@ -142,10 +142,15 @@ public class BottomBarController : MonoBehaviour
         state = State.PLAYING;
         int wordIndex = 0;
 
+        float normalDelay = 0.05f;
+        float fastDelay = 0.01f; // Adjust as desired
+
         while (wordIndex < text.Length)
         {
             barText.text += text[wordIndex];
-            yield return new WaitForSeconds(0.05f);
+            // If spacebar is held, use fastDelay, otherwise use normalDelay
+            float delay = Input.GetKey(KeyCode.Space) ? fastDelay : normalDelay;
+            yield return new WaitForSeconds(delay);
             wordIndex++;
         }
         
@@ -231,6 +236,17 @@ public class BottomBarController : MonoBehaviour
                 else
                 {
                     Debug.LogWarning($"Attempted to switch sprite for non-existent speaker: {action.speaker.speakerName}");
+                }
+                return;
+
+                 case StoryScene.Sentence.Action.Type.BOUNCE:
+                if (sprites.ContainsKey(action.speaker))
+                {
+                    animator.SetTrigger("Bounce");
+                }
+                else
+                {
+                    Debug.LogWarning($"it didnt work bruh");
                 }
                 return;
         }
