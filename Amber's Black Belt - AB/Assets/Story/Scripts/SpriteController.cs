@@ -24,6 +24,11 @@ public class SpriteController : MonoBehaviour
         rect.localPosition = coords;
     }
 
+     public void Bounce()
+    {
+        animator.SetTrigger("Bounce");
+    }
+
     public void Hide()
     {
         animator.SetTrigger("Hide");

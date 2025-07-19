@@ -51,6 +51,11 @@ public class BottomBarController : MonoBehaviour
         }
     }
 
+    public void Bounce()
+    {
+        animator.SetTrigger("Bounce");
+    }
+
     public void ClearText()
     {
         barText.text = "";
@@ -242,7 +247,8 @@ public class BottomBarController : MonoBehaviour
                  case StoryScene.Sentence.Action.Type.BOUNCE:
                 if (sprites.ContainsKey(action.speaker))
                 {
-                    animator.SetTrigger("Bounce");
+                    controller = sprites[action.speaker];
+                    controller.Bounce();
                 }
                 else
                 {
