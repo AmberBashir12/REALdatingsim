@@ -47,13 +47,13 @@ MonoBehaviour:
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
-      actionType: 0
+      actionType: 3
       coords: {x: 0, y: 0}
       moveSpeed: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
       spriteIndex: 0
-      actionType: 0
+      actionType: 3
       coords: {x: 0, y: 0}
       moveSpeed: 0
   background: {fileID: 21300000, guid: 9812d653554bfd64d959817233034f0e, type: 3}
-  nextScene: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: 1a7aee9ec18b2134baa4beb2c952d07a, type: 2}
