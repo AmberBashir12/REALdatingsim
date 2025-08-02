@@ -10,6 +10,7 @@ public class ChooseController : MonoBehaviour
 {
 
     public ChooseLabelController label;
+    public GameObject labelPrefab;
     public GameController gameController;
     private RectTransform rectTransform;
     public Animator animator;
@@ -25,11 +26,13 @@ public class ChooseController : MonoBehaviour
         canvasGroup.alpha = 0;  // Start invisible
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+      
     }
 
     public void SetupChoose(ChooseScene scene)
     {
         DestroyLabels();
+      
         animator.SetTrigger("Show");
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;
@@ -37,8 +40,7 @@ public class ChooseController : MonoBehaviour
 
         for (int i = 0; i < scene.labels.Count; i++) 
         {
-            ChooseLabelController newLabel = Instantiate(label.gameObject, transform).GetComponent<ChooseLabelController>();
-            
+            ChooseLabelController newLabel = Instantiate(labelPrefab, transform).GetComponent<ChooseLabelController>();
             // Enable the ChooseLabelController script
             newLabel.enabled = true;
             
@@ -71,7 +73,7 @@ public class ChooseController : MonoBehaviour
     {
         float spacing = labelHeight * 1.2f; // Add 20% spacing between choices
         float totalHeight = spacing * (labelCount - 1);
-        float startY = totalHeight / 2;
+        float startY = totalHeight / 40.2f;
         
         return startY - (labelIndex * spacing);
     }
@@ -80,7 +82,7 @@ public class ChooseController : MonoBehaviour
     {
         foreach (Transform childTransform in transform)
         {
-            Destroy(childTransform.gameObject);
+           Destroy(childTransform.gameObject);
         }
     }
 

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1280
     height: 629.3334
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -554,9 +554,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 38241334bd6afc6468cb6674a9653f6f, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 14ba587d20c4e3240a35e5f69643748d, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -1970515062825123304, guid: 38241334bd6afc6468cb6674a9653f6f, type: 2}
+  - m_Target: {fileID: 713947844154487279, guid: 14ba587d20c4e3240a35e5f69643748d, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -605,7 +605,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 29196
+  m_LastSelectedObjectID: 25166
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -651,7 +651,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Story/Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -659,17 +659,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 89
   m_LastFolders:
-  - Assets/Story/Scripts
+  - Assets
   m_LastFoldersGridSize: 89
   m_LastProjectPath: C:\Users\user\Documents\GitHub\REALdatingsim\Amber's Black Belt
     - AB
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 279.00003}
-    m_SelectedIDs: 64640000
-    m_LastClickedID: 25700
-    m_ExpandedIDs: 000000003e6400004064000042640000446400004e6400006264000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 3e640000
+    m_LastClickedID: 25662
+    m_ExpandedIDs: 000000003e64000040640000426400004464000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -722,8 +722,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 6e130000
-    m_LastClickedInstanceID: 4974
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000e6100001a680000de610000a86200009a62000000000000426400009c620000b46200009e620000886200003064000050610000
     m_RenameOverlay:
@@ -790,9 +790,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6e130000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1cfbfffff8610000
+      m_ExpandedIDs: 1cfbfffff86100004e620000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
