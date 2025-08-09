@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
-  m_Name: Student Council Room
+  m_Name: YOU DIED
   m_EditorClassIdentifier: 
   sentences: []
-  background: {fileID: 21300000, guid: d716f6b5cecf14f4d916d7a15f16e04f, type: 3}
+  background: {fileID: 21300000, guid: 71f418bb1e2acc940b92201af2318ee9, type: 3}
   nextScene: {fileID: 0}

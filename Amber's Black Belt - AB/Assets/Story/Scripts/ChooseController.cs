@@ -73,7 +73,7 @@ public class ChooseController : MonoBehaviour
     {
         float spacing = labelHeight * 1.2f; // Add 20% spacing between choices
         float totalHeight = spacing * (labelCount - 1);
-        float startY = totalHeight / 40.2f;
+        float startY = totalHeight - 300;
         
         return startY - (labelIndex * spacing);
     }

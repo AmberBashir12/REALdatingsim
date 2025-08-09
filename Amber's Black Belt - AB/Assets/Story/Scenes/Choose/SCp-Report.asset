@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 412dca171f510ae4a91e62bb794a7ff5, type: 3}
-  m_Name: Room 339 Choose 1
+  m_Name: SCp-Report
   m_EditorClassIdentifier: 
   labels:
-  - text: Ignore
-    nextScene: {fileID: 11400000, guid: 4d67bccd5dbbb91438b673ef66f7cd9b, type: 2}
-  - text: Go inside
-    nextScene: {fileID: 11400000, guid: ec457ec546a23e34f97ad0a669e92c2d, type: 2}
-  - text: Tell Student Council
-    nextScene: {fileID: 11400000, guid: 4f50950c523e18d418c5b95518c52c82, type: 2}
+  - text: '"Theres a girl playing music in Room 339."'
+    nextScene: {fileID: 0}
+  - text: Theres a School FIRE!! RUN!!!
+    nextScene: {fileID: 11400000, guid: 117bf7147cbc3cf408f5926c4f82f8e1, type: 2}
+  - text: Im struggling with my Homework.. can you help me..?
+    nextScene: {fileID: 0}

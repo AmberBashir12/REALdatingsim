@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
+  m_Name: Soccer Field 2
+  m_EditorClassIdentifier: 
+  sentences:
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: i chose to stay... maybe i can meet that handsome guy
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    text: wassup shawty
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: .....
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: wow you are soo handsome
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: bad boy exactly my type
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    text: yea im soo hot
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    text: everyone falls for me haha
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Thingking"Omg hes so confident and hot" blushes
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: 4769e0f6e25b87341b9167192c3291b6, type: 2}
+    text: HEY!! RED GET BACK ON THE FIELD LIL BRO!!!
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    text: SHUT UP
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    text: Anyways, babe wanna meet after school?
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: should i meet with him afetr school?
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 0, y: 70}
+      moveSpeed: 0
+  background: {fileID: 21300000, guid: 64c45f32e38b3a64595738b378eaa516, type: 3}
+  nextScene: {fileID: 11400000, guid: 7bbc85dc303585747b0bbd514e70f1bc, type: 2}
