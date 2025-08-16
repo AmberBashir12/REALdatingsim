@@ -40,7 +40,7 @@ MonoBehaviour:
     - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 1
-      coords: {x: 70, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: WAIT- WHy DOES THAT GUY HAVE CAT EARS??!
@@ -53,7 +53,7 @@ MonoBehaviour:
     - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 300, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: ok he doesnt seem to notice me cuz hes sooo into his book
@@ -66,7 +66,7 @@ MonoBehaviour:
     - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 300, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: what should I do?
@@ -79,7 +79,7 @@ MonoBehaviour:
     - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 3
-      coords: {x: 300, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
   background: {fileID: 21300000, guid: d25cb78adbfb1b041aad17b6285537a4, type: 3}
   nextScene: {fileID: 11400000, guid: 5c1e1b6e1121b4e468b63c8c3348d5e5, type: 2}

@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSwitched: 0
-  Image1: {fileID: 0}
-  Image2: {fileID: 0}
+  Image1: {fileID: 207506117173452617}
+  Image2: {fileID: 207506117173452617}
 --- !u!114 &2177461010597799455
 MonoBehaviour:
   m_ObjectHideFlags: 0

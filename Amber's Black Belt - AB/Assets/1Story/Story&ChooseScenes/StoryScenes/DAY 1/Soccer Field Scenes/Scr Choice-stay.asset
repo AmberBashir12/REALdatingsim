@@ -66,7 +66,7 @@ MonoBehaviour:
       coords: {x: 0, y: 0}
       moveSpeed: 0
   - speaker: {fileID: 11400000, guid: 4769e0f6e25b87341b9167192c3291b6, type: 2}
-    text: 'HEY!!! RED_ GET BACK ON THE FIELD LIL BRO '
+    text: hey um were kinda losing rn can you come back onto the field
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
