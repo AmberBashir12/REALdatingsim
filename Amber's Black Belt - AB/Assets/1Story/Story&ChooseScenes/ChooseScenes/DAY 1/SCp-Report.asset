@@ -18,4 +18,4 @@ MonoBehaviour:
   - text: Theres a School FIRE!! RUN!!!
     nextScene: {fileID: 11400000, guid: 117bf7147cbc3cf408f5926c4f82f8e1, type: 2}
   - text: Im struggling with my Homework.. can you help me..?
-    nextScene: {fileID: 0}
+    nextScene: {fileID: 11400000, guid: 3f2e6d5f8a6c4b5c9d0e1f2a3b4c5d6e, type: 2}
