@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   labels:
   - text: Talk to Him
-    nextScene: {fileID: 0}
-  - text: Make Eye contact and run away
+    nextScene: {fileID: 11400000, guid: e2e0132f6b6c4c8c8a72123456789abc, type: 2}
+  - text: Make Eye contact and Run Away
     nextScene: {fileID: 0}
   - text: Leave
     nextScene: {fileID: 11400000, guid: f1b27e2e2d8c18644b90d7737a461c31, type: 2}
