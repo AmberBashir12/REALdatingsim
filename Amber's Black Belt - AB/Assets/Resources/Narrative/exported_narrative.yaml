@@ -1,0 +1,904 @@
+﻿startScene: entrance_1
+backgrounds:
+  - id: default_bg
+    sprite: Backgrounds/Default
+speakers:
+  - id: cat_boy
+    name: "Cat Boy"
+    textColor: "#005DFF00"
+  - id: pink
+    name: "Pink Girl"
+    textColor: "#FF00BFFF"
+  - id: random_soccer_guy
+    name: "Soccer Guy"
+    textColor: "#1E1E1E00"
+  - id: scp
+    name: "Scp"
+    textColor: "#00000000"
+  - id: sport_guy
+    name: "Red"
+    textColor: "#FF000000"
+  - id: vscp
+    name: "VSCP"
+    textColor: "#0063FFFF"
+  - id: you
+    name: "You"
+    textColor: "#680084FF"
+scenes:
+  - id: entrance_1
+    type: story
+    sentences:
+      - text: "Omg new school Aaa"
+        speaker: you
+        actions:
+          - speaker: you
+            type: APPEAR
+            x: 200
+      - text: "boy come inside now"
+        speaker: vscp
+        actions:
+          - speaker: vscp
+            type: APPEAR
+            x: -200
+          - speaker: you
+            type: APPEAR
+            x: 200
+      - text: "ok"
+        speaker: you
+        actions:
+          - speaker: vscp
+            type: DISAPPEAR
+          - speaker: you
+            type: DISAPPEAR
+            x: 200
+    next: garden_first
+  - id: garden_1
+    type: story
+    sentences:
+      - text: "HEY YOU"
+        speaker: vscp
+      - text: "huh "
+        speaker: you
+      - text: "huh "
+        speaker: vscp
+    next: room_339
+  - id: catboy_talk_1
+    type: story
+    sentences:
+      - text: "H-hey... cat ears? That's... cool."
+        speaker: you
+        actions:
+          - speaker: you
+            type: APPEAR
+            x: -180
+          - speaker: cat_boy
+            type: APPEAR
+            x: 180
+      - text: "...You think so? No one ever says that."
+        speaker: cat_boy
+      - text: "Want to get some air? The hallway is quieter."
+        speaker: you
+    next: hallway_confrontation
+  - id: hallway_confrontation
+    type: story
+    sentences:
+      - text: "I don't like crowds. Thanks for moving."
+        speaker: cat_boy
+      - text: "No problem! Wait—what's that noise?"
+        speaker: you
+      - text: "HEY! You two! No loitering!"
+        speaker: pink
+    next: principal_office
+  - id: principal_office
+    type: story
+    sentences:
+      - text: "These two were disrupting the halls, father."
+        speaker: pink
+      - text: "We were just talking!"
+        speaker: you
+      - text: "It was my fault."
+        speaker: cat_boy
+    next: expelled
+  - id: garden_first
+    type: story
+    sentences:
+      - text: "wooww.. this garden is really pretyty"
+        speaker: you
+        actions:
+          - speaker: you
+            type: APPEAR
+      - text: "im gonna look around a bit."
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+      - text: "then you SUDDENLY!! run into a cute guy with.... CAT EARS?????"
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+          - speaker: cat_boy
+            type: APPEAR
+            x: 200
+      - text: "WAIT- WHy DOES THAT GUY HAVE CAT EARS??!"
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+          - speaker: cat_boy
+            type: NONE
+            x: 200
+      - text: "ok he doesnt seem to notice me cuz hes sooo into his book"
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+          - speaker: cat_boy
+            type: NONE
+            x: 200
+      - text: "what should I do?"
+        speaker: you
+        actions:
+          - speaker: you
+            type: DISAPPEAR
+          - speaker: cat_boy
+            type: DISAPPEAR
+            x: 200
+    next: catboywhatdo
+  - id: hallway_2
+    type: story
+    sentences:
+      - text: "bro when are we gonna get there ughh"
+        speaker: you
+      - text: "girrrllll, just be patient "
+        speaker: vscp
+      - text: "Bruh the sun is alr setting"
+        speaker: you
+      - text: "Whatever"
+        speaker: vscp
+    next: room_339
+  - id: leave_alone
+    type: story
+    sentences:
+      - text: "You go home, ALONE"
+        speaker: you
+        actions:
+          - speaker: you
+            type: APPEAR
+      - text: "You diligently study for the rest of your school years, move out, and get a j*b"
+        speaker: you
+        actions:
+          - speaker: you
+            type: NONE
+      - text: "but you work so hard you dont realize you ahve NO lover "
+        speaker: you
+        actions:
+          - speaker: you
+            type: NONE
+      - text: "You die alone in your bed."
+        speaker: you
+        actions:
+          - speaker: you
+            type: DISAPPEAR
+    next: you_died
+  - id: 339choiceno
+    type: story
+    sentences:
+      - text: "......."
+        speaker: pink
+        actions:
+          - speaker: pink
+            type: APPEAR
+          - speaker: you
+            type: APPEAR
+      - text: "are you sure"
+        speaker: pink
+        actions:
+          - speaker: pink
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+      - text: "yea im p p p p pawsitive-- woof!!"
+        speaker: you
+        actions:
+          - speaker: pink
+            type: NONE
+          - speaker: you
+            type: BOUNCE
+      - text: ".....I dont believe tou..."
+        speaker: pink
+        actions:
+          - speaker: pink
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+      - text: "huh?"
+        speaker: you
+        actions:
+          - speaker: pink
+            type: NONE
+          - speaker: you
+            type: BOUNCE
+      - text: "For lying to me im gonna get ym dad to expell you. Unlike you im not a poor pleb"
+        speaker: pink
+        actions:
+          - speaker: pink
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+      - text: "broke broke broke, my dad is the richest in the country"
+        speaker: pink
+        actions:
+          - speaker: pink
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+      - text: "WHAT"
+        speaker: you
+        actions:
+          - speaker: pink
+            type: NONE
+          - speaker: you
+            type: BOUNCE
+      - text: "WHAT"
+        speaker: you
+        actions:
+          - speaker: pink
+            type: DISAPPEAR
+          - speaker: you
+            type: DISAPPEAR
+    next: expelled
+  - id: hallway_1
+    type: story
+    sentences:
+      - text: "hmmm, its kinda quiet rn"
+        speaker: you
+        actions:
+          - speaker: you
+            type: APPEAR
+      - text: "(music plays) omg whats that noise"
+        speaker: you
+        actions:
+          - speaker: you
+            type: NONE
+      - text: "you peek inside and there is a really cute girl, omg shes so cutie"
+        speaker: you
+        actions:
+          - speaker: you
+            type: NONE
+          - speaker: pink
+            type: APPEAR
+      - text: "what should i do here?"
+        speaker: you
+        actions:
+          - speaker: you
+            type: DISAPPEAR
+          - speaker: pink
+            type: DISAPPEAR
+    next: room_339_choose_1
+  - id: room_339
+    type: story
+    sentences:
+      - text: "hwello???"
+        speaker: you
+        actions:
+          - speaker: you
+            type: APPEAR
+            x: 400
+      - text: "is anyone heres*cute*"
+        speaker: you
+        actions:
+          - speaker: you
+            type: NONE
+      - text: "no you poo"
+        speaker: vscp
+        actions:
+          - speaker: vscp
+            type: APPEAR
+      - text: "OMG!!! you scaredmeeee *kawaaii*"
+        speaker: you
+      - text: "HEY YOUU!!!!"
+        speaker: pink
+        actions:
+          - speaker: pink
+            type: APPEAR
+      - text: "uh ohs im leavings"
+        speaker: vscp
+        actions:
+          - speaker: vscp
+            type: DISAPPEAR
+      - text: "watever ur ugly anyways, i want that person there"
+        speaker: pink
+      - text: "OMG MEE!!!??"
+        speaker: you
+      - text: "yes lets marry"
+        speaker: pink
+  - id: room339_girl
+    type: story
+    sentences:
+      - text: "**You enter the room.. q q q quietly"
+        speaker: you
+        actions:
+          - speaker: pink
+            type: APPEAR
+          - speaker: you
+            type: APPEAR
+      - text: "HEY!!! WHO ARE U?!?!"
+        speaker: pink
+        actions:
+          - speaker: pink
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+      - text: "AHHHHHH YOU SCARED ME!!"
+        speaker: you
+        actions:
+          - speaker: pink
+            type: NONE
+          - speaker: you
+            type: BOUNCE
+      - text: "WAIT-- did u hearr?"
+        speaker: pink
+        actions:
+          - speaker: pink
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+      - text: "uhhh"
+        speaker: you
+        actions:
+          - speaker: pink
+            type: NONE
+          - speaker: you
+            type: BOUNCE
+      - text: "What should I tell her?"
+        speaker: you
+        actions:
+          - speaker: pink
+            type: DISAPPEAR
+          - speaker: you
+            type: DISAPPEAR
+    next: 339_did_u_hear
+  - id: scp_choicereport
+    type: story
+    sentences:
+      - text: "I walk into the SCP room CONFIDENTLY"
+        speaker: you
+        actions:
+          - speaker: scp
+            type: APPEAR
+          - speaker: you
+            type: APPEAR
+            x: 300
+      - text: "PRESIDENT!!! I have something to report"
+        speaker: you
+        actions:
+          - speaker: scp
+            type: NONE
+          - speaker: you
+            type: BOUNCE
+            x: 300
+      - text: "yes what do you have to say."
+        speaker: scp
+        actions:
+          - speaker: scp
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+            x: 300
+      - text: "What should I report?"
+        speaker: you
+        actions:
+          - speaker: scp
+            type: DISAPPEAR
+          - speaker: you
+            type: DISAPPEAR
+    next: scpreport
+  - id: scpchoicefire
+    type: story
+    sentences:
+      - text: "....."
+        speaker: scp
+        actions:
+          - speaker: scp
+            type: APPEAR
+          - speaker: you
+            type: APPEAR
+            x: 300
+      - text: "you DARE lie to me?"
+        speaker: scp
+        actions:
+          - speaker: scp
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+            x: 300
+      - text: "what no i didnt (lie)"
+        speaker: you
+        actions:
+          - speaker: scp
+            type: NONE
+          - speaker: you
+            type: BOUNCE
+            x: 300
+      - text: "EXPELLED!!"
+        speaker: scp
+        actions:
+          - speaker: scp
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+            x: 300
+      - text: "WHAT"
+        speaker: you
+        actions:
+          - speaker: scp
+            type: NONE
+          - speaker: you
+            type: BOUNCE
+            x: 300
+      - text: "WHAT"
+        speaker: you
+        actions:
+          - speaker: scp
+            type: DISAPPEAR
+          - speaker: you
+            type: DISAPPEAR
+            x: 300
+    next: expelled
+  - id: scphomework_help
+    type: story
+    sentences:
+      - text: "Hey Scp, I'm stuck on this homework. Can you help me?"
+        speaker: you
+        actions:
+          - speaker: you
+            type: APPEAR
+            x: -120
+          - speaker: scp
+            type: APPEAR
+            x: 120
+      - text: "Of course. Give it here — let's go through it step by step."
+        speaker: scp
+        actions:
+          - speaker: scp
+            type: NONE
+            x: 120
+      - text: "See, if you isolate the variable here and substitute, it works out."
+        speaker: scp
+        actions:
+          - speaker: scp
+            type: NONE
+            x: 120
+      - text: "Ohh, that makes sense now. Thanks!"
+        speaker: you
+        actions:
+          - speaker: you
+            type: NONE
+            x: -120
+      - text: "Anytime. Finish this up and meet me in the garden later."
+        speaker: scp
+        actions:
+          - speaker: scp
+            type: DISAPPEAR
+            x: 120
+          - speaker: you
+            type: DISAPPEAR
+            x: -120
+    next: garden_first
+  - id: scp
+    type: story
+    sentences:
+      - text: "Hey.... so ive heard about you... girl"
+        speaker: scp
+        actions:
+          - speaker: scp
+            type: APPEAR
+      - text: "wait you have"
+        speaker: you
+        actions:
+          - speaker: scp
+            type: NONE
+      - text: "ya ofc im the student council presisdent i was told tohelp you get used to life here in this private school amirite"
+        speaker: scp
+        actions:
+          - speaker: scp
+            type: BOUNCE
+      - text: "oh ok thanks"
+        speaker: you
+        actions:
+          - speaker: scp
+            type: NONE
+      - text: "tell me if you need help"
+        speaker: scp
+        actions:
+          - speaker: scp
+            type: DISAPPEAR
+    next: soccer_field
+  - id: scr_choice_yeslets_go
+    type: story
+    sentences:
+      - text: "lesss gooo"
+        speaker: sport_guy
+        actions:
+          - speaker: sport_guy
+            type: APPEAR
+          - speaker: you
+            type: APPEAR
+      - text: "come here straight after school!"
+        speaker: sport_guy
+        actions:
+          - speaker: sport_guy
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+      - text: "OK! IM SO EXCITED"
+        speaker: you
+        actions:
+          - speaker: sport_guy
+            type: NONE
+          - speaker: you
+            type: BOUNCE
+      - text: "dont trip over your feet babe"
+        speaker: sport_guy
+        actions:
+          - speaker: sport_guy
+            type: BOUNCE
+          - speaker: you
+            type: NONE
+      - text: "EEEEEEKKK!!!!"
+        speaker: you
+        actions:
+          - speaker: sport_guy
+            type: NONE
+          - speaker: you
+            type: BOUNCE
+  - id: scr_choicestay
+    type: story
+    sentences:
+      - text: "you go up to the hottie"
+        speaker: you
+        actions:
+          - speaker: you
+            type: APPEAR
+          - speaker: sport_guy
+            type: APPEAR
+      - text: "uhmm.. hey, are you busy rn,,?"
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+          - speaker: sport_guy
+            type: NONE
+      - text: "wassup shawty, nad no im not busy pretty girl."
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+          - speaker: sport_guy
+            type: BOUNCE
+      - text: "'omg he called me pretty' Blush"
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+          - speaker: sport_guy
+            type: NONE
+      - text: "hey um were kinda losing rn can you come back onto the field"
+        speaker: random_soccer_guy
+        actions:
+          - speaker: you
+            type: BOUNCE
+          - speaker: sport_guy
+            type: BOUNCE
+      - text: "SHUT UP"
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+          - speaker: sport_guy
+            type: BOUNCE
+      - text: "anyways... wanna meet after shcool??>"
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+          - speaker: sport_guy
+            type: BOUNCE
+      - text: "Omg.. should i meet with him>>?"
+        speaker: you
+        actions:
+          - speaker: you
+            type: DISAPPEAR
+          - speaker: sport_guy
+            type: DISAPPEAR
+    next: scrwannameet
+  - id: scrbusy
+    type: story
+    sentences:
+      - text: ".........."
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: APPEAR
+          - speaker: sport_guy
+            type: APPEAR
+      - text: "why.. I didnt even say a date i just said after school....."
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+          - speaker: sport_guy
+            type: BOUNCE
+      - text: "...oops"
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+          - speaker: sport_guy
+            type: NONE
+      - text: "you should gotten the hint that i dont wanna go on a date with you."
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+          - speaker: sport_guy
+            type: NONE
+      - text: "oh.. ok bye.."
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+          - speaker: sport_guy
+            type: BOUNCE
+      - text: "he walks back into the game crying"
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+          - speaker: sport_guy
+            type: DISAPPEAR
+      - text: "huh. wtvr. imma go explore."
+        speaker: you
+        actions:
+          - speaker: you
+            type: DISAPPEAR
+          - speaker: sport_guy
+            type: NONE
+    next: hallway_1
+  - id: soccer_field_2
+    type: story
+    sentences:
+      - text: "i chose to stay... maybe i can meet that handsome guy"
+        speaker: you
+        actions:
+          - speaker: you
+            type: APPEAR
+            x: 200
+      - text: "wassup shawty"
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+            x: 200
+          - speaker: sport_guy
+            type: APPEAR
+            y: 70
+      - text: "....."
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+            x: 200
+          - speaker: sport_guy
+            type: NONE
+            y: 70
+      - text: "wow you are soo handsome"
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+            x: 200
+          - speaker: sport_guy
+            type: NONE
+            y: 70
+      - text: "bad boy exactly my type"
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+            x: 200
+          - speaker: sport_guy
+            type: NONE
+            y: 70
+      - text: "yea im soo hot"
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+            x: 200
+          - speaker: sport_guy
+            type: BOUNCE
+            y: 70
+      - text: "everyone falls for me haha"
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+            x: 200
+          - speaker: sport_guy
+            type: BOUNCE
+            y: 70
+      - text: "Thingking\"Omg hes so confident and hot\" blushes"
+        speaker: you
+        actions:
+          - speaker: you
+            type: BOUNCE
+            x: 200
+          - speaker: sport_guy
+            type: NONE
+            y: 70
+      - text: "hey um were kinda losing rn can you come back onto the field"
+        speaker: random_soccer_guy
+        actions:
+          - speaker: you
+            type: BOUNCE
+            x: 200
+          - speaker: sport_guy
+            type: BOUNCE
+            y: 70
+      - text: "SHUT UP"
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+            x: 200
+          - speaker: sport_guy
+            type: BOUNCE
+            y: 70
+      - text: "Anyways, babe wanna meet after school?"
+        speaker: sport_guy
+        actions:
+          - speaker: you
+            type: NONE
+            x: 200
+          - speaker: sport_guy
+            type: BOUNCE
+            y: 70
+      - text: "should i meet with him afetr school?"
+        speaker: you
+        actions:
+          - speaker: you
+            type: DISAPPEAR
+            x: 200
+          - speaker: sport_guy
+            type: DISAPPEAR
+            y: 70
+    next: scrwannameet
+  - id: soccer_field
+    type: story
+    sentences:
+      - text: "ok so this the scr field----"
+        speaker: vscp
+        actions:
+          - speaker: vscp
+            type: APPEAR
+      - text: "woww.. who is that hottie.."
+        speaker: you
+        actions:
+          - speaker: vscp
+            type: NONE
+          - speaker: you
+            type: APPEAR
+      - text: "woww.. who is that hottie.."
+        speaker: you
+        actions:
+          - speaker: vscp
+            type: NONE
+          - speaker: you
+            type: APPEAR
+      - text: "ummmm"
+        speaker: scp
+        actions:
+          - speaker: vscp
+            type: DISAPPEAR
+          - speaker: you
+            type: DISAPPEAR
+          - speaker: sport_guy
+            type: APPEAR
+      - text: "okay whatever the tour is done now so you can do whatever you want"
+        speaker: scp
+        actions:
+          - speaker: vscp
+            type: APPEAR
+          - speaker: you
+            type: APPEAR
+          - speaker: sport_guy
+            type: DISAPPEAR
+      - text: "yea bye"
+        speaker: you
+        actions:
+          - speaker: vscp
+            type: DISAPPEAR
+          - speaker: you
+            type: NONE
+          - speaker: sport_guy
+            type: APPEAR
+      - text: "hmmmm should i stay or explore on my own"
+        speaker: you
+        actions:
+          - speaker: vscp
+            type: NONE
+          - speaker: you
+            type: DISAPPEAR
+            x: 200
+          - speaker: sport_guy
+            type: DISAPPEAR
+    next: soccer_field_choose_1
+  - id: expelled
+    type: ending
+    sentences:
+      - text: "You were expelled from the academy." 
+  - id: you_died
+    type: ending
+    sentences:
+      - text: "You lived a quiet life and faded away... (Bad End)"
+  - id: 339_did_u_hear
+    type: choice
+    choices:
+      - text: "N N N noo..."
+        next: 339choiceno
+      - text: "Yes"
+      - text: "You were really good"
+  - id: catboywhatdo
+    type: choice
+    choices:
+      - text: "Talk to Him"
+        next: catboy_talk_1
+      - text: "Make Eye contact and Run Away"
+      - text: "Leave"
+        next: leave_alone
+  - id: newchoosescene
+    type: choice
+    choices:
+      - text: "sCp room"
+        next: scp_choicereport
+      - text: "Sccor field"
+        next: soccer_field
+      - text: "room 339"
+        next: room_339
+      - text: "garden"
+        next: garden_1
+      - text: "Hallway"
+        next: hallway_2
+  - id: room_339_choose_1
+    type: choice
+    choices:
+      - text: "Ignore"
+        next: garden_first
+      - text: "Go inside"
+        next: room339_girl
+      - text: "Tell Student Council"
+        next: scp_choicereport
+  - id: scpreport
+    type: choice
+    choices:
+      - text: "\"Theres a girl playing music in Room 339.\""
+      - text: "Theres a School FIRE!! RUN!!!"
+        next: scpchoicefire
+      - text: "Im struggling with my Homework.. can you help me..?"
+        next: scphomework_help
+  - id: scrwannameet
+    type: choice
+    choices:
+      - text: "Sorry.. Im busy that day"
+        next: scrbusy
+      - text: "YES!! LETS GO!!"
+        next: scr_choice_yeslets_go
+  - id: soccer_field_choose_1
+    type: choice
+    choices:
+      - text: "Stay"
+        next: soccer_field_2
+      - text: "Go explore"
+        next: hallway_1

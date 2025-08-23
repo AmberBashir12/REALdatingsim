@@ -47,11 +47,35 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
         textMesh.rectTransform.localPosition = position;
     }
 
+    // Runtime narrative support (callback-based)
+    private System.Action runtimeCallback;
+    public void SetupRuntime(string text, System.Action onClick, ChooseController controller, float y)
+    {
+        runtimeCallback = onClick;
+        scene = null;
+        if (textMesh != null)
+        {
+            textMesh.text = text;
+            textMesh.enabled = true;
+        }
+        this.controller = controller;
+        var position = textMesh.rectTransform.localPosition;
+        position.y = y;
+        textMesh.rectTransform.localPosition = position;
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (enabled && controller != null)
         {
-            controller.PerformChoose(scene);
+            if (scene != null)
+            {
+                controller.PerformChoose(scene);
+            }
+            else
+            {
+                runtimeCallback?.Invoke();
+            }
         }
     }
 

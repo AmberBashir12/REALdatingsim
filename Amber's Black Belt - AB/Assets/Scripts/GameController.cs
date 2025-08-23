@@ -2,39 +2,74 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using NarrativeRuntime;
+using Narrative;
+
 public class GameController : MonoBehaviour
 {
-    public GameScene currentScene;
-    public BottomBarController bottomBar;
+    [Header("Narrative Data")] public string narrativeResourcePath = "Narrative/exported_narrative"; // Resources path without extension
+    public string overrideStartSceneId;
+
+    [Header("Controllers")] public BottomBarController bottomBar;
     public SpriteSwitcher backgroundController;
     public ChooseController chooseController;
 
+    private IGameScene currentScene;
     private State state = State.IDLE;
 
-    private enum State
+    private enum State { IDLE, ANIMATE, CHOOSE }
+
+    private void Start()
     {
-        IDLE, ANIMATE, CHOOSE
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (currentScene is StoryScene)
+        LoadNarrative();
+        var startId = string.IsNullOrEmpty(overrideStartSceneId) ? NarrativeRegistry.StartSceneId : overrideStartSceneId;
+        if (string.IsNullOrEmpty(startId))
         {
-            StoryScene storyScene = currentScene as StoryScene;
-            bottomBar.PlayScene(storyScene);
-            backgroundController.SetImage(storyScene.background);
+            Debug.LogError("Runtime narrative start scene id is null/empty. Check YAML 'startScene' or loader errors above.");
+            return;
+        }
+        if (!string.IsNullOrEmpty(startId) && NarrativeRegistry.TryGet(startId, out var startScene))
+        {
+            PlayScene(startScene);
+        }
+        else
+        {
+            Debug.LogError($"Start scene id '{startId}' not found or narrative not loaded. Falling back to legacy currentScene if assigned.");
+            if (currentSceneLegacy != null)
+            {
+                PlayLegacyScene(currentSceneLegacy);
+            }
         }
     }
-    // Update is called once per frame
-    void Update()
+
+    [Header("Legacy (temporary)")] public StoryScene currentSceneLegacy;
+
+    private void Update()
     {
+        // Hot reload (Ctrl+R)
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Hot reloading narrative...");
+            LoadNarrative();
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             if (state == State.IDLE && bottomBar.IsCompleted())
             {
                 if (bottomBar.IsLastSentence())
                 {
-                    PlayScene((currentScene as StoryScene).nextScene);
+                    if (currentScene is RuntimeStoryScene rss)
+                    {
+                        if (!string.IsNullOrEmpty(rss.NextId) && NarrativeRegistry.TryGet(rss.NextId, out var next))
+                        {
+                            PlayScene(next);
+                        }
+                        else
+                        {
+                            Debug.Log("End of branch or missing next id.");
+                        }
+                    }
                 }
                 else
                 {
@@ -44,58 +79,70 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void PlayScene(GameScene scene)
+    private void LoadNarrative()
+    {
+    NarrativeLoader.Load(narrativeResourcePath);
+    }
+
+    public void PlayScene(IGameScene scene)
     {
         StartCoroutine(SwitchScene(scene));
     }
 
-    private IEnumerator SwitchScene(GameScene scene)
+    // Legacy support for ScriptableObject StoryScene while migrating
+    public void PlayLegacyScene(StoryScene scene)
+    {
+        StartCoroutine(LegacyStoryFlow(scene));
+    }
+
+    private IEnumerator LegacyStoryFlow(StoryScene storyScene)
+    {
+        if (storyScene == null) yield break;
+        state = State.ANIMATE;
+        bottomBar.Hide();
+        yield return new WaitForSeconds(0.3f);
+        if (storyScene.background)
+        {
+            backgroundController.SwitchImage(storyScene.background);
+        }
+        yield return new WaitForSeconds(0.3f);
+        bottomBar.Show();
+        bottomBar.ClearText();
+        yield return new WaitForSeconds(0.1f);
+        bottomBar.PlayScene(storyScene);
+        state = State.IDLE;
+    }
+
+    private IEnumerator SwitchScene(IGameScene scene)
     {
         state = State.ANIMATE;
-
         if (scene == null)
         {
-            Debug.LogError($"Attempted to switch to a null scene. Current scene was '{currentScene?.name}'. Check 'nextScene' assignments in your StoryScene assets.");
-            if (bottomBar.IsHidden) // Ensure bottom bar is visible if we can't proceed
-            {
-                bottomBar.Show();
-            }
-            state = State.IDLE; // Revert to IDLE to allow player interaction or prevent soft lock
-            yield break; // Exit coroutine
+            Debug.LogError("Null scene passed to SwitchScene");
+            state = State.IDLE;
+            yield break;
         }
-
-        currentScene = scene;  
+        currentScene = scene;
         bottomBar.Hide();
-        yield return new WaitForSeconds(1f);
-
-        if (scene is StoryScene storyScene)
+        yield return new WaitForSeconds(0.5f);
+        if (scene.Background != null)
         {
-            if (storyScene.background == null) {
-                Debug.LogWarning($"StoryScene '{storyScene.name}' has no background assigned.");
-            }
-            backgroundController.SwitchImage(storyScene.background);
-            
-            yield return new WaitForSeconds(1f);
-            bottomBar.Show();
-            bottomBar.ClearText();
-            yield return new WaitForSeconds(1f);
-            
-            bottomBar.PlayScene(storyScene); // PlayScene in BottomBarController will handle empty sentences
-            state = State.IDLE; // Reset state to IDLE
+            backgroundController.SwitchImage(scene.Background);
         }
-        else if (scene is ChooseScene chooseScene) 
+        yield return new WaitForSeconds(0.5f);
+        bottomBar.Show();
+        bottomBar.ClearText();
+        yield return new WaitForSeconds(0.2f);
+
+        if (scene is RuntimeStoryScene rss)
+        {
+            bottomBar.PlayRuntimeStory(rss);
+            state = State.IDLE;
+        }
+        else if (scene is RuntimeChooseScene rcs)
         {
             state = State.CHOOSE;
-            chooseController.SetupChoose(chooseScene); 
-        }
-        else
-        {
-            Debug.LogError($"Loaded scene '{scene.name}' is not a StoryScene or ChooseScene. Type: {scene.GetType()}. Cannot proceed.");
-            if (bottomBar.IsHidden)
-            {
-                bottomBar.Show();
-            }
-            state = State.IDLE; // Revert to IDLE
+            chooseController.SetupRuntimeChoose(rcs);
         }
     }
 }

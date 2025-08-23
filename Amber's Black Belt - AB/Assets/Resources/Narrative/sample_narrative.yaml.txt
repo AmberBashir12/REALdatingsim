@@ -1,0 +1,41 @@
+# Sample narrative data (rename without .txt if needed). Minimal stub.
+startScene: intro
+backgrounds:
+  - id: classroom
+    sprite: Backgrounds/Classroom
+speakers:
+  - id: mc
+    name: Protagonist
+    textColor: "#FFFFFF"
+    prefab: Prefabs/SpeakerPrefab
+    sprite: Characters/MC/neutral
+scenes:
+  - id: intro
+    type: story
+    background: classroom
+    sentences:
+      - speaker: mc
+        text: "Another day at school..."
+      - speaker: mc
+        text: "I should decide what to do next."
+    next: choice1
+  - id: choice1
+    type: choice
+    background: classroom
+    choices:
+      - text: Look around
+        next: end1
+      - text: Take a nap
+        next: end2
+  - id: end1
+    type: ending
+    background: classroom
+    sentences:
+      - speaker: mc
+        text: "You looked around and found nothing unusual."
+  - id: end2
+    type: ending
+    background: classroom
+    sentences:
+      - speaker: mc
+        text: "You fell asleep at your desk. The day passed uneventfully."

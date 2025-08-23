@@ -65,8 +65,37 @@ public class ChooseController : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
-        gameController.PlayScene(scene);
+    // Legacy ScriptableObject path
+    gameController.PlayLegacyScene(scene);
         animator.SetTrigger("Hide");
+    }
+
+    // Runtime narrative support (temporary)
+    public void SetupRuntimeChoose(NarrativeRuntime.RuntimeChooseScene runtimeChoose)
+    {
+        DestroyLabels();
+        animator.SetTrigger("Show");
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+        var count = runtimeChoose.Choices.Count;
+        for (int i = 0; i < count; i++)
+        {
+            var c = runtimeChoose.Choices[i];
+            var newLabel = Instantiate(labelPrefab, transform).GetComponent<ChooseLabelController>();
+            var tmpText = newLabel.GetComponent<TMPro.TextMeshProUGUI>();
+            if (tmpText != null) tmpText.enabled = true;
+            float yPos = CalculateLabelPosition(count, i);
+            // Build a transient ChooseLabel / StoryScene bridging when clicked
+            newLabel.SetupRuntime(c.text, () => {
+                if (!string.IsNullOrEmpty(c.next) && NarrativeRuntime.NarrativeRegistry.TryGet(c.next, out var next))
+                {
+                    gameController.PlayScene(next);
+                }
+            }, this, yPos);
+        }
+        float totalHeight = (count + 1) * labelHeight;
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, totalHeight);
     }
 
     private float CalculateLabelPosition(int labelCount, int labelIndex)

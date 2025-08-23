@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using JetBrains.Annotations;
 using System;
+using NarrativeRuntime;
+using Narrative;
 
 public class BottomBarController : MonoBehaviour
 {
@@ -12,11 +14,17 @@ public class BottomBarController : MonoBehaviour
 
     private int sentenceIndex = -1;
     public StoryScene currentScene;
+    // Runtime mode fields
+    private RuntimeStoryScene runtimeScene;
+    private List<Narrative.SentenceData> runtimeSentences;
+    private bool isRuntime = false;
     private State state = State.COMPLETED;
     private Animator animator;
     public bool IsHidden = false;
 
     public Dictionary<Speaker, SpriteController> sprites = new Dictionary<Speaker, SpriteController>();
+    // Runtime sprite controllers keyed by speaker id
+    private Dictionary<string, SpriteController> runtimeSprites = new Dictionary<string, SpriteController>();
 
     // public Speaker[] Speakers;
     // public SpriteController[] SpriteControllers;
@@ -27,33 +35,55 @@ public class BottomBarController : MonoBehaviour
         PLAYING, COMPLETED
     }
 
+    private void Awake()
+    {
+        // Ensure animator reference (some prefabs might be missing it)
+        if (!animator) animator = GetComponent<Animator>();
+    }
+
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        if (!animator)
+        {
+            animator = GetComponent<Animator>();
+            if (!animator)
+            {
+                Debug.LogWarning("BottomBarController has no Animator component; Hide/Show/Bounce animations will be skipped.");
+            }
+        }
     }
 
     public void Hide()
     {
-        if (!IsHidden)
+        if (IsHidden) return;
+        if (animator)
         {
             animator.SetTrigger("Hide");
-            IsHidden = true;
         }
-
+        else
+        {
+            // Fallback: simply deactivate text objects visually if desired
+            // (leave active so logic still progresses)
+        }
+        IsHidden = true;
     }
 
     public void Show()
     {
-        if (IsHidden)
+        if (!IsHidden) return;
+        if (animator)
         {
             animator.SetTrigger("Show");
-            IsHidden = false;
         }
+        IsHidden = false;
     }
 
     public void Bounce()
     {
-        animator.SetTrigger("Bounce");
+        if (animator)
+        {
+            animator.SetTrigger("Bounce");
+        }
     }
 
     public void ClearText()
@@ -63,6 +93,9 @@ public class BottomBarController : MonoBehaviour
 
     public void PlayScene(StoryScene scene)
     {
+    isRuntime = false;
+    runtimeScene = null;
+    runtimeSentences = null;
         currentScene = scene;
         sentenceIndex = -1;
 
@@ -89,28 +122,47 @@ public class BottomBarController : MonoBehaviour
         }
     }
 
+    // Runtime narrative support (temporary adapter methods)
+    public void PlayRuntimeStory(NarrativeRuntime.RuntimeStoryScene runtimeScene)
+    {
+        // Full runtime path (no ScriptableObject bridge)
+        isRuntime = true;
+        currentScene = null;
+        this.runtimeScene = runtimeScene;
+        runtimeSentences = runtimeScene.Sentences;
+        sentenceIndex = -1;
+        // Clear any prior runtime sprites
+        foreach (var kv in runtimeSprites)
+        {
+            if (kv.Value) Destroy(kv.Value.gameObject);
+        }
+        runtimeSprites.Clear();
+        PlayNextSentence();
+    }
+
     public void PlayNextSentence()
     {
-        // Ensure currentScene and its sentences are valid before proceeding
+        if (isRuntime)
+        {
+            PlayNextRuntimeSentence();
+            return;
+        }
+
+        // Original SO path
         if (currentScene == null || currentScene.sentences == null || currentScene.sentences.Count == 0)
         {
             Debug.LogError("PlayNextSentence called, but currentScene is null or has no sentences.");
-            state = State.COMPLETED; // Mark as completed to prevent getting stuck
+            state = State.COMPLETED;
             return;
         }
-
-        // Check if we are trying to play beyond the last sentence
         if (sentenceIndex + 1 >= currentScene.sentences.Count)
         {
-            Debug.LogWarning("PlayNextSentence called, but already at/past the last sentence. This should be handled by GameController.");
-            state = State.COMPLETED; // Ensure state is COMPLETED
+            Debug.LogWarning("PlayNextSentence called, but already at/past the last sentence.");
+            state = State.COMPLETED;
             return;
         }
-
-        sentenceIndex++; // Increment sentenceIndex *before* using it
-
+        sentenceIndex++;
         StartCoroutine(TypeText(currentScene.sentences[sentenceIndex].text));
-        
         Speaker speaker = currentScene.sentences[sentenceIndex].speaker;
         if (speaker != null)
         {
@@ -119,11 +171,36 @@ public class BottomBarController : MonoBehaviour
         }
         else
         {
-            personNameText.text = ""; // Clear name if no speaker
-            // Optional: Log a warning if a speaker is expected but is null for this sentence
-            // Debug.LogWarning($"Sentence {sentenceIndex} in scene '{currentScene.name}' has a null speaker.");
+            personNameText.text = "";
         }
         ActSpeakers();
+    }
+
+    private void PlayNextRuntimeSentence()
+    {
+        if (runtimeSentences == null || runtimeSentences.Count == 0)
+        {
+            state = State.COMPLETED;
+            return;
+        }
+        if (sentenceIndex + 1 >= runtimeSentences.Count)
+        {
+            state = State.COMPLETED;
+            return;
+        }
+        sentenceIndex++;
+        var sentence = runtimeSentences[sentenceIndex];
+        StartCoroutine(TypeText(sentence.text));
+        if (!string.IsNullOrEmpty(sentence.speaker) && NarrativeRegistry.Speakers.TryGetValue(sentence.speaker, out var sp))
+        {
+            personNameText.text = sp.Name;
+            personNameText.color = sp.Color;
+        }
+        else
+        {
+            personNameText.text = "";
+        }
+        ActRuntimeSpeakers(sentence);
     }
 
     public bool IsCompleted()
@@ -133,11 +210,12 @@ public class BottomBarController : MonoBehaviour
 
     public bool IsLastSentence()
     {
-        if (currentScene == null || currentScene.sentences == null)
+        if (isRuntime)
         {
-            // If scene or sentences are null, consider it as if there are no more sentences.
-            return true; 
+            if (runtimeSentences == null) return true;
+            return sentenceIndex + 1 >= runtimeSentences.Count;
         }
+        if (currentScene == null || currentScene.sentences == null) return true;
         return sentenceIndex + 1 >= currentScene.sentences.Count;
     }
 
@@ -255,6 +333,76 @@ public class BottomBarController : MonoBehaviour
                     Debug.LogWarning($"it didnt work bruh");
                 }
                 return;
+        }
+    }
+
+    private void ActRuntimeSpeakers(Narrative.SentenceData sentence)
+    {
+        if (sentence.actions == null) return;
+        foreach (var action in sentence.actions)
+        {
+            RuntimeActSpeaker(action);
+        }
+    }
+
+    private void RuntimeActSpeaker(Narrative.ActionData action)
+    {
+        if (string.IsNullOrEmpty(action.speaker)) return;
+        if (!NarrativeRegistry.Speakers.TryGetValue(action.speaker, out var speakerRuntime))
+        {
+            Debug.LogWarning($"Runtime speaker not found: {action.speaker}");
+            return;
+        }
+        runtimeSprites.TryGetValue(action.speaker, out var controller);
+        var pos = new Vector2(action.x, action.y);
+        switch (action.type)
+        {
+            case ActionType.APPEAR:
+                if (!controller)
+                {
+                    if (!speakerRuntime.Prefab)
+                    {
+                        Debug.LogWarning($"Speaker prefab missing for {speakerRuntime.Id}");
+                        return;
+                    }
+                    controller = Instantiate(speakerRuntime.Prefab.gameObject, spritesPrefab.transform).GetComponent<SpriteController>();
+                    runtimeSprites[action.speaker] = controller;
+                }
+                if (speakerRuntime.Sprites.Count <= action.spriteIndex || action.spriteIndex < 0)
+                {
+                    Debug.LogWarning($"Sprite index {action.spriteIndex} out of range for speaker {speakerRuntime.Id}");
+                    return;
+                }
+                controller.Setup(speakerRuntime.Sprites[action.spriteIndex]);
+                controller.Show(pos);
+                break;
+            case ActionType.MOVE:
+                if (controller)
+                {
+                    controller.Move(pos, action.moveSpeed <= 0 ? 1f : action.moveSpeed);
+                }
+                break;
+            case ActionType.DISAPPEAR:
+                if (controller)
+                {
+                    controller.Hide();
+                    runtimeSprites.Remove(action.speaker);
+                    Destroy(controller.gameObject);
+                }
+                break;
+            case ActionType.NONE:
+                if (controller)
+                {
+                    if (speakerRuntime.Sprites.Count > action.spriteIndex && action.spriteIndex >= 0)
+                        controller.SwitchSprite(speakerRuntime.Sprites[action.spriteIndex]);
+                }
+                break;
+            case ActionType.BOUNCE:
+                if (controller)
+                {
+                    controller.Bounce();
+                }
+                break;
         }
     }
 }
