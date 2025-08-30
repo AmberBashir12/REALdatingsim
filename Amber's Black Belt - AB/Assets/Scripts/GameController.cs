@@ -8,12 +8,13 @@ public class GameController : MonoBehaviour
     public BottomBarController bottomBar;
     public SpriteSwitcher backgroundController;
     public ChooseController chooseController;
+    public AIDialogueController aiDialogueController; // Add AI dialogue controller reference
 
     private State state = State.IDLE;
 
     private enum State
     {
-        IDLE, ANIMATE, CHOOSE
+        IDLE, ANIMATE, CHOOSE, AI_DIALOGUE
     }
     // Start is called before the first frame update
     void Start()
@@ -21,8 +22,55 @@ public class GameController : MonoBehaviour
         if (currentScene is StoryScene)
         {
             StoryScene storyScene = currentScene as StoryScene;
-            bottomBar.PlayScene(storyScene);
-            backgroundController.SetImage(storyScene.background);
+            
+            // BottomBar is required for StoryScenes
+            if (bottomBar != null)
+            {
+                bottomBar.PlayScene(storyScene);
+            }
+            else
+            {
+                Debug.LogError("BottomBarController not assigned to GameController! This is required for StoryScenes.");
+            }
+            
+            // Background controller is optional for StoryScenes
+            if (backgroundController != null && storyScene.background != null)
+            {
+                backgroundController.SetImage(storyScene.background);
+            }
+            else if (backgroundController == null)
+            {
+                Debug.LogWarning("Background Controller not assigned to GameController! Background images won't work.");
+            }
+        }
+        else if (currentScene is AIScene)
+        {
+            AIScene aiScene = currentScene as AIScene;
+            
+            // Background controller is optional for AI scenes
+            if (backgroundController != null && aiScene.background != null)
+            {
+                backgroundController.SetImage(aiScene.background);
+            }
+            else if (backgroundController == null && aiScene.background != null)
+            {
+                Debug.LogWarning("Background Controller not assigned but AI scene has a background. Background won't display.");
+            }
+            
+            // AI Dialogue Controller is required for AI scenes
+            if (aiDialogueController != null)
+            {
+                aiDialogueController.StartAIScene(aiScene);
+                state = State.AI_DIALOGUE;
+            }
+            else
+            {
+                Debug.LogError("AIDialogueController not assigned to GameController! This is required for AI scenes.");
+            }
+        }
+        else if (currentScene == null)
+        {
+            Debug.LogError("No scene assigned to GameController! Please assign a scene in the Inspector.");
         }
     }
     // Update is called once per frame
@@ -40,6 +88,15 @@ public class GameController : MonoBehaviour
                 {
                     bottomBar.PlayNextSentence();
                 }
+            }
+        }
+        
+        // Check if AI dialogue is complete
+        if (state == State.AI_DIALOGUE && aiDialogueController != null)
+        {
+            if (aiDialogueController.IsConversationComplete() && !aiDialogueController.IsProcessing())
+            {
+                // AI conversation is done, but don't auto-advance - let the continue button handle it
             }
         }
     }
@@ -88,9 +145,29 @@ public class GameController : MonoBehaviour
             state = State.CHOOSE;
             chooseController.SetupChoose(chooseScene); 
         }
+        else if (scene is AIScene aiScene)
+        {
+            if (aiScene.background != null)
+            {
+                backgroundController.SwitchImage(aiScene.background);
+            }
+            
+            yield return new WaitForSeconds(1f);
+            
+            if (aiDialogueController != null)
+            {
+                aiDialogueController.StartAIScene(aiScene);
+                state = State.AI_DIALOGUE;
+            }
+            else
+            {
+                Debug.LogError("AIDialogueController not found! Cannot start AI scene.");
+                state = State.IDLE;
+            }
+        }
         else
         {
-            Debug.LogError($"Loaded scene '{scene.name}' is not a StoryScene or ChooseScene. Type: {scene.GetType()}. Cannot proceed.");
+            Debug.LogError($"Loaded scene '{scene.name}' is not a StoryScene, ChooseScene, or AIScene. Type: {scene.GetType()}. Cannot proceed.");
             if (bottomBar.IsHidden)
             {
                 bottomBar.Show();

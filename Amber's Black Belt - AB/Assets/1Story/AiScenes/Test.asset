@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85db54e49a1270047aa6af729d30e540, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  sceneName: Ai chat test
+  background: {fileID: 21300000, guid: 64c45f32e38b3a64595738b378eaa516, type: 3}
+  nextScene: {fileID: 11400000, guid: a787fcf6da426f74b9ace39999c31039, type: 2}
+  aiSpeaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+  playerSpeaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+  systemPrompt: You are a character in a dating simulation game. Respond naturally
+    and stay in character. Keep responses conversational and engaging, around 1-2
+    sentences.
+  characterDescription: You are a friendly and charming character who enjoys getting
+    to know new people. Also you think you are the hottest guy in the world, and
+    all girls should fall for you. But your also very nonchalant about it. You play
+    soccer and try to ask out the new girl.
+  maxConversationTurns: 10
+  allowPlayerInput: 1
+  conversationStarters:
+  - Wasssupp shawty
+  responseOptions: []

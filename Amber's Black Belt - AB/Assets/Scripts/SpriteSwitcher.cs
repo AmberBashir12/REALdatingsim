@@ -19,6 +19,18 @@ public class SpriteSwitcher : MonoBehaviour
 
     public void SwitchImage(Sprite sprite)
     {
+        if (Image1 == null || Image2 == null)
+        {
+            Debug.LogError("Image1 or Image2 not assigned in SpriteSwitcher! Please assign them in the Inspector.");
+            return;
+        }
+        
+        if (animator == null)
+        {
+            Debug.LogError("Animator component missing on SpriteSwitcher!");
+            return;
+        }
+        
         if(!isSwitched)
         {
             Image1.sprite = sprite;
@@ -33,6 +45,12 @@ public class SpriteSwitcher : MonoBehaviour
     }
     public void SetImage(Sprite sprite)
     {
+        if (Image1 == null || Image2 == null)
+        {
+            Debug.LogError("Image1 or Image2 not assigned in SpriteSwitcher! Please assign them in the Inspector.");
+            return;
+        }
+        
         if (!isSwitched)
         {
             Image1.sprite = sprite;
