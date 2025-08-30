@@ -17,9 +17,6 @@ public class StoryScene : GameScene
         public string text;
         public List<Action> actions;
 
-        public AudioClip Music;
-        public AudioClip Sound;
-
         [System.Serializable]
         public struct Action
         {
