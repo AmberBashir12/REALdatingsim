@@ -21,6 +21,8 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 200, y: 0}
       moveSpeed: 0
+    music: {fileID: 8300000, guid: 2b02399d4718e3541a3c18653ae2a3c2, type: 3}
+    sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
     text: boy come inside now
     actions:
@@ -34,6 +36,8 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 200, y: 0}
       moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: ok
     actions:
@@ -47,5 +51,7 @@ MonoBehaviour:
       actionType: 3
       coords: {x: 200, y: 0}
       moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
   background: {fileID: 21300000, guid: dbcdd7fd899ffae459c18f2381aea204, type: 3}
   nextScene: {fileID: 11400000, guid: 183980f9e61441642bf1211f6989814c, type: 2}

@@ -32,6 +32,11 @@ public class BottomBarController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    public int GetSentenceIndex()
+    {
+        return sentenceIndex;
+    }
+
     public void Hide()
     {
         if (!IsHidden)

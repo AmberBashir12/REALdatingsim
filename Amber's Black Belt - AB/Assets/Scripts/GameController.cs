@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public BottomBarController bottomBar;
     public SpriteSwitcher backgroundController;
     public ChooseController chooseController;
+    public AudioController audioController;
 
     private State state = State.IDLE;
 
@@ -23,6 +24,7 @@ public class GameController : MonoBehaviour
             StoryScene storyScene = currentScene as StoryScene;
             bottomBar.PlayScene(storyScene);
             backgroundController.SetImage(storyScene.background);
+            PlayAudio(storyScene.sentences[0]);
         }
     }
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class GameController : MonoBehaviour
                 else
                 {
                     bottomBar.PlayNextSentence();
+                    PlayAudio((currentScene as StoryScene).sentences[bottomBar.GetSentenceIndex()]);
                 }
             }
         }
@@ -74,7 +77,8 @@ public class GameController : MonoBehaviour
                 Debug.LogWarning($"StoryScene '{storyScene.name}' has no background assigned.");
             }
             backgroundController.SwitchImage(storyScene.background);
-            
+            PlayAudio(storyScene.sentences[0]);
+
             yield return new WaitForSeconds(1f);
             bottomBar.Show();
             bottomBar.ClearText();
@@ -98,4 +102,9 @@ public class GameController : MonoBehaviour
             state = State.IDLE; // Revert to IDLE
         }
     }
+
+    private void PlayAudio(StoryScene.Sentence sentence)
+    {
+        audioController.PlayAudio(sentence.music, sentence.sound);
+    } 
 }
