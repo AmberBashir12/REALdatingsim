@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 412dca171f510ae4a91e62bb794a7ff5, type: 3}
-  m_Name: 339 DId u hear
+  m_Name: 339-Wannameet
   m_EditorClassIdentifier: 
   labels:
-  - text: N N N noo...
-    nextScene: {fileID: 11400000, guid: 23ea59d93350e1d428af3da88b13db46, type: 2}
-  - text: Yes
-    nextScene: {fileID: 0}
-  - text: You were really good
+  - text: umm I dont want to meet
+    nextScene: {fileID: 11400000, guid: 95f98c327051fa7459b33623aefa2651, type: 2}
+  - text: ok
     nextScene: {fileID: 0}
