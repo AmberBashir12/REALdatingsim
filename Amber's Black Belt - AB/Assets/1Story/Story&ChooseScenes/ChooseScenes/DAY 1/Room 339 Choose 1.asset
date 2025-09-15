@@ -15,7 +15,15 @@ MonoBehaviour:
   labels:
   - text: Ignore
     nextScene: {fileID: 11400000, guid: 4d67bccd5dbbb91438b673ef66f7cd9b, type: 2}
+    choiceKeyToUnlock: 
   - text: Go inside
     nextScene: {fileID: 11400000, guid: ec457ec546a23e34f97ad0a669e92c2d, type: 2}
+    choiceKeyToUnlock: 
   - text: Tell Student Council
     nextScene: {fileID: 11400000, guid: 4f50950c523e18d418c5b95518c52c82, type: 2}
+    choiceKeyToUnlock: 
+  additionalLabels:
+  - text: Tell Sporty Guy
+    nextScene: {fileID: 11400000, guid: 2c02fbd3fdbdcd74c87633cbe3fc0190, type: 2}
+    requiredChoiceKey: W
+    choiceKeyToUnlock: 

@@ -505,6 +505,8 @@ GameObject:
   - component: {fileID: 416896280}
   - component: {fileID: 416896279}
   - component: {fileID: 416896283}
+  - component: {fileID: 416896284}
+  - component: {fileID: 416896285}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -617,6 +619,37 @@ MonoBehaviour:
   backgroundController: {fileID: 1329605603}
   chooseController: {fileID: 1314921446}
   audioController: {fileID: 516357578}
+--- !u!114 &416896284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416896278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfce784a3d0f6bb4fbadc62aa3c53e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetStateOnStart: 0
+  choicesToUnlock:
+  - W
+--- !u!114 &416896285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416896278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0bc23a39e03f141bebef0884faacc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugUnlockedChoices:
+  - 
+  choiceToUnlock: 
+  choiceToCheck: 
 --- !u!1 &425530775
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,10 @@ public class ChooseController : MonoBehaviour
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
 
-        for (int i = 0; i < scene.labels.Count; i++) 
+        // Get all available choices (base + unlocked additional choices)
+        List<ChooseScene.ChooseLabel> availableChoices = scene.GetAvailableChoices();
+
+        for (int i = 0; i < availableChoices.Count; i++) 
         {
             ChooseLabelController newLabel = Instantiate(labelPrefab, transform).GetComponent<ChooseLabelController>();
             // Enable the ChooseLabelController script
@@ -51,12 +54,12 @@ public class ChooseController : MonoBehaviour
                 tmpText.enabled = true;
             }
             
-            float yPos = CalculateLabelPosition(scene.labels.Count, i);
-            newLabel.Setup(scene.labels[i], this, yPos);
+            float yPos = CalculateLabelPosition(availableChoices.Count, i);
+            newLabel.Setup(availableChoices[i], this, yPos);
         }
 
         // Adjust container height based on number of choices
-        float totalHeight = (scene.labels.Count + 1) * labelHeight;
+        float totalHeight = (availableChoices.Count + 1) * labelHeight;
         rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, totalHeight);
     }
 
