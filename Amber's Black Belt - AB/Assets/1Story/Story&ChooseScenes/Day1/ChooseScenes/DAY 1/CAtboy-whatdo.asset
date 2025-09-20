@@ -10,12 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 412dca171f510ae4a91e62bb794a7ff5, type: 3}
-  m_Name: SCp-Report
+  m_Name: CAtboy-whatdo
   m_EditorClassIdentifier: 
   labels:
-  - text: '"Theres a girl playing music in Room 339."'
+  - text: Talk to Him
     nextScene: {fileID: 0}
-  - text: Theres a School FIRE!! RUN!!!
-    nextScene: {fileID: 11400000, guid: 117bf7147cbc3cf408f5926c4f82f8e1, type: 2}
-  - text: Im struggling with my Homework.. can you help me..?
+    choiceKeyToUnlock: 
+  - text: Make Eye contact and run away
+    nextScene: {fileID: 11400000, guid: 22a9063325b8972469a8bf62b2851f8c, type: 2}
+    choiceKeyToUnlock: 
+  - text: Leave
+    nextScene: {fileID: 11400000, guid: f1b27e2e2d8c18644b90d7737a461c31, type: 2}
+    choiceKeyToUnlock: 
+  additionalLabels:
+  - text: 
     nextScene: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
