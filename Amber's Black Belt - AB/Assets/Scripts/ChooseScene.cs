@@ -32,6 +32,15 @@ public class ChooseScene : GameScene
                 {
                     Debug.Log($"Unlocking choice key: '{label.choiceKeyToUnlock}'");
                     GameStateManager.Instance.UnlockChoice(label.choiceKeyToUnlock);
+                    Debug.Log($"After unlocking, key '{label.choiceKeyToUnlock}' is now unlocked: {GameStateManager.Instance.IsChoiceUnlocked(label.choiceKeyToUnlock)}");
+                }
+                else if (string.IsNullOrEmpty(label.choiceKeyToUnlock))
+                {
+                    Debug.Log($"No choice key to unlock for label '{labelText}'");
+                }
+                else if (GameStateManager.Instance == null)
+                {
+                    Debug.LogWarning("GameStateManager.Instance is null when trying to unlock choice key!");
                 }
                 return label.nextScene;
             }

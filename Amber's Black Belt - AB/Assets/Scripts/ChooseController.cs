@@ -56,6 +56,7 @@ public class ChooseController : MonoBehaviour
             
             float yPos = CalculateLabelPosition(availableChoices.Count, i);
             newLabel.Setup(availableChoices[i], this, yPos);
+            newLabel.SetChooseScene(scene); // Pass the ChooseScene so it can handle choice key unlocking
         }
 
         // Adjust container height based on number of choices

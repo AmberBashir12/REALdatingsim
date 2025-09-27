@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
             {
                 if (bottomBar.IsLastSentence())
                 {
-                    PlayScene((currentScene as StoryScene).nextScene);
+                    PlayScene((currentScene as StoryScene).GetNextScene());
                 }
                 else
                 {

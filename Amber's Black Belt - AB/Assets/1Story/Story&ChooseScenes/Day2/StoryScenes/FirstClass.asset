@@ -20,3 +20,6 @@ MonoBehaviour:
     sound: {fileID: 0}
   background: {fileID: 0}
   nextScene: {fileID: 0}
+  alternativeScenes:
+  - requiredChoiceKey: 
+    alternativeScene: {fileID: 0}

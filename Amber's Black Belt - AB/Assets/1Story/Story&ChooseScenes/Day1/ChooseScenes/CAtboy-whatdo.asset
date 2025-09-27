@@ -17,10 +17,10 @@ MonoBehaviour:
     nextScene: {fileID: 0}
     choiceKeyToUnlock: 
   - text: Make Eye contact and run away
-    nextScene: {fileID: 11400000, guid: 22a9063325b8972469a8bf62b2851f8c, type: 2}
-    choiceKeyToUnlock: 
+    nextScene: {fileID: 0}
+    choiceKeyToUnlock: NextDay
   - text: Leave
-    nextScene: {fileID: 11400000, guid: f1b27e2e2d8c18644b90d7737a461c31, type: 2}
+    nextScene: {fileID: 11400000, guid: 22a9063325b8972469a8bf62b2851f8c, type: 2}
     choiceKeyToUnlock: 
   additionalLabels:
   - text: 

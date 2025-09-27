@@ -26,6 +26,8 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 0, y: 0}
       moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: come here straight after school!
     actions:
@@ -39,6 +41,8 @@ MonoBehaviour:
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: OK! IM SO EXCITED
     actions:
@@ -52,6 +56,8 @@ MonoBehaviour:
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: dont trip over your feet babe
     actions:
@@ -65,18 +71,23 @@ MonoBehaviour:
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: EEEEEEKKK!!!!
     actions:
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
-      actionType: 0
+      actionType: 3
       coords: {x: 0, y: 0}
       moveSpeed: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
-      actionType: 4
+      actionType: 3
       coords: {x: 0, y: 0}
       moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
   background: {fileID: 21300000, guid: 64c45f32e38b3a64595738b378eaa516, type: 3}
-  nextScene: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: 6308f58002f79894885795cebe833932, type: 2}
+  alternativeScenes: []

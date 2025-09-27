@@ -11,6 +11,8 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
     private StoryScene scene;
     private TextMeshProUGUI textMesh;
     private ChooseController controller;
+    private ChooseScene chooseScene;
+    private string labelText;
 
     // Start is called before the first frame update
     void Awake()
@@ -35,6 +37,7 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
     public void Setup(ChooseScene.ChooseLabel label, ChooseController controller, float y)
     {
         scene = label.nextScene;
+        labelText = label.text;
         if (textMesh != null)
         {
             textMesh.text = label.text;
@@ -47,11 +50,24 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
         textMesh.rectTransform.localPosition = position;
     }
 
+    public void SetChooseScene(ChooseScene chooseScene)
+    {
+        this.chooseScene = chooseScene;
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (enabled && controller != null)
         {
-            controller.PerformChoose(scene);
+            StoryScene nextScene = scene; // Default fallback
+            
+            if (chooseScene != null && !string.IsNullOrEmpty(labelText))
+            {
+                // Use ChooseScene.GetNextScene to handle choice key unlocking
+                nextScene = chooseScene.GetNextScene(labelText);
+            }
+            
+            controller.PerformChoose(nextScene);
         }
     }
 
