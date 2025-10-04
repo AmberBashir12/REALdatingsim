@@ -13,13 +13,83 @@ MonoBehaviour:
   m_Name: FirstClass
   m_EditorClassIdentifier: 
   sentences:
-  - speaker: {fileID: 0}
-    text: 
-    actions: []
+  - speaker: {fileID: 11400000, guid: 85ac4a561de601645863045c62205dd9, type: 2}
+    text: Goodmorning Class today we have a new student
+    actions:
+    - speaker: {fileID: 11400000, guid: 85ac4a561de601645863045c62205dd9, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
     music: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 0}
+  - speaker: {fileID: 11400000, guid: 85ac4a561de601645863045c62205dd9, type: 2}
+    text: say hi
+    actions:
+    - speaker: {fileID: 11400000, guid: 85ac4a561de601645863045c62205dd9, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: hi
+    actions:
+    - speaker: {fileID: 11400000, guid: 85ac4a561de601645863045c62205dd9, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - speaker: {fileID: 11400000, guid: 85ac4a561de601645863045c62205dd9, type: 2}
+    text: ok you can sit at the back with "sportyguy" over there
+    actions:
+    - speaker: {fileID: 11400000, guid: 85ac4a561de601645863045c62205dd9, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - speaker: {fileID: 11400000, guid: 85ac4a561de601645863045c62205dd9, type: 2}
+    text: ok
+    actions:
+    - speaker: {fileID: 11400000, guid: 85ac4a561de601645863045c62205dd9, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  background: {fileID: 21300000, guid: aee0bbc580c777b478969e59bcfb83e8, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes:
-  - requiredChoiceKey: 
+  - requiredChoiceKeys: []
     alternativeScene: {fileID: 0}

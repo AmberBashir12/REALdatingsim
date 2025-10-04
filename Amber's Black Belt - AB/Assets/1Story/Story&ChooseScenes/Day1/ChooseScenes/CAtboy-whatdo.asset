@@ -21,7 +21,7 @@ MonoBehaviour:
     choiceKeyToUnlock: NextDay
   - text: Leave
     nextScene: {fileID: 11400000, guid: 22a9063325b8972469a8bf62b2851f8c, type: 2}
-    choiceKeyToUnlock: 
+    choiceKeyToUnlock: Alone3
   additionalLabels:
   - text: 
     nextScene: {fileID: 0}

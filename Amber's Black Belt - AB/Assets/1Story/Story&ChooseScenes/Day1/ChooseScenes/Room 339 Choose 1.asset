@@ -15,11 +15,11 @@ MonoBehaviour:
   labels:
   - text: Ignore
     nextScene: {fileID: 11400000, guid: 4d67bccd5dbbb91438b673ef66f7cd9b, type: 2}
-    choiceKeyToUnlock: 
+    choiceKeyToUnlock: Alone2
   - text: Go inside
     nextScene: {fileID: 11400000, guid: ec457ec546a23e34f97ad0a669e92c2d, type: 2}
-    choiceKeyToUnlock: NextDay
+    choiceKeyToUnlock: 
   - text: Tell Student Council
     nextScene: {fileID: 11400000, guid: 4f50950c523e18d418c5b95518c52c82, type: 2}
-    choiceKeyToUnlock: NextDay
+    choiceKeyToUnlock: 
   additionalLabels: []

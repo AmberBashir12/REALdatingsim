@@ -54,9 +54,12 @@ MonoBehaviour:
     music: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: dbcdd7fd899ffae459c18f2381aea204, type: 3}
-  nextScene: {fileID: 11400000, guid: f1b27e2e2d8c18644b90d7737a461c31, type: 2}
+  nextScene: {fileID: 11400000, guid: d48fc4ad8a1780445a1f6f7a3e9ccdef, type: 2}
   alternativeScenes:
-  - requiredChoiceKey: MeetSportyGuy
+  - requiredChoiceKeys: []
     alternativeScene: {fileID: 11400000, guid: 9227bb42cc2d78744a2cd9ee3d1c64ae, type: 2}
-  - requiredChoiceKey: NextDay
-    alternativeScene: {fileID: 11400000, guid: d48fc4ad8a1780445a1f6f7a3e9ccdef, type: 2}
+  - requiredChoiceKeys:
+    - Alone1
+    - Alone2
+    - Alone3
+    alternativeScene: {fileID: 11400000, guid: f1b27e2e2d8c18644b90d7737a461c31, type: 2}

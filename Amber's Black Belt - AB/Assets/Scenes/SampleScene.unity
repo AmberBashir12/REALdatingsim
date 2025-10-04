@@ -632,8 +632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetStateOnStart: 0
-  choicesToUnlock:
-  - MeetMusicGirl1
+  choicesToUnlock: []
 --- !u!114 &416896285
 MonoBehaviour:
   m_ObjectHideFlags: 0

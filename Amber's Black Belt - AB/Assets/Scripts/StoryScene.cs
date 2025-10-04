@@ -41,7 +41,7 @@ public class StoryScene : GameScene
     [System.Serializable]
     public struct AlternativeScenes
     {
-        public string requiredChoiceKey; // Key that must be unlocked to access this alternative scene
+        public List<string> requiredChoiceKeys; // All keys that must be unlocked to access this alternative scene
         public StoryScene alternativeScene;
     }
 
@@ -75,22 +75,43 @@ public class StoryScene : GameScene
             for (int i = 0; i < alternativeScenes.Count; i++)
             {
                 AlternativeScenes altScene = alternativeScenes[i];
-                Debug.Log($"Checking alternative scene {i}: requiredKey='{altScene.requiredChoiceKey}', scene={altScene.alternativeScene?.name ?? "NULL"}");
+                Debug.Log($"Checking alternative scene {i}: scene={altScene.alternativeScene?.name ?? "NULL"}");
                 
-                if (string.IsNullOrEmpty(altScene.requiredChoiceKey))
+                if (altScene.requiredChoiceKeys == null || altScene.requiredChoiceKeys.Count == 0)
                 {
-                    Debug.Log($"Alternative scene {i} has empty/null requiredChoiceKey");
+                    Debug.Log($"Alternative scene {i} has no required choice keys");
+                    continue;
+                }
+                
+                bool allKeysUnlocked = true;
+                Debug.Log($"Alternative scene {i} requires {altScene.requiredChoiceKeys.Count} keys:");
+                
+                foreach (string requiredKey in altScene.requiredChoiceKeys)
+                {
+                    if (string.IsNullOrEmpty(requiredKey))
+                    {
+                        Debug.Log($"  - Empty/null key found, skipping");
+                        continue;
+                    }
+                    
+                    bool isUnlocked = GameStateManager.Instance.IsChoiceUnlocked(requiredKey);
+                    Debug.Log($"  - Choice key '{requiredKey}' is unlocked: {isUnlocked}");
+                    
+                    if (!isUnlocked)
+                    {
+                        allKeysUnlocked = false;
+                        break;
+                    }
+                }
+                
+                if (allKeysUnlocked)
+                {
+                    Debug.Log($"All required keys unlocked! Using alternative scene: {altScene.alternativeScene?.name ?? "NULL"}");
+                    return altScene.alternativeScene;
                 }
                 else
                 {
-                    bool isUnlocked = GameStateManager.Instance.IsChoiceUnlocked(altScene.requiredChoiceKey);
-                    Debug.Log($"Choice key '{altScene.requiredChoiceKey}' is unlocked: {isUnlocked}");
-                    
-                    if (isUnlocked)
-                    {
-                        Debug.Log($"Using alternative scene for unlocked key: '{altScene.requiredChoiceKey}' -> {altScene.alternativeScene?.name ?? "NULL"}");
-                        return altScene.alternativeScene;
-                    }
+                    Debug.Log($"Not all required keys are unlocked for alternative scene {i}");
                 }
             }
         }
