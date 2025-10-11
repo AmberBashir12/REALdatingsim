@@ -9,12 +9,13 @@ public class GameController : MonoBehaviour
     public SpriteSwitcher backgroundController;
     public ChooseController chooseController;
     public AudioController audioController;
+    public ExplorationController explorationController;
 
     private State state = State.IDLE;
 
     private enum State
     {
-        IDLE, ANIMATE, CHOOSE
+        IDLE, ANIMATE, CHOOSE, EXPLORE
     }
     // Start is called before the first frame update
     void Start()
@@ -92,9 +93,21 @@ public class GameController : MonoBehaviour
             state = State.CHOOSE;
             chooseController.SetupChoose(chooseScene); 
         }
+        else if (scene is ExplorationScene explorationScene)
+        {
+            if (explorationController == null)
+            {
+                Debug.LogError("ExplorationController is not assigned in GameController! Please assign it in the Inspector.");
+                state = State.IDLE;
+                yield break;
+            }
+            
+            state = State.EXPLORE;
+            explorationController.SetupExplorationScene(explorationScene);
+        }
         else
         {
-            Debug.LogError($"Loaded scene '{scene.name}' is not a StoryScene or ChooseScene. Type: {scene.GetType()}. Cannot proceed.");
+            Debug.LogError($"Loaded scene '{scene.name}' is not a StoryScene, ChooseScene, or ExplorationScene. Type: {scene.GetType()}. Cannot proceed.");
             if (bottomBar.IsHidden)
             {
                 bottomBar.Show();
