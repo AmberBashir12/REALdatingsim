@@ -10,23 +10,29 @@ public class InteractiveSpeakerController : MonoBehaviour, IPointerClickHandler,
     public Color glowColor = Color.yellow;
     public float glowIntensity = 1.3f;
     
-    private SpriteRenderer spriteRenderer;
+    private UnityEngine.UI.Image imageComponent;
     private Color originalColor;
     private ExplorationController explorationController;
+    private Speaker speaker;
     
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null)
+        imageComponent = GetComponent<UnityEngine.UI.Image>();
+        if (imageComponent != null)
         {
-            originalColor = spriteRenderer.color;
+            originalColor = imageComponent.color;
+        }
+        else
+        {
+            Debug.LogWarning($"InteractiveSpeakerController on {gameObject.name} has no Image component!");
         }
     }
     
-    public void Setup(string dialogue, ExplorationController controller)
+    public void Setup(string dialogue, ExplorationController controller, Speaker speakerData)
     {
         dialogueText = dialogue;
         explorationController = controller;
+        speaker = speakerData;
     }
     
     public void OnPointerClick(PointerEventData eventData)
@@ -35,27 +41,27 @@ public class InteractiveSpeakerController : MonoBehaviour, IPointerClickHandler,
         
         if (!string.IsNullOrEmpty(dialogueText) && explorationController != null)
         {
-            explorationController.ShowDialogue(dialogueText);
+            explorationController.ShowDialogue(dialogueText, speaker);
         }
     }
     
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (spriteRenderer != null)
+        if (imageComponent != null)
         {
             // Apply glow effect
             Color glowEffect = originalColor * glowIntensity;
             glowEffect.a = originalColor.a;
-            spriteRenderer.color = glowEffect;
+            imageComponent.color = glowEffect;
         }
     }
     
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (spriteRenderer != null)
+        if (imageComponent != null)
         {
             // Remove glow effect
-            spriteRenderer.color = originalColor;
+            imageComponent.color = originalColor;
         }
     }
 }

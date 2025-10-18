@@ -95,13 +95,6 @@ public class GameController : MonoBehaviour
         }
         else if (scene is ExplorationScene explorationScene)
         {
-            if (explorationController == null)
-            {
-                Debug.LogError("ExplorationController is not assigned in GameController! Please assign it in the Inspector.");
-                state = State.IDLE;
-                yield break;
-            }
-            
             state = State.EXPLORE;
             explorationController.SetupExplorationScene(explorationScene);
         }

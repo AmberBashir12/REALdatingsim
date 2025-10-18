@@ -18,8 +18,7 @@ public class ExplorationScene : GameScene
     public struct InteractiveSpeaker
     {
         public Speaker speaker;
-        [Tooltip("Position as percentage of screen (0,0 = bottom-left, 1,1 = top-right)")]
-        [Range(0f, 1f)]
+        [Tooltip("Position as percentage of screen (0,0 = bottom-left, 1,1 = top-right). Values should be between 0 and 1")]
         public Vector2 screenPosition;
         [Tooltip("Size relative to screen (1 = normal size, 0.5 = half size, etc.)")]
         public float scale;
@@ -32,8 +31,7 @@ public class ExplorationScene : GameScene
     {
         [Tooltip("Prefab to instantiate for this interactive object")]
         public GameObject objectPrefab;
-        [Tooltip("Position as percentage of screen (0,0 = bottom-left, 1,1 = top-right)")]
-        [Range(0f, 1f)]
+        [Tooltip("Position as percentage of screen (0,0 = bottom-left, 1,1 = top-right). Values should be between 0 and 1")]
         public Vector2 screenPosition;
         [Tooltip("Size relative to screen (1 = normal size, 0.5 = half size, etc.)")]
         public float scale;

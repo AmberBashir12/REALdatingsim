@@ -9,6 +9,7 @@ public class ExplorationController : MonoBehaviour
     [Header("UI References")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI speakerNameText;
     public Button dialogueCloseButton;
     
     [Header("Prefab Containers")]
@@ -18,6 +19,13 @@ public class ExplorationController : MonoBehaviour
     
     private ExplorationScene currentScene;
     private GameController gameController;
+    
+    [Header("Typing Settings")]
+    public float typingSpeed = 0.05f;
+    
+    private Coroutine typingCoroutine;
+    private string fullDialogueText;
+    private bool isTyping = false;
     
     void Start()
     {
@@ -39,16 +47,47 @@ public class ExplorationController : MonoBehaviour
         {
             dialogueCloseButton.onClick.AddListener(CloseDialogue);
         }
+        
+        // Set up click detection for dialogue panel to complete/close text
+        if (dialoguePanel != null)
+        {
+            // Add Button component to dialogue panel if it doesn't exist
+            Button dialoguePanelButton = dialoguePanel.GetComponent<Button>();
+            if (dialoguePanelButton == null)
+            {
+                dialoguePanelButton = dialoguePanel.AddComponent<Button>();
+            }
+            dialoguePanelButton.onClick.AddListener(OnDialogueClicked);
+        }
     }
     
     public void SetupExplorationScene(ExplorationScene scene)
     {
+        Debug.Log($"SetupExplorationScene called for: {scene.name}");
         currentScene = scene;
         
         // Set background through GameController's background system
+        Debug.Log("Attempting to set background...");
         if (scene.background != null && gameController != null)
         {
-            gameController.backgroundController.SetImage(scene.background);
+            Debug.Log($"Setting exploration scene background: {scene.background.name}");
+            if (gameController.backgroundController != null)
+            {
+                Debug.Log($"BackgroundController found, calling SwitchImage with sprite: {scene.background.name}");
+                gameController.backgroundController.SwitchImage(scene.background);
+                Debug.Log("Background set through GameController.backgroundController.SwitchImage()");
+            }
+            else
+            {
+                Debug.LogError("GameController.backgroundController is null!");
+            }
+        }
+        else
+        {
+            if (scene.background == null)
+                Debug.LogError("ExplorationScene has no background assigned!");
+            if (gameController == null)
+                Debug.LogError("GameController reference is null!");
         }
         
         // Clear existing elements
@@ -86,7 +125,18 @@ public class ExplorationController : MonoBehaviour
     
     private void SetupSpeakers()
     {
-        if (currentScene.speakers == null || speakerContainer == null) return;
+        if (currentScene.speakers == null)
+        {
+            Debug.Log("No speakers in current scene");
+            return;
+        }
+        if (speakerContainer == null)
+        {
+            Debug.LogWarning("Speaker container is null!");
+            return;
+        }
+        
+        Debug.Log($"Setting up {currentScene.speakers.Count} speakers");
         
         foreach (var speakerData in currentScene.speakers)
         {
@@ -100,21 +150,26 @@ public class ExplorationController : MonoBehaviour
             rectTransform.anchoredPosition = screenPos;
             rectTransform.localScale = Vector3.one * speakerData.scale;
             
-            // Add sprite renderer for speaker image
+            // Add UI Image for speaker sprite (not SpriteRenderer for UI)
             if (speakerData.speaker.sprites != null && speakerData.speaker.sprites.Count > 0 && speakerData.speaker.sprites[0] != null)
             {
-                SpriteRenderer spriteRenderer = speakerObj.AddComponent<SpriteRenderer>();
-                spriteRenderer.sprite = speakerData.speaker.sprites[0]; // Use first sprite as default
-                spriteRenderer.sortingOrder = 1;
+                UnityEngine.UI.Image imageComponent = speakerObj.AddComponent<UnityEngine.UI.Image>();
+                imageComponent.sprite = speakerData.speaker.sprites[0]; // Use first sprite as default
+                imageComponent.preserveAspect = true; // Keep aspect ratio
+                
+                // Set size for the image
+                rectTransform.sizeDelta = new Vector2(200, 200); // Default size, adjust as needed
+            }
+            else
+            {
+                Debug.LogWarning($"Speaker {speakerData.speaker.speakerName} has no sprites assigned!");
             }
             
             // Add interactive speaker controller
             InteractiveSpeakerController speakerController = speakerObj.AddComponent<InteractiveSpeakerController>();
-            speakerController.Setup(speakerData.dialogueText, this);
+            speakerController.Setup(speakerData.dialogueText, this, speakerData.speaker);
             
-            // Add collider for interaction
-            BoxCollider2D collider = speakerObj.AddComponent<BoxCollider2D>();
-            collider.isTrigger = true;
+            Debug.Log($"Created speaker: {speakerData.speaker.speakerName} at position {screenPos} with scale {speakerData.scale}");
         }
     }
     
@@ -155,12 +210,32 @@ public class ExplorationController : MonoBehaviour
         }
     }
     
-    public void ShowDialogue(string text)
+    public void ShowDialogue(string text, Speaker speaker = null)
     {
         if (dialoguePanel != null && dialogueText != null)
         {
-            dialogueText.text = text;
+            // Store the full text
+            fullDialogueText = text;
+            
+            // Set speaker name and color if provided
+            if (speaker != null && speakerNameText != null)
+            {
+                speakerNameText.text = speaker.speakerName;
+                speakerNameText.color = speaker.textColor;
+            }
+            else if (speakerNameText != null)
+            {
+                speakerNameText.text = ""; // Clear name if no speaker
+            }
+            
             dialoguePanel.SetActive(true);
+            
+            // Start typing animation
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+            }
+            typingCoroutine = StartCoroutine(TypeText(fullDialogueText));
         }
     }
     
@@ -169,6 +244,49 @@ public class ExplorationController : MonoBehaviour
         if (dialoguePanel != null)
         {
             dialoguePanel.SetActive(false);
+            
+            // Stop typing if still in progress
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+                typingCoroutine = null;
+            }
+            isTyping = false;
+        }
+    }
+    
+    private IEnumerator TypeText(string text)
+    {
+        isTyping = true;
+        dialogueText.text = "";
+        
+        for (int i = 0; i < text.Length; i++)
+        {
+            dialogueText.text = text.Substring(0, i + 1);
+            yield return new WaitForSeconds(typingSpeed);
+        }
+        
+        isTyping = false;
+        typingCoroutine = null;
+    }
+    
+    public void OnDialogueClicked()
+    {
+        if (isTyping)
+        {
+            // Complete the text immediately
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+                typingCoroutine = null;
+            }
+            dialogueText.text = fullDialogueText;
+            isTyping = false;
+        }
+        else
+        {
+            // Close dialogue if text is complete
+            CloseDialogue();
         }
     }
     
@@ -185,7 +303,16 @@ public class ExplorationController : MonoBehaviour
     {
         if (gameController != null)
         {
+            // Clear current exploration scene elements before transitioning
+            Debug.Log($"Navigating from exploration scene to: {nextScene.name}");
+            Debug.Log("Clearing exploration scene elements before transitioning to next scene");
+            ClearScene();
+            
             gameController.PlayScene(nextScene);
+        }
+        else
+        {
+            Debug.LogError("GameController is null in NavigateToScene!");
         }
     }
     

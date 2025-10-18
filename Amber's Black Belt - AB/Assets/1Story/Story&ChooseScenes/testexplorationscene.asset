@@ -16,12 +16,21 @@ MonoBehaviour:
   audioClips: []
   speakers:
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    coords: {x: 80, y: 180}
+    screenPosition: {x: 0.2, y: 0.2}
+    scale: 1
     dialogueText: wahatssupppp ayyy
   interactableObjects:
   - objectPrefab: {fileID: 8657296758840795533, guid: 268b5bbd6140ea847968d2c83a51ea20, type: 3}
-    coords: {x: 60, y: 300}
+    screenPosition: {x: 0.1, y: 0.5}
+    scale: 1
     nextScene: {fileID: 11400000, guid: ed2c8eed1d7a147418943c553fca94ee, type: 2}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
+  - objectPrefab: {fileID: 55672829980942931, guid: 3937527f9e68a4e458e3483d6e08d473, type: 3}
+    screenPosition: {x: 0.9, y: 0.5}
+    scale: 1
+    nextScene: {fileID: 11400000, guid: 0af992b21789b8248958e1368030a591, type: 2}
     soundOnClick: {fileID: 0}
     requiredChoiceKey: 
     choiceKeyToUnlock: 
