@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
     public GameScene currentScene;
     public BottomBarController bottomBar;
-    public SpriteSwitcher backgroundController;
+    public BackgroundSwitcher backgroundController;
     public ChooseController chooseController;
     public AudioController audioController;
     public ExplorationController explorationController;

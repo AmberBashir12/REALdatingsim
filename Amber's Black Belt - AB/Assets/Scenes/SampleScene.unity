@@ -619,7 +619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 2c02fbd3fdbdcd74c87633cbe3fc0190, type: 2}
   bottomBar: {fileID: 928399771}
-  backgroundController: {fileID: 1329605603}
+  backgroundController: {fileID: 1329605606}
   chooseController: {fileID: 1314921446}
   audioController: {fileID: 516357578}
   explorationController: {fileID: 416896286}
@@ -1992,7 +1992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1329605605}
   - component: {fileID: 1329605604}
-  - component: {fileID: 1329605603}
+  - component: {fileID: 1329605606}
   m_Layer: 0
   m_Name: Backgrounds
   m_TagString: Untagged
@@ -2000,21 +2000,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1329605603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329605602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f472e53b24ada864fa0944d8c94af684, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isSwitched: 0
-  Image1: {fileID: 1224686885}
-  Image2: {fileID: 1779942701}
 --- !u!95 &1329605604
 Animator:
   serializedVersion: 5
@@ -2053,6 +2038,21 @@ Transform:
   - {fileID: 1779942700}
   m_Father: {fileID: 416896282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1329605606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329605602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c1f49446fda314ebb3586be5efea5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSwitched: 0
+  Image1: {fileID: 1224686885}
+  Image2: {fileID: 1779942701}
 --- !u!1 &1619638721
 GameObject:
   m_ObjectHideFlags: 0
