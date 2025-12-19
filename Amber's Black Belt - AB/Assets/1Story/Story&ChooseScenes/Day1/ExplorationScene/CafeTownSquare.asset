@@ -10,27 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aff05cf4b03d724e8930ad460e956ab, type: 3}
-  m_Name: testexplorationscene
+  m_Name: CafeTownSquare
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: 541484b0920f64c44a393f06674ff137, type: 3}
+  background: {fileID: 21300000, guid: 8ef20273178d3a549a7fb1e4964046d2, type: 3}
   audioClips: []
   speakers:
-  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    screenPosition: {x: 0.2, y: 0.2}
-    scale: 1
-    dialogueText: wahatssupppp ayyy
+  - speaker: {fileID: 0}
+    screenPosition: {x: 0, y: 0}
+    scale: 0
+    dialogueText: 
   interactableObjects:
+  - objectPrefab: {fileID: 612335224802550055, guid: 87a98443c943be64985d26bd35159a9e, type: 3}
+    screenPosition: {x: 0.5, y: 0.1}
+    scale: 1
+    nextScene: {fileID: 11400000, guid: 3e2c89e295229344684f04a4425e0425, type: 2}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
   - objectPrefab: {fileID: 8657296758840795533, guid: 268b5bbd6140ea847968d2c83a51ea20, type: 3}
     screenPosition: {x: 0.1, y: 0.5}
     scale: 1
-    nextScene: {fileID: 11400000, guid: ed2c8eed1d7a147418943c553fca94ee, type: 2}
+    nextScene: {fileID: 0}
     soundOnClick: {fileID: 0}
     requiredChoiceKey: 
     choiceKeyToUnlock: 
   - objectPrefab: {fileID: 55672829980942931, guid: 3937527f9e68a4e458e3483d6e08d473, type: 3}
     screenPosition: {x: 0.9, y: 0.5}
     scale: 1
-    nextScene: {fileID: 11400000, guid: d6f269b17a7c8a940a3fd08683dd87e8, type: 2}
+    nextScene: {fileID: 0}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
+  - objectPrefab: {fileID: 1817057588252265457, guid: 70f94f598816a1446b44a45f2d9f7ed1, type: 3}
+    screenPosition: {x: 0.5, y: 0.5}
+    scale: 1
+    nextScene: {fileID: 0}
     soundOnClick: {fileID: 0}
     requiredChoiceKey: 
     choiceKeyToUnlock: 

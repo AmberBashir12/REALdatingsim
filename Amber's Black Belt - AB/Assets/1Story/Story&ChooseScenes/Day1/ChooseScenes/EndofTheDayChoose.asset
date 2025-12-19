@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412dca171f510ae4a91e62bb794a7ff5, type: 3}
+  m_Name: EndofTheDayChoose
+  m_EditorClassIdentifier: 
+  labels:
+  - text: NextDay
+    nextScene: {fileID: 11400000, guid: d48fc4ad8a1780445a1f6f7a3e9ccdef, type: 2}
+    choiceKeyToUnlock: 
+  additionalLabels:
+  - text: Meet with SportGuy
+    nextScene: {fileID: 11400000, guid: 9227bb42cc2d78744a2cd9ee3d1c64ae, type: 2}
+    requiredChoiceKey: MeetSportyGuy
+    choiceKeyToUnlock: 

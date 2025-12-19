@@ -54,7 +54,7 @@ MonoBehaviour:
     music: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: dbcdd7fd899ffae459c18f2381aea204, type: 3}
-  nextScene: {fileID: 11400000, guid: d48fc4ad8a1780445a1f6f7a3e9ccdef, type: 2}
+  nextScene: {fileID: 11400000, guid: 86bb3e6c667b3d144a0c846bd7a97ae7, type: 2}
   alternativeScenes:
   - requiredChoiceKeys: []
     alternativeScene: {fileID: 11400000, guid: 9227bb42cc2d78744a2cd9ee3d1c64ae, type: 2}
