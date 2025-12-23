@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   labels:
   - text: N N N noo...
-    nextScene: {fileID: 11400000, guid: 23ea59d93350e1d428af3da88b13db46, type: 2}
+    nextScene: {fileID: 11400000, guid: 1bc0e702f4a558d4a804e2f0874c297d, type: 2}
     choiceKeyToUnlock: 
   - text: Yes
-    nextScene: {fileID: 0}
+    nextScene: {fileID: 11400000, guid: ad014163fe038ba4bb3f1e85536d82ae, type: 2}
     choiceKeyToUnlock: MeetMusicGirl1
   - text: You were really good
     nextScene: {fileID: 0}

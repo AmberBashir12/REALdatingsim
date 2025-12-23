@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412dca171f510ae4a91e62bb794a7ff5, type: 3}
   m_Name: 339-GoOrNo
   m_EditorClassIdentifier: 
-  labels: []
+  labels:
+  - text: I dont want to
+    nextScene: {fileID: 11400000, guid: 95f98c327051fa7459b33623aefa2651, type: 2}
+    choiceKeyToUnlock: 
+  - text: OK
+    nextScene: {fileID: 11400000, guid: 01f79c8bd9c3f6e46abdd550e15de798, type: 2}
+    choiceKeyToUnlock: 
   additionalLabels: []

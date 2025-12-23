@@ -12,7 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aff05cf4b03d724e8930ad460e956ab, type: 3}
   m_Name: BookStoreTownSquare
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: 8ef20273178d3a549a7fb1e4964046d2, type: 3}
   audioClips: []
-  speakers: []
-  interactableObjects: []
+  speakers:
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    screenPosition: {x: 0.1, y: 0.1}
+    scale: 1
+    dialogueText: A bookstore?
+  interactableObjects:
+  - objectPrefab: {fileID: 2206610925133797156, guid: 3457fe32463cbbb4fb2136e6304f1fd1, type: 3}
+    screenPosition: {x: 0.5, y: 0.5}
+    scale: 2
+    nextScene: {fileID: 0}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
+  - objectPrefab: {fileID: 8657296758840795533, guid: 268b5bbd6140ea847968d2c83a51ea20, type: 3}
+    screenPosition: {x: 0.1, y: 0.5}
+    scale: 1
+    nextScene: {fileID: 11400000, guid: 219f053a86075ea4abce0e42c72db7da, type: 2}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
+  - objectPrefab: {fileID: 55672829980942931, guid: 3937527f9e68a4e458e3483d6e08d473, type: 3}
+    screenPosition: {x: 0.9, y: 0.5}
+    scale: 1
+    nextScene: {fileID: 11400000, guid: 478a2881d40a5f549bc11fe38de6dbec, type: 2}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
