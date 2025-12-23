@@ -25,7 +25,7 @@ MonoBehaviour:
     scale: 2
     nextScene: {fileID: 0}
     soundOnClick: {fileID: 0}
-    requiredChoiceKey: 
+    requiredChoiceKey: MeetSportyGuy
     choiceKeyToUnlock: 
   - objectPrefab: {fileID: 8657296758840795533, guid: 268b5bbd6140ea847968d2c83a51ea20, type: 3}
     screenPosition: {x: 0.1, y: 0.5}
