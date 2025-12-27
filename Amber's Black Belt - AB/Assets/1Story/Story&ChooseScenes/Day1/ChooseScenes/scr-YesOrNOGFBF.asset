@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   labels:
   - text: EW NO
-    nextScene: {fileID: 0}
-    choiceKeyToUnlock: 
+    nextScene: {fileID: 11400000, guid: 78193cfefd6286547adadabb1a24b328, type: 2}
+    choiceKeyToUnlock: NoToScr
   - text: omg yes
-    nextScene: {fileID: 0}
-    choiceKeyToUnlock: 
+    nextScene: {fileID: 11400000, guid: 32062d7090655d34aad082c48929b420, type: 2}
+    choiceKeyToUnlock: YesToScr
   additionalLabels: []

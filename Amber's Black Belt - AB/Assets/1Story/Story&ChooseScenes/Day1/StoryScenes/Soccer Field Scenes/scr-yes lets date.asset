@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
-  m_Name: scrchoice-EWNO
+  m_Name: scr-yes lets date
   m_EditorClassIdentifier: 
   sentences:
   - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-    text: heh... playing hard to get are you?
+    text: easy as pie haha
     actions:
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
@@ -34,73 +34,53 @@ MonoBehaviour:
     music: {fileID: 0}
     sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: Eww no ur so ugly i could never date you
+    text: omg yay i have abf on the first day of school
     actions:
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 4
-      coords: {x: 200, y: 0}
-      moveSpeed: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: -200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
       moveSpeed: 0
     music: {fileID: 0}
     sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-    text: what
+    text: yea real
     actions:
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 200, y: 0}
-      moveSpeed: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 4
       coords: {x: -200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
       moveSpeed: 0
     music: {fileID: 0}
     sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-    text: stop lying i know im baueitufl
+    text: ill walk you back to ur dorm
     actions:
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 200, y: 0}
-      moveSpeed: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
-    music: {fileID: 0}
-    sound: {fileID: 0}
-  - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-    text: whatever ur just playing ahrd to get ahha
-    actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 200, y: 0}
-      moveSpeed: 0
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
-      actionType: 4
-      coords: {x: -200, y: 0}
       moveSpeed: 0
     music: {fileID: 0}
     sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: no, bye
+    text: ok heart
     actions:
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 4
-      coords: {x: 200, y: 0}
-      moveSpeed: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
@@ -108,17 +88,12 @@ MonoBehaviour:
       moveSpeed: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
-      actionType: 3
+      actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
-    music: {fileID: 0}
-    sound: {fileID: 0}
-  - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-    text: bruh
-    actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
-      actionType: 0
+      actionType: 3
       coords: {x: 200, y: 0}
       moveSpeed: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
@@ -126,13 +101,8 @@ MonoBehaviour:
       actionType: 3
       coords: {x: -200, y: 0}
       moveSpeed: 0
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
-      actionType: 4
-      coords: {x: -200, y: 0}
-      moveSpeed: 0
     music: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 59ae3aa410c392745aea0d020975bb63, type: 3}
+  background: {fileID: 0}
   nextScene: {fileID: 0}
   alternativeScenes: []
