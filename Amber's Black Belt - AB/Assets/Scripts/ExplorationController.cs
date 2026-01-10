@@ -16,16 +16,15 @@ public class ExplorationController : MonoBehaviour
     public RectTransform speakerContainer;
     public RectTransform objectContainer;
     public Canvas mainCanvas;
+    public GameObject blackScreen;
     
     private ExplorationScene currentScene;
     private GameController gameController;
-    
-    [Header("Typing Settings")]
-    public float typingSpeed = 0.05f;
-    
+    private float typingSpeed = 0.05f;
     private Coroutine typingCoroutine;
     private string fullDialogueText;
     private bool isTyping = false;
+
     
     void Start()
     {
@@ -289,7 +288,7 @@ public class ExplorationController : MonoBehaviour
             CloseDialogue();
         }
     }
-    
+
     public void PlaySound(AudioClip clip)
     {
         if (clip != null && gameController != null && gameController.audioController != null)
@@ -303,17 +302,50 @@ public class ExplorationController : MonoBehaviour
     {
         if (gameController != null)
         {
-            // Clear current exploration scene elements before transitioning
-            Debug.Log($"Navigating from exploration scene to: {nextScene.name}");
-            Debug.Log("Clearing exploration scene elements before transitioning to next scene");
-            ClearScene();
-            
-            gameController.PlayScene(nextScene);
+            StartCoroutine(NavigateToSceneCoroutine(nextScene));
         }
         else
         {
             Debug.LogError("GameController is null in NavigateToScene!");
         }
+    }
+    
+    private IEnumerator NavigateToSceneCoroutine(GameScene nextScene)
+    {
+        Debug.Log($"Navigating from exploration scene to: {nextScene.name}");
+        
+        // Get the animator from the black screen
+        Animator blackScreenAnimator = blackScreen.GetComponent<Animator>();
+        
+        // Activate black screen and fade to black
+        blackScreen.SetActive(true);
+        if (blackScreenAnimator != null)
+        {
+            blackScreenAnimator.SetTrigger("FadeIn");
+            // Wait for fade animation (adjust time based on your animation length)
+            yield return new WaitForSeconds(0.15f);
+        }
+        
+        // Clear exploration scene elements
+        Debug.Log("Clearing exploration scene elements before transitioning to next scene");
+        ClearScene();
+
+        // Load the next scene (GameController will call SetupExplorationScene if it's an ExplorationScene)
+        gameController.PlayScene(nextScene);
+        
+        // Small delay to let scene load
+        yield return new WaitForSeconds(1f);
+        
+        // Fade from black
+        if (blackScreenAnimator != null)
+        {
+            blackScreenAnimator.SetTrigger("FadeOut");
+            // Wait for fade animation
+            yield return new WaitForSeconds(0.15f);
+        }
+        
+        // Deactivate black screen
+        blackScreen.SetActive(false);
     }
     
     private Vector2 ConvertScreenPositionToCanvasPosition(Vector2 screenPercent)

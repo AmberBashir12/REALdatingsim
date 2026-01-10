@@ -673,7 +673,7 @@ MonoBehaviour:
   speakerContainer: {fileID: 980659240}
   objectContainer: {fileID: 1756989409}
   mainCanvas: {fileID: 416896281}
-  typingSpeed: 0.05
+  blackScreen: {fileID: 1024602280}
 --- !u!1 &425530775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,8 +1391,9 @@ GameObject:
   - component: {fileID: 1024602284}
   - component: {fileID: 1024602283}
   - component: {fileID: 1024602282}
+  - component: {fileID: 1024602285}
   m_Layer: 5
-  m_Name: Image
+  m_Name: blackscreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1405,17 +1406,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024602280}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6044443, y: 1.6044443, z: 1.6044443}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 416896282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -44.444458, y: 1}
+  m_SizeDelta: {x: 0, y: 0.083740234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1024602282
 Animator:
@@ -1427,7 +1428,7 @@ Animator:
   m_GameObject: {fileID: 1024602280}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: da69ed3a78a8dc740b105ed36f456b38, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0e0b6c6e340bba045bb8a18facab38bf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1476,6 +1477,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024602280}
   m_CullTransparentMesh: 1
+--- !u!225 &1024602285
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024602280}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1155189067
 GameObject:
   m_ObjectHideFlags: 0
