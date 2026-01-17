@@ -66,8 +66,24 @@ public class BottomBarController : MonoBehaviour
         barText.text = "";
     }
 
+    private void ClearSprites()
+    {
+        // Destroy all sprite GameObjects and clear the dictionary
+        foreach (var controller in sprites.Values)
+        {
+            if (controller != null && controller.gameObject != null)
+            {
+                Destroy(controller.gameObject);
+            }
+        }
+        sprites.Clear();
+    }
+
     public void PlayScene(StoryScene scene)
     {
+        // Clear previous speakers before starting a new scene
+        ClearSprites();
+        
         currentScene = scene;
         sentenceIndex = -1;
 

@@ -71,8 +71,18 @@ MonoBehaviour:
       actionType: 2
       coords: {x: -200, y: 0}
       moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
+      spriteIndex: 0
+      actionType: 2
+      coords: {x: -300, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
     music: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: 7303c05cb5da0cb4eb35604e62c72d2f, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []

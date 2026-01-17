@@ -140,34 +140,35 @@ public class ExplorationController : MonoBehaviour
         
         foreach (var speakerData in currentScene.speakers)
         {
-            // Create speaker object (you'll need a speaker prefab)
-            GameObject speakerObj = new GameObject($"Speaker_{speakerData.speaker.speakerName}");
-            speakerObj.transform.SetParent(speakerContainer);
+            // Instantiate speaker from prefab
+            GameObject speakerObj = Instantiate(speakerData.speaker.prefab.gameObject, speakerContainer);
+            speakerObj.name = $"Speaker_{speakerData.speaker.speakerName}";
             
             // Position the speaker using screen-relative coordinates
-            RectTransform rectTransform = speakerObj.AddComponent<RectTransform>();
+            RectTransform rectTransform = speakerObj.GetComponent<RectTransform>();
+            if (rectTransform == null)
+            {
+                rectTransform = speakerObj.AddComponent<RectTransform>();
+            }
+            
             Vector2 screenPos = ConvertScreenPositionToCanvasPosition(speakerData.screenPosition);
             rectTransform.anchoredPosition = screenPos;
             rectTransform.localScale = Vector3.one * speakerData.scale;
             
-            // Add UI Image for speaker sprite (not SpriteRenderer for UI)
-            if (speakerData.speaker.sprites != null && speakerData.speaker.sprites.Count > 0 && speakerData.speaker.sprites[0] != null)
+            // Setup sprite controller if it exists
+            SpriteController spriteController = speakerObj.GetComponent<SpriteController>();
+            if (spriteController != null && speakerData.speaker.sprites != null && speakerData.speaker.sprites.Count > 0)
             {
-                UnityEngine.UI.Image imageComponent = speakerObj.AddComponent<UnityEngine.UI.Image>();
-                imageComponent.sprite = speakerData.speaker.sprites[0]; // Use first sprite as default
-                imageComponent.preserveAspect = true; // Keep aspect ratio
-                
-                // Set size for the image
-                rectTransform.sizeDelta = new Vector2(200, 200); // Default size, adjust as needed
-            }
-            else
-            {
-                Debug.LogWarning($"Speaker {speakerData.speaker.speakerName} has no sprites assigned!");
+                spriteController.Setup(speakerData.speaker.sprites[0]); // Use first sprite as default
             }
             
             // Add interactive speaker controller
-            InteractiveSpeakerController speakerController = speakerObj.AddComponent<InteractiveSpeakerController>();
-            speakerController.Setup(speakerData.dialogueText, this, speakerData.speaker);
+            InteractiveSpeakerController speakerInteractionController = speakerObj.GetComponent<InteractiveSpeakerController>();
+            if (speakerInteractionController == null)
+            {
+                speakerInteractionController = speakerObj.AddComponent<InteractiveSpeakerController>();
+            }
+            speakerInteractionController.Setup(speakerData.dialogueText, this, speakerData.speaker);
             
             Debug.Log($"Created speaker: {speakerData.speaker.speakerName} at position {screenPos} with scale {speakerData.scale}");
         }
@@ -255,6 +256,25 @@ public class ExplorationController : MonoBehaviour
         }
     }
     
+    public void ResetDialoguePanel()
+    {
+        if (dialoguePanel != null)
+        {
+            dialoguePanel.SetActive(false);
+        }
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+        isTyping = false;
+        fullDialogueText = "";
+        if (dialogueText != null)
+        {
+            dialogueText.text = "";
+        }
+    }
+    
     private IEnumerator TypeText(string text)
     {
         isTyping = true;
@@ -307,6 +327,12 @@ public class ExplorationController : MonoBehaviour
             Debug.Log($"Navigating from exploration scene to: {nextScene.name}");
             Debug.Log("Clearing exploration scene elements before transitioning to next scene");
             ClearScene();
+            
+            // Reset dialogue panel visibility
+            if (dialoguePanel != null)
+            {
+                dialoguePanel.SetActive(false);
+            }
             
             gameController.PlayScene(nextScene);
         }

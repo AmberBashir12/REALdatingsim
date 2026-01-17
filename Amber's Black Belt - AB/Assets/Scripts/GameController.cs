@@ -83,6 +83,11 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(1f);
             bottomBar.Show();
             bottomBar.ClearText();
+            // Reset exploration dialogue panel when returning to story
+            if (explorationController != null)
+            {
+                explorationController.ResetDialoguePanel();
+            }
             yield return new WaitForSeconds(1f);
             
             bottomBar.PlayScene(storyScene); // PlayScene in BottomBarController will handle empty sentences

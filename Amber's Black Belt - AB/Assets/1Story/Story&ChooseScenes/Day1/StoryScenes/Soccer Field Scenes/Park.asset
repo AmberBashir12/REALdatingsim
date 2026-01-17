@@ -10,12 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
-  m_Name: scr-yes lets date
+  m_Name: Park
   m_EditorClassIdentifier: 
   sentences:
   - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-    text: easy as pie haha
+    text: Wow, ok the park, good chocie
     actions:
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 4
@@ -26,15 +31,10 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 200, y: 0}
       moveSpeed: 0
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
-      actionType: 1
-      coords: {x: -200, y: 0}
-      moveSpeed: 0
     music: {fileID: 0}
     sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: omg yay i have abf on the first day of school
+    text: yes
     actions:
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
@@ -48,12 +48,12 @@ MonoBehaviour:
       moveSpeed: 0
     music: {fileID: 0}
     sound: {fileID: 0}
-  - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-    text: yea real
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: yea hours pass or somehting
     actions:
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
-      actionType: 4
+      actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -64,7 +64,22 @@ MonoBehaviour:
     music: {fileID: 0}
     sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-    text: ill walk you back to ur dorm
+    text: wow i had a creat time lol
+    actions:
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    text: wanna be my gf?
     actions:
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
@@ -79,7 +94,7 @@ MonoBehaviour:
     music: {fileID: 0}
     sound: {fileID: 0}
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: ok heart
+    text: wh
     actions:
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
@@ -91,18 +106,8 @@ MonoBehaviour:
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 3
-      coords: {x: 200, y: 0}
-      moveSpeed: 0
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
-      actionType: 3
-      coords: {x: -200, y: 0}
-      moveSpeed: 0
     music: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 76e77f0601b98a14bacd5e5e0d6fa811, type: 3}
-  nextScene: {fileID: 11400000, guid: d48fc4ad8a1780445a1f6f7a3e9ccdef, type: 2}
+  background: {fileID: 21300000, guid: 59ae3aa410c392745aea0d020975bb63, type: 3}
+  nextScene: {fileID: 11400000, guid: 478e5b7f70cdee3468b8639b4ff78c8c, type: 2}
   alternativeScenes: []
