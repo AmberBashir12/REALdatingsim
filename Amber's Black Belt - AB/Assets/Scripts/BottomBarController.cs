@@ -27,9 +27,42 @@ public class BottomBarController : MonoBehaviour
         PLAYING, COMPLETED
     }
 
+    private Coroutine currentTextCoroutine;
+    private string currentFullText = "";
+
     private void Start()
     {
         animator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0)) // Left mouse click
+        {
+            AdvanceSentence();
+        }
+    }
+
+    private void AdvanceSentence()
+    {
+        if (state == State.PLAYING)
+        {
+            // Skip to the end of current text
+            if (currentTextCoroutine != null)
+            {
+                StopCoroutine(currentTextCoroutine);
+            }
+            barText.text = currentFullText;
+            state = State.COMPLETED;
+        }
+        else if (state == State.COMPLETED)
+        {
+            // Move to next sentence
+            if (!IsLastSentence())
+            {
+                PlayNextSentence();
+            }
+        }
     }
 
     public int GetSentenceIndex()
@@ -130,7 +163,7 @@ public class BottomBarController : MonoBehaviour
 
         sentenceIndex++; // Increment sentenceIndex *before* using it
 
-        StartCoroutine(TypeText(currentScene.sentences[sentenceIndex].text));
+        currentTextCoroutine = StartCoroutine(TypeText(currentScene.sentences[sentenceIndex].text));
         
         Speaker speaker = currentScene.sentences[sentenceIndex].speaker;
         if (speaker != null)
@@ -166,6 +199,7 @@ public class BottomBarController : MonoBehaviour
     {
         barText.text = "";
         state = State.PLAYING;
+        currentFullText = text;
         int wordIndex = 0;
 
         float normalDelay = 0.05f;
