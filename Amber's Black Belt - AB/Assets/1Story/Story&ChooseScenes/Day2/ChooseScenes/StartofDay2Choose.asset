@@ -16,9 +16,6 @@ MonoBehaviour:
   - text: Go to Class
     nextScene: {fileID: 11400000, guid: ed2c8eed1d7a147418943c553fca94ee, type: 2}
     choiceKeyToUnlock: 
-  - text: Skip (Townsquare)
-    nextScene: {fileID: 0}
-    choiceKeyToUnlock: 
   additionalLabels:
   - text: Meet Music Girl
     nextScene: {fileID: 11400000, guid: f85096c2072f4824f858e6812a2b4e8e, type: 2}

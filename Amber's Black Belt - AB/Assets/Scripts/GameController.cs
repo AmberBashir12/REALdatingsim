@@ -13,9 +13,14 @@ public class GameController : MonoBehaviour
 
     private State state = State.IDLE;
 
-    private enum State
+    public enum State
     {
         IDLE, ANIMATE, CHOOSE, EXPLORE
+    }
+
+    public State GetCurrentState()
+    {
+        return state;
     }
     // Start is called before the first frame update
     void Start()
@@ -31,21 +36,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        {
-            if (state == State.IDLE && bottomBar.IsCompleted())
-            {
-                if (bottomBar.IsLastSentence())
-                {
-                    PlayScene((currentScene as StoryScene).GetNextScene());
-                }
-                else
-                {
-                    bottomBar.PlayNextSentence();
-                    PlayAudio((currentScene as StoryScene).sentences[bottomBar.GetSentenceIndex()]);
-                }
-            }
-        }
+        // GameController no longer handles input - BottomBarController handles all click/key logic for story scenes
+        // This prevents double-triggering of advances
     }
 
     public void PlayScene(GameScene scene)
@@ -114,8 +106,8 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private void PlayAudio(StoryScene.Sentence sentence)
+    public void PlayAudio(StoryScene.Sentence sentence)
     {
         audioController.PlayAudio(sentence.music, sentence.sound);
-    } 
+    }
 }

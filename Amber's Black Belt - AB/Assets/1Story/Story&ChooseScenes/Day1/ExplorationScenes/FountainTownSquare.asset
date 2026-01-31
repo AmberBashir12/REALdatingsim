@@ -16,24 +16,20 @@ MonoBehaviour:
   audioClips: []
   speakers:
   - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    screenPosition: {x: 0.1, y: 0.1}
-    scale: 1
+    coords: {x: 100, y: 199}
     dialogueText: Hmm... Where should we go?
   - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-    screenPosition: {x: 0.3, y: 0.1}
-    scale: 1
+    coords: {x: 0, y: 0}
     dialogueText: Ill just be here, you can choose where we go. *smirk
   interactableObjects:
   - objectPrefab: {fileID: 6911417204943782542, guid: 74ae294ea217d4640b70251a23459c2e, type: 3}
-    screenPosition: {x: 0.5, y: 0.5}
-    scale: 1
+    coords: {x: 0, y: 0}
     nextScene: {fileID: 0}
     soundOnClick: {fileID: 0}
     requiredChoiceKey: 
     choiceKeyToUnlock: 
   - objectPrefab: {fileID: 2111313605603743952, guid: 94fbce5e0a8391b45b0f9e614e027c74, type: 3}
-    screenPosition: {x: 0.5, y: 0.9}
-    scale: 0.3
+    coords: {x: 0, y: 0}
     nextScene: {fileID: 11400000, guid: 5ece921b04b9abe4d95168c75362092d, type: 2}
     soundOnClick: {fileID: 0}
     requiredChoiceKey: 

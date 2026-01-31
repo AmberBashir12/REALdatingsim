@@ -144,16 +144,14 @@ public class ExplorationController : MonoBehaviour
             GameObject speakerObj = Instantiate(speakerData.speaker.prefab.gameObject, speakerContainer);
             speakerObj.name = $"Speaker_{speakerData.speaker.speakerName}";
             
-            // Position the speaker using screen-relative coordinates
+            // Position the speaker using canvas coordinates
             RectTransform rectTransform = speakerObj.GetComponent<RectTransform>();
             if (rectTransform == null)
             {
                 rectTransform = speakerObj.AddComponent<RectTransform>();
             }
             
-            Vector2 screenPos = ConvertScreenPositionToCanvasPosition(speakerData.screenPosition);
-            rectTransform.anchoredPosition = screenPos;
-            rectTransform.localScale = Vector3.one * speakerData.scale;
+            rectTransform.anchoredPosition = speakerData.coords;
             
             // Setup sprite controller if it exists
             SpriteController spriteController = speakerObj.GetComponent<SpriteController>();
@@ -170,7 +168,7 @@ public class ExplorationController : MonoBehaviour
             }
             speakerInteractionController.Setup(speakerData.dialogueText, this, speakerData.speaker);
             
-            Debug.Log($"Created speaker: {speakerData.speaker.speakerName} at position {screenPos} with scale {speakerData.scale}");
+            Debug.Log($"Created speaker: {speakerData.speaker.speakerName} at position {speakerData.coords}");
         }
     }
     
@@ -188,16 +186,14 @@ public class ExplorationController : MonoBehaviour
             GameObject obj = Instantiate(objectData.objectPrefab, objectContainer);
             obj.name = $"InteractiveObject_{i}";
             
-            // Position the object using screen-relative coordinates
+            // Position the object using canvas coordinates
             RectTransform rectTransform = obj.GetComponent<RectTransform>();
             if (rectTransform == null)
             {
                 rectTransform = obj.AddComponent<RectTransform>();
             }
             
-            Vector2 screenPos = ConvertScreenPositionToCanvasPosition(objectData.screenPosition);
-            rectTransform.anchoredPosition = screenPos;
-            rectTransform.localScale = Vector3.one * objectData.scale;
+            rectTransform.anchoredPosition = objectData.coords;
             
             // Add or setup interactive controller
             InteractiveObjectController controller = obj.GetComponent<InteractiveObjectController>();
@@ -340,24 +336,5 @@ public class ExplorationController : MonoBehaviour
         {
             Debug.LogError("GameController is null in NavigateToScene!");
         }
-    }
-    
-    private Vector2 ConvertScreenPositionToCanvasPosition(Vector2 screenPercent)
-    {
-        if (mainCanvas == null || speakerContainer == null) return Vector2.zero;
-        
-        // Get the canvas rect
-        RectTransform canvasRect = mainCanvas.GetComponent<RectTransform>();
-        if (canvasRect == null) return Vector2.zero;
-        
-        // Get canvas size
-        Vector2 canvasSize = canvasRect.sizeDelta;
-        
-        // Convert percentage (0-1) to canvas coordinates
-        // (0,0) should be bottom-left, (1,1) should be top-right
-        float x = (screenPercent.x - 0.5f) * canvasSize.x;
-        float y = (screenPercent.y - 0.5f) * canvasSize.y;
-        
-        return new Vector2(x, y);
     }
 }

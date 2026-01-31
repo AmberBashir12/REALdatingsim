@@ -29,15 +29,17 @@ public class BottomBarController : MonoBehaviour
 
     private Coroutine currentTextCoroutine;
     private string currentFullText = "";
+    private GameController gameController;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        gameController = FindObjectOfType<GameController>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Left mouse click
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && gameController.GetCurrentState() == GameController.State.IDLE) // Left mouse click or spacebar, only when game is idle
         {
             AdvanceSentence();
         }
@@ -61,6 +63,19 @@ public class BottomBarController : MonoBehaviour
             if (!IsLastSentence())
             {
                 PlayNextSentence();
+                // Play audio for the new sentence
+                if (gameController != null && currentScene != null)
+                {
+                    gameController.PlayAudio(currentScene.sentences[sentenceIndex]);
+                }
+            }
+            else
+            {
+                // We're at the last sentence, move to the next scene
+                if (gameController != null && currentScene != null)
+                {
+                    gameController.PlayScene(currentScene.GetNextScene());
+                }
             }
         }
     }
