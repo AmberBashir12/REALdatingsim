@@ -89,7 +89,11 @@ MonoBehaviour:
     music: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: aee0bbc580c777b478969e59bcfb83e8, type: 3}
-  nextScene: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: fa019aa4153862b4e9a86c62884ec446, type: 2}
   alternativeScenes:
-  - requiredChoiceKeys: []
-    alternativeScene: {fileID: 0}
+  - requiredChoiceKeys:
+    - NoToScr
+    alternativeScene: {fileID: 11400000, guid: dab654288e94bed4a8998458abd66383, type: 2}
+  - requiredChoiceKeys:
+    - YesToScr
+    alternativeScene: {fileID: 11400000, guid: 70c57a2246ab94445953408cff325f67, type: 2}

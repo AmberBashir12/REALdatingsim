@@ -20,18 +20,30 @@ public class SpriteController : MonoBehaviour
     }
     public void Show(Vector2 coords)
     {
-        animator.SetTrigger("Show");
-        rect.localPosition = coords;
+        if (animator != null)
+        {
+            animator.SetTrigger("Show");
+        }
+        if (rect != null)
+        {
+            rect.localPosition = coords;
+        }
     }
 
-     public void Bounce()
+    public void Bounce()
     {
-        animator.SetTrigger("Bounce");
+        if (animator != null)
+        {
+            animator.SetTrigger("Bounce");
+        }
     }
 
     public void Hide()
     {
-        animator.SetTrigger("Hide");
+        if (animator != null)
+        {
+            animator.SetTrigger("Hide");
+        }
     }
 
     public void Move(Vector2 coords, float speed)

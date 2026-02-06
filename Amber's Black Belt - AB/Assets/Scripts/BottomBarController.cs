@@ -27,9 +27,57 @@ public class BottomBarController : MonoBehaviour
         PLAYING, COMPLETED
     }
 
+    private Coroutine currentTextCoroutine;
+    private string currentFullText = "";
+    private GameController gameController;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
+        gameController = FindObjectOfType<GameController>();
+    }
+
+    private void Update()
+    {
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && gameController.GetCurrentState() == GameController.State.IDLE) // Left mouse click or spacebar, only when game is idle
+        {
+            AdvanceSentence();
+        }
+    }
+
+    private void AdvanceSentence()
+    {
+        if (state == State.PLAYING)
+        {
+            // Skip to the end of current text
+            if (currentTextCoroutine != null)
+            {
+                StopCoroutine(currentTextCoroutine);
+            }
+            barText.text = currentFullText;
+            state = State.COMPLETED;
+        }
+        else if (state == State.COMPLETED)
+        {
+            // Move to next sentence
+            if (!IsLastSentence())
+            {
+                PlayNextSentence();
+                // Play audio for the new sentence
+                if (gameController != null && currentScene != null)
+                {
+                    gameController.PlayAudio(currentScene.sentences[sentenceIndex]);
+                }
+            }
+            else
+            {
+                // We're at the last sentence, move to the next scene
+                if (gameController != null && currentScene != null)
+                {
+                    gameController.PlayScene(currentScene.GetNextScene());
+                }
+            }
+        }
     }
 
     public int GetSentenceIndex()
@@ -66,8 +114,24 @@ public class BottomBarController : MonoBehaviour
         barText.text = "";
     }
 
+    private void ClearSprites()
+    {
+        // Destroy all sprite GameObjects and clear the dictionary
+        foreach (var controller in sprites.Values)
+        {
+            if (controller != null && controller.gameObject != null)
+            {
+                Destroy(controller.gameObject);
+            }
+        }
+        sprites.Clear();
+    }
+
     public void PlayScene(StoryScene scene)
     {
+        // Clear previous speakers before starting a new scene
+        ClearSprites();
+        
         currentScene = scene;
         sentenceIndex = -1;
 
@@ -114,7 +178,7 @@ public class BottomBarController : MonoBehaviour
 
         sentenceIndex++; // Increment sentenceIndex *before* using it
 
-        StartCoroutine(TypeText(currentScene.sentences[sentenceIndex].text));
+        currentTextCoroutine = StartCoroutine(TypeText(currentScene.sentences[sentenceIndex].text));
         
         Speaker speaker = currentScene.sentences[sentenceIndex].speaker;
         if (speaker != null)
@@ -150,6 +214,7 @@ public class BottomBarController : MonoBehaviour
     {
         barText.text = "";
         state = State.PLAYING;
+        currentFullText = text;
         int wordIndex = 0;
 
         float normalDelay = 0.05f;

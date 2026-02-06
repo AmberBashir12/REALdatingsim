@@ -17,6 +17,6 @@ MonoBehaviour:
     nextScene: {fileID: 0}
     choiceKeyToUnlock: 
   - text: Okay sure
-    nextScene: {fileID: 0}
+    nextScene: {fileID: 11400000, guid: e56785381c377944cbb8cb51434fc9ec, type: 2}
     choiceKeyToUnlock: 
   additionalLabels: []

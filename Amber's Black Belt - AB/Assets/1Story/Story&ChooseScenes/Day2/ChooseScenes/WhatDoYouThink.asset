@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: WhatDoYouThink
   m_EditorClassIdentifier: 
   labels:
-  - text: I loved it
-    nextScene: {fileID: 0}
-    choiceKeyToUnlock: 
   - text: I liked it
     nextScene: {fileID: 0}
     choiceKeyToUnlock: 

@@ -23,7 +23,7 @@ MonoBehaviour:
   - objectPrefab: {fileID: 1678174691834854811, guid: f71eb9c604db6534790f0849a89e68ca, type: 3}
     screenPosition: {x: 0.5, y: 0.5}
     scale: 0.3
-    nextScene: {fileID: 0}
+    nextScene: {fileID: 11400000, guid: a25ecb0457825d046945ea28fca83262, type: 2}
     soundOnClick: {fileID: 0}
     requiredChoiceKey: 
     choiceKeyToUnlock: 
