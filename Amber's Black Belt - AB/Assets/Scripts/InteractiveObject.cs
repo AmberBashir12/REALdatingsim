@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InteractiveObjectController : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -12,20 +13,26 @@ public class InteractiveObjectController : MonoBehaviour, IPointerClickHandler, 
     public string choiceKeyToUnlock;
     
     [Header("Visual Effects")]
-    public Color glowColor = Color.white;
-    public float glowIntensity = 1.5f;
+    public Color glowColor = Color.red;
+    public float glowIntensity = 3f;
     
-    private SpriteRenderer spriteRenderer;
+    private Image imageComponent;
+    private Outline outlineComponent;
     private Color originalColor;
     private ExplorationController explorationController;
     private bool isInteractable = true;
     
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null)
+        // Get Image component (for UI)
+        imageComponent = GetComponent<Image>();
+        
+        // Get Outline component for glow effect
+        outlineComponent = GetComponent<Outline>();
+        
+        if (imageComponent != null)
         {
-            originalColor = spriteRenderer.color;
+            originalColor = imageComponent.color;
         }
         
         // Find the exploration controller
@@ -50,12 +57,12 @@ public class InteractiveObjectController : MonoBehaviour, IPointerClickHandler, 
         {
             isInteractable = GameStateManager.Instance.IsChoiceUnlocked(requiredChoiceKey);
             
-            if (!isInteractable && spriteRenderer != null)
+            if (!isInteractable && imageComponent != null)
             {
                 // Make object appear disabled
                 Color disabledColor = originalColor;
                 disabledColor.a = 0.5f;
-                spriteRenderer.color = disabledColor;
+                imageComponent.color = disabledColor;
             }
         }
     }
@@ -92,23 +99,19 @@ public class InteractiveObjectController : MonoBehaviour, IPointerClickHandler, 
     
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!isInteractable) return;
-        
-        if (spriteRenderer != null)
+        // Enable outline glow effect
+        if (outlineComponent != null)
         {
-            // Apply glow effect
-            Color glowEffect = originalColor * glowIntensity;
-            glowEffect.a = originalColor.a;
-            spriteRenderer.color = glowEffect;
+            outlineComponent.enabled = true;
         }
     }
-    
+
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (spriteRenderer != null)
+        // Disable outline glow effect
+        if (outlineComponent != null)
         {
-            // Remove glow effect
-            spriteRenderer.color = originalColor;
+            outlineComponent.enabled = false;
         }
     }
 }
