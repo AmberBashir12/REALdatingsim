@@ -13,21 +13,81 @@ MonoBehaviour:
   m_Name: Garden 1
   m_EditorClassIdentifier: 
   sentences:
-  - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
     text: HEY YOU
     actions: []
+    choice:
+      prompt: 
+      options: []
     music: {fileID: 0}
     sound: {fileID: 0}
-  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: 'huh '
     actions: []
+    choice:
+      prompt: 
+      options: []
     music: {fileID: 0}
     sound: {fileID: 0}
-  - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
     text: 'huh '
     actions: []
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
+    text: 'huh '
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 1
+    speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
+    text: 'huh '
+    actions: []
+    choice:
+      prompt: 
+      options:
+      - text: 
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 1
+          speaker: {fileID: 0}
+          text: 
+          actions: []
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options:
+            - text: 
+              requiredChoiceKeys: []
+              choiceKeyToUnlock: 
+              followUpLines:
+              - speaker: {fileID: 0}
+                text: 
+                actions:
+                - speaker: {fileID: 0}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                music: {fileID: 0}
+                sound: {fileID: 0}
     music: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: d25cb78adbfb1b041aad17b6285537a4, type: 3}
   nextScene: {fileID: 11400000, guid: 43bfab8d374e8314f90826d403f258cf, type: 2}
-  alternativeScenes: []
+  alternativeScenes:
+  - requiredChoiceKeys:
+    - 
+    alternativeScene: {fileID: 0}

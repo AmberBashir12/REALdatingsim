@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Garden FIRST
   m_EditorClassIdentifier: 
   sentences:
-  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: wooww.. this garden is really pretyty
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -21,7 +22,48 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 0, y: 0}
       moveSpeed: 0
-  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    choice:
+      prompt: YO CHOOSE
+      options:
+      - text: OMG TEST
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: boyyyyboyyy
+        followUpSentences:
+        - sentenceType: 0
+          speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+          text: boyyy boyy
+          actions: []
+          choice:
+            prompt: 
+            options: []
+          music: {fileID: 0}
+          sound: {fileID: 0}
+      - text: yayaya
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: ya ya ya
+        followUpSentences:
+        - sentenceType: 0
+          speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+          text: NO NONO
+          actions: []
+          choice:
+            prompt: 
+            options: []
+          music: {fileID: 0}
+          sound: {fileID: 0}
+        - sentenceType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: yesyeyes
+          actions: []
+          choice:
+            prompt: 
+            options: []
+          music: {fileID: 0}
+          sound: {fileID: 0}
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: im gonna look around a bit.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -29,7 +71,13 @@ MonoBehaviour:
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
-  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: then you SUDDENLY!! run into a cute guy with.... CAT EARS?????
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -42,7 +90,13 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 200, y: 0}
       moveSpeed: 0
-  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: WAIT- WHy DOES THAT GUY HAVE CAT EARS??!
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -55,7 +109,13 @@ MonoBehaviour:
       actionType: 0
       coords: {x: 200, y: 0}
       moveSpeed: 0
-  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: ok he doesnt seem to notice me cuz hes sooo into his book
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -68,7 +128,13 @@ MonoBehaviour:
       actionType: 0
       coords: {x: 200, y: 0}
       moveSpeed: 0
-  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: what should I do?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -81,5 +147,11 @@ MonoBehaviour:
       actionType: 3
       coords: {x: 200, y: 0}
       moveSpeed: 0
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
   background: {fileID: 21300000, guid: d25cb78adbfb1b041aad17b6285537a4, type: 3}
   nextScene: {fileID: 11400000, guid: 5c1e1b6e1121b4e468b63c8c3348d5e5, type: 2}
+  alternativeScenes: []

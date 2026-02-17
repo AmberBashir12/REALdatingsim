@@ -14,17 +14,40 @@ public class GameController : MonoBehaviour
     public CanvasGroup fadePanel;
     public float fadeDuration = 1f;
     private Image fadeImage;
+    private int pendingStoryStartSentenceIndex = -1;
 
     private State state = State.IDLE;
+    private State prePauseState = State.IDLE;
 
     public enum State
     {
-        IDLE, ANIMATE, CHOOSE, EXPLORE
+        IDLE, ANIMATE, CHOOSE, EXPLORE, PAUSED
     }
 
     public State GetCurrentState()
     {
         return state;
+    }
+
+    public bool IsPaused()
+    {
+        return state == State.PAUSED;
+    }
+
+    public void SetPaused(bool paused)
+    {
+        if (paused)
+        {
+            if (state != State.PAUSED)
+            {
+                prePauseState = state;
+            }
+            state = State.PAUSED;
+        }
+        else
+        {
+            state = prePauseState;
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -40,7 +63,6 @@ public class GameController : MonoBehaviour
             StoryScene storyScene = currentScene as StoryScene;
             bottomBar.PlayScene(storyScene);
             backgroundController.SetImage(storyScene.background);
-            PlayAudio(storyScene.sentences[0]);
         }
     }
 
@@ -79,6 +101,24 @@ public class GameController : MonoBehaviour
 
     public void PlayScene(GameScene scene)
     {
+        PlayScene(scene, -1);
+    }
+
+    public void SetChooseState(bool isChoosing)
+    {
+        if (isChoosing)
+        {
+            state = State.CHOOSE;
+        }
+        else if (state == State.CHOOSE)
+        {
+            state = State.IDLE;
+        }
+    }
+
+    public void PlayScene(GameScene scene, int startSentenceIndex)
+    {
+        pendingStoryStartSentenceIndex = startSentenceIndex;
         StartCoroutine(SwitchScene(scene));
     }
 
@@ -111,9 +151,8 @@ public class GameController : MonoBehaviour
                 Debug.LogWarning($"StoryScene '{storyScene.name}' has no background assigned.");
             }
             backgroundController.SwitchImage(storyScene.background);
-            PlayAudio(storyScene.sentences[0]);
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             bottomBar.Show();
             bottomBar.ClearText();
             // Reset exploration dialogue panel when returning to story
@@ -121,9 +160,10 @@ public class GameController : MonoBehaviour
             {
                 explorationController.ResetDialoguePanel();
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             
-            bottomBar.PlayScene(storyScene); // PlayScene in BottomBarController will handle empty sentences
+            bottomBar.PlayScene(storyScene, pendingStoryStartSentenceIndex); // PlayScene in BottomBarController will handle empty sentences
+            pendingStoryStartSentenceIndex = -1;
             state = State.IDLE; // Reset state to IDLE
         }
         else if (scene is ChooseScene chooseScene) 

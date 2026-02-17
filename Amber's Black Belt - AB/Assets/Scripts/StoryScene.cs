@@ -14,9 +14,11 @@ public class StoryScene : GameScene
     [System.Serializable]
     public struct Sentence
     {
+        public SentenceType sentenceType;
         public Speaker speaker;
         public string text;
         public List<Action> actions;
+        public ChoiceBlock choice;
 
         public AudioClip music;
         public AudioClip sound;
@@ -37,7 +39,74 @@ public class StoryScene : GameScene
                 NONE, APPEAR, MOVE, DISAPPEAR, BOUNCE
             }
         }
+
+        [System.Serializable]
+        public struct ChoiceBlock
+        {
+            public string prompt;
+            public List<ChoiceOption> options;
+        }
+
+        [System.Serializable]
+        public struct ChoiceOption
+        {
+            public string text;
+            public List<string> requiredChoiceKeys;
+            public string choiceKeyToUnlock;
+            public List<FollowUpSentence> followUpSentences;
+        }
+
+        public enum SentenceType
+        {
+            SENTENCE,
+            CHOICE
+        }
     }
+
+    [System.Serializable]
+    public struct FollowUpSentence
+    {
+        public FollowUpType followUpType;
+        public Speaker speaker;
+        public string text;
+        public List<Sentence.Action> actions;
+        public AudioClip music;
+        public AudioClip sound;
+        public FollowUpChoice choice;
+
+        public enum FollowUpType
+        {
+            SENTENCE,
+            CHOICE
+        }
+    }
+
+    [System.Serializable]
+    public struct FollowUpChoice
+    {
+        public string prompt;
+        public List<FollowUpChoiceOption> options;
+    }
+
+    [System.Serializable]
+    public struct FollowUpChoiceOption
+    {
+        public string text;
+        public List<string> requiredChoiceKeys;
+        public string choiceKeyToUnlock;
+        public List<FollowUpLine> followUpLines;
+    }
+
+    [System.Serializable]
+    public struct FollowUpLine
+    {
+        public Speaker speaker;
+        public string text;
+        public List<Sentence.Action> actions;
+        public AudioClip music;
+        public AudioClip sound;
+    }
+
     [System.Serializable]
     public struct AlternativeScenes
     {

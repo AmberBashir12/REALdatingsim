@@ -13,6 +13,8 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
     private ChooseController controller;
     private ChooseScene chooseScene;
     private string labelText;
+    private bool isInlineChoice;
+    private int inlineChoiceIndex = -1;
 
     // Start is called before the first frame update
     void Awake()
@@ -36,6 +38,8 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
 
     public void Setup(ChooseScene.ChooseLabel label, ChooseController controller, float y)
     {
+        isInlineChoice = false;
+        inlineChoiceIndex = -1;
         scene = label.nextScene;
         labelText = label.text;
         if (textMesh != null)
@@ -44,6 +48,26 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
             textMesh.enabled = true; // Ensure TextMeshPro is enabled when setting up
         }
         this.controller = controller;
+
+        Vector3 position = textMesh.rectTransform.localPosition;
+        position.y = y;
+        textMesh.rectTransform.localPosition = position;
+    }
+
+    public void SetupInline(string text, ChooseController controller, float y, int optionIndex)
+    {
+        isInlineChoice = true;
+        inlineChoiceIndex = optionIndex;
+        chooseScene = null;
+        scene = null;
+        labelText = text;
+        this.controller = controller;
+
+        if (textMesh != null)
+        {
+            textMesh.text = text;
+            textMesh.enabled = true;
+        }
 
         Vector3 position = textMesh.rectTransform.localPosition;
         position.y = y;
@@ -59,15 +83,29 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
     {
         if (enabled && controller != null)
         {
-            StoryScene nextScene = scene; // Default fallback
+            if (isInlineChoice)
+            {
+                controller.PerformInlineChoose(inlineChoiceIndex);
+                return;
+            }
+
+            ChooseScene.ChoiceResult result = new ChooseScene.ChoiceResult
+            {
+                nextScene = scene,
+                startSentenceIndex = -1
+            };
             
             if (chooseScene != null && !string.IsNullOrEmpty(labelText))
             {
-                // Use ChooseScene.GetNextScene to handle choice key unlocking
-                nextScene = chooseScene.GetNextScene(labelText);
+                // Use ChooseScene.TryGetChoiceResult to handle choice key unlocking and sentence resume index
+                if (!chooseScene.TryGetChoiceResult(labelText, out result))
+                {
+                    result.nextScene = scene;
+                    result.startSentenceIndex = -1;
+                }
             }
             
-            controller.PerformChoose(nextScene);
+            controller.PerformChoose(result);
         }
     }
 

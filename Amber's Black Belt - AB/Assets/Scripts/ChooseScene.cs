@@ -10,17 +10,36 @@ public class ChooseScene : GameScene
     public List<ChooseLabel> labels;
 
     [System.Serializable]
+    public struct ChoiceResult
+    {
+        public StoryScene nextScene;
+        public int startSentenceIndex; // -1 means play from the beginning.
+    }
+
+    [System.Serializable]
     public struct ChooseLabel
     {
         public string text;
         public StoryScene nextScene;
+        public int startSentenceIndex; // -1 means play from the beginning.
         public string choiceKeyToUnlock; // Optional: choice key to unlock when this option is selected
     }
 
     public StoryScene GetNextScene(string labelText)
     {
-        Debug.Log($"GetNextScene called with labelText: '{labelText}'");
-        
+        if (TryGetChoiceResult(labelText, out ChoiceResult result))
+        {
+            return result.nextScene;
+        }
+
+        return null;
+    }
+
+    public bool TryGetChoiceResult(string labelText, out ChoiceResult result)
+    {
+        Debug.Log($"TryGetChoiceResult called with labelText: '{labelText}'");
+        result = new ChoiceResult { nextScene = null, startSentenceIndex = -1 };
+
         // Check regular labels first
         foreach (ChooseLabel label in labels)
         {
@@ -42,10 +61,16 @@ public class ChooseScene : GameScene
                 {
                     Debug.LogWarning("GameStateManager.Instance is null when trying to unlock choice key!");
                 }
-                return label.nextScene;
+
+                result = new ChoiceResult
+                {
+                    nextScene = label.nextScene,
+                    startSentenceIndex = label.startSentenceIndex
+                };
+                return true;
             }
         }
-        
+
         // Check additional labels
         AdditionalLabel? additionalLabel = GetAdditionalLabel(labelText);
         if (additionalLabel.HasValue)
@@ -57,11 +82,17 @@ public class ChooseScene : GameScene
                 Debug.Log($"Unlocking choice key: '{additionalLabel.Value.choiceKeyToUnlock}'");
                 GameStateManager.Instance.UnlockChoice(additionalLabel.Value.choiceKeyToUnlock);
             }
-            return additionalLabel.Value.nextScene;
+
+            result = new ChoiceResult
+            {
+                nextScene = additionalLabel.Value.nextScene,
+                startSentenceIndex = additionalLabel.Value.startSentenceIndex
+            };
+            return true;
         }
-        
+
         Debug.LogWarning($"No matching label found for: '{labelText}'");
-        return null;
+        return false;
     }
 
     [System.Serializable]
@@ -69,6 +100,7 @@ public class ChooseScene : GameScene
     {
         public string text;
         public StoryScene nextScene;
+        public int startSentenceIndex; // -1 means play from the beginning.
         public string requiredChoiceKey; // The choice key that must be unlocked to show this option
         public string choiceKeyToUnlock; // Optional: choice key to unlock when this option is selected
     }
@@ -106,7 +138,8 @@ public class ChooseScene : GameScene
                 ChooseLabel newChoice = new ChooseLabel
                 {
                     text = additionalLabel.text,
-                    nextScene = additionalLabel.nextScene
+                    nextScene = additionalLabel.nextScene,
+                    startSentenceIndex = additionalLabel.startSentenceIndex
                 };
                 availableChoices.Add(newChoice);
             }

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Entrance 1
   m_EditorClassIdentifier: 
   sentences:
-  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Omg new school Aaa
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -21,9 +22,13 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 200, y: 0}
       moveSpeed: 0
+    choice:
+      prompt: 
+      options: []
     music: {fileID: 8300000, guid: 2b02399d4718e3541a3c18653ae2a3c2, type: 3}
     sound: {fileID: 0}
-  - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
     text: boy come inside now
     actions:
     - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
@@ -36,9 +41,13 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 200, y: 0}
       moveSpeed: 0
+    choice:
+      prompt: 
+      options: []
     music: {fileID: 0}
     sound: {fileID: 0}
-  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: ok
     actions:
     - speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
@@ -51,8 +60,11 @@ MonoBehaviour:
       actionType: 3
       coords: {x: 200, y: 0}
       moveSpeed: 0
+    choice:
+      prompt: 
+      options: []
     music: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: dbcdd7fd899ffae459c18f2381aea204, type: 3}
-  nextScene: {fileID: 11400000, guid: 5cf7a94bf47a0e641bd80d3289f12d9c, type: 2}
+  nextScene: {fileID: 11400000, guid: 4d67bccd5dbbb91438b673ef66f7cd9b, type: 2}
   alternativeScenes: []

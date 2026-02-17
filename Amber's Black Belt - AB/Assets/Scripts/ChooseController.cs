@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 using System.Reflection.Emit;
@@ -16,6 +17,7 @@ public class ChooseController : MonoBehaviour
     public Animator animator;
     private float labelHeight = 70f;  // Fixed height for consistency
     private CanvasGroup canvasGroup;
+    private Action<int> inlineChoiceCallback;
 
     // Start is called before the first frame update
     void Start()
@@ -64,20 +66,79 @@ public class ChooseController : MonoBehaviour
         rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, totalHeight);
     }
 
-    public void PerformChoose(StoryScene scene)
+    public void PerformChoose(ChooseScene.ChoiceResult result)
     {
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
         animator.SetTrigger("Hide");
         // Delay scene transition to allow hide animation to start
-        StartCoroutine(TransitionToScene(scene));
+        StartCoroutine(TransitionToScene(result));
     }
 
-    private IEnumerator TransitionToScene(StoryScene scene)
+    public void SetupInlineChoose(List<string> choiceTexts, Action<int> onSelected)
+    {
+        DestroyLabels();
+
+        inlineChoiceCallback = onSelected;
+
+        animator.SetTrigger("Show");
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+
+        for (int i = 0; i < choiceTexts.Count; i++)
+        {
+            ChooseLabelController newLabel = Instantiate(labelPrefab, transform).GetComponent<ChooseLabelController>();
+            newLabel.enabled = true;
+
+            TextMeshProUGUI tmpText = newLabel.GetComponent<TextMeshProUGUI>();
+            if (tmpText != null)
+            {
+                tmpText.enabled = true;
+            }
+
+            float yPos = CalculateLabelPosition(choiceTexts.Count, i);
+            newLabel.SetupInline(choiceTexts[i], this, yPos, i);
+        }
+
+        float totalHeight = (choiceTexts.Count + 1) * labelHeight;
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, totalHeight);
+    }
+
+    private IEnumerator TransitionToScene(ChooseScene.ChoiceResult result)
     {
         yield return new WaitForSeconds(0.5f);
-        gameController.PlayScene(scene);
+
+        if (result.startSentenceIndex >= 0)
+        {
+            gameController.PlayScene(result.nextScene, result.startSentenceIndex);
+        }
+        else
+        {
+            gameController.PlayScene(result.nextScene);
+        }
+    }
+
+    public void PerformInlineChoose(int optionIndex)
+    {
+        canvasGroup.alpha = 0;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+        animator.SetTrigger("Hide");
+        StartCoroutine(TransitionInlineChoice(optionIndex));
+    }
+
+    private IEnumerator TransitionInlineChoice(int optionIndex)
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        if (inlineChoiceCallback != null)
+        {
+            inlineChoiceCallback(optionIndex);
+        }
+
+        inlineChoiceCallback = null;
     }
 
     private float CalculateLabelPosition(int labelCount, int labelIndex)
