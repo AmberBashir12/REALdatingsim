@@ -30,6 +30,8 @@ public class BottomBarController : MonoBehaviour
     private Coroutine currentTextCoroutine;
     private string currentFullText = "";
     private GameController gameController;
+    [SerializeField] private float inputCooldownSeconds = 0.08f;
+    private float lastAdvanceInputTime = -999f;
 
     private void Start()
     {
@@ -41,6 +43,12 @@ public class BottomBarController : MonoBehaviour
     {
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && gameController.GetCurrentState() == GameController.State.IDLE) // Left mouse click or spacebar, only when game is idle
         {
+            if (Time.unscaledTime - lastAdvanceInputTime < inputCooldownSeconds)
+            {
+                return;
+            }
+
+            lastAdvanceInputTime = Time.unscaledTime;
             AdvanceSentence();
         }
     }

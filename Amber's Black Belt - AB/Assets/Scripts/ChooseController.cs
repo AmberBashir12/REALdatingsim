@@ -69,8 +69,15 @@ public class ChooseController : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
-        gameController.PlayScene(scene);
         animator.SetTrigger("Hide");
+        // Delay scene transition to allow hide animation to start
+        StartCoroutine(TransitionToScene(scene));
+    }
+
+    private IEnumerator TransitionToScene(StoryScene scene)
+    {
+        yield return new WaitForSeconds(0.5f);
+        gameController.PlayScene(scene);
     }
 
     private float CalculateLabelPosition(int labelCount, int labelIndex)

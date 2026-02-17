@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class GameController : MonoBehaviour
     public ChooseController chooseController;
     public AudioController audioController;
     public ExplorationController explorationController;
+    public CanvasGroup fadePanel;
+    public float fadeDuration = 1f;
+    private Image fadeImage;
 
     private State state = State.IDLE;
 
@@ -25,6 +29,12 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (fadePanel != null)
+        {
+            fadePanel.gameObject.SetActive(true);
+            fadeImage = fadePanel.GetComponent<Image>();
+        }
+        StartCoroutine(FadeInFromBlack());
         if (currentScene is StoryScene)
         {
             StoryScene storyScene = currentScene as StoryScene;
@@ -33,12 +43,39 @@ public class GameController : MonoBehaviour
             PlayAudio(storyScene.sentences[0]);
         }
     }
-    // Update is called once per frame
-    void Update()
+
+    private IEnumerator FadeInFromBlack()
     {
-        // GameController no longer handles input - BottomBarController handles all click/key logic for story scenes
-        // This prevents double-triggering of advances
+        if (fadePanel != null)
+        {
+            fadePanel.gameObject.SetActive(true);
+            SetFadeAlpha(1f);
+            float elapsedTime = 0f;
+            while (elapsedTime < fadeDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                SetFadeAlpha(Mathf.Clamp01(1f - (elapsedTime / fadeDuration)));
+                yield return null;
+            }
+            SetFadeAlpha(0f);
+            fadePanel.gameObject.SetActive(false);
+        }
     }
+
+    private void SetFadeAlpha(float alpha)
+    {
+        fadePanel.alpha = alpha;
+
+        // Fallback for cases where CanvasGroup alpha isn't affecting the panel Image.
+        if (fadeImage != null)
+        {
+            Color color = fadeImage.color;
+            color.a = alpha;
+            fadeImage.color = color;
+        }
+    }
+    // Story dialogue input is handled by BottomBarController.
+    // Keeping input handling in one place avoids frame-order dependent double-advances.
 
     public void PlayScene(GameScene scene)
     {
@@ -60,8 +97,12 @@ public class GameController : MonoBehaviour
             yield break; // Exit coroutine
         }
 
-        currentScene = scene;  
-        bottomBar.Hide();
+        currentScene = scene;
+        // Hide bottom bar only for non-story scenes
+        if (!(scene is StoryScene))
+        {
+            bottomBar.Hide();
+        }
         yield return new WaitForSeconds(1f);
 
         if (scene is StoryScene storyScene)

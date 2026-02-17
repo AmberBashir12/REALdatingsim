@@ -253,21 +253,17 @@ public class ExplorationController : MonoBehaviour
     
     public void ResetDialoguePanel()
     {
-        if (dialoguePanel != null)
-        {
-            dialoguePanel.SetActive(false);
-        }
-        if (typingCoroutine != null)
-        {
-            StopCoroutine(typingCoroutine);
-            typingCoroutine = null;
-        }
-        isTyping = false;
-        fullDialogueText = "";
+        // Ensure dialogue panel is closed and reset
+        CloseDialogue();
         if (dialogueText != null)
         {
             dialogueText.text = "";
         }
+        if (speakerNameText != null)
+        {
+            speakerNameText.text = "";
+        }
+        fullDialogueText = "";
     }
     
     private IEnumerator TypeText(string text)
