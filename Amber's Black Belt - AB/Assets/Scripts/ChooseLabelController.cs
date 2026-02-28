@@ -44,7 +44,7 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
         labelText = label.text;
         if (textMesh != null)
         {
-            textMesh.text = label.text;
+            textMesh.text = TextTemplate.Resolve(label.text);
             textMesh.enabled = true; // Ensure TextMeshPro is enabled when setting up
         }
         this.controller = controller;
@@ -65,7 +65,7 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
 
         if (textMesh != null)
         {
-            textMesh.text = text;
+            textMesh.text = TextTemplate.Resolve(text);
             textMesh.enabled = true;
         }
 

@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - sentenceType: 0
-    speaker: {fileID: 0}
-    text: 
-    actions: []
+    speaker: {fileID: 11400000, guid: 83d3ca40263423343952628e3da1cea2, type: 2}
+    text: boyyyy {playerName}
+    actions:
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
     choice:
       prompt: 
       options: []

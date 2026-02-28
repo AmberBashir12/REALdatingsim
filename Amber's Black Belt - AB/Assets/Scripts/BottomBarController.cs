@@ -288,7 +288,7 @@ public class BottomBarController : MonoBehaviour
             return;
         }
 
-        barText.text = sentence.choice.prompt;
+        barText.text = TextTemplate.Resolve(sentence.choice.prompt);
         personNameText.text = "";
         state = State.COMPLETED;
 
@@ -302,7 +302,7 @@ public class BottomBarController : MonoBehaviour
                 continue;
             }
 
-            optionTexts.Add(option.text);
+            optionTexts.Add(TextTemplate.Resolve(option.text));
             visibleSentenceChoiceOptionIndices.Add(i);
         }
 
@@ -433,7 +433,7 @@ public class BottomBarController : MonoBehaviour
             return;
         }
 
-        barText.text = followUpSentence.choice.prompt;
+        barText.text = TextTemplate.Resolve(followUpSentence.choice.prompt);
         personNameText.text = "";
         state = State.COMPLETED;
 
@@ -447,7 +447,7 @@ public class BottomBarController : MonoBehaviour
                 continue;
             }
 
-            optionTexts.Add(option.text);
+            optionTexts.Add(TextTemplate.Resolve(option.text));
             visibleBranchChoiceOptionIndices.Add(i);
         }
 
@@ -551,11 +551,12 @@ public class BottomBarController : MonoBehaviour
             StopCoroutine(currentTextCoroutine);
         }
 
-        currentTextCoroutine = StartCoroutine(TypeText(text));
+        string resolvedText = TextTemplate.Resolve(text);
+        currentTextCoroutine = StartCoroutine(TypeText(resolvedText));
 
         if (speaker != null)
         {
-            personNameText.text = speaker.speakerName;
+            personNameText.text = TextTemplate.Resolve(speaker.speakerName);
             personNameText.color = speaker.textColor;
         }
         else

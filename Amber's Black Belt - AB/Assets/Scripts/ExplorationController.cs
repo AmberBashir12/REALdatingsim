@@ -211,12 +211,12 @@ public class ExplorationController : MonoBehaviour
         if (dialoguePanel != null && dialogueText != null)
         {
             // Store the full text
-            fullDialogueText = text;
+            fullDialogueText = TextTemplate.Resolve(text);
             
             // Set speaker name and color if provided
             if (speaker != null && speakerNameText != null)
             {
-                speakerNameText.text = speaker.speakerName;
+                speakerNameText.text = TextTemplate.Resolve(speaker.speakerName);
                 speakerNameText.color = speaker.textColor;
             }
             else if (speakerNameText != null)

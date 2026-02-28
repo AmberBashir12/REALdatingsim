@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7924fdf277f9cf4097f370463eb8e76, type: 3}
   m_Name: You
   m_EditorClassIdentifier: 
-  speakerName: You
+  speakerName: '{playerName}'
   textColor: {r: 0.40784314, g: 0, b: 0.5176945, a: 1}
   sprites:
   - {fileID: 21300000, guid: b2d5366ed93256d4bb369e172f87a1ca, type: 3}
+  - {fileID: 21300000, guid: e8e7220994b43eb4c86d9383879f540e, type: 3}
   prefab: {fileID: 934540294316633314, guid: 05e76c0e1031ddf4fb6a17e6a4931617, type: 3}
