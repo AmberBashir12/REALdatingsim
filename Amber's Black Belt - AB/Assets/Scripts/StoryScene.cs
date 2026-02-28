@@ -31,6 +31,7 @@ public class StoryScene : GameScene
             public Type actionType;
             public Vector2 coords;
             public float moveSpeed;
+            public Color tintColor;
 
             [System.Serializable]
 

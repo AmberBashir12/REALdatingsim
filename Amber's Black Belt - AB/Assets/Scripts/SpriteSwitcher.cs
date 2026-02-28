@@ -33,15 +33,30 @@ public class SpriteSwitcher : MonoBehaviour
     }
     public void SetImage(Sprite sprite)
     {
-        if (!isSwitched)
+        if (Image1 != null)
         {
             Image1.sprite = sprite;
         }
-        else
+
+        if (Image2 != null)
         {
             Image2.sprite = sprite;
         }
     }
+
+    public void SetTint(Color color)
+    {
+        if (Image1 != null)
+        {
+            Image1.color = color;
+        }
+
+        if (Image2 != null)
+        {
+            Image2.color = color;
+        }
+    }
+
     public Sprite GetImage()
     {
         if(!isSwitched)

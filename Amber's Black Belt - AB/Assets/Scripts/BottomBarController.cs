@@ -41,7 +41,7 @@ public class BottomBarController : MonoBehaviour
     private int branchChoiceLineIndex = -1;
     private List<int> visibleBranchChoiceOptionIndices = new List<int>();
 
-    private void Start()
+    private void Awake()
     {
         animator = GetComponent<Animator>();
         gameController = FindObjectOfType<GameController>();
@@ -76,6 +76,11 @@ public class BottomBarController : MonoBehaviour
         else if (state == State.COMPLETED)
         {
             if (waitingForSentenceChoice || waitingForBranchChoice)
+            {
+                return;
+            }
+
+            if (IsBlockingSoundPlaying())
             {
                 return;
             }
@@ -127,6 +132,18 @@ public class BottomBarController : MonoBehaviour
                 }
             }
         }
+    }
+
+    private bool IsBlockingSoundPlaying()
+    {
+        if (gameController == null)
+        {
+            gameController = FindObjectOfType<GameController>();
+        }
+
+        return gameController != null
+            && gameController.audioController != null
+            && gameController.audioController.IsSoundPlaying();
     }
 
     public int GetSentenceIndex()
@@ -524,6 +541,11 @@ public class BottomBarController : MonoBehaviour
 
     private void ShowDialogueSentence(Speaker speaker, string text, List<StoryScene.Sentence.Action> actions, AudioClip music, AudioClip sound)
     {
+        if (gameController == null)
+        {
+            gameController = FindObjectOfType<GameController>();
+        }
+
         if (currentTextCoroutine != null)
         {
             StopCoroutine(currentTextCoroutine);
@@ -603,6 +625,7 @@ public class BottomBarController : MonoBehaviour
     private void ActSpeaker(StoryScene.Sentence.Action action)
     {
         SpriteController controller = null;
+        Color resolvedTint = action.tintColor.a <= 0f ? Color.white : action.tintColor;
         switch (action.actionType)
         {
             case StoryScene.Sentence.Action.Type.APPEAR:
@@ -625,6 +648,7 @@ public class BottomBarController : MonoBehaviour
                     }
                     Debug.Log(action.speaker.sprites[0] == null);
                     controller.Setup(action.speaker.sprites[action.spriteIndex]);
+                    controller.SetTint(resolvedTint);
                     controller.Show(action.coords);
                 }
                 catch (UnassignedReferenceException)
@@ -665,6 +689,7 @@ public class BottomBarController : MonoBehaviour
                 {
                     controller = sprites[action.speaker];
                     controller.SwitchSprite(action.speaker.sprites[action.spriteIndex]);
+                    controller.SetTint(resolvedTint);
                 }
                 else
                 {

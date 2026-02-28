@@ -18,6 +18,17 @@ public class SpriteController : MonoBehaviour
     {
         switcher.SetImage(sprite);
     }
+
+    public void SetTint(Color color)
+    {
+        switcher.SetTint(color);
+    }
+
+    public void ResetTint()
+    {
+        switcher.SetTint(Color.white);
+    }
+
     public void Show(Vector2 coords)
     {
         if (animator != null)
