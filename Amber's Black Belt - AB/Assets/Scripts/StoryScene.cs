@@ -32,6 +32,7 @@ public class StoryScene : GameScene
             public Vector2 coords;
             public float moveSpeed;
             public Color tintColor;
+            [Range(0f, 1f)] public float tintOpacity;
 
             [System.Serializable]
 
