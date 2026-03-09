@@ -20,8 +20,8 @@ MonoBehaviour:
     choice:
       prompt: 
       options: []
-    music: {fileID: 0}
-    sound: {fileID: 0}
+    music: {fileID: 8300000, guid: 130be0aeecf540a46982314ffd68b59a, type: 3}
+    sound: {fileID: 8300000, guid: e40889089bd90cc479df3043df5b69d7, type: 3}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: The platform is really empty today.
@@ -31,11 +31,12 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 0, y: 0}
       moveSpeed: 0
-      tintColor: {r: 0.042732716, g: 0, b: 0.33333334, a: 0.41960785}
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.596
     choice:
       prompt: 
       options: []
-    music: {fileID: 8300000, guid: 34d7a4464054ddf43a1157dab5112455, type: 3}
+    music: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -46,11 +47,12 @@ MonoBehaviour:
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
     choice:
       prompt: 
       options: []
-    music: {fileID: 8300000, guid: 34d7a4464054ddf43a1157dab5112455, type: 3}
+    music: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -61,7 +63,8 @@ MonoBehaviour:
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
     choice:
       prompt: 
       options: []
@@ -76,7 +79,8 @@ MonoBehaviour:
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
     choice:
       prompt: 
       options: []
@@ -91,22 +95,224 @@ MonoBehaviour:
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
     choice:
       prompt: 
       options: []
     music: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: The train comes into view.
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: Oh dear, what's a youngster like you taking the train at this hour?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: -200, y: 0}
+      moveSpeed: 50
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 200, y: 0}
       moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: Did you just come back from spending time with your friends?
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 50
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 1
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: But yea, im going to live in the dorms.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options:
+      - text: '"Im just waiting for the train."'
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Im just waiting for the train.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Well of course, thats what a train station is for.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: .....
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+      - text: '"No"'
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: No
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: ....I see.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: By chance are you leaving home to attend school? Ive seen a lot of youngsters
+      leave home in order to attend the school nearby.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
     choice:
       prompt: 
       options: []
@@ -114,7 +320,2933 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: ....
+    text: Something.. like that.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: But yea, im going to live in the dorms.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: Hmmm, not the best timing is it not? Its already been a few weeks since
+      school started
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: ..I know.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: My grandson started this year like you. At the same school we spoke about.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: Hm, havent heard from him all week!
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 1
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: 
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options:
+      - text: Wow, thats sad.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Wow, thats sad.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: .....
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: You children and your dismissive attitude.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: I get it, not really something that changes your life in any way.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im just rambling, so let me ramble in peace.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I never said anything about that-
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Nah I don't care.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: ..
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+      - text: I guess he's busy doing work.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I guess he's busy doing work.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Since, school started only a few weeks ago.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Yes.. I understand that. So, im trying not to call him too much to
+            bother him.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im sure he'll call at some point when hes not as busy.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: Anyways, enough about my grandson. I want to warn you about something!
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options:
+      - text: Wow, thats sad.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Wow, thats sad.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: .....
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: You children and your dismissive attitude.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: I get it, not really something that changes your life in any way.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im just rambling, so let me ramble in peace.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I never said anything about that-
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Nah I don't care.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: ..
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+      - text: I guess he's busy doing work.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I guess he's busy doing work.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Since, school started only a few weeks ago.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Yes.. I understand that. So, im trying not to call him too much to
+            bother him.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im sure he'll call at some point when hes not as busy.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: What is it?
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options:
+      - text: Wow, thats sad.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Wow, thats sad.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: .....
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: You children and your dismissive attitude.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: I get it, not really something that changes your life in any way.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im just rambling, so let me ramble in peace.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I never said anything about that-
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Nah I don't care.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: ..
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+      - text: I guess he's busy doing work.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I guess he's busy doing work.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Since, school started only a few weeks ago.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Yes.. I understand that. So, im trying not to call him too much to
+            bother him.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im sure he'll call at some point when hes not as busy.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: Come closer
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options:
+      - text: Wow, thats sad.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Wow, thats sad.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: .....
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: You children and your dismissive attitude.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: I get it, not really something that changes your life in any way.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im just rambling, so let me ramble in peace.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I never said anything about that-
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Nah I don't care.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: ..
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+      - text: I guess he's busy doing work.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I guess he's busy doing work.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Since, school started only a few weeks ago.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Yes.. I understand that. So, im trying not to call him too much to
+            bother him.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im sure he'll call at some point when hes not as busy.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: ?? Ok. Nobodys around tho
+    actions:
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 2
+      coords: {x: -50, y: 0}
+      moveSpeed: 30
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options:
+      - text: Wow, thats sad.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Wow, thats sad.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: .....
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: You children and your dismissive attitude.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: I get it, not really something that changes your life in any way.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im just rambling, so let me ramble in peace.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I never said anything about that-
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Nah I don't care.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: ..
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+      - text: I guess he's busy doing work.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I guess he's busy doing work.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Since, school started only a few weeks ago.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Yes.. I understand that. So, im trying not to call him too much to
+            bother him.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im sure he'll call at some point when hes not as busy.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: My grandson told me that there's a lot of suspicious activity going on
+      in the school
+    actions:
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -50, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options:
+      - text: Wow, thats sad.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Wow, thats sad.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: .....
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: You children and your dismissive attitude.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: I get it, not really something that changes your life in any way.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im just rambling, so let me ramble in peace.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I never said anything about that-
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Nah I don't care.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: ..
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+      - text: I guess he's busy doing work.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I guess he's busy doing work.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Since, school started only a few weeks ago.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Yes.. I understand that. So, im trying not to call him too much to
+            bother him.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im sure he'll call at some point when hes not as busy.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: Like.. dealings with the government, suspicious organizations...
+    actions:
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -50, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options:
+      - text: Wow, thats sad.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Wow, thats sad.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: .....
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: You children and your dismissive attitude.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: I get it, not really something that changes your life in any way.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im just rambling, so let me ramble in peace.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I never said anything about that-
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Nah I don't care.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: ..
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+      - text: I guess he's busy doing work.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I guess he's busy doing work.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Since, school started only a few weeks ago.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Yes.. I understand that. So, im trying not to call him too much to
+            bother him.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im sure he'll call at some point when hes not as busy.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: So make sure you be careful!!
+    actions:
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -50, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options:
+      - text: Wow, thats sad.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Wow, thats sad.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: .....
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: You children and your dismissive attitude.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: I get it, not really something that changes your life in any way.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im just rambling, so let me ramble in peace.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I never said anything about that-
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Nah I don't care.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: ..
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+      - text: I guess he's busy doing work.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I guess he's busy doing work.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Since, school started only a few weeks ago.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Yes.. I understand that. So, im trying not to call him too much to
+            bother him.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im sure he'll call at some point when hes not as busy.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: What- Really? Wait how do you know this stuff?
+    actions:
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: -50, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 2
+      coords: {x: -200, y: 0}
+      moveSpeed: 30
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options:
+      - text: Wow, thats sad.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Wow, thats sad.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: .....
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: You children and your dismissive attitude.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: I get it, not really something that changes your life in any way.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im just rambling, so let me ramble in peace.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I never said anything about that-
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Nah I don't care.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: ..
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+      - text: I guess he's busy doing work.
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I guess he's busy doing work.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Since, school started only a few weeks ago.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Yes.. I understand that. So, im trying not to call him too much to
+            bother him.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+          text: Im sure he'll call at some point when hes not as busy.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0.5
+          - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: '!'
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
@@ -122,6 +3254,7 @@ MonoBehaviour:
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -137,6 +3270,69 @@ MonoBehaviour:
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+    text: Well! Ill let you take your phone call in peace! Goodbye now.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: The Old Man zooms off far away. What was he even doing on the tracks anyway?
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Bruh
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -152,12 +3348,14 @@ MonoBehaviour:
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
       spriteIndex: 0
       actionType: 1
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -173,33 +3371,14 @@ MonoBehaviour:
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
-    choice:
-      prompt: 
-      options: []
-    music: {fileID: 0}
-    sound: {fileID: 0}
-  - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: Seriously? This guy is still calling me?
-    actions:
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-    - speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []

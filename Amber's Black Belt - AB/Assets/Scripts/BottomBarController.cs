@@ -626,7 +626,14 @@ public class BottomBarController : MonoBehaviour
     private void ActSpeaker(StoryScene.Sentence.Action action)
     {
         SpriteController controller = null;
-        Color resolvedTint = action.tintColor.a <= 0f ? Color.white : action.tintColor;
+        float tintStrength = action.tintOpacity;
+        if (tintStrength <= 0f && action.tintColor.a > 0f)
+        {
+            tintStrength = action.tintColor.a;
+        }
+
+        Color tintTarget = new Color(action.tintColor.r, action.tintColor.g, action.tintColor.b, 1f);
+        Color resolvedTint = Color.Lerp(Color.white, tintTarget, Mathf.Clamp01(tintStrength));
         switch (action.actionType)
         {
             case StoryScene.Sentence.Action.Type.APPEAR:
