@@ -15,6 +15,7 @@ public class StorySceneSentenceDrawer : PropertyDrawer
         SerializedProperty textProp = property.FindPropertyRelative("text");
         SerializedProperty actionsProp = property.FindPropertyRelative("actions");
         SerializedProperty musicProp = property.FindPropertyRelative("music");
+        SerializedProperty music2Prop = property.FindPropertyRelative("music2");
         SerializedProperty soundProp = property.FindPropertyRelative("sound");
         SerializedProperty choiceProp = property.FindPropertyRelative("choice");
 
@@ -45,6 +46,7 @@ public class StorySceneSentenceDrawer : PropertyDrawer
                 DrawProperty(ref y, position, textProp, true);
                 DrawProperty(ref y, position, actionsProp, true);
                 DrawProperty(ref y, position, musicProp);
+                DrawProperty(ref y, position, music2Prop);
                 DrawProperty(ref y, position, soundProp);
             }
 
@@ -61,6 +63,7 @@ public class StorySceneSentenceDrawer : PropertyDrawer
         SerializedProperty textProp = property.FindPropertyRelative("text");
         SerializedProperty actionsProp = property.FindPropertyRelative("actions");
         SerializedProperty musicProp = property.FindPropertyRelative("music");
+        SerializedProperty music2Prop = property.FindPropertyRelative("music2");
         SerializedProperty soundProp = property.FindPropertyRelative("sound");
         SerializedProperty choiceProp = property.FindPropertyRelative("choice");
 
@@ -89,6 +92,7 @@ public class StorySceneSentenceDrawer : PropertyDrawer
             height += EditorGUI.GetPropertyHeight(textProp, true) + Spacing;
             height += EditorGUI.GetPropertyHeight(actionsProp, true) + Spacing;
             height += EditorGUI.GetPropertyHeight(musicProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(music2Prop, true) + Spacing;
             height += EditorGUI.GetPropertyHeight(soundProp, true) + Spacing;
         }
 

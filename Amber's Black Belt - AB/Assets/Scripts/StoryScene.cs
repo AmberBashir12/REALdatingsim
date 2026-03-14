@@ -21,6 +21,7 @@ public class StoryScene : GameScene
         public ChoiceBlock choice;
 
         public AudioClip music;
+        public AudioClip music2;
         public AudioClip sound;
 
         [System.Serializable]
@@ -72,6 +73,7 @@ public class StoryScene : GameScene
         public string text;
         public List<Sentence.Action> actions;
         public AudioClip music;
+        public AudioClip music2;
         public AudioClip sound;
         public FollowUpChoice choice;
 
@@ -105,6 +107,7 @@ public class StoryScene : GameScene
         public string text;
         public List<Sentence.Action> actions;
         public AudioClip music;
+        public AudioClip music2;
         public AudioClip sound;
     }
 

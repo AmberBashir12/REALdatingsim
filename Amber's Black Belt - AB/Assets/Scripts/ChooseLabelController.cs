@@ -74,6 +74,10 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
         textMesh.rectTransform.localPosition = position;
     }
 
+
+
+
+
     public void SetChooseScene(ChooseScene chooseScene)
     {
         this.chooseScene = chooseScene;
