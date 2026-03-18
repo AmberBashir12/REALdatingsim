@@ -189,6 +189,6 @@ public class GameController : MonoBehaviour
 
     public void PlayAudio(StoryScene.Sentence sentence)
     {
-        audioController.PlayAudio(sentence.music, sentence.sound);
+        audioController.PlayAudio(sentence.music, sentence.music2, sentence.sound);
     }
 }

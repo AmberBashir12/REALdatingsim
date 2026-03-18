@@ -526,24 +526,29 @@ public class BottomBarController : MonoBehaviour
 
     private void ShowSentence(StoryScene.Sentence sentence)
     {
-        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.sound);
+        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.music2, sentence.sound);
     }
 
     private void ShowFollowUpSentence(StoryScene.FollowUpSentence sentence)
     {
-        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.sound);
+        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.music2, sentence.sound);
     }
 
     private void ShowFollowUpLine(StoryScene.FollowUpLine line)
     {
-        ShowDialogueSentence(line.speaker, line.text, line.actions, line.music, line.sound);
+        ShowDialogueSentence(line.speaker, line.text, line.actions, line.music, line.music2, line.sound);
     }
 
-    private void ShowDialogueSentence(Speaker speaker, string text, List<StoryScene.Sentence.Action> actions, AudioClip music, AudioClip sound)
+    private void ShowDialogueSentence(Speaker speaker, string text, List<StoryScene.Sentence.Action> actions, AudioClip music, AudioClip music2, AudioClip sound)
     {
         if (gameController == null)
         {
             gameController = FindObjectOfType<GameController>();
+        }
+
+        if (gameController != null && gameController.audioController != null && speaker != null)
+        {
+            gameController.audioController.PlayBlip(speaker.blip);
         }
 
         if (currentTextCoroutine != null)
@@ -568,7 +573,7 @@ public class BottomBarController : MonoBehaviour
 
         if (gameController != null && gameController.audioController != null)
         {
-            gameController.audioController.PlayAudio(music, sound);
+            gameController.audioController.PlayAudio(music, music2, sound);
         }
     }
 
