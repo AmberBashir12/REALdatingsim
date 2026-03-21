@@ -11,7 +11,7 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private KeyCode pauseKey = KeyCode.Escape;
 
     [Header("Navigation")]
-    [SerializeField] private string mainMenuSceneName = "MainMenu";
+    [SerializeField] private string mainMenuSceneName = "Main Menu";
 
     private bool isPaused;
 

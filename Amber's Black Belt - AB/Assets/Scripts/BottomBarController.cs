@@ -4,11 +4,16 @@ using UnityEngine;
 using TMPro;
 using JetBrains.Annotations;
 using System;
+using UnityEngine.SceneManagement;
 
 public class BottomBarController : MonoBehaviour
 {
     public TextMeshProUGUI barText;
     public TextMeshProUGUI personNameText;
+
+    [Header("Ending")]
+    [SerializeField] private string mainMenuSceneName = "Main Menu";
+    [SerializeField] private EndingReturnToMenuButton endingReturnButton;
 
     private int sentenceIndex = -1;
     public StoryScene currentScene;
@@ -33,6 +38,7 @@ public class BottomBarController : MonoBehaviour
     [SerializeField] private float inputCooldownSeconds = 0.08f;
     private float lastAdvanceInputTime = -999f;
     private bool waitingForSentenceChoice = false;
+    private bool waitingForEndingReturnToMenu = false;
     private List<StoryScene.FollowUpSentence> activeBranchSentences;
     private int branchSentenceIndex = -1;
     private List<int> visibleSentenceChoiceOptionIndices = new List<int>();
@@ -45,6 +51,11 @@ public class BottomBarController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         gameController = FindObjectOfType<GameController>();
+
+        if (endingReturnButton != null)
+        {
+            endingReturnButton.SetVisible(false);
+        }
     }
 
     private void Update()
@@ -75,7 +86,7 @@ public class BottomBarController : MonoBehaviour
         }
         else if (state == State.COMPLETED)
         {
-            if (waitingForSentenceChoice || waitingForBranchChoice)
+            if (waitingForSentenceChoice || waitingForBranchChoice || waitingForEndingReturnToMenu)
             {
                 return;
             }
@@ -110,6 +121,30 @@ public class BottomBarController : MonoBehaviour
                         return;
                     }
 
+                    if (followUpSentence.followUpType == StoryScene.FollowUpSentence.FollowUpType.ENDING)
+                    {
+                        if (gameController == null)
+                        {
+                            gameController = FindObjectOfType<GameController>();
+                        }
+
+                        if (gameController != null)
+                        {
+                            if (followUpSentence.endingScene == null)
+                            {
+                                Debug.LogError($"StoryScene '{currentScene?.name}' follow-up sentence {branchSentenceIndex} is ENDING but has no endingScene assigned.");
+                                HandleStoryCompleted();
+                                return;
+                            }
+
+                            gameController.PlayScene(followUpSentence.endingScene);
+                            return;
+                        }
+
+                        Debug.LogError("Cannot switch to EndingScene because GameController was not found.");
+                        return;
+                    }
+
                     ShowFollowUpSentence(followUpSentence);
                     return;
                 }
@@ -128,21 +163,60 @@ public class BottomBarController : MonoBehaviour
                 // We're at the last sentence, move to the next scene
                 if (gameController != null && currentScene != null)
                 {
-                    TransitionFromStoryEnd();
+                    HandleStoryCompleted();
                 }
             }
         }
     }
 
-    private void TransitionFromStoryEnd()
+    private void HandleStoryCompleted()
     {
         if (gameController == null || currentScene == null)
         {
             return;
         }
 
+        if (currentScene is EndingScene)
+        {
+            ShowEndingReturnButton();
+            return;
+        }
+
         GameScene nextScene = currentScene.GetNextScene();
         gameController.PlayScene(nextScene);
+    }
+
+    private void ShowEndingReturnButton()
+    {
+        if (waitingForEndingReturnToMenu)
+        {
+            return;
+        }
+
+        waitingForEndingReturnToMenu = true;
+
+        if (endingReturnButton != null)
+        {
+            endingReturnButton.SetMainMenuSceneName(mainMenuSceneName);
+            endingReturnButton.SetVisible(true);
+            return;
+        }
+
+        Debug.LogWarning("Ending reached but no EndingReturnToMenuButton is assigned on BottomBarController. Returning to main menu.");
+        ReturnToMainMenuFromEnding();
+    }
+
+    public void ReturnToMainMenuFromEnding()
+    {
+        waitingForEndingReturnToMenu = false;
+
+        if (endingReturnButton != null)
+        {
+            endingReturnButton.SetVisible(false);
+        }
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
     }
 
     private bool IsBlockingSoundPlaying()
@@ -224,6 +298,12 @@ public class BottomBarController : MonoBehaviour
         branchChoiceLineIndex = -1;
         visibleSentenceChoiceOptionIndices.Clear();
         visibleBranchChoiceOptionIndices.Clear();
+        waitingForEndingReturnToMenu = false;
+
+        if (endingReturnButton != null)
+        {
+            endingReturnButton.SetVisible(false);
+        }
 
         if (currentScene == null)
         {
@@ -241,6 +321,11 @@ public class BottomBarController : MonoBehaviour
             personNameText.text = ""; 
             state = State.COMPLETED; // If no sentences, it's immediately completed.
                                      // GameController will then check IsLastSentence.
+
+            if (currentScene is EndingScene)
+            {
+                ShowEndingReturnButton();
+            }
         }
         else
         {
@@ -280,6 +365,30 @@ public class BottomBarController : MonoBehaviour
             return;
         }
 
+        if (sentence.sentenceType == StoryScene.Sentence.SentenceType.ENDING)
+        {
+            if (gameController == null)
+            {
+                gameController = FindObjectOfType<GameController>();
+            }
+
+            if (gameController != null)
+            {
+                if (sentence.endingScene == null)
+                {
+                    Debug.LogError($"StoryScene '{currentScene?.name}' sentence {sentenceIndex} is ENDING but has no endingScene assigned.");
+                    HandleStoryCompleted();
+                    return;
+                }
+
+                gameController.PlayScene(sentence.endingScene);
+                return;
+            }
+
+            Debug.LogError("Cannot switch to EndingScene because GameController was not found.");
+            return;
+        }
+
         ShowSentence(sentence);
     }
 
@@ -294,7 +403,7 @@ public class BottomBarController : MonoBehaviour
             }
             else if (gameController != null && currentScene != null)
             {
-                TransitionFromStoryEnd();
+                HandleStoryCompleted();
             }
             return;
         }
@@ -327,7 +436,7 @@ public class BottomBarController : MonoBehaviour
             }
             else if (gameController != null && currentScene != null)
             {
-                TransitionFromStoryEnd();
+                HandleStoryCompleted();
             }
             return;
         }
@@ -402,7 +511,7 @@ public class BottomBarController : MonoBehaviour
         }
         else if (gameController != null && currentScene != null)
         {
-            TransitionFromStoryEnd();
+            HandleStoryCompleted();
         }
     }
 
@@ -547,6 +656,32 @@ public class BottomBarController : MonoBehaviour
 
     private void ShowFollowUpLine(StoryScene.FollowUpLine line)
     {
+        if (line.lineType == StoryScene.FollowUpLine.LineType.ENDING)
+        {
+            if (gameController == null)
+            {
+                gameController = FindObjectOfType<GameController>();
+            }
+
+            if (gameController != null)
+            {
+                if (line.endingScene == null)
+                {
+                    Debug.LogError($"StoryScene '{currentScene?.name}' follow-up line {branchChoiceLineIndex} is ENDING but has no endingScene assigned.");
+                    activeBranchChoiceLines = null;
+                    branchChoiceLineIndex = -1;
+                    AdvanceSentence();
+                    return;
+                }
+
+                gameController.PlayScene(line.endingScene);
+                return;
+            }
+
+            Debug.LogError("Cannot switch to EndingScene because GameController was not found.");
+            return;
+        }
+
         ShowDialogueSentence(line.speaker, line.text, line.actions, line.music, line.sound);
     }
 
@@ -730,7 +865,7 @@ public class BottomBarController : MonoBehaviour
                         Sprite targetSprite = action.speaker.sprites[action.spriteIndex];
                         if (targetSprite != null)
                         {
-                            controller.SwitchSprite(targetSprite);
+                            controller.Setup(targetSprite);
                         }
                     }
                     controller.SetTint(resolvedTint);

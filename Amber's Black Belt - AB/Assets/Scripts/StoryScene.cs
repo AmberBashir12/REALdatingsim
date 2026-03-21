@@ -20,6 +20,8 @@ public class StoryScene : GameScene
         public List<Action> actions;
         public ChoiceBlock choice;
 
+        public EndingScene endingScene;
+
         public AudioClip music;
         public AudioClip music2;
         public AudioClip sound;
@@ -62,7 +64,8 @@ public class StoryScene : GameScene
         public enum SentenceType
         {
             SENTENCE,
-            CHOICE
+            CHOICE,
+            ENDING
         }
     }
 
@@ -77,11 +80,13 @@ public class StoryScene : GameScene
         public AudioClip music2;
         public AudioClip sound;
         public FollowUpChoice choice;
+        public EndingScene endingScene;
 
         public enum FollowUpType
         {
             SENTENCE,
-            CHOICE
+            CHOICE,
+            ENDING
         }
     }
 
@@ -104,12 +109,20 @@ public class StoryScene : GameScene
     [System.Serializable]
     public struct FollowUpLine
     {
+        public LineType lineType;
         public Speaker speaker;
         public string text;
         public List<Sentence.Action> actions;
         public AudioClip music;
         public AudioClip music2;
         public AudioClip sound;
+        public EndingScene endingScene;
+
+        public enum LineType
+        {
+            SENTENCE,
+            ENDING
+        }
     }
 
     [System.Serializable]
