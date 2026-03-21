@@ -128,10 +128,21 @@ public class BottomBarController : MonoBehaviour
                 // We're at the last sentence, move to the next scene
                 if (gameController != null && currentScene != null)
                 {
-                    gameController.PlayScene(currentScene.GetNextScene());
+                    TransitionFromStoryEnd();
                 }
             }
         }
+    }
+
+    private void TransitionFromStoryEnd()
+    {
+        if (gameController == null || currentScene == null)
+        {
+            return;
+        }
+
+        GameScene nextScene = currentScene.GetNextScene();
+        gameController.PlayScene(nextScene);
     }
 
     private bool IsBlockingSoundPlaying()
@@ -283,7 +294,7 @@ public class BottomBarController : MonoBehaviour
             }
             else if (gameController != null && currentScene != null)
             {
-                gameController.PlayScene(currentScene.GetNextScene());
+                TransitionFromStoryEnd();
             }
             return;
         }
@@ -316,7 +327,7 @@ public class BottomBarController : MonoBehaviour
             }
             else if (gameController != null && currentScene != null)
             {
-                gameController.PlayScene(currentScene.GetNextScene());
+                TransitionFromStoryEnd();
             }
             return;
         }
@@ -391,7 +402,7 @@ public class BottomBarController : MonoBehaviour
         }
         else if (gameController != null && currentScene != null)
         {
-            gameController.PlayScene(currentScene.GetNextScene());
+            TransitionFromStoryEnd();
         }
     }
 
@@ -526,29 +537,24 @@ public class BottomBarController : MonoBehaviour
 
     private void ShowSentence(StoryScene.Sentence sentence)
     {
-        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.music2, sentence.sound);
+        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.sound);
     }
 
     private void ShowFollowUpSentence(StoryScene.FollowUpSentence sentence)
     {
-        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.music2, sentence.sound);
+        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.sound);
     }
 
     private void ShowFollowUpLine(StoryScene.FollowUpLine line)
     {
-        ShowDialogueSentence(line.speaker, line.text, line.actions, line.music, line.music2, line.sound);
+        ShowDialogueSentence(line.speaker, line.text, line.actions, line.music, line.sound);
     }
 
-    private void ShowDialogueSentence(Speaker speaker, string text, List<StoryScene.Sentence.Action> actions, AudioClip music, AudioClip music2, AudioClip sound)
+    private void ShowDialogueSentence(Speaker speaker, string text, List<StoryScene.Sentence.Action> actions, AudioClip music, AudioClip sound)
     {
         if (gameController == null)
         {
             gameController = FindObjectOfType<GameController>();
-        }
-
-        if (gameController != null && gameController.audioController != null && speaker != null)
-        {
-            gameController.audioController.PlayBlip(speaker.blip);
         }
 
         if (currentTextCoroutine != null)
@@ -557,7 +563,12 @@ public class BottomBarController : MonoBehaviour
         }
 
         string resolvedText = TextTemplate.Resolve(text);
-        currentTextCoroutine = StartCoroutine(TypeText(resolvedText));
+        AudioClip blipClip = speaker != null ? speaker.blip : null;
+        currentTextCoroutine = StartCoroutine(TypeText(resolvedText, blipClip));
+        if (blipClip != null && gameController != null && gameController.audioController != null)
+        {
+            gameController.audioController.PlayBlip(blipClip);
+        }
 
         if (speaker != null)
         {
@@ -573,7 +584,7 @@ public class BottomBarController : MonoBehaviour
 
         if (gameController != null && gameController.audioController != null)
         {
-            gameController.audioController.PlayAudio(music, music2, sound);
+            gameController.audioController.PlayAudio(music, sound);
         }
     }
 
@@ -592,7 +603,7 @@ public class BottomBarController : MonoBehaviour
         return sentenceIndex + 1 >= currentScene.sentences.Count;
     }
 
-    private IEnumerator TypeText(string text)
+    private IEnumerator TypeText(string text, AudioClip blipClip)
     {
         barText.text = "";
         state = State.PLAYING;
@@ -714,6 +725,15 @@ public class BottomBarController : MonoBehaviour
                 if (sprites.ContainsKey(action.speaker))
                 {
                     controller = sprites[action.speaker];
+                    if (action.speaker != null && action.speaker.sprites != null && action.spriteIndex >= 0 && action.spriteIndex < action.speaker.sprites.Count)
+                    {
+                        Sprite targetSprite = action.speaker.sprites[action.spriteIndex];
+                        if (targetSprite != null)
+                        {
+                            controller.SwitchSprite(targetSprite);
+                        }
+                    }
+                    controller.SetTint(resolvedTint);
                     controller.Bounce();
                 }
                 else

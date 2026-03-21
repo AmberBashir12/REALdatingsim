@@ -21,13 +21,13 @@ public class SpriteSwitcher : MonoBehaviour
     {
         if(!isSwitched)
         {
-            Image1.sprite = sprite;
-            animator.SetTrigger("SwitchZero");
+            Image2.sprite = sprite;
+            animator.SetTrigger("Switch1");
         }
         else
         {
-            Image2.sprite = sprite; 
-            animator.SetTrigger("SwitchOne");
+            Image1.sprite = sprite; 
+            animator.SetTrigger("Switch2");
         }
         isSwitched = !isSwitched;
     }

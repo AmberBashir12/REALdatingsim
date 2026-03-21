@@ -15,6 +15,9 @@ MonoBehaviour:
   speakerName: '{playerName}'
   textColor: {r: 0.40784314, g: 0, b: 0.5176945, a: 1}
   sprites:
-  - {fileID: 21300000, guid: b2d5366ed93256d4bb369e172f87a1ca, type: 3}
-  - {fileID: 21300000, guid: e8e7220994b43eb4c86d9383879f540e, type: 3}
+  - {fileID: 21300000, guid: 781c5fb0c0dafba4598da35984f1e441, type: 3}
+  - {fileID: 21300000, guid: 5e1341611fdf53944831641cc1bcad25, type: 3}
+  - {fileID: 21300000, guid: ce9f431bf28b86e498150467ec51b4b5, type: 3}
+  - {fileID: 21300000, guid: 6d5a15dface56d04c8137c6bfb6faec5, type: 3}
   prefab: {fileID: 934540294316633314, guid: 05e76c0e1031ddf4fb6a17e6a4931617, type: 3}
+  blip: {fileID: 8300000, guid: 4f9f0e262c8a7ab4893619fe40da3563, type: 3}

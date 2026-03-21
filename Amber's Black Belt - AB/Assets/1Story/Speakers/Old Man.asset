@@ -15,6 +15,9 @@ MonoBehaviour:
   speakerName: Old Guy
   textColor: {r: 0, g: 0, b: 0, a: 0}
   sprites:
-  - {fileID: 21300000, guid: 1bbbc281b4ed3664f8b832f113d76a42, type: 3}
-  - {fileID: 21300000, guid: 1bbbc281b4ed3664f8b832f113d76a42, type: 3}
+  - {fileID: 21300000, guid: f36d03b079e453b4587c417e70e31c24, type: 3}
+  - {fileID: 21300000, guid: fad58ed5a2605834e92e5ae7f1baabd7, type: 3}
+  - {fileID: 21300000, guid: b73e2b0b4f6ebfb409f5aded91a1b2ab, type: 3}
+  - {fileID: 21300000, guid: 548d20bc6a39e964784bc2abd5f2efe7, type: 3}
   prefab: {fileID: 1267266089686353376, guid: 1edc6ccc10c41654080dbe242135eed5, type: 3}
+  blip: {fileID: 8300000, guid: 4870c5ef3cd43b04591c930ade319dc7, type: 3}

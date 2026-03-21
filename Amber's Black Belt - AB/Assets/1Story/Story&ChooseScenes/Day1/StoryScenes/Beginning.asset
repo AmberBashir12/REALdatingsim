@@ -21,7 +21,8 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 8300000, guid: 130be0aeecf540a46982314ffd68b59a, type: 3}
-    sound: {fileID: 8300000, guid: e40889089bd90cc479df3043df5b69d7, type: 3}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: The platform is really empty today.
@@ -37,6 +38,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -53,6 +55,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -69,6 +72,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -85,6 +89,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -101,16 +106,17 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-    text: Oh dear, what's a youngster like you taking the train at this hour?
+    text: Hey there, what's a kid like you taking the train at this hour?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
-      actionType: 0
+      actionType: 2
       coords: {x: -200, y: 0}
-      moveSpeed: 50
+      moveSpeed: 2
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
@@ -124,6 +130,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
@@ -147,6 +154,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 1
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -178,20 +186,21 @@ MonoBehaviour:
           text: Im just waiting for the train.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 1
             actionType: 4
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -205,16 +214,17 @@ MonoBehaviour:
             actionType: 0
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-            spriteIndex: 0
+            spriteIndex: 1
             actionType: 4
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -224,20 +234,21 @@ MonoBehaviour:
           text: .....
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 3
             actionType: 4
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -251,53 +262,56 @@ MonoBehaviour:
           text: No
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 1
             actionType: 4
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
         - followUpType: 0
           speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-          text: ....I see.
+          text: I see.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-            spriteIndex: 0
+            spriteIndex: 1
             actionType: 4
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-    text: By chance are you leaving home to attend school? Ive seen a lot of youngsters
-      leave home in order to attend the school nearby.
+    text: By chance are you leaving home to attend school? Ive seen a lot of kids
+      leave home to attend the school nearby.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
@@ -307,7 +321,7 @@ MonoBehaviour:
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -317,13 +331,14 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: Something.. like that.
+    text: Something like that.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -340,13 +355,14 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: But yea, im going to live in the dorms.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -363,6 +379,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
@@ -377,7 +394,7 @@ MonoBehaviour:
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -387,13 +404,14 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: ..I know.
+    text: Yea, I know
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -410,6 +428,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
@@ -423,7 +442,7 @@ MonoBehaviour:
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -433,6 +452,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
@@ -446,7 +466,7 @@ MonoBehaviour:
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -456,6 +476,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 1
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -480,27 +501,28 @@ MonoBehaviour:
       options:
       - text: Wow, thats sad.
         requiredChoiceKeys: []
-        choiceKeyToUnlock: 
+        choiceKeyToUnlock: RudeYoungster
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
           text: Wow, thats sad.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 1
             actionType: 4
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -514,39 +536,42 @@ MonoBehaviour:
             actionType: 0
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-            spriteIndex: 0
+            spriteIndex: 2
             actionType: 4
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
         - followUpType: 0
           speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-          text: You children and your dismissive attitude.
+          text: '"That''s sad?" that''s it? Children are so dismissive these days,
+            ugh'
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-            spriteIndex: 0
+            spriteIndex: 3
             actionType: 4
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -556,66 +581,69 @@ MonoBehaviour:
           text: I get it, not really something that changes your life in any way.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 2
             actionType: 0
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-            spriteIndex: 0
+            spriteIndex: 3
             actionType: 4
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
         - followUpType: 0
           speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-          text: Im just rambling, so let me ramble in peace.
+          text: But you should learn some manners!
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 3
             actionType: 0
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-            spriteIndex: 0
+            spriteIndex: 3
             actionType: 4
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: I never said anything about that-
+          text: I never said anything like that
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 1
             actionType: 4
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-            spriteIndex: 0
+            spriteIndex: 2
             actionType: 0
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -625,25 +653,26 @@ MonoBehaviour:
           text: Nah I don't care.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 3
             actionType: 0
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-            spriteIndex: 0
+            spriteIndex: 3
             actionType: 4
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
-        - followUpType: 0
+        - followUpType: 1
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
           text: ..
           actions:
@@ -662,10 +691,201 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
-            options: []
+            options:
+            - text: Sorry
+              requiredChoiceKeys: []
+              choiceKeyToUnlock: 
+              followUpLines:
+              - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: Sorry that I offended you.
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 1
+                  actionType: 4
+                  coords: {x: -200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                  spriteIndex: 2
+                  actionType: 0
+                  coords: {x: 200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+              - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: I didnt mean it that way.
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 1
+                  actionType: 4
+                  coords: {x: -200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+              - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                text: ohhh its okay haha
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: -200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                  spriteIndex: 1
+                  actionType: 4
+                  coords: {x: 200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+              - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                text: I apologize as well. I was too worked up.
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: -200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                  spriteIndex: 1
+                  actionType: 4
+                  coords: {x: 200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+            - text: Whatever old man
+              requiredChoiceKeys: []
+              choiceKeyToUnlock: 
+              followUpLines:
+              - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: Whatever old man
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 1
+                  actionType: 4
+                  coords: {x: -200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 1
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+              - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                text: I-
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: -200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                  spriteIndex: 1
+                  actionType: 4
+                  coords: {x: 200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+              - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                text: um
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: -200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                  spriteIndex: 1
+                  actionType: 4
+                  coords: {x: 200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+              - speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+                text: SUDDENLY! A guy comes running through the station and pushes
+                  you onto the train tracks
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 2
+                  coords: {x: -400, y: 0}
+                  moveSpeed: 2
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                  spriteIndex: 4
+                  actionType: 0
+                  coords: {x: 200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+              - speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+                text: SUDDENLY! A guy comes running through the station and pushes
+                  you onto the train tracks
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 2
+                  coords: {x: -400, y: 0}
+                  moveSpeed: 6
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
+                  spriteIndex: 6
+                  actionType: 0
+                  coords: {x: 200, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+                  tintOpacity: 0.5
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
       - text: I guess he's busy doing work.
         requiredChoiceKeys: []
         choiceKeyToUnlock: 
@@ -689,6 +909,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -712,6 +933,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -736,6 +958,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -759,11 +982,13 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
@@ -777,7 +1002,7 @@ MonoBehaviour:
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -809,6 +1034,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -832,6 +1058,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -855,6 +1082,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -878,6 +1106,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -901,6 +1130,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -924,6 +1154,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -947,6 +1178,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -970,6 +1202,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -997,6 +1230,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1020,6 +1254,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1044,6 +1279,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1067,18 +1303,20 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: What is it?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -1117,6 +1355,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1140,6 +1379,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1163,6 +1403,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1186,6 +1427,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1209,6 +1451,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1232,6 +1475,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1255,6 +1499,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1278,6 +1523,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1305,6 +1551,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1328,6 +1575,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1352,6 +1600,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1375,25 +1624,27 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
     text: Come closer
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 2
       actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -1425,6 +1676,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1448,6 +1700,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1471,6 +1724,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1494,6 +1748,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1517,6 +1772,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1540,6 +1796,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1563,6 +1820,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1586,6 +1844,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1613,6 +1872,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1636,6 +1896,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1660,6 +1921,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1683,11 +1945,13 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -1701,7 +1965,7 @@ MonoBehaviour:
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -1740,6 +2004,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1763,6 +2028,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1786,6 +2052,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1809,6 +2076,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1832,6 +2100,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1855,6 +2124,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1878,6 +2148,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1901,6 +2172,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1928,6 +2200,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1951,6 +2224,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1975,6 +2249,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -1998,11 +2273,13 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
@@ -2049,6 +2326,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2072,6 +2350,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2095,6 +2374,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2118,6 +2398,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2141,6 +2422,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2164,6 +2446,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2187,6 +2470,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2210,6 +2494,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2237,6 +2522,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2260,6 +2546,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2284,6 +2571,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2307,11 +2595,13 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
@@ -2357,6 +2647,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2380,6 +2671,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2403,6 +2695,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2426,6 +2719,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2449,6 +2743,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2472,6 +2767,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2495,6 +2791,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2518,6 +2815,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2545,6 +2843,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2568,6 +2867,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2592,6 +2892,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2615,11 +2916,13 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
@@ -2665,6 +2968,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2688,6 +2992,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2711,6 +3016,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2734,6 +3040,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2757,6 +3064,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2780,6 +3088,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2803,6 +3112,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2826,6 +3136,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2853,6 +3164,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2876,6 +3188,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2900,6 +3213,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -2923,11 +3237,13 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -2980,6 +3296,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3003,6 +3320,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3026,6 +3344,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3049,6 +3368,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3072,6 +3392,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3095,6 +3416,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3118,6 +3440,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3141,6 +3464,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0.5
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3168,6 +3492,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3191,6 +3516,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3215,6 +3541,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
@@ -3238,11 +3565,13 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           music: {fileID: 0}
+          music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
             prompt: 
             options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -3259,6 +3588,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 8300000, guid: 5ed693c8ee2521a4eb098f617c7a5a96, type: 3}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -3275,6 +3605,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
@@ -3298,6 +3629,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -3321,6 +3653,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -3337,6 +3670,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -3360,6 +3694,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 8300000, guid: d462bd13453889547a4f97ae415ed517, type: 3}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -3383,6 +3718,7 @@ MonoBehaviour:
       prompt: 
       options: []
     music: {fileID: 0}
+    music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: 84be4959134b2fb4dbb7d656fd07586e, type: 3}
   nextScene: {fileID: 0}
