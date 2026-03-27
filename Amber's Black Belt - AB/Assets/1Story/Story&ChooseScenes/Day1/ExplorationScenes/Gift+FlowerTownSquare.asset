@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aff05cf4b03d724e8930ad460e956ab, type: 3}
+  m_Name: Gift+FlowerTownSquare
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 8ef20273178d3a549a7fb1e4964046d2, type: 3}
+  audioClips: []
+  speakers:
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    screenPosition: {x: 0.1, y: 0.1}
+    scale: 1
+    dialogueText: which one
+  interactableObjects:
+  - objectPrefab: {fileID: 8110410102745603167, guid: 41fa586d444299b4994eb18f31513051, type: 3}
+    screenPosition: {x: 0.7, y: 0.5}
+    scale: 0.5
+    nextScene: {fileID: 0}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
+  - objectPrefab: {fileID: 6443304363007278285, guid: 2ff075470f0f0fa429ece3df2188f9c6, type: 3}
+    screenPosition: {x: 0.2, y: 0.5}
+    scale: 0.5
+    nextScene: {fileID: 0}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
+  - objectPrefab: {fileID: 55672829980942931, guid: 3937527f9e68a4e458e3483d6e08d473, type: 3}
+    screenPosition: {x: 0.9, y: 0.5}
+    scale: 1
+    nextScene: {fileID: 11400000, guid: 219f053a86075ea4abce0e42c72db7da, type: 2}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
+  - objectPrefab: {fileID: 8657296758840795533, guid: 268b5bbd6140ea847968d2c83a51ea20, type: 3}
+    screenPosition: {x: 0.1, y: 0.5}
+    scale: 1
+    nextScene: {fileID: 11400000, guid: 4515706e3e229a548a9ce31deecc3744, type: 2}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aff05cf4b03d724e8930ad460e956ab, type: 3}
+  m_Name: StageTownSquare
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 054a774d14f97924fae189022a43518f, type: 3}
+  audioClips:
+  - {fileID: 0}
+  speakers:
+  - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    screenPosition: {x: 0.1, y: 0.1}
+    scale: 1
+    dialogueText: bro this frying me smmsms
+  interactableObjects:
+  - objectPrefab: {fileID: 8657296758840795533, guid: 268b5bbd6140ea847968d2c83a51ea20, type: 3}
+    screenPosition: {x: 0.1, y: 0.5}
+    scale: 1
+    nextScene: {fileID: 11400000, guid: 1f613494d3520064a9f2c5448d46a94e, type: 2}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 
+  - objectPrefab: {fileID: 55672829980942931, guid: 3937527f9e68a4e458e3483d6e08d473, type: 3}
+    screenPosition: {x: 0.9, y: 0.5}
+    scale: 1
+    nextScene: {fileID: 11400000, guid: ea40586818411fc4da87675d0ac153eb, type: 2}
+    soundOnClick: {fileID: 0}
+    requiredChoiceKey: 
+    choiceKeyToUnlock: 

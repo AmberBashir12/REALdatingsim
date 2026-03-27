@@ -9,13 +9,19 @@ public class StoryScene : GameScene
     public List<Sentence> sentences;
     public Sprite background;
     public GameScene nextScene;
-
+    public List<AlternativeScenes> alternativeScenes;
+    
     [System.Serializable]
     public struct Sentence
     {
+        public SentenceType sentenceType;
         public Speaker speaker;
         public string text;
         public List<Action> actions;
+        public ChoiceBlock choice;
+
+        public AudioClip music;
+        public AudioClip sound;
 
         [System.Serializable]
         public struct Action
@@ -33,6 +39,155 @@ public class StoryScene : GameScene
                 NONE, APPEAR, MOVE, DISAPPEAR, BOUNCE
             }
         }
+
+        [System.Serializable]
+        public struct ChoiceBlock
+        {
+            public string prompt;
+            public List<ChoiceOption> options;
+        }
+
+        [System.Serializable]
+        public struct ChoiceOption
+        {
+            public string text;
+            public List<string> requiredChoiceKeys;
+            public string choiceKeyToUnlock;
+            public List<FollowUpSentence> followUpSentences;
+        }
+
+        public enum SentenceType
+        {
+            SENTENCE,
+            CHOICE
+        }
+    }
+
+    [System.Serializable]
+    public struct FollowUpSentence
+    {
+        public FollowUpType followUpType;
+        public Speaker speaker;
+        public string text;
+        public List<Sentence.Action> actions;
+        public AudioClip music;
+        public AudioClip sound;
+        public FollowUpChoice choice;
+
+        public enum FollowUpType
+        {
+            SENTENCE,
+            CHOICE
+        }
+    }
+
+    [System.Serializable]
+    public struct FollowUpChoice
+    {
+        public string prompt;
+        public List<FollowUpChoiceOption> options;
+    }
+
+    [System.Serializable]
+    public struct FollowUpChoiceOption
+    {
+        public string text;
+        public List<string> requiredChoiceKeys;
+        public string choiceKeyToUnlock;
+        public List<FollowUpLine> followUpLines;
+    }
+
+    [System.Serializable]
+    public struct FollowUpLine
+    {
+        public Speaker speaker;
+        public string text;
+        public List<Sentence.Action> actions;
+        public AudioClip music;
+        public AudioClip sound;
+    }
+
+    [System.Serializable]
+    public struct AlternativeScenes
+    {
+        public List<string> requiredChoiceKeys; // All keys that must be unlocked to access this alternative scene
+        public StoryScene alternativeScene;
+    }
+
+    // Get the next scene, checking for unlocked alternatives first
+    public GameScene GetNextScene()
+    {
+        Debug.Log($"GetNextScene called on StoryScene: {name}");
+        Debug.Log($"Default nextScene: {(nextScene != null ? nextScene.name : "NULL")}");
+        
+        // Check if any alternative scenes should be used instead
+        if (alternativeScenes == null)
+        {
+            Debug.Log("alternativeScenes is null");
+        }
+        else if (alternativeScenes.Count == 0)
+        {
+            Debug.Log("alternativeScenes list is empty");
+        }
+        else
+        {
+            Debug.Log($"Found {alternativeScenes.Count} alternative scenes to check");
+        }
+        
+        if (GameStateManager.Instance == null)
+        {
+            Debug.LogWarning("GameStateManager.Instance is null!");
+        }
+        
+        if (alternativeScenes != null && GameStateManager.Instance != null)
+        {
+            for (int i = 0; i < alternativeScenes.Count; i++)
+            {
+                AlternativeScenes altScene = alternativeScenes[i];
+                Debug.Log($"Checking alternative scene {i}: scene={altScene.alternativeScene?.name ?? "NULL"}");
+                
+                if (altScene.requiredChoiceKeys == null || altScene.requiredChoiceKeys.Count == 0)
+                {
+                    Debug.Log($"Alternative scene {i} has no required choice keys");
+                    continue;
+                }
+                
+                bool allKeysUnlocked = true;
+                Debug.Log($"Alternative scene {i} requires {altScene.requiredChoiceKeys.Count} keys:");
+                
+                foreach (string requiredKey in altScene.requiredChoiceKeys)
+                {
+                    if (string.IsNullOrEmpty(requiredKey))
+                    {
+                        Debug.Log($"  - Empty/null key found, skipping");
+                        continue;
+                    }
+                    
+                    bool isUnlocked = GameStateManager.Instance.IsChoiceUnlocked(requiredKey);
+                    Debug.Log($"  - Choice key '{requiredKey}' is unlocked: {isUnlocked}");
+                    
+                    if (!isUnlocked)
+                    {
+                        allKeysUnlocked = false;
+                        break;
+                    }
+                }
+                
+                if (allKeysUnlocked)
+                {
+                    Debug.Log($"All required keys unlocked! Using alternative scene: {altScene.alternativeScene?.name ?? "NULL"}");
+                    return altScene.alternativeScene;
+                }
+                else
+                {
+                    Debug.Log($"Not all required keys are unlocked for alternative scene {i}");
+                }
+            }
+        }
+        
+        // No alternative scene found, use the default next scene
+        Debug.Log($"No alternative scenes found, using default nextScene: {(nextScene != null ? nextScene.name : "NULL")}");
+        return nextScene;
     }
 }
 

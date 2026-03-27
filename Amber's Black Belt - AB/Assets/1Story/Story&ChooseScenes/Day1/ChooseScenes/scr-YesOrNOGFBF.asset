@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412dca171f510ae4a91e62bb794a7ff5, type: 3}
+  m_Name: scr-YesOrNOGFBF
+  m_EditorClassIdentifier: 
+  labels:
+  - text: EW NO
+    nextScene: {fileID: 11400000, guid: 78193cfefd6286547adadabb1a24b328, type: 2}
+    choiceKeyToUnlock: NoToScr
+  - text: omg yes
+    nextScene: {fileID: 11400000, guid: 32062d7090655d34aad082c48929b420, type: 2}
+    choiceKeyToUnlock: YesToScr
+  additionalLabels: []
