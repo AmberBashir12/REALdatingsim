@@ -13,7 +13,6 @@ public class ChooseScene : GameScene
     public struct ChoiceResult
     {
         public StoryScene nextScene;
-        public int startSentenceIndex; // -1 means play from the beginning.
     }
 
     [System.Serializable]
@@ -21,7 +20,6 @@ public class ChooseScene : GameScene
     {
         public string text;
         public StoryScene nextScene;
-        public int startSentenceIndex; // -1 means play from the beginning.
         public string choiceKeyToUnlock; // Optional: choice key to unlock when this option is selected
     }
 
@@ -38,7 +36,7 @@ public class ChooseScene : GameScene
     public bool TryGetChoiceResult(string labelText, out ChoiceResult result)
     {
         Debug.Log($"TryGetChoiceResult called with labelText: '{labelText}'");
-        result = new ChoiceResult { nextScene = null, startSentenceIndex = -1 };
+        result = new ChoiceResult { nextScene = null };
 
         // Check regular labels first
         foreach (ChooseLabel label in labels)
@@ -64,8 +62,7 @@ public class ChooseScene : GameScene
 
                 result = new ChoiceResult
                 {
-                    nextScene = label.nextScene,
-                    startSentenceIndex = label.startSentenceIndex
+                    nextScene = label.nextScene
                 };
                 return true;
             }
@@ -85,8 +82,7 @@ public class ChooseScene : GameScene
 
             result = new ChoiceResult
             {
-                nextScene = additionalLabel.Value.nextScene,
-                startSentenceIndex = additionalLabel.Value.startSentenceIndex
+                nextScene = additionalLabel.Value.nextScene
             };
             return true;
         }
@@ -100,7 +96,6 @@ public class ChooseScene : GameScene
     {
         public string text;
         public StoryScene nextScene;
-        public int startSentenceIndex; // -1 means play from the beginning.
         public string requiredChoiceKey; // The choice key that must be unlocked to show this option
         public string choiceKeyToUnlock; // Optional: choice key to unlock when this option is selected
     }
@@ -138,8 +133,7 @@ public class ChooseScene : GameScene
                 ChooseLabel newChoice = new ChooseLabel
                 {
                     text = additionalLabel.text,
-                    nextScene = additionalLabel.nextScene,
-                    startSentenceIndex = additionalLabel.startSentenceIndex
+                    nextScene = additionalLabel.nextScene
                 };
                 availableChoices.Add(newChoice);
             }

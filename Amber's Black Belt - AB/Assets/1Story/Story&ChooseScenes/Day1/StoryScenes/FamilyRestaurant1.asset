@@ -12,7 +12,194 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
   m_Name: FamilyRestaurant1
   m_EditorClassIdentifier: 
-  sentences: []
-  background: {fileID: 0}
-  nextScene: {fileID: 0}
+  sentences:
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Oh wow..
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 5
+      actionType: 1
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 8300000, guid: b99acbe2e588cf043b4b60be624d8997, type: 3}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: What a nice place, I cant believe this is supposed to be a family owned
+      restaurant.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 2
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+    text: Welcome! Welcome!
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 2
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 1
+      actionType: 1
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+    text: Just one person? Okay, please take a seat over here.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 2
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Okay
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+    text: Ill be back in just a minute, here's a menu. Take your time to order.
+    actions:
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 3
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Alright, thank you.
+    actions:
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: ..
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 1
+      actionType: 3
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5760986, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  background: {fileID: 21300000, guid: 80970a6b314b7c4468b67de15eb4d195, type: 3}
+  nextScene: {fileID: 11400000, guid: 5558f0a7c2c30e547ba218cc0e809390, type: 2}
   alternativeScenes: []

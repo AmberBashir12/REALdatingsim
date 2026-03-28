@@ -110,14 +110,7 @@ public class ChooseController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
-        if (result.startSentenceIndex >= 0)
-        {
-            gameController.PlayScene(result.nextScene, result.startSentenceIndex);
-        }
-        else
-        {
-            gameController.PlayScene(result.nextScene);
-        }
+        gameController.PlayScene(result.nextScene);
     }
 
     public void PerformInlineChoose(int optionIndex)

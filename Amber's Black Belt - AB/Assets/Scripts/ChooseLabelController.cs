@@ -95,17 +95,15 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
 
             ChooseScene.ChoiceResult result = new ChooseScene.ChoiceResult
             {
-                nextScene = scene,
-                startSentenceIndex = -1
+                nextScene = scene
             };
             
             if (chooseScene != null && !string.IsNullOrEmpty(labelText))
             {
-                // Use ChooseScene.TryGetChoiceResult to handle choice key unlocking and sentence resume index
+                // Use ChooseScene.TryGetChoiceResult to handle choice key unlocking.
                 if (!chooseScene.TryGetChoiceResult(labelText, out result))
                 {
                     result.nextScene = scene;
-                    result.startSentenceIndex = -1;
                 }
             }
             

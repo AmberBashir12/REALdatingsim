@@ -4,16 +4,12 @@ using UnityEngine;
 using TMPro;
 using JetBrains.Annotations;
 using System;
-using UnityEngine.SceneManagement;
 
 public class BottomBarController : MonoBehaviour
 {
     public TextMeshProUGUI barText;
     public TextMeshProUGUI personNameText;
-
-    [Header("Ending")]
-    [SerializeField] private string mainMenuSceneName = "Main Menu";
-    [SerializeField] private EndingReturnToMenuButton endingReturnButton;
+    [SerializeField] private EndingReturnToMenuButton endingReturnToMenuButton;
 
     private int sentenceIndex = -1;
     public StoryScene currentScene;
@@ -36,9 +32,9 @@ public class BottomBarController : MonoBehaviour
     private string currentFullText = "";
     private GameController gameController;
     [SerializeField] private float inputCooldownSeconds = 0.08f;
+    [SerializeField] private float spriteHideDestroyDelay = 0.5f;
     private float lastAdvanceInputTime = -999f;
     private bool waitingForSentenceChoice = false;
-    private bool waitingForEndingReturnToMenu = false;
     private List<StoryScene.FollowUpSentence> activeBranchSentences;
     private int branchSentenceIndex = -1;
     private List<int> visibleSentenceChoiceOptionIndices = new List<int>();
@@ -52,9 +48,9 @@ public class BottomBarController : MonoBehaviour
         animator = GetComponent<Animator>();
         gameController = FindObjectOfType<GameController>();
 
-        if (endingReturnButton != null)
+        if (endingReturnToMenuButton == null)
         {
-            endingReturnButton.SetVisible(false);
+            endingReturnToMenuButton = FindObjectOfType<EndingReturnToMenuButton>(true);
         }
     }
 
@@ -86,7 +82,7 @@ public class BottomBarController : MonoBehaviour
         }
         else if (state == State.COMPLETED)
         {
-            if (waitingForSentenceChoice || waitingForBranchChoice || waitingForEndingReturnToMenu)
+            if (waitingForSentenceChoice || waitingForBranchChoice)
             {
                 return;
             }
@@ -133,7 +129,7 @@ public class BottomBarController : MonoBehaviour
                             if (followUpSentence.endingScene == null)
                             {
                                 Debug.LogError($"StoryScene '{currentScene?.name}' follow-up sentence {branchSentenceIndex} is ENDING but has no endingScene assigned.");
-                                HandleStoryCompleted();
+                                TransitionFromStoryEnd();
                                 return;
                             }
 
@@ -163,13 +159,13 @@ public class BottomBarController : MonoBehaviour
                 // We're at the last sentence, move to the next scene
                 if (gameController != null && currentScene != null)
                 {
-                    HandleStoryCompleted();
+                    TransitionFromStoryEnd();
                 }
             }
         }
     }
 
-    private void HandleStoryCompleted()
+    private void TransitionFromStoryEnd()
     {
         if (gameController == null || currentScene == null)
         {
@@ -178,7 +174,7 @@ public class BottomBarController : MonoBehaviour
 
         if (currentScene is EndingScene)
         {
-            ShowEndingReturnButton();
+            SetEndingReturnButtonVisible(true);
             return;
         }
 
@@ -186,37 +182,17 @@ public class BottomBarController : MonoBehaviour
         gameController.PlayScene(nextScene);
     }
 
-    private void ShowEndingReturnButton()
+    private void SetEndingReturnButtonVisible(bool visible)
     {
-        if (waitingForEndingReturnToMenu)
+        if (endingReturnToMenuButton == null)
         {
-            return;
+            endingReturnToMenuButton = FindObjectOfType<EndingReturnToMenuButton>(true);
         }
 
-        waitingForEndingReturnToMenu = true;
-
-        if (endingReturnButton != null)
+        if (endingReturnToMenuButton != null)
         {
-            endingReturnButton.SetMainMenuSceneName(mainMenuSceneName);
-            endingReturnButton.SetVisible(true);
-            return;
+            endingReturnToMenuButton.SetVisible(visible);
         }
-
-        Debug.LogWarning("Ending reached but no EndingReturnToMenuButton is assigned on BottomBarController. Returning to main menu.");
-        ReturnToMainMenuFromEnding();
-    }
-
-    public void ReturnToMainMenuFromEnding()
-    {
-        waitingForEndingReturnToMenu = false;
-
-        if (endingReturnButton != null)
-        {
-            endingReturnButton.SetVisible(false);
-        }
-
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
     }
 
     private bool IsBlockingSoundPlaying()
@@ -278,6 +254,16 @@ public class BottomBarController : MonoBehaviour
         sprites.Clear();
     }
 
+    private IEnumerator DestroySpriteAfterDelay(SpriteController controller)
+    {
+        yield return new WaitForSeconds(spriteHideDestroyDelay);
+
+        if (controller != null && controller.gameObject != null)
+        {
+            Destroy(controller.gameObject);
+        }
+    }
+
     public void PlayScene(StoryScene scene)
     {
         PlayScene(scene, -1);
@@ -287,6 +273,7 @@ public class BottomBarController : MonoBehaviour
     {
         // Clear previous speakers before starting a new scene
         ClearSprites();
+        SetEndingReturnButtonVisible(false);
         
         currentScene = scene;
         sentenceIndex = startSentenceIndex - 1;
@@ -298,12 +285,6 @@ public class BottomBarController : MonoBehaviour
         branchChoiceLineIndex = -1;
         visibleSentenceChoiceOptionIndices.Clear();
         visibleBranchChoiceOptionIndices.Clear();
-        waitingForEndingReturnToMenu = false;
-
-        if (endingReturnButton != null)
-        {
-            endingReturnButton.SetVisible(false);
-        }
 
         if (currentScene == null)
         {
@@ -321,11 +302,6 @@ public class BottomBarController : MonoBehaviour
             personNameText.text = ""; 
             state = State.COMPLETED; // If no sentences, it's immediately completed.
                                      // GameController will then check IsLastSentence.
-
-            if (currentScene is EndingScene)
-            {
-                ShowEndingReturnButton();
-            }
         }
         else
         {
@@ -359,12 +335,6 @@ public class BottomBarController : MonoBehaviour
         sentenceIndex++; // Increment sentenceIndex *before* using it
 
         StoryScene.Sentence sentence = currentScene.sentences[sentenceIndex];
-        if (sentence.sentenceType == StoryScene.Sentence.SentenceType.CHOICE)
-        {
-            ShowSentenceChoice(sentence);
-            return;
-        }
-
         if (sentence.sentenceType == StoryScene.Sentence.SentenceType.ENDING)
         {
             if (gameController == null)
@@ -377,7 +347,7 @@ public class BottomBarController : MonoBehaviour
                 if (sentence.endingScene == null)
                 {
                     Debug.LogError($"StoryScene '{currentScene?.name}' sentence {sentenceIndex} is ENDING but has no endingScene assigned.");
-                    HandleStoryCompleted();
+                    TransitionFromStoryEnd();
                     return;
                 }
 
@@ -386,6 +356,12 @@ public class BottomBarController : MonoBehaviour
             }
 
             Debug.LogError("Cannot switch to EndingScene because GameController was not found.");
+            return;
+        }
+
+        if (sentence.sentenceType == StoryScene.Sentence.SentenceType.CHOICE)
+        {
+            ShowSentenceChoice(sentence);
             return;
         }
 
@@ -403,7 +379,7 @@ public class BottomBarController : MonoBehaviour
             }
             else if (gameController != null && currentScene != null)
             {
-                HandleStoryCompleted();
+                TransitionFromStoryEnd();
             }
             return;
         }
@@ -436,7 +412,7 @@ public class BottomBarController : MonoBehaviour
             }
             else if (gameController != null && currentScene != null)
             {
-                HandleStoryCompleted();
+                TransitionFromStoryEnd();
             }
             return;
         }
@@ -511,7 +487,7 @@ public class BottomBarController : MonoBehaviour
         }
         else if (gameController != null && currentScene != null)
         {
-            HandleStoryCompleted();
+            TransitionFromStoryEnd();
         }
     }
 
@@ -646,12 +622,12 @@ public class BottomBarController : MonoBehaviour
 
     private void ShowSentence(StoryScene.Sentence sentence)
     {
-        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.sound);
+        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.music2, sentence.sound);
     }
 
     private void ShowFollowUpSentence(StoryScene.FollowUpSentence sentence)
     {
-        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.sound);
+        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.music2, sentence.sound);
     }
 
     private void ShowFollowUpLine(StoryScene.FollowUpLine line)
@@ -682,10 +658,10 @@ public class BottomBarController : MonoBehaviour
             return;
         }
 
-        ShowDialogueSentence(line.speaker, line.text, line.actions, line.music, line.sound);
+        ShowDialogueSentence(line.speaker, line.text, line.actions, line.music, line.music2, line.sound);
     }
 
-    private void ShowDialogueSentence(Speaker speaker, string text, List<StoryScene.Sentence.Action> actions, AudioClip music, AudioClip sound)
+    private void ShowDialogueSentence(Speaker speaker, string text, List<StoryScene.Sentence.Action> actions, AudioClip music, AudioClip music2, AudioClip sound)
     {
         if (gameController == null)
         {
@@ -719,7 +695,7 @@ public class BottomBarController : MonoBehaviour
 
         if (gameController != null && gameController.audioController != null)
         {
-            gameController.audioController.PlayAudio(music, sound);
+            gameController.audioController.PlayAudio(music, music2, sound);
         }
     }
 
@@ -835,7 +811,7 @@ public class BottomBarController : MonoBehaviour
                     controller = sprites[action.speaker];
                     controller.Hide();
                     sprites.Remove(action.speaker);
-                    Destroy(controller.gameObject);
+                    StartCoroutine(DestroySpriteAfterDelay(controller));
                 }
                 else
                 {
@@ -847,7 +823,14 @@ public class BottomBarController : MonoBehaviour
                 if (sprites.ContainsKey(action.speaker))
                 {
                     controller = sprites[action.speaker];
-                    controller.SwitchSprite(action.speaker.sprites[action.spriteIndex]);
+                    if (action.speaker != null && action.speaker.sprites != null && action.spriteIndex >= 0 && action.spriteIndex < action.speaker.sprites.Count)
+                    {
+                        Sprite targetSprite = action.speaker.sprites[action.spriteIndex];
+                        if (targetSprite != null)
+                        {
+                            controller.Setup(targetSprite);
+                        }
+                    }
                     controller.SetTint(resolvedTint);
                 }
                 else

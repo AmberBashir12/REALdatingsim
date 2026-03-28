@@ -21,7 +21,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: 130be0aeecf540a46982314ffd68b59a, type: 3}
+    music: {fileID: 8300000, guid: 00bc00c7f3090a74c9580680e042b4ab, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -851,7 +851,7 @@ MonoBehaviour:
                 text: Wait- WATCH OUT!
                 actions:
                 - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-                  spriteIndex: 2
+                  spriteIndex: 5
                   actionType: 0
                   coords: {x: -200, y: 0}
                   moveSpeed: 0
@@ -874,7 +874,7 @@ MonoBehaviour:
                   you onto the train tracks
                 actions:
                 - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-                  spriteIndex: 4
+                  spriteIndex: 5
                   actionType: 2
                   coords: {x: 400, y: 0}
                   moveSpeed: 4
@@ -924,19 +924,19 @@ MonoBehaviour:
           text: I guess he's busy doing work.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 1
             actionType: 4
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+            tintOpacity: 0.5
           music: {fileID: 0}
           music2: {fileID: 0}
           sound: {fileID: 0}
@@ -949,19 +949,19 @@ MonoBehaviour:
           text: Since, school started only a few weeks ago.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 1
             actionType: 4
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+            tintOpacity: 0.5
           music: {fileID: 0}
           music2: {fileID: 0}
           sound: {fileID: 0}
@@ -979,15 +979,15 @@ MonoBehaviour:
             actionType: 0
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-            spriteIndex: 0
+            spriteIndex: 1
             actionType: 4
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+            tintOpacity: 0.5
           music: {fileID: 0}
           music2: {fileID: 0}
           sound: {fileID: 0}
@@ -1004,15 +1004,15 @@ MonoBehaviour:
             actionType: 0
             coords: {x: -200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
             tintOpacity: 0.5
           - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-            spriteIndex: 0
+            spriteIndex: 1
             actionType: 4
             coords: {x: 200, y: 0}
             moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
+            tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+            tintOpacity: 0.5
           music: {fileID: 0}
           music2: {fileID: 0}
           sound: {fileID: 0}
@@ -1363,7 +1363,7 @@ MonoBehaviour:
     text: What is it?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 1
+      spriteIndex: 4
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -2038,7 +2038,7 @@ MonoBehaviour:
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 1
+      spriteIndex: 4
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -2372,7 +2372,7 @@ MonoBehaviour:
     text: There's a lot of suspicious activity going on in the school...
     actions:
     - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -2706,7 +2706,7 @@ MonoBehaviour:
     text: So try to keep your head down and dont interact with people powerful people.
     actions:
     - speaker: {fileID: 11400000, guid: edaed0e32631cbe4382baa95c09221c8, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -3047,7 +3047,7 @@ MonoBehaviour:
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 5
+      spriteIndex: 4
       actionType: 4
       coords: {x: -50, y: 0}
       moveSpeed: 0
@@ -3391,7 +3391,7 @@ MonoBehaviour:
       spriteIndex: 3
       actionType: 2
       coords: {x: -200, y: 0}
-      moveSpeed: 30
+      moveSpeed: 1
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.37647063, a: 1}
       tintOpacity: 0.5
     choice:
@@ -3734,13 +3734,13 @@ MonoBehaviour:
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
-    sound: {fileID: 8300000, guid: 5ed693c8ee2521a4eb098f617c7a5a96, type: 3}
+    sound: {fileID: 8300000, guid: 3a37a21bc11c9b84f9584164cded3021, type: 3}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Who could be calling me at this hour?..
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 5
+      spriteIndex: 4
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -3845,7 +3845,7 @@ MonoBehaviour:
       coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
-      tintOpacity: 0
+      tintOpacity: 0.5
     choice:
       prompt: 
       options: []
@@ -3877,10 +3877,10 @@ MonoBehaviour:
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
-    sound: {fileID: 8300000, guid: d462bd13453889547a4f97ae415ed517, type: 3}
+    sound: {fileID: 8300000, guid: ef8cffdcc12f71942a23cc71ffe749cb, type: 3}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: ..? How did this guy find my number again!?
+    text: ..? How did this guy find my number again?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
@@ -3903,6 +3903,57 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: I better block him and get a new phone.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 3
+      actionType: 1
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 8300000, guid: ef8cffdcc12f71942a23cc71ffe749cb, type: 3}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Oh look, the train is here. I shouldnt worry about it too much, I'll just
+      get some sleep.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+      tintOpacity: 0.5
+    - speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0.18039216, g: 0.25490198, b: 0.3764706, a: 1}
+      tintOpacity: 0.5
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 8300000, guid: 65e7e31c5b217d94686b5ce8726a0ed5, type: 3}
   background: {fileID: 21300000, guid: 84be4959134b2fb4dbb7d656fd07586e, type: 3}
-  nextScene: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: ce6a967e2a7763b4aadf95caf763f879, type: 2}
   alternativeScenes: []

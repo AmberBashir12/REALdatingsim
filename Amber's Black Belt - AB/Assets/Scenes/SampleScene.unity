@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd07b2e4d42f6b4b86a9338118e15d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: {fileID: 11400000, guid: 9d188bd0bfac0d3428086a389a555cec, type: 2}
+  currentScene: {fileID: 11400000, guid: ce6a967e2a7763b4aadf95caf763f879, type: 2}
   bottomBar: {fileID: 928399771}
   backgroundController: {fileID: 1329605606}
   chooseController: {fileID: 1314921446}
@@ -2745,12 +2745,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barText: {fileID: 506911326}
   personNameText: {fileID: 1764496068}
-  mainMenuSceneName: MainMenu
-  endingReturnButton: {fileID: 0}
+  endingReturnToMenuButton: {fileID: 0}
   currentScene: {fileID: 11400000, guid: 2c02fbd3fdbdcd74c87633cbe3fc0190, type: 2}
   IsHidden: 0
   spritesPrefab: {fileID: 980659239}
   inputCooldownSeconds: 0.08
+  spriteHideDestroyDelay: 0.5
 --- !u!114 &859181224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2981,12 +2981,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barText: {fileID: 1619638723}
   personNameText: {fileID: 1254207065}
-  mainMenuSceneName: MainMenu
-  endingReturnButton: {fileID: 1295667513}
+  endingReturnToMenuButton: {fileID: 0}
   currentScene: {fileID: 11400000, guid: 2c02fbd3fdbdcd74c87633cbe3fc0190, type: 2}
   IsHidden: 0
   spritesPrefab: {fileID: 980659239}
   inputCooldownSeconds: 0.08
+  spriteHideDestroyDelay: 0.5
 --- !u!95 &928399772
 Animator:
   serializedVersion: 5
@@ -4805,7 +4805,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5503,7 +5503,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

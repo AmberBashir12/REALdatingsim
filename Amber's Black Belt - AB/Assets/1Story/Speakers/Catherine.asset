@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7924fdf277f9cf4097f370463eb8e76, type: 3}
+  m_Name: Catherine
+  m_EditorClassIdentifier: 
+  speakerName: Catherine
+  textColor: {r: 1, g: 0.6212033, b: 0, a: 1}
+  sprites:
+  - {fileID: 21300000, guid: e5cbd777d94a802498c4b4930242008c, type: 3}
+  - {fileID: 21300000, guid: 57960002f9ce0ab44a3ad5bbc9188f13, type: 3}
+  - {fileID: 21300000, guid: 78a8c94339671264c8dd9ef65a4ada3b, type: 3}
+  - {fileID: 21300000, guid: aae79727a09c8b6489d8d25d96115776, type: 3}
+  prefab: {fileID: 1469775399503827904, guid: e42a177171a1c6d4392a9563cf44f289, type: 3}
+  blip: {fileID: 8300000, guid: 6848a398af14e1049826879d56b56cf6, type: 3}

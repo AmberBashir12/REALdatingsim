@@ -68,18 +68,44 @@ public class GameController : MonoBehaviour
 
     private IEnumerator FadeInFromBlack()
     {
-        if (fadePanel != null)
+        yield return FadePanel(1f, 0f, disableOnComplete: true);
+    }
+
+    private IEnumerator FadeOutToBlack()
+    {
+        yield return FadePanel(0f, 1f, disableOnComplete: false);
+    }
+
+    private IEnumerator FadePanel(float startAlpha, float endAlpha, bool disableOnComplete)
+    {
+        if (fadePanel == null)
         {
-            fadePanel.gameObject.SetActive(true);
-            SetFadeAlpha(1f);
-            float elapsedTime = 0f;
+            yield break;
+        }
+
+        fadePanel.gameObject.SetActive(true);
+        SetFadeAlpha(startAlpha);
+
+        float elapsedTime = 0f;
+        if (fadeDuration <= 0f)
+        {
+            SetFadeAlpha(endAlpha);
+        }
+        else
+        {
             while (elapsedTime < fadeDuration)
             {
                 elapsedTime += Time.deltaTime;
-                SetFadeAlpha(Mathf.Clamp01(1f - (elapsedTime / fadeDuration)));
+                float progress = Mathf.Clamp01(elapsedTime / fadeDuration);
+                SetFadeAlpha(Mathf.Lerp(startAlpha, endAlpha, progress));
                 yield return null;
             }
-            SetFadeAlpha(0f);
+        }
+
+        SetFadeAlpha(endAlpha);
+
+        if (disableOnComplete)
+        {
             fadePanel.gameObject.SetActive(false);
         }
     }
@@ -101,7 +127,7 @@ public class GameController : MonoBehaviour
 
     public void PlayScene(GameScene scene)
     {
-        PlayScene(scene, -1);
+        PlayScene(scene, -1, false);
     }
 
     public void SetChooseState(bool isChoosing)
@@ -118,11 +144,16 @@ public class GameController : MonoBehaviour
 
     public void PlayScene(GameScene scene, int startSentenceIndex)
     {
-        pendingStoryStartSentenceIndex = startSentenceIndex;
-        StartCoroutine(SwitchScene(scene));
+        PlayScene(scene, startSentenceIndex, false);
     }
 
-    private IEnumerator SwitchScene(GameScene scene)
+    public void PlayScene(GameScene scene, int startSentenceIndex, bool useStoryFadeTransition)
+    {
+        pendingStoryStartSentenceIndex = startSentenceIndex;
+        StartCoroutine(SwitchScene(scene, useStoryFadeTransition));
+    }
+
+    private IEnumerator SwitchScene(GameScene scene, bool useStoryFadeTransition)
     {
         state = State.ANIMATE;
 
@@ -135,6 +166,11 @@ public class GameController : MonoBehaviour
             }
             state = State.IDLE; // Revert to IDLE to allow player interaction or prevent soft lock
             yield break; // Exit coroutine
+        }
+
+        if (useStoryFadeTransition)
+        {
+            yield return StartCoroutine(FadeOutToBlack());
         }
 
         currentScene = scene;
@@ -184,6 +220,11 @@ public class GameController : MonoBehaviour
                 bottomBar.Show();
             }
             state = State.IDLE; // Revert to IDLE
+        }
+
+        if (useStoryFadeTransition)
+        {
+            yield return StartCoroutine(FadeInFromBlack());
         }
     }
 

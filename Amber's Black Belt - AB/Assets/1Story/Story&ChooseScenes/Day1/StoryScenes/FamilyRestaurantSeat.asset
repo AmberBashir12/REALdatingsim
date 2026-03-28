@@ -1,0 +1,759 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
+  m_Name: FamilyRestaurantSeat
+  m_EditorClassIdentifier: 
+  sentences:
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: okay.. lets take a look at this menu.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 1
+      actionType: 1
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: First I should take off my backpack
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: .
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Im only here for a quick snack, so let's just look at the first page.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 3
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
+      spriteIndex: 2
+      actionType: 1
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 8300000, guid: ef8cffdcc12f71942a23cc71ffe749cb, type: 3}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Chicken wings.. Mozzarella sticks.. Mushroom soup...
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
+      spriteIndex: 2
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Alright, I think I know what I want.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 1
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
+      spriteIndex: 2
+      actionType: 3
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 8300000, guid: ef8cffdcc12f71942a23cc71ffe749cb, type: 3}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+    text: What will it be then?
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 2
+      coords: {x: -200, y: 0}
+      moveSpeed: 1
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 3
+      actionType: 1
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 3
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: '!? When did you get here!?'
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 11
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 1
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 3
+      actionType: 1
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 3
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+    text: ...Well, I'll get-
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 7
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 1
+    speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+    text: 
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 2
+      coords: {x: -200, y: 0}
+      moveSpeed: 1
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 3
+      actionType: 1
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 3
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+    text: Of course!  Just a minute.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 3
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: ...
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 2
+      coords: {x: 0, y: 0}
+      moveSpeed: 2
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: What a kind lady, she had a positive attitude the entire time.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 1
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: But.. she's taking care of a baby while working? That seems difficult..
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 10
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 1
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: At least the baby is well-behaved.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 8
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 1
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: ...Well, thats beside the point.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 1
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: "There\u2019s just something about this city. Like, it's warm and alive."
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 8
+      actionType: 4
+      coords: {x: 0, y: 0}
+      moveSpeed: 1
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+    text: Here you go. Careful it's hot!
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 11
+      actionType: 2
+      coords: {x: -200, y: 0}
+      moveSpeed: 3
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 1
+      actionType: 1
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+    text: Awww, what a cute smile! What's on your mind?
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 6
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 3
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Oh- um.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 7
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Chicken Wings
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mushroom Soup
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: 'Water '
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  - sentenceType: 1
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Oh- um.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 7
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 1, g: 0.5328307, b: 0, a: 1}
+      tintOpacity: 0.1
+    choice:
+      prompt: 
+      options:
+      - text: Nothing
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+      - text: Mozzarella Sticks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+    sound: {fileID: 0}
+  background: {fileID: 21300000, guid: 89b8125fdaba48f4c8f0b71136bb9835, type: 3}
+  nextScene: {fileID: 0}
+  alternativeScenes: []

@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: HIde
+    m_ConditionEvent: Hide
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2540336930229523134}
@@ -109,7 +109,7 @@ AnimatorController:
   m_Name: Mr_Lo
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: HIde
+  - m_Name: Hide
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0

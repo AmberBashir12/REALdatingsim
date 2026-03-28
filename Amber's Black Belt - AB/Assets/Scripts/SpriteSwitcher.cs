@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class SpriteSwitcher : MonoBehaviour
 {
-
     public bool isSwitched = false;
     public Image Image1;
     public Image Image2;
@@ -31,6 +30,7 @@ public class SpriteSwitcher : MonoBehaviour
         }
         isSwitched = !isSwitched;
     }
+
     public void SetImage(Sprite sprite)
     {
         if (Image1 != null)
