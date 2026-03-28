@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd07b2e4d42f6b4b86a9338118e15d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: {fileID: 11400000, guid: ce6a967e2a7763b4aadf95caf763f879, type: 2}
+  currentScene: {fileID: 11400000, guid: 9d188bd0bfac0d3428086a389a555cec, type: 2}
   bottomBar: {fileID: 928399771}
   backgroundController: {fileID: 1329605606}
   chooseController: {fileID: 1314921446}
@@ -3023,7 +3023,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &970782968
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4163,7 +4163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1295667513
 MonoBehaviour:
   m_ObjectHideFlags: 0

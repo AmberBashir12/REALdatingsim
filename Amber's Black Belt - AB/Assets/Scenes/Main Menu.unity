@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameScene: SampleScene
-  clickSound: {fileID: 8300000, guid: dd11510abb83c3d48b62a1739744df40, type: 3}
+  clickSound: {fileID: 8300000, guid: 1caf9f6f1fd0c614782e929e96987f25, type: 3}
   fadePanel: {fileID: 309300118}
   fadeDuration: 1
   nameInputField: {fileID: 1242181906}
@@ -2701,7 +2701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1442496108
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3008,7 +3008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1718968998
 RectTransform:
   m_ObjectHideFlags: 0
