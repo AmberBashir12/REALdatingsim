@@ -223,7 +223,7 @@ MonoBehaviour:
     music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: ...Well, I'll get-
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -745,11 +745,230 @@ MonoBehaviour:
       - text: Nothing
         requiredChoiceKeys: []
         choiceKeyToUnlock: 
-        followUpSentences: []
-      - text: Mozzarella Sticks
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: It's nothing.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 7
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+          text: Ohh, alright. Forget I said anything!
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 6
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 3
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: The food
         requiredChoiceKeys: []
         choiceKeyToUnlock: 
-        followUpSentences: []
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Im thinking about the food.
+          actions:
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 1
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 9
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+          text: Really? The food's so good its making you smile?
+          actions:
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 3
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 8
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+          text: Oh, why thank you.
+          actions:
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 3
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 8
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+          text: 
+          actions:
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 8
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: How warm your restaurant is
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: DateChoiceRestaurant
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 0}
+          text: 
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: You
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: DateChoiceRestaurant
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: You.
+          actions:
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 4
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 9
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+          text: You.
+          actions:
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 1
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 9
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
     endingScene: {fileID: 0}
     music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
     music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
