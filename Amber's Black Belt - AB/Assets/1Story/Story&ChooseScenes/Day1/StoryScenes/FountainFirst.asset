@@ -15,11 +15,11 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: ...
+    text: 'Okay, lets see here. '
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 1
+      spriteIndex: 1
+      actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -28,15 +28,15 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: 47f1b514f8010f54c84a578bac820a29, type: 3}
-    music2: {fileID: 8300000, guid: 0ecc272310bdee44c8c9b1bb0788d400, type: 3}
+    music: {fileID: 0}
+    music2: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: ..so, currently im in the town square.
+    text: The map says im close by but I dont see it anywhere...
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -47,14 +47,14 @@ MonoBehaviour:
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
-    music2: {fileID: 0}
+    music2: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: but I need to go north to find the campus, and my dorm.
+    text: I-
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -65,14 +65,14 @@ MonoBehaviour:
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
-    music2: {fileID: 0}
+    music2: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: ...
+    text: I-
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -83,14 +83,14 @@ MonoBehaviour:
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 8300000, guid: 3778330ff9278e74a8fcecdc4271636a, type: 3}
+    music2: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
+    sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: oh yea.. I didnt eat anything after I got on the train yesterday.
+    text: I-
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 3
+      spriteIndex: 1
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -101,182 +101,26 @@ MonoBehaviour:
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
-    music2: {fileID: 0}
+    music2: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     sound: {fileID: 0}
-  - sentenceType: 1
-    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: yea, I didnt eat anything after I got on the train yesterday.
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 1869da4fb41aabc4591071d74feefe35, type: 2}
+    text: Hey you!! Stop that person!!!
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 4
+      spriteIndex: 5
+      actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     choice:
       prompt: 
-      options:
-      - text: Go to a restaurant
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: OffTrainRestaurant
-        followUpSentences:
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: Finding my dorm can wait
-          actions:
-          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
-            actionType: 4
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: Im not navigating the area on an empty stomach
-          actions:
-          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 3
-            actionType: 4
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: hmm lets take a look on google maps..
-          actions:
-          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
-            actionType: 4
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: Oh! This place looks good! 4.8 stars with 500 reviews. Plus, its
-            cheap.
-          actions:
-          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
-            actionType: 4
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: Only a minute away.
-          actions:
-          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
-            actionType: 4
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
-      - text: Go find your dorm
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: OffTrainDorm
-        followUpSentences:
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: Food can wait
-          actions:
-          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
-            actionType: 4
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: Finding my dorm is more important right now.
-          actions:
-          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
-            actionType: 4
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: Later, Ill grab a snack or somthing.
-          actions:
-          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
-            actionType: 4
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
+      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
-    music2: {fileID: 0}
+    music2: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 9cb60dd8eb3fcaf4e80f471fed622549, type: 3}
-  nextScene: {fileID: 11400000, guid: 2c02fbd3fdbdcd74c87633cbe3fc0190, type: 2}
-  alternativeScenes:
-  - requiredChoiceKeys:
-    - OffTrainRestaurant
-    alternativeScene: {fileID: 11400000, guid: 05c3e0d94530c0f40bbdd1dbbef630f4, type: 2}
+  background: {fileID: 0}
+  nextScene: {fileID: 0}
+  alternativeScenes: []

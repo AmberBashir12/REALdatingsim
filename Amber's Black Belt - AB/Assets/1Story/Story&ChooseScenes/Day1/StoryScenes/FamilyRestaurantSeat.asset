@@ -303,10 +303,6 @@ MonoBehaviour:
         requiredChoiceKeys: []
         choiceKeyToUnlock: 
         followUpSentences: []
-      - text: 'Water '
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: 
-        followUpSentences: []
     endingScene: {fileID: 0}
     music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
     music2: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
@@ -931,7 +927,7 @@ MonoBehaviour:
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: Just how warm your restuarant feels.
+          text: Just how warm your restaurant feels.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
             spriteIndex: 9
@@ -967,6 +963,57 @@ MonoBehaviour:
             tintOpacity: 0.1
           - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
             spriteIndex: 1
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+          text: I spent a lot of time renovating this place so it means a lot to
+            me.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 7
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 3
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: It was time well-spent.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 9
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 0
             actionType: 0
             coords: {x: 200, y: 0}
             moveSpeed: 0
@@ -981,7 +1028,57 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
-          text: 'Aww really? '
+          text: Thank you!
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 8
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 3
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+          text: My children helped me decorate.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 8
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 3
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+          text: Actually, on that topic- you remind me a lot of my son.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
             spriteIndex: 8
@@ -992,7 +1089,184 @@ MonoBehaviour:
             tintOpacity: 0.1
           - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
             spriteIndex: 1
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+          text: Must be because you both know the just the right thing to say to
+            someone!
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 8
             actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 3
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+          text: Hey, why dont you tell me your name?
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 8
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: ae20cfae3333ee84d8b097b3f55146c6, type: 2}
+          text: My name is Catherine by the way.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 8
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 3
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: My name is {playerName}
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 9
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: ae20cfae3333ee84d8b097b3f55146c6, type: 2}
+          text: '{playerName} you should come back to my restaurant, ill give you
+            a discount!'
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 8
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Oh really? Thanks.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 9
+            actionType: 4
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          music: {fileID: 8300000, guid: 092d354d9c1ba3b42be6bb74bd5b2e74, type: 3}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: A cutie like you is welcome back anytime!
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 8
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
+            tintOpacity: 0.1
+          - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
+            spriteIndex: 3
+            actionType: 4
             coords: {x: 200, y: 0}
             moveSpeed: 0
             tintColor: {r: 1, g: 0.53333336, b: 0, a: 1}
@@ -1631,7 +1905,7 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: My name is [PlayerName].
+          text: My name is {playerName}.
           actions:
           - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
             spriteIndex: 1
@@ -1796,7 +2070,7 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: ae20cfae3333ee84d8b097b3f55146c6, type: 2}
-          text: '[PlayerName] you should come back to my restaurant, ill give you
+          text: '{playerName} you should come back to my restaurant, ill give you
             a discount.'
           actions:
           - speaker: {fileID: 11400000, guid: 7dd840c250f5eda40b522a1650ebef92, type: 2}
