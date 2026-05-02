@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sport Guy
   m_EditorClassIdentifier: 
   speakerName: Red
-  textColor: {r: 1, g: 0, b: 0, a: 0}
+  textColor: {r: 1, g: 0, b: 0, a: 1}
   sprites:
   - {fileID: 21300000, guid: cf61a9b9fe4a6cb42ae40908a2bad316, type: 3}
   prefab: {fileID: 4463995172477532118, guid: 1b01e4e93d4c04848b85a3143f5470ac, type: 3}
+  blip: {fileID: 0}

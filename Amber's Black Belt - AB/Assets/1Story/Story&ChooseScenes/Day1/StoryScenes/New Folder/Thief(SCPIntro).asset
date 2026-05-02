@@ -25,7 +25,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    speaker: {fileID: 11400000, guid: 67974ff49e7f8514ca1ce5240425f2ce, type: 2}
     text: No wait-!!
     actions: []
     choice:
@@ -54,25 +54,6 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  - sentenceType: 1
-    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 
-    actions: []
-    choice:
-      prompt: 
-      options:
-      - text: Stop Him
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: 
-        followUpSentences: []
-      - text: Stand still
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: 
-        followUpSentences: []
-    endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 0}
   background: {fileID: 21300000, guid: 7083e9caa2a386b4199099d640f97a4e, type: 3}
-  nextScene: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: 999d7d70b65d07a4797573fd469dfb2f, type: 2}
   alternativeScenes: []

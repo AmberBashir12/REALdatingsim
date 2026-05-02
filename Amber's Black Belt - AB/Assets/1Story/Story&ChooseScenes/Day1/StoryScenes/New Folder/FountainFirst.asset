@@ -104,7 +104,7 @@ MonoBehaviour:
     music2: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 1869da4fb41aabc4591071d74feefe35, type: 2}
+    speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
     text: Hey you!! Stop that person!!!
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -121,6 +121,6 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     sound: {fileID: 0}
-  background: {fileID: 0}
-  nextScene: {fileID: 0}
+  background: {fileID: 21300000, guid: d0f63714b3fb18048ac3a6fda86a2b71, type: 3}
+  nextScene: {fileID: 11400000, guid: 45cb5462d139b9749bb5df4c0db0237e, type: 2}
   alternativeScenes: []
