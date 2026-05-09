@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7924fdf277f9cf4097f370463eb8e76, type: 3}
+  m_Name: Receptionist
+  m_EditorClassIdentifier: 
+  speakerName: Receptionist
+  textColor: {r: 0, g: 0, b: 0, a: 1}
+  sprites:
+  - {fileID: 21300000, guid: 684bf8d9096850a4080f5c0f8e5a3a79, type: 3}
+  - {fileID: 21300000, guid: 684bf8d9096850a4080f5c0f8e5a3a79, type: 3}
+  prefab: {fileID: 9114057820567733106, guid: bb0ce994878e0a4428caab08e310698a, type: 3}
+  blip: {fileID: 0}
