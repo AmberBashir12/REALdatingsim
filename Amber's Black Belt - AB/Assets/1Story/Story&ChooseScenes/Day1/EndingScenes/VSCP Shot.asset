@@ -48,7 +48,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
-    text: Ugh, what does it matter at this point?
+    text: Ugh, just shut up you bum. What does it matter at this point?
     actions: []
     choice:
       prompt: 
