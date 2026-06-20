@@ -1940,7 +1940,7 @@ MonoBehaviour:
                 endingScene: {fileID: 0}
             - text: OH YEA
               requiredChoiceKeys: []
-              choiceKeyToUnlock: 
+              choiceKeyToUnlock: GardenWithRed
               followUpLines:
               - lineType: 0
                 speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -1972,14 +1972,17 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: 64c45f32e38b3a64595738b378eaa516, type: 3}
-  nextScene: {fileID: 11400000, guid: 1f47d01cd5257f1488577c8fe40c455a, type: 2}
+  nextScene: {fileID: 11400000, guid: 5effbd1f4396fab4f82a0903b191f56a, type: 2}
   alternativeScenes:
   - requiredChoiceKeys:
     - GardenOrClass
     alternativeScene: {fileID: 0}
   - requiredChoiceKeys:
     - MahaAppearance
-    alternativeScene: {fileID: 0}
+    alternativeScene: {fileID: 11400000, guid: 5f488434b48f3744a9ba6db4bc352136, type: 2}
   - requiredChoiceKeys:
     - LiamAppearance
+    alternativeScene: {fileID: 11400000, guid: 5adc4c5d0be043f46bbac2307be16bcd, type: 2}
+  - requiredChoiceKeys:
+    - GardenWithRed
     alternativeScene: {fileID: 11400000, guid: 5adc4c5d0be043f46bbac2307be16bcd, type: 2}

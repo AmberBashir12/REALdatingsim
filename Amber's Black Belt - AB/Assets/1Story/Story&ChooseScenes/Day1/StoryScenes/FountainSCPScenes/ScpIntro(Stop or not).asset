@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 412dca171f510ae4a91e62bb794a7ff5, type: 3}
-  m_Name: Scp intro(Stop or not)
+  m_Name: ScpIntro(Stop or not)
   m_EditorClassIdentifier: 
   labels:
   - text: Stop him
     nextScene: {fileID: 11400000, guid: e4615c41a7cdc7845b5c10c8899ed11e, type: 2}
     choiceKeyToUnlock: 
   - text: Let him go
-    nextScene: {fileID: 0}
+    nextScene: {fileID: 11400000, guid: 81757359d9c908b4ea4a6b918f4a315d, type: 2}
     choiceKeyToUnlock: 
   additionalLabels: []
