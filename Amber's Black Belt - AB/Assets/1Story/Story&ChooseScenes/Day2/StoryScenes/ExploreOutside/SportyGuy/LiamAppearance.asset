@@ -792,49 +792,9 @@ MonoBehaviour:
     choice:
       prompt: 
       options:
-      - text: No thanks
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: 
-        followUpSentences:
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-          text: I see.
-          actions:
-          - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-          text: I see.
-          actions:
-          - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
       - text: Sure
         requiredChoiceKeys: []
-        choiceKeyToUnlock: 
+        choiceKeyToUnlock: GardenWithArcher
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
@@ -1823,5 +1783,8 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 0}
-  nextScene: {fileID: 0}
-  alternativeScenes: []
+  nextScene: {fileID: 11400000, guid: ed2c8eed1d7a147418943c553fca94ee, type: 2}
+  alternativeScenes:
+  - requiredChoiceKeys:
+    - GardenWithArcher
+    alternativeScene: {fileID: 11400000, guid: aa8922e69b83fdb4cb53e3595345f9db, type: 2}
