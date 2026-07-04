@@ -6,6 +6,11 @@ public class StorySceneSentenceDrawer : PropertyDrawer
 {
     private const float Spacing = 2f;
 
+    public override bool CanCacheInspectorGUI(SerializedProperty property)
+    {
+        return true;
+    }
+
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
         EditorGUI.BeginProperty(position, label, property);
@@ -54,7 +59,7 @@ public class StorySceneSentenceDrawer : PropertyDrawer
             else
             {
                 DrawProperty(ref y, position, speakerProp);
-                DrawProperty(ref y, position, textProp, true);
+                DrawProperty(ref y, position, textProp);
                 DrawProperty(ref y, position, actionsProp, true);
                 DrawProperty(ref y, position, musicProp);
                 DrawProperty(ref y, position, music2Prop);
@@ -87,7 +92,7 @@ public class StorySceneSentenceDrawer : PropertyDrawer
         }
 
         height += Spacing;
-        height += EditorGUI.GetPropertyHeight(sentenceTypeProp, true) + Spacing;
+        height += EditorGUI.GetPropertyHeight(sentenceTypeProp, false) + Spacing;
 
         bool isChoice = sentenceTypeProp.enumValueIndex == (int)StoryScene.Sentence.SentenceType.CHOICE;
         bool isEnding = sentenceTypeProp.enumValueIndex == (int)StoryScene.Sentence.SentenceType.ENDING;
@@ -96,21 +101,21 @@ public class StorySceneSentenceDrawer : PropertyDrawer
             SerializedProperty promptProp = choiceProp.FindPropertyRelative("prompt");
             SerializedProperty optionsProp = choiceProp.FindPropertyRelative("options");
 
-            height += EditorGUI.GetPropertyHeight(promptProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(promptProp, false) + Spacing;
             height += EditorGUI.GetPropertyHeight(optionsProp, true) + Spacing;
         }
         else if (isEnding)
         {
-            height += EditorGUI.GetPropertyHeight(endingSceneProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(endingSceneProp, false) + Spacing;
         }
         else
         {
-            height += EditorGUI.GetPropertyHeight(speakerProp, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(textProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(speakerProp, false) + Spacing;
+            height += EditorGUI.GetPropertyHeight(textProp, false) + Spacing;
             height += EditorGUI.GetPropertyHeight(actionsProp, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(musicProp, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(music2Prop, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(soundProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(musicProp, false) + Spacing;
+            height += EditorGUI.GetPropertyHeight(music2Prop, false) + Spacing;
+            height += EditorGUI.GetPropertyHeight(soundProp, false) + Spacing;
         }
 
         return height;
@@ -129,6 +134,11 @@ public class StorySceneSentenceDrawer : PropertyDrawer
 public class StorySceneFollowUpSentenceDrawer : PropertyDrawer
 {
     private const float Spacing = 2f;
+
+    public override bool CanCacheInspectorGUI(SerializedProperty property)
+    {
+        return true;
+    }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
@@ -175,7 +185,7 @@ public class StorySceneFollowUpSentenceDrawer : PropertyDrawer
             else
             {
                 DrawProperty(ref y, position, speakerProp);
-                DrawProperty(ref y, position, textProp, true);
+                DrawProperty(ref y, position, textProp);
                 DrawProperty(ref y, position, actionsProp, true);
                 DrawProperty(ref y, position, musicProp);
                 DrawProperty(ref y, position, soundProp);
@@ -205,7 +215,7 @@ public class StorySceneFollowUpSentenceDrawer : PropertyDrawer
         }
 
         height += Spacing;
-        height += EditorGUI.GetPropertyHeight(typeProp, true) + Spacing;
+        height += EditorGUI.GetPropertyHeight(typeProp, false) + Spacing;
 
         bool isChoice = typeProp.enumValueIndex == (int)StoryScene.FollowUpSentence.FollowUpType.CHOICE;
         bool isEnding = typeProp.enumValueIndex == (int)StoryScene.FollowUpSentence.FollowUpType.ENDING;
@@ -214,20 +224,20 @@ public class StorySceneFollowUpSentenceDrawer : PropertyDrawer
             SerializedProperty promptProp = choiceProp.FindPropertyRelative("prompt");
             SerializedProperty optionsProp = choiceProp.FindPropertyRelative("options");
 
-            height += EditorGUI.GetPropertyHeight(promptProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(promptProp, false) + Spacing;
             height += EditorGUI.GetPropertyHeight(optionsProp, true) + Spacing;
         }
         else if (isEnding)
         {
-            height += EditorGUI.GetPropertyHeight(endingSceneProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(endingSceneProp, false) + Spacing;
         }
         else
         {
-            height += EditorGUI.GetPropertyHeight(speakerProp, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(textProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(speakerProp, false) + Spacing;
+            height += EditorGUI.GetPropertyHeight(textProp, false) + Spacing;
             height += EditorGUI.GetPropertyHeight(actionsProp, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(musicProp, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(soundProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(musicProp, false) + Spacing;
+            height += EditorGUI.GetPropertyHeight(soundProp, false) + Spacing;
         }
 
         return height;
@@ -246,6 +256,11 @@ public class StorySceneFollowUpSentenceDrawer : PropertyDrawer
 public class StorySceneFollowUpLineDrawer : PropertyDrawer
 {
     private const float Spacing = 2f;
+
+    public override bool CanCacheInspectorGUI(SerializedProperty property)
+    {
+        return true;
+    }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
@@ -270,12 +285,12 @@ public class StorySceneFollowUpLineDrawer : PropertyDrawer
             EditorGUI.indentLevel++;
 
             EditorGUI.PropertyField(
-                new Rect(position.x, y, position.width, EditorGUI.GetPropertyHeight(typeProp, true)),
+                new Rect(position.x, y, position.width, EditorGUI.GetPropertyHeight(typeProp, false)),
                 typeProp,
                 new GUIContent("Sentence Type"),
-                true
+                false
             );
-            y += EditorGUI.GetPropertyHeight(typeProp, true) + Spacing;
+            y += EditorGUI.GetPropertyHeight(typeProp, false) + Spacing;
 
             bool isEnding = typeProp.enumValueIndex == (int)StoryScene.FollowUpLine.LineType.ENDING;
             if (isEnding)
@@ -290,7 +305,7 @@ public class StorySceneFollowUpLineDrawer : PropertyDrawer
             else
             {
                 DrawProperty(ref y, position, speakerProp);
-                DrawProperty(ref y, position, textProp, true);
+                DrawProperty(ref y, position, textProp);
                 DrawProperty(ref y, position, actionsProp, true);
                 DrawProperty(ref y, position, musicProp);
                 DrawProperty(ref y, position, music2Prop);
@@ -321,21 +336,21 @@ public class StorySceneFollowUpLineDrawer : PropertyDrawer
         }
 
         height += Spacing;
-        height += EditorGUI.GetPropertyHeight(typeProp, true) + Spacing;
+        height += EditorGUI.GetPropertyHeight(typeProp, false) + Spacing;
 
         bool isEnding = typeProp.enumValueIndex == (int)StoryScene.FollowUpLine.LineType.ENDING;
         if (isEnding)
         {
-            height += EditorGUI.GetPropertyHeight(endingSceneProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(endingSceneProp, false) + Spacing;
         }
         else
         {
-            height += EditorGUI.GetPropertyHeight(speakerProp, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(textProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(speakerProp, false) + Spacing;
+            height += EditorGUI.GetPropertyHeight(textProp, false) + Spacing;
             height += EditorGUI.GetPropertyHeight(actionsProp, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(musicProp, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(music2Prop, true) + Spacing;
-            height += EditorGUI.GetPropertyHeight(soundProp, true) + Spacing;
+            height += EditorGUI.GetPropertyHeight(musicProp, false) + Spacing;
+            height += EditorGUI.GetPropertyHeight(music2Prop, false) + Spacing;
+            height += EditorGUI.GetPropertyHeight(soundProp, false) + Spacing;
         }
 
         return height;

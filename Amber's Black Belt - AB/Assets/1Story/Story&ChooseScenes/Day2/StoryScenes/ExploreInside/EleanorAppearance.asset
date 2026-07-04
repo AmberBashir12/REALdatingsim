@@ -68,7 +68,7 @@ MonoBehaviour:
         requiredChoiceKeys: []
         choiceKeyToUnlock: 
         followUpSentences: []
-      - text: Its bad
+      - text: It was trash
         requiredChoiceKeys: []
         choiceKeyToUnlock: 
         followUpSentences: []
