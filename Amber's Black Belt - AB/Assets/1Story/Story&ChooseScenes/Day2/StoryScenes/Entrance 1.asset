@@ -695,7 +695,18 @@ MonoBehaviour:
       - text: Go straight to class.
         requiredChoiceKeys: []
         choiceKeyToUnlock: 
-        followUpSentences: []
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 0}
+          text: 
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
