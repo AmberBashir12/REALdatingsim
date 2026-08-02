@@ -15,8 +15,6 @@ public class ExplorationController : MonoBehaviour
     [Header("Prefab Containers")]
     public RectTransform speakerContainer;
     public RectTransform objectContainer;
-    public Canvas mainCanvas;
-    public GameObject blackScreen;
     
     private ExplorationScene currentScene;
     private GameController gameController;
@@ -29,13 +27,7 @@ public class ExplorationController : MonoBehaviour
     void Start()
     {
         gameController = FindObjectOfType<GameController>();
-        
-        // Find main canvas if not assigned
-        if (mainCanvas == null)
-        {
-            mainCanvas = FindObjectOfType<Canvas>();
-        }
-        
+
         // Setup dialogue panel
         if (dialoguePanel != null)
         {
@@ -62,31 +54,26 @@ public class ExplorationController : MonoBehaviour
     
     public void SetupExplorationScene(ExplorationScene scene)
     {
-        Debug.Log($"SetupExplorationScene called for: {scene.name}");
         currentScene = scene;
         
         // Set background through GameController's background system
-        Debug.Log("Attempting to set background...");
         if (scene.background != null && gameController != null)
         {
-            Debug.Log($"Setting exploration scene background: {scene.background.name}");
             if (gameController.backgroundController != null)
             {
-                Debug.Log($"BackgroundController found, calling SwitchImage with sprite: {scene.background.name}");
                 gameController.backgroundController.SwitchImage(scene.background);
-                Debug.Log("Background set through GameController.backgroundController.SwitchImage()");
             }
             else
             {
-                Debug.LogError("GameController.backgroundController is null!");
+                Debug.LogWarning("GameController.backgroundController is null!");
             }
         }
         else
         {
             if (scene.background == null)
-                Debug.LogError("ExplorationScene has no background assigned!");
+                Debug.LogWarning("ExplorationScene has no background assigned!");
             if (gameController == null)
-                Debug.LogError("GameController reference is null!");
+                Debug.LogWarning("GameController reference is null!");
         }
         
         // Clear existing elements
@@ -97,8 +84,6 @@ public class ExplorationController : MonoBehaviour
         
         // Setup interactive objects
         SetupInteractiveObjects();
-        
-        Debug.Log($"Exploration scene setup complete: {scene.name}");
     }
     
     private void ClearScene()
@@ -126,7 +111,6 @@ public class ExplorationController : MonoBehaviour
     {
         if (currentScene.speakers == null)
         {
-            Debug.Log("No speakers in current scene");
             return;
         }
         if (speakerContainer == null)
@@ -134,8 +118,6 @@ public class ExplorationController : MonoBehaviour
             Debug.LogWarning("Speaker container is null!");
             return;
         }
-        
-        Debug.Log($"Setting up {currentScene.speakers.Count} speakers");
         
         foreach (var speakerData in currentScene.speakers)
         {
@@ -166,8 +148,6 @@ public class ExplorationController : MonoBehaviour
                 speakerInteractionController = speakerObj.AddComponent<InteractiveSpeakerController>();
             }
             speakerInteractionController.Setup(speakerData.dialogueText, this, speakerData.speaker);
-            
-            Debug.Log($"Created speaker: {speakerData.speaker.speakerName} at position {speakerData.coords}");
         }
     }
     
@@ -314,78 +294,19 @@ public class ExplorationController : MonoBehaviour
     {
         if (gameController != null)
         {
-            StartCoroutine(NavigateToSceneCoroutine(nextScene));
+            CloseDialogue();
+
+            if (dialoguePanel != null)
+            {
+                dialoguePanel.SetActive(false);
+            }
+
+            ClearScene();
+            gameController.PlayScene(nextScene, -1, true);
         }
         else
         {
-            Debug.LogError("GameController is null in NavigateToScene!");
+            Debug.LogWarning("GameController is null in NavigateToScene!");
         }
-    }
-    
-    private IEnumerator NavigateToSceneCoroutine(GameScene nextScene)
-    {
-        // Clear current exploration scene elements before transitioning
-        Debug.Log($"Navigating from exploration scene to: {nextScene.name}");
-        Debug.Log("Clearing exploration scene elements before transitioning to next scene");
-        
-        // Close dialogue panel if open
-        CloseDialogue();
-        
-        // Reset dialogue panel visibility explicitly
-        if (dialoguePanel != null)
-        {
-            dialoguePanel.SetActive(false);
-        }
-        
-        // Get the animator from the black screen
-        Animator blackScreenAnimator = blackScreen.GetComponent<Animator>();
-        
-        // Activate black screen and fade to black
-        blackScreen.SetActive(true);
-        if (blackScreenAnimator != null)
-        {
-            blackScreenAnimator.SetTrigger("FadeIn");
-            // Wait for fade animation (adjust time based on your animation length)
-            yield return new WaitForSeconds(0.15f);
-        }
-        
-        // Clear exploration scene elements
-        ClearScene();
-
-        // Load the next scene (GameController will call SetupExplorationScene if it's an ExplorationScene)
-        gameController.PlayScene(nextScene);
-        
-        // Small delay to let scene load
-        yield return new WaitForSeconds(1f);
-        
-        // Fade from black
-        if (blackScreenAnimator != null)
-        {
-            blackScreenAnimator.SetTrigger("FadeOut");
-            // Wait for fade animation
-            yield return new WaitForSeconds(0.15f);
-        }
-        
-        // Deactivate black screen
-        blackScreen.SetActive(false);
-    }
-    
-    private Vector2 ConvertScreenPositionToCanvasPosition(Vector2 screenPercent)
-    {
-        if (mainCanvas == null || speakerContainer == null) return Vector2.zero;
-        
-        // Get the canvas rect
-        RectTransform canvasRect = mainCanvas.GetComponent<RectTransform>();
-        if (canvasRect == null) return Vector2.zero;
-        
-        // Get canvas size
-        Vector2 canvasSize = canvasRect.sizeDelta;
-        
-        // Convert percentage (0-1) to canvas coordinates
-        // (0,0) should be bottom-left, (1,1) should be top-right
-        float x = (screenPercent.x - 0.5f) * canvasSize.x;
-        float y = (screenPercent.y - 0.5f) * canvasSize.y;
-        
-        return new Vector2(x, y);
     }
 }

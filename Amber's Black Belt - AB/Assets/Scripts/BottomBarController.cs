@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using JetBrains.Annotations;
-using System;
 
 public class BottomBarController : MonoBehaviour
 {
@@ -19,8 +17,6 @@ public class BottomBarController : MonoBehaviour
 
     public Dictionary<Speaker, SpriteController> sprites = new Dictionary<Speaker, SpriteController>();
 
-    // public Speaker[] Speakers;
-    // public SpriteController[] SpriteControllers;
     public GameObject spritesPrefab;
 
     private enum State
@@ -29,6 +25,7 @@ public class BottomBarController : MonoBehaviour
     }
 
     private Coroutine currentTextCoroutine;
+    private Coroutine autoAdvanceCoroutine;
     private string currentFullText = "";
     private GameController gameController;
     [SerializeField] private float inputCooldownSeconds = 0.08f;
@@ -128,16 +125,16 @@ public class BottomBarController : MonoBehaviour
                         {
                             if (followUpSentence.endingScene == null)
                             {
-                                Debug.LogError($"StoryScene '{currentScene?.name}' follow-up sentence {branchSentenceIndex} is ENDING but has no endingScene assigned.");
+                                Debug.LogWarning($"StoryScene '{currentScene?.name}' follow-up sentence {branchSentenceIndex} is ENDING but has no endingScene assigned.");
                                 TransitionFromStoryEnd();
                                 return;
                             }
 
-                            gameController.PlayScene(followUpSentence.endingScene);
+                            gameController.PlayScene(followUpSentence.endingScene, -1, true);
                             return;
                         }
 
-                        Debug.LogError("Cannot switch to EndingScene because GameController was not found.");
+                        Debug.LogWarning("Cannot switch to EndingScene because GameController was not found.");
                         return;
                     }
 
@@ -179,7 +176,7 @@ public class BottomBarController : MonoBehaviour
         }
 
         GameScene nextScene = currentScene.GetNextScene();
-        gameController.PlayScene(nextScene);
+        gameController.PlayScene(nextScene, -1, true);
     }
 
     private void SetEndingReturnButtonVisible(bool visible)
@@ -205,11 +202,6 @@ public class BottomBarController : MonoBehaviour
         return gameController != null
             && gameController.audioController != null
             && gameController.audioController.IsSoundPlaying();
-    }
-
-    public int GetSentenceIndex()
-    {
-        return sentenceIndex;
     }
 
     public void Hide()
@@ -274,6 +266,12 @@ public class BottomBarController : MonoBehaviour
         // Clear previous speakers before starting a new scene
         ClearSprites();
         SetEndingReturnButtonVisible(false);
+
+        if (autoAdvanceCoroutine != null)
+        {
+            StopCoroutine(autoAdvanceCoroutine);
+            autoAdvanceCoroutine = null;
+        }
         
         currentScene = scene;
         sentenceIndex = startSentenceIndex - 1;
@@ -319,7 +317,7 @@ public class BottomBarController : MonoBehaviour
         // Ensure currentScene and its sentences are valid before proceeding
         if (currentScene == null || currentScene.sentences == null || currentScene.sentences.Count == 0)
         {
-            Debug.LogError("PlayNextSentence called, but currentScene is null or has no sentences.");
+            Debug.LogWarning("PlayNextSentence called, but currentScene is null or has no sentences.");
             state = State.COMPLETED; // Mark as completed to prevent getting stuck
             return;
         }
@@ -346,16 +344,16 @@ public class BottomBarController : MonoBehaviour
             {
                 if (sentence.endingScene == null)
                 {
-                    Debug.LogError($"StoryScene '{currentScene?.name}' sentence {sentenceIndex} is ENDING but has no endingScene assigned.");
+                    Debug.LogWarning($"StoryScene '{currentScene?.name}' sentence {sentenceIndex} is ENDING but has no endingScene assigned.");
                     TransitionFromStoryEnd();
                     return;
                 }
 
-                gameController.PlayScene(sentence.endingScene);
+                gameController.PlayScene(sentence.endingScene, -1, true);
                 return;
             }
 
-            Debug.LogError("Cannot switch to EndingScene because GameController was not found.");
+            Debug.LogWarning("Cannot switch to EndingScene because GameController was not found.");
             return;
         }
 
@@ -435,7 +433,7 @@ public class BottomBarController : MonoBehaviour
             {
                 gameController.SetChooseState(false);
             }
-            Debug.LogError("ChooseController reference is missing on GameController. Cannot show sentence choice.");
+            Debug.LogWarning("ChooseController reference is missing on GameController. Cannot show sentence choice.");
         }
     }
 
@@ -571,7 +569,7 @@ public class BottomBarController : MonoBehaviour
             {
                 gameController.SetChooseState(false);
             }
-            Debug.LogError("ChooseController reference is missing on GameController. Cannot show branch choice.");
+            Debug.LogWarning("ChooseController reference is missing on GameController. Cannot show branch choice.");
         }
     }
 
@@ -617,6 +615,14 @@ public class BottomBarController : MonoBehaviour
             return;
         }
 
+        if (IsAtTerminalBranchChoice())
+        {
+            activeBranchSentences = null;
+            branchSentenceIndex = -1;
+            TransitionFromStoryEnd();
+            return;
+        }
+
         AdvanceSentence();
     }
 
@@ -643,18 +649,18 @@ public class BottomBarController : MonoBehaviour
             {
                 if (line.endingScene == null)
                 {
-                    Debug.LogError($"StoryScene '{currentScene?.name}' follow-up line {branchChoiceLineIndex} is ENDING but has no endingScene assigned.");
+                    Debug.LogWarning($"StoryScene '{currentScene?.name}' follow-up line {branchChoiceLineIndex} is ENDING but has no endingScene assigned.");
                     activeBranchChoiceLines = null;
                     branchChoiceLineIndex = -1;
                     AdvanceSentence();
                     return;
                 }
 
-                gameController.PlayScene(line.endingScene);
+                gameController.PlayScene(line.endingScene, -1, true);
                 return;
             }
 
-            Debug.LogError("Cannot switch to EndingScene because GameController was not found.");
+            Debug.LogWarning("Cannot switch to EndingScene because GameController was not found.");
             return;
         }
 
@@ -666,6 +672,12 @@ public class BottomBarController : MonoBehaviour
         if (gameController == null)
         {
             gameController = FindObjectOfType<GameController>();
+        }
+
+        if (autoAdvanceCoroutine != null)
+        {
+            StopCoroutine(autoAdvanceCoroutine);
+            autoAdvanceCoroutine = null;
         }
 
         if (currentTextCoroutine != null)
@@ -699,11 +711,6 @@ public class BottomBarController : MonoBehaviour
         }
     }
 
-    public bool IsCompleted()
-    {
-        return state == State.COMPLETED;
-    }
-
     public bool IsLastSentence()
     {
         if (currentScene == null || currentScene.sentences == null)
@@ -734,6 +741,82 @@ public class BottomBarController : MonoBehaviour
         }
         
         state = State.COMPLETED;
+
+        if (ShouldAutoAdvanceTerminalLine())
+        {
+            autoAdvanceCoroutine = StartCoroutine(AutoAdvanceTerminalLine());
+        }
+    }
+
+    private bool ShouldAutoAdvanceTerminalLine()
+    {
+        if (waitingForSentenceChoice || waitingForBranchChoice)
+        {
+            return false;
+        }
+
+        if (activeBranchChoiceLines != null)
+        {
+            bool isLastBranchLine = branchChoiceLineIndex >= 0 && branchChoiceLineIndex == activeBranchChoiceLines.Count - 1;
+            bool branchEndsAfterLine = activeBranchSentences == null
+                || branchSentenceIndex + 1 >= activeBranchSentences.Count;
+            return isLastBranchLine && branchEndsAfterLine && IsLastSentence();
+        }
+
+        if (activeBranchSentences != null)
+        {
+            bool isLastBranchSentence = branchSentenceIndex >= 0 && branchSentenceIndex == activeBranchSentences.Count - 1;
+            return isLastBranchSentence && IsLastSentence();
+        }
+
+        return IsLastSentence();
+    }
+
+    private IEnumerator AutoAdvanceTerminalLine()
+    {
+        yield return null;
+
+        while (IsBlockingSoundPlaying())
+        {
+            yield return null;
+        }
+
+        if (state == State.COMPLETED && !waitingForSentenceChoice && !waitingForBranchChoice)
+        {
+            if (IsAtTerminalBranchLine())
+            {
+                activeBranchChoiceLines = null;
+                branchChoiceLineIndex = -1;
+                activeBranchSentences = null;
+                branchSentenceIndex = -1;
+                TransitionFromStoryEnd();
+                autoAdvanceCoroutine = null;
+                yield break;
+            }
+
+            AdvanceSentence();
+        }
+
+        autoAdvanceCoroutine = null;
+    }
+
+    private bool IsAtTerminalBranchChoice()
+    {
+        return activeBranchSentences != null
+            && branchSentenceIndex >= 0
+            && branchSentenceIndex == activeBranchSentences.Count - 1
+            && IsLastSentence();
+    }
+
+    private bool IsAtTerminalBranchLine()
+    {
+        return activeBranchChoiceLines != null
+            && branchChoiceLineIndex >= 0
+            && branchChoiceLineIndex == activeBranchChoiceLines.Count - 1
+            && activeBranchSentences != null
+            && branchSentenceIndex >= 0
+            && branchSentenceIndex == activeBranchSentences.Count - 1
+            && IsLastSentence();
     }
 
     private void ActSpeakers(List<StoryScene.Sentence.Action> actions)
@@ -745,7 +828,6 @@ public class BottomBarController : MonoBehaviour
 
         for (int i = 0; i < actions.Count; i++)
         {
-            Debug.Log(i);
             ActSpeaker(actions[i]);
         }
     }
@@ -761,6 +843,17 @@ public class BottomBarController : MonoBehaviour
 
         Color tintTarget = new Color(action.tintColor.r, action.tintColor.g, action.tintColor.b, 1f);
         Color resolvedTint = Color.Lerp(Color.white, tintTarget, Mathf.Clamp01(tintStrength));
+
+        if (action.speaker == null)
+        {
+            if (action.actionType != StoryScene.Sentence.Action.Type.NONE)
+            {
+                Debug.LogWarning($"Skipped sprite action '{action.actionType}' because no speaker was assigned.");
+            }
+
+            return;
+        }
+
         switch (action.actionType)
         {
             case StoryScene.Sentence.Action.Type.APPEAR:
@@ -776,19 +869,17 @@ public class BottomBarController : MonoBehaviour
                     {
                         controller = sprites[action.speaker];
                     }
-                    Debug.Log($"Speaker: {action.speaker}, Sprites: {action.speaker.sprites}, Index: {action.spriteIndex}");
                     if (action.speaker.sprites == null || action.speaker.sprites.Count <= action.spriteIndex || action.speaker.sprites[action.spriteIndex] == null)
                     {
-                        Debug.LogError("Sprite reference is missing or index is out of range!");
+                        Debug.LogWarning("Sprite reference is missing or index is out of range!");
                     }
-                    Debug.Log(action.speaker.sprites[0] == null);
                     controller.Setup(action.speaker.sprites[action.spriteIndex]);
                     controller.SetTint(resolvedTint);
                     controller.Show(action.coords);
                 }
                 catch (UnassignedReferenceException)
                 {
-                    Debug.LogError($"Failed to instantiate sprite for speaker: {action.speaker.speakerName}. Make sure the prefab is assigned.");
+                    Debug.LogWarning($"Failed to instantiate sprite for speaker: {action.speaker.speakerName}. Make sure the prefab is assigned.");
                 }
 
                 return;
@@ -856,7 +947,7 @@ public class BottomBarController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning($"it didnt work bruh");
+                    Debug.LogWarning($"Attempted to bounce non-existent sprite for speaker: {action.speaker.speakerName}");
                 }
                 return;
         }

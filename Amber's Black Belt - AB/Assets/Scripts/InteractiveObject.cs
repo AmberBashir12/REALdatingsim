@@ -71,11 +71,8 @@ public class InteractiveObjectController : MonoBehaviour, IPointerClickHandler, 
     {
         if (!isInteractable)
         {
-            Debug.Log($"Object requires choice key '{requiredChoiceKey}' to interact");
             return;
         }
-        
-        Debug.Log($"Interactive object clicked: {gameObject.name}");
         
         // Play sound effect
         if (soundOnClick != null && explorationController != null)
@@ -86,7 +83,6 @@ public class InteractiveObjectController : MonoBehaviour, IPointerClickHandler, 
         // Unlock choice key if specified
         if (!string.IsNullOrEmpty(choiceKeyToUnlock) && GameStateManager.Instance != null)
         {
-            Debug.Log($"Unlocking choice key: '{choiceKeyToUnlock}'");
             GameStateManager.Instance.UnlockChoice(choiceKeyToUnlock);
         }
         

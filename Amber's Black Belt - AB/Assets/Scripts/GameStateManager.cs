@@ -31,7 +31,6 @@ public class GameStateManager : MonoBehaviour
         if (!unlockedChoices.Contains(choiceKey))
         {
             unlockedChoices.Add(choiceKey);
-            Debug.Log($"Choice unlocked: {choiceKey}");
         }
     }
 
@@ -45,7 +44,6 @@ public class GameStateManager : MonoBehaviour
     public void SetFlag(string flagName, object value)
     {
         gameFlags[flagName] = value;
-        Debug.Log($"Flag set: {flagName} = {value}");
     }
 
     // Get a game flag
@@ -69,7 +67,6 @@ public class GameStateManager : MonoBehaviour
     {
         unlockedChoices.Clear();
         gameFlags.Clear();
-        Debug.Log("Game state reset");
     }
 
     // Get all unlocked choices (for debugging)
