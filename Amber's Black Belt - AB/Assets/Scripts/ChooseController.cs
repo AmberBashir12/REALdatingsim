@@ -110,7 +110,7 @@ public class ChooseController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
-        gameController.PlayScene(result.nextScene);
+        gameController.PlayScene(result.nextScene, -1, true);
     }
 
     public void PerformInlineChoose(int optionIndex)

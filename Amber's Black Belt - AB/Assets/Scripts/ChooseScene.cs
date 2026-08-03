@@ -35,7 +35,6 @@ public class ChooseScene : GameScene
 
     public bool TryGetChoiceResult(string labelText, out ChoiceResult result)
     {
-        Debug.Log($"TryGetChoiceResult called with labelText: '{labelText}'");
         result = new ChoiceResult { nextScene = null };
 
         // Check regular labels first
@@ -43,17 +42,10 @@ public class ChooseScene : GameScene
         {
             if (label.text == labelText)
             {
-                Debug.Log($"Found matching regular label: '{labelText}'");
                 // Unlock new choice if specified
                 if (!string.IsNullOrEmpty(label.choiceKeyToUnlock) && GameStateManager.Instance != null)
                 {
-                    Debug.Log($"Unlocking choice key: '{label.choiceKeyToUnlock}'");
                     GameStateManager.Instance.UnlockChoice(label.choiceKeyToUnlock);
-                    Debug.Log($"After unlocking, key '{label.choiceKeyToUnlock}' is now unlocked: {GameStateManager.Instance.IsChoiceUnlocked(label.choiceKeyToUnlock)}");
-                }
-                else if (string.IsNullOrEmpty(label.choiceKeyToUnlock))
-                {
-                    Debug.Log($"No choice key to unlock for label '{labelText}'");
                 }
                 else if (GameStateManager.Instance == null)
                 {
@@ -72,11 +64,9 @@ public class ChooseScene : GameScene
         AdditionalLabel? additionalLabel = GetAdditionalLabel(labelText);
         if (additionalLabel.HasValue)
         {
-            Debug.Log($"Found matching additional label: '{labelText}'");
             // Unlock new choice if specified
             if (!string.IsNullOrEmpty(additionalLabel.Value.choiceKeyToUnlock) && GameStateManager.Instance != null)
             {
-                Debug.Log($"Unlocking choice key: '{additionalLabel.Value.choiceKeyToUnlock}'");
                 GameStateManager.Instance.UnlockChoice(additionalLabel.Value.choiceKeyToUnlock);
             }
 
@@ -106,7 +96,6 @@ public class ChooseScene : GameScene
     public List<ChooseLabel> GetAvailableChoices()
     {
         List<ChooseLabel> availableChoices = new List<ChooseLabel>(labels);
-        Debug.Log($"Base choices count: {labels.Count}");
         
         if (GameStateManager.Instance == null)
         {
@@ -116,19 +105,13 @@ public class ChooseScene : GameScene
         
         if (additionalLabels == null)
         {
-            Debug.Log("No additional labels configured for this scene");
             return availableChoices;
         }
         
-        Debug.Log($"Checking {additionalLabels.Count} additional labels");
-        
         foreach (AdditionalLabel additionalLabel in additionalLabels)
         {
-            Debug.Log($"Checking additional choice: '{additionalLabel.text}' - requires key: '{additionalLabel.requiredChoiceKey}'");
-            
             if (GameStateManager.Instance.IsChoiceUnlocked(additionalLabel.requiredChoiceKey))
             {
-                Debug.Log($"Choice unlocked! Adding: '{additionalLabel.text}'");
                 // Convert AdditionalLabel to ChooseLabel
                 ChooseLabel newChoice = new ChooseLabel
                 {
@@ -137,13 +120,8 @@ public class ChooseScene : GameScene
                 };
                 availableChoices.Add(newChoice);
             }
-            else
-            {
-                Debug.Log($"Choice locked. Key '{additionalLabel.requiredChoiceKey}' not unlocked yet.");
-            }
         }
         
-        Debug.Log($"Total available choices: {availableChoices.Count}");
         return availableChoices;
     }
 

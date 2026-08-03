@@ -12,6 +12,7 @@ public class AudioController : MonoBehaviour
 
     private Coroutine musicSwitchCoroutine;
     private Coroutine music2SwitchCoroutine;
+    private bool blockingSoundActive;
 
     public void PlayAudio(AudioClip music, AudioClip sound)
     {
@@ -24,6 +25,7 @@ public class AudioController : MonoBehaviour
         {
             soundSource.clip = sound;
             soundSource.Play();
+            blockingSoundActive = true;
         }
 
         if (music != null)
@@ -50,7 +52,18 @@ public class AudioController : MonoBehaviour
 
     public bool IsSoundPlaying()
     {
-        return soundSource != null && soundSource.isPlaying;
+        if (!blockingSoundActive || soundSource == null)
+        {
+            return false;
+        }
+
+        if (!soundSource.isPlaying)
+        {
+            blockingSoundActive = false;
+            return false;
+        }
+
+        return true;
     }
 
     public void PlayBlip(AudioClip blip)

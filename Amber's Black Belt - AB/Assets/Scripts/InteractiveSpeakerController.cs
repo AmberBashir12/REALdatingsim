@@ -37,8 +37,6 @@ public class InteractiveSpeakerController : MonoBehaviour, IPointerClickHandler,
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log($"Speaker clicked: {gameObject.name}");
-        
         if (!string.IsNullOrEmpty(dialogueText) && explorationController != null)
         {
             explorationController.ShowDialogue(dialogueText, speaker);
