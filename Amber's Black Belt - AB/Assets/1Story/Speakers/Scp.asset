@@ -15,5 +15,8 @@ MonoBehaviour:
   speakerName: Scp
   textColor: {r: 0, g: 0, b: 0, a: 0}
   sprites:
-  - {fileID: 21300000, guid: bf690a845945e1546aedd0a161ff25c2, type: 3}
+  - {fileID: 21300000, guid: 768d6712fc5024a418565dd31c92dc24, type: 3}
+  - {fileID: 21300000, guid: 5964c6f7931a0cb49b6ea4150bcce970, type: 3}
+  - {fileID: 21300000, guid: 069467ae7d783c945a1d2ba65afa7635, type: 3}
   prefab: {fileID: 8781425397434010887, guid: 066730a48f9034a4ba9ab01893032761, type: 3}
+  blip: {fileID: 8300000, guid: b2c9e8d47bb46f54ca683d101b42873e, type: 3}

@@ -15,5 +15,8 @@ MonoBehaviour:
   speakerName: VSCP
   textColor: {r: 0, g: 0.38947248, b: 1, a: 1}
   sprites:
-  - {fileID: 21300000, guid: eabd46b6fb876784192268c8ea94d266, type: 3}
+  - {fileID: 21300000, guid: f6e518f08cbcf2e4093d80b36c8d59d4, type: 3}
+  - {fileID: 21300000, guid: 024f6b94ef2c86f478ffce5cc268088f, type: 3}
+  - {fileID: 21300000, guid: 7e327af7ccb571d4ca6fb2e247327f55, type: 3}
   prefab: {fileID: 9114057820567733106, guid: bb0ce994878e0a4428caab08e310698a, type: 3}
+  blip: {fileID: 8300000, guid: 2f17e51426e5f8f46b864b00a02f4566, type: 3}

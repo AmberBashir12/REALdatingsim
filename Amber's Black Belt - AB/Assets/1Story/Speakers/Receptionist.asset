@@ -15,7 +15,11 @@ MonoBehaviour:
   speakerName: Receptionist
   textColor: {r: 0, g: 0, b: 0, a: 1}
   sprites:
-  - {fileID: 21300000, guid: 684bf8d9096850a4080f5c0f8e5a3a79, type: 3}
-  - {fileID: 21300000, guid: 684bf8d9096850a4080f5c0f8e5a3a79, type: 3}
-  prefab: {fileID: 9114057820567733106, guid: bb0ce994878e0a4428caab08e310698a, type: 3}
-  blip: {fileID: 0}
+  - {fileID: 21300000, guid: 9af0e56dda7221d43b6024f1e9367b06, type: 3}
+  - {fileID: 21300000, guid: 55fa118cddf7ba94aa127f6f07ab4875, type: 3}
+  - {fileID: 21300000, guid: d7479583d5938324a86e408809ef1447, type: 3}
+  - {fileID: 21300000, guid: f3921ff6d23e7cf44a9e0ce0ca19f1d6, type: 3}
+  - {fileID: 21300000, guid: 1af8466b009581440b55ffb0939f0e16, type: 3}
+  - {fileID: 21300000, guid: 68b029719272c854f9806639073f6a84, type: 3}
+  prefab: {fileID: 8694592931453225590, guid: 1b414451c3e0f3449b1eede431fb73d4, type: 3}
+  blip: {fileID: 8300000, guid: 89321b02cae8f5d49b7a3876ca097929, type: 3}

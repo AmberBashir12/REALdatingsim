@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: You
   m_EditorClassIdentifier: 
   speakerName: '{playerName}'
-  textColor: {r: 0.40784314, g: 0, b: 0.5176945, a: 1}
+  textColor: {r: 0.18759015, g: 0, b: 0.5176471, a: 1}
   sprites:
   - {fileID: 21300000, guid: 781c5fb0c0dafba4598da35984f1e441, type: 3}
   - {fileID: 21300000, guid: 5e1341611fdf53944831641cc1bcad25, type: 3}
@@ -27,5 +27,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e07620a663b81e342ba1d4da6840cef5, type: 3}
   - {fileID: 21300000, guid: deb04c180263d5341a3de550c8b30b0b, type: 3}
   - {fileID: 21300000, guid: 0ac68847c66fa9b4bba06f12fcfa2ade, type: 3}
+  - {fileID: 21300000, guid: 94a053d02a259354d910788f9603bc81, type: 3}
+  - {fileID: 21300000, guid: 1487ce9658aecfb4287e0fab0a119937, type: 3}
+  - {fileID: 21300000, guid: e2d0fddcd5bab8647850c41326408a05, type: 3}
+  - {fileID: 21300000, guid: c5cead52b1857684c9d8d409d8baee05, type: 3}
+  - {fileID: 21300000, guid: 2b7fd4b3d66a90e44afe509449eb6edd, type: 3}
+  - {fileID: 21300000, guid: 299ec399cd3a94e4387ede4f05e48d73, type: 3}
+  - {fileID: 21300000, guid: 960bfbaec178fe944b3f5dd362accbdb, type: 3}
+  - {fileID: 21300000, guid: 19f81827b9ce9e042a54efff3626ceb4, type: 3}
+  - {fileID: 21300000, guid: 77253534b5fd9174c82ec9ef0e063805, type: 3}
+  - {fileID: 21300000, guid: c104e57d38dbe6646b8b048736325d81, type: 3}
+  - {fileID: 21300000, guid: 81d9430b8f40b554190513edce713c48, type: 3}
   prefab: {fileID: 934540294316633314, guid: 05e76c0e1031ddf4fb6a17e6a4931617, type: 3}
   blip: {fileID: 8300000, guid: 3f1c9dfc054213548bdcb14f4a2be0bc, type: 3}

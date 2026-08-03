@@ -15,7 +15,7 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: What the hell!?
+    text: What in the world!?
     actions: []
     choice:
       prompt: 
@@ -59,7 +59,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
-    text: Come on, take a look around you.
+    text: Come on, im holding a gun to your face.
     actions: []
     choice:
       prompt: 
@@ -70,8 +70,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: '"" Upon skimming over the area, you see locked doors and people who werent
-      there before.'
+    text: '"" The Vice student president holds the gun directly at your forehead'
     actions: []
     choice:
       prompt: 

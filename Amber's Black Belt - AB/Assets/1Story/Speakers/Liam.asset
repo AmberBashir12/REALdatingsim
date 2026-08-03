@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7924fdf277f9cf4097f370463eb8e76, type: 3}
   m_Name: Liam
   m_EditorClassIdentifier: 
-  speakerName: 
+  speakerName: Liam
   textColor: {r: 0, g: 1, b: 0.7396574, a: 1}
   sprites:
-  - {fileID: 21300000, guid: cdddbca72dfb581409c6125c7e755887, type: 3}
+  - {fileID: 21300000, guid: d142cef02ba64794aa89dc391cd2ac72, type: 3}
+  - {fileID: 21300000, guid: 2d2518f4228fab84e82f83bfb1aa8738, type: 3}
+  - {fileID: 21300000, guid: 738faa8aec6190e43ab5f445efec53ae, type: 3}
+  - {fileID: 21300000, guid: aa0407a580b0e4a418b63198254152ad, type: 3}
   prefab: {fileID: 3358683441059249534, guid: 18c24c2602962b64a9f9443d8b21aac1, type: 3}
+  blip: {fileID: 8300000, guid: ba0c948d3ac209a4895c15736c2b2827, type: 3}

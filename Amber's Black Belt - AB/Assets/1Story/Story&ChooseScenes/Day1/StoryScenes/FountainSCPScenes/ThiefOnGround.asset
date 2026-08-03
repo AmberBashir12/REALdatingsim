@@ -16,14 +16,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 67974ff49e7f8514ca1ce5240425f2ce, type: 2}
     text: Aghhhh....
-    actions:
-    - speaker: {fileID: 11400000, guid: aa5dafe8122875046b6a55ccf927e6d1, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []
@@ -34,14 +27,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
     text: Oh finally..
-    actions:
-    - speaker: {fileID: 11400000, guid: aa5dafe8122875046b6a55ccf927e6d1, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []

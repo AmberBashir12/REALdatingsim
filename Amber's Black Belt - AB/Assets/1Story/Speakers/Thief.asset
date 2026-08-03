@@ -15,6 +15,6 @@ MonoBehaviour:
   speakerName: Thief
   textColor: {r: 0, g: 0, b: 0, a: 1}
   sprites:
-  - {fileID: 21300000, guid: 3e50e4091f693134a8c07404cece0d54, type: 3}
-  prefab: {fileID: 9114057820567733106, guid: bb0ce994878e0a4428caab08e310698a, type: 3}
-  blip: {fileID: 0}
+  - {fileID: 21300000, guid: c53b99c1ebd35ec4d841e3fe25473b47, type: 3}
+  prefab: {fileID: 8053861796908029433, guid: b6b786adcdfb6de44bfeb4e608e83527, type: 3}
+  blip: {fileID: 8300000, guid: 912c57f70f7459e429de299cb0ebf5f4, type: 3}
