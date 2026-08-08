@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7924fdf277f9cf4097f370463eb8e76, type: 3}
-  m_Name: Pink
+  m_Name: Eleanor
   m_EditorClassIdentifier: 
   speakerName: Eleanor
   textColor: {r: 1, g: 0.6194968, b: 0.90450114, a: 1}

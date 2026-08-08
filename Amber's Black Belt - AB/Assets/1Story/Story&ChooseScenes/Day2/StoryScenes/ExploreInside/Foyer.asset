@@ -18,7 +18,7 @@ MonoBehaviour:
     text: Woww, it's still a rich massive school.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 1
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
     text: Hmm.. find my people.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 16
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
     text: Guess ill try to follow the president's words and befriend some people.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
     text: Since my class is on the second floor lets explore the first floor.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
