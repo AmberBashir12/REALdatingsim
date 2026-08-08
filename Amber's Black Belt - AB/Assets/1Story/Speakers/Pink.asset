@@ -12,8 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7924fdf277f9cf4097f370463eb8e76, type: 3}
   m_Name: Pink
   m_EditorClassIdentifier: 
-  speakerName: Pink Girl
-  textColor: {r: 1, g: 0, b: 0.7478447, a: 1}
+  speakerName: Eleanor
+  textColor: {r: 1, g: 0.6194968, b: 0.90450114, a: 1}
   sprites:
-  - {fileID: 21300000, guid: 7adcbeb41229aee44a594de314a51164, type: 3}
+  - {fileID: 21300000, guid: b9d052397a810e9419a73690b3bd4ef6, type: 3}
+  - {fileID: 21300000, guid: 52002f8c7ac3e9f4da081f1de03f72dd, type: 3}
+  - {fileID: 21300000, guid: e58ef8dd660850140a28902852580e75, type: 3}
+  - {fileID: 21300000, guid: 5f433ef65c8f2b249aacc94cae0e5a05, type: 3}
+  - {fileID: 21300000, guid: dd32c701327e1624fa63921e5d2fecef, type: 3}
+  - {fileID: 21300000, guid: bbcc2f18ed0cc7143a75f57128e13bdf, type: 3}
+  - {fileID: 21300000, guid: d86616c67d5b5e34c99b8de1113c89fb, type: 3}
+  - {fileID: 21300000, guid: 83fa8be6919bcc54f86c3fe3041f6455, type: 3}
+  - {fileID: 21300000, guid: 54520125ff440424d951ce694cd069f2, type: 3}
+  - {fileID: 21300000, guid: 557d2af766bad5040828d2cc40dbf323, type: 3}
+  - {fileID: 21300000, guid: f37a236fd324ffd4fb15dd17b8e3d4ef, type: 3}
   prefab: {fileID: -1492987450203322265, guid: c2868f9b3aa1fb94db3c232331346797, type: 3}
+  blip: {fileID: 0}

@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd07b2e4d42f6b4b86a9338118e15d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: {fileID: 11400000, guid: ce6a967e2a7763b4aadf95caf763f879, type: 2}
+  currentScene: {fileID: 11400000, guid: 9a0c85f37d75a69489ab041ba09b7eba, type: 2}
   bottomBar: {fileID: 928399771}
   backgroundController: {fileID: 1329605606}
   chooseController: {fileID: 1314921446}
@@ -1114,8 +1114,6 @@ MonoBehaviour:
   dialogueCloseButton: {fileID: 1763059992}
   speakerContainer: {fileID: 980659240}
   objectContainer: {fileID: 1756989409}
-  mainCanvas: {fileID: 416896281}
-  blackScreen: {fileID: 1024602280}
 --- !u!1 &417039554
 GameObject:
   m_ObjectHideFlags: 0

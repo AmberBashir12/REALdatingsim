@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: -1492987450203322265}
   - component: {fileID: 8595655445170808066}
   m_Layer: 0
-  m_Name: Pink
+  m_Name: Eleanor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

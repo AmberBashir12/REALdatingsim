@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7924fdf277f9cf4097f370463eb8e76, type: 3}
   m_Name: Classmate Girl
   m_EditorClassIdentifier: 
-  speakerName: Classmate
-  textColor: {r: 0, g: 0, b: 0, a: 0}
+  speakerName: ..
+  textColor: {r: 0, g: 0.43544483, b: 1, a: 1}
   sprites:
   - {fileID: 21300000, guid: 702f32ceedde01841bd38537564f449e, type: 3}
   prefab: {fileID: 2536029742150806809, guid: 25196051fa9cbab4e997852ee5538790, type: 3}
+  blip: {fileID: 0}
