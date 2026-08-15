@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
   m_Name: Lunchtime
   m_EditorClassIdentifier: 
-  sentences: []
+  sentences:
+  - sentenceType: 0
+    speaker: {fileID: 0}
+    text: 
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
   background: {fileID: 0}
   nextScene: {fileID: 0}
   alternativeScenes: []

@@ -27,7 +27,8 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: a2fa8e2766ec7e04388956a325ba3c4d, type: 3}
   nextScene: {fileID: 11400000, guid: a0b3bce9ca4e99a4abdd941b3a598c0a, type: 2}
   alternativeScenes:
-  - requiredChoiceKeys: []
+  - requiredChoiceKeys:
+    - 
     alternativeScene: {fileID: 11400000, guid: daf3fe97ef6fa354596d4f60f6442e96, type: 2}
   - requiredChoiceKeys: []
     alternativeScene: {fileID: 11400000, guid: 824517cfe4e0af147a406dba0c4b4ac5, type: 2}
