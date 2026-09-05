@@ -219,29 +219,17 @@ MonoBehaviour:
         choiceKeyToUnlock: 
         followUpSentences:
         - followUpType: 0
-          speaker: {fileID: 0}
-          text: 
-          actions: []
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
-      - text: Stare
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: 
-        followUpSentences: []
-      - text: Leave for class
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: 
-        followUpSentences:
-        - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: 
+          text: Hey you.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -255,10 +243,704 @@ MonoBehaviour:
             prompt: 
             options: []
           endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Wake up.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+            spriteIndex: 0
+            actionType: 0
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+          text: Wh-what the!?
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 2
+            coords: {x: -200, y: 0}
+            moveSpeed: 1
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+            spriteIndex: 0
+            actionType: 1
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+          text: 
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 0
+            actionType: 2
+            coords: {x: -200, y: 0}
+            moveSpeed: 1
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+            spriteIndex: 0
+            actionType: 1
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: Stare
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: StareChoice
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 0}
+          text: 
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: Leave for class
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I shouldnt wake him up
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 14
+            actionType: 4
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Its kind of weird to be woken up by a stranger
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 14
+            actionType: 4
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+          text: HEY!
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 14
+            actionType: 2
+            coords: {x: -200, y: 0}
+            moveSpeed: 1
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+            spriteIndex: 0
+            actionType: 1
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+          text: What are you doing here?
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 14
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 1
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+          text: Everyone knows the garden is closed off
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 14
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 1
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+          text: You cant be here
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 14
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 1
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: What? Then what about you?
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 14
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 1
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+          text: Its my job to tell people.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 14
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 1
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 1
+          speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+          text: Its my job to tell people.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 14
+            actionType: 0
+            coords: {x: -200, y: 0}
+            moveSpeed: 1
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+            spriteIndex: 0
+            actionType: 4
+            coords: {x: 200, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options:
+            - text: Stop sleeping on the job then
+              requiredChoiceKeys: []
+              choiceKeyToUnlock: 
+              followUpLines:
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                text: W-what!? You saw!?
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                text: W-what!? You saw!?
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+            - text: Ok, Ill leave
+              requiredChoiceKeys: []
+              choiceKeyToUnlock: 
+              followUpLines:
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: Ok, Ill leave
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                text: Yea, good.
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: How long will it be closed?
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                text: For like.. 2 more years.
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: I see.
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+            - text: Why is it closed?
+              requiredChoiceKeys: []
+              choiceKeyToUnlock: 
+              followUpLines:
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                text: .... Over the break, the school forgot to take care of it.
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                text: So, now its become a potential safety hazard.
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: Ok, and how long will it be closed?
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                text: ...Like two years.
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: ....
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                text: Uh, the school has more important stuff to fix.
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                text: A garden that doesnt lead anywhere is the least of their priorities
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: I see
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: Ill get going then
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                text: Yea, good
+                actions:
+                - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
+                  spriteIndex: 0
+                  actionType: 0
+                  coords: {x: 0, y: 0}
+                  moveSpeed: 0
+                  tintColor: {r: 0, g: 0, b: 0, a: 0}
+                  tintOpacity: 0
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+          endingScene: {fileID: 0}
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 0}
   nextScene: {fileID: 0}
-  alternativeScenes: []
+  alternativeScenes:
+  - requiredChoiceKeys:
+    - StareChoice
+    alternativeScene: {fileID: 0}
