@@ -63,11 +63,6 @@ MonoBehaviour:
     choice:
       prompt: 
       options:
-      - text: Go find Maha
-        requiredChoiceKeys:
-        - Maha
-        choiceKeyToUnlock: 
-        followUpSentences: []
       - text: Go to the garden
         requiredChoiceKeys:
         - WakeUpCat

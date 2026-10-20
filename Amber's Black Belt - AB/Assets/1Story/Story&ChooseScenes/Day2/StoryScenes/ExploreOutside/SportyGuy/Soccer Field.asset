@@ -87,7 +87,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: You see a few potential friends hanging around the soccer field.
+    text: You see a 2 potential friends hanging around the soccer field.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -142,26 +142,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: Second is a girl sitting on the bleachers by herself. She look hyper focused
-      on someone in the soccer team.
-    actions:
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    choice:
-      prompt: 
-      options: []
-    endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 0}
-  - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: Last is a guy sitting on the soccer bench drinking water.
+    text: And there is a guy sitting on the soccer bench drinking water.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -1640,10 +1621,6 @@ MonoBehaviour:
                 sound: {fileID: 0}
                 endingScene: {fileID: 0}
           endingScene: {fileID: 0}
-      - text: Bleachers girl
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: MahaAppearance
-        followUpSentences: []
       - text: Water guy
         requiredChoiceKeys: []
         choiceKeyToUnlock: LiamAppearance

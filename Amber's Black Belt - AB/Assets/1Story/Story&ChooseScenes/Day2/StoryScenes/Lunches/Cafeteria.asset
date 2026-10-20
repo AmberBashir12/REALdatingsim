@@ -78,21 +78,6 @@ MonoBehaviour:
             prompt: 
             options: []
           endingScene: {fileID: 0}
-      - text: Find a group of kids
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: Cafeteria(FindAGroupOfKids)
-        followUpSentences:
-        - followUpType: 0
-          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: Maybe ill go talk to that group over there
-          actions: []
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
