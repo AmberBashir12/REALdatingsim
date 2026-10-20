@@ -1,0 +1,371 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
+  m_Name: Reception 2
+  m_EditorClassIdentifier: 
+  sentences:
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Man im tired
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Lets get this over with
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+    text: Hey- wait!
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: '?'
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+    text: I havent seen you in a while, are you okay?
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 1
+    speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+    text: I havent seen you in a while, are you okay?
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options:
+      - text: Yea
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: Reception2(No)
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+          text: But I havent even seen you go to school..
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Yea, im fine
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+          text: ... If you say so.
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: No
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+          text: What! No whats wrong?
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+          text: Actually, wait. I shouldnt ask, its not my business.
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Oh ok
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+          text: ....
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+          text: ...It must be hard transfering in the middle of the school year.
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+          text: You know what! How about you come down to chat with me whenever your
+            feeling down!
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 1
+          speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+          text: You know what! How about you come down to chat with me whenever your
+            feeling down!
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options:
+            - text: Hmm, sure
+              requiredChoiceKeys: []
+              choiceKeyToUnlock: 
+              followUpLines:
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+                text: Great! Come see me whenever during day school! Ill be here
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: Wouldnt I be disturbing your work?
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+                text: No no! Itll be more fun if someone comes down to talk!
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+                text: So feel free!
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: ..Okay
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: Ill come down sometime tommorrow
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: I just need to do something real quick
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+                text: sure sure go ahead.
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+            - text: No thanks
+              requiredChoiceKeys: []
+              choiceKeyToUnlock: Reception2(No)
+              followUpLines:
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: c3109ce7f1f2244429e9f93994fb2799, type: 2}
+                text: Oh... alright
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+          endingScene: {fileID: 0}
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  background: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: 9741614ae1427b647acef3cbf1f5a030, type: 2}
+  alternativeScenes:
+  - requiredChoiceKeys:
+    - Reception2(No)
+    alternativeScene: {fileID: 11400000, guid: 5ac04f4e82cce9e489e62ac6e6465425, type: 2}

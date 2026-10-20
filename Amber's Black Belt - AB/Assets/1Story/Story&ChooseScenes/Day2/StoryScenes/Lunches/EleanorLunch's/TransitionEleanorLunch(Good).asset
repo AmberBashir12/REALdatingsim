@@ -25,5 +25,5 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 0}
-  nextScene: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: fc0980030d9d12f43bce23fe62fdb6a7, type: 2}
   alternativeScenes: []

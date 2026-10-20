@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
+  m_Name: Morning 3
+  m_EditorClassIdentifier: 
+  sentences:
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+    text: You slept in 2 days in a row
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+    text: '*Alarm'
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 1
+    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+    text: '#Alarm'
+    actions: []
+    choice:
+      prompt: 
+      options:
+      - text: Wake up
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: Morning2WakeUp
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Ugh, missed 2 days in a row
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Guess ill go to school
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: Sleep in
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: Morning3(SleepIn)
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Sooo annoying
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 1
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Sooo annoying
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options:
+            - text: Leave alarm on
+              requiredChoiceKeys: []
+              choiceKeyToUnlock: Morning3(AlarmOn)
+              followUpLines:
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: Too lazy to turn it off
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+            - text: Turn off alarm from now on
+              requiredChoiceKeys: []
+              choiceKeyToUnlock: 
+              followUpLines:
+              - lineType: 0
+                speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+                text: This alarm is so annoying, im turning it off
+                actions: []
+                music: {fileID: 0}
+                music2: {fileID: 0}
+                sound: {fileID: 0}
+                endingScene: {fileID: 0}
+          endingScene: {fileID: 0}
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  background: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: 875f25f8ebbffc447afc11898f0333a9, type: 2}
+  alternativeScenes:
+  - requiredChoiceKeys:
+    - Morning3(AlarmOn)
+    alternativeScene: {fileID: 11400000, guid: 608773341b01ae4409a3ec8cce4b6dcd, type: 2}
+  - requiredChoiceKeys:
+    - Morning2WakeUp
+    alternativeScene: {fileID: 11400000, guid: d8cbc68662d44d6429bcdfe0ec6de49e, type: 2}

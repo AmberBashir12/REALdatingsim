@@ -840,7 +840,7 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: 'Thoughts: She talks a lot,'
+          text: '*She talks a lot,'
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
             spriteIndex: 0
@@ -865,7 +865,7 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: 'Thoughts: But'
+          text: '*But'
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
             spriteIndex: 0
@@ -918,8 +918,8 @@ MonoBehaviour:
               followUpLines: []
             - text: Its kinda annoying
               requiredChoiceKeys:
-              - ItsKindaAnnoyingEleanorLunch
-              choiceKeyToUnlock: 
+              - 
+              choiceKeyToUnlock: ItsKindaAnnoyingEleanorLunch
               followUpLines: []
           endingScene: {fileID: 0}
       - text: Theres room for improvement.
