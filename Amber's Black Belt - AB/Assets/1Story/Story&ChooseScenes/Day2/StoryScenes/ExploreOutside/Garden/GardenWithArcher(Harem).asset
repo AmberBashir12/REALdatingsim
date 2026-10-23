@@ -240,7 +240,7 @@ MonoBehaviour:
         followUpSentences: []
       - text: Awww (Thoughts)
         requiredChoiceKeys: []
-        choiceKeyToUnlock: 
+        choiceKeyToUnlock: ArcherFlirtHaremLiked
         followUpSentences: []
     endingScene: {fileID: 0}
     music: {fileID: 0}

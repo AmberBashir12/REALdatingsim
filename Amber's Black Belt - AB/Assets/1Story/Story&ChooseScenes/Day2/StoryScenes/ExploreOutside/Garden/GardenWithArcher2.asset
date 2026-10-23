@@ -310,7 +310,7 @@ MonoBehaviour:
         followUpSentences: []
       - text: Aww (Thoughts)
         requiredChoiceKeys: []
-        choiceKeyToUnlock: 
+        choiceKeyToUnlock: ArcherFlirt1Liked
         followUpSentences: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -670,7 +670,7 @@ MonoBehaviour:
         followUpSentences: []
       - text: Really!? I looked like that!?
         requiredChoiceKeys: []
-        choiceKeyToUnlock: 
+        choiceKeyToUnlock: ArcherFlirt2Liked
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -1606,7 +1606,7 @@ MonoBehaviour:
         followUpSentences: []
       - text: Hehe, That was smooth
         requiredChoiceKeys: []
-        choiceKeyToUnlock: 
+        choiceKeyToUnlock: ArcherFlirt3Liked
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
