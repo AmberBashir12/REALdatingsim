@@ -39,6 +39,7 @@ public class BottomBarController : MonoBehaviour
     private List<StoryScene.FollowUpLine> activeBranchChoiceLines;
     private int branchChoiceLineIndex = -1;
     private List<int> visibleBranchChoiceOptionIndices = new List<int>();
+    private bool skipping;
 
     private void Awake()
     {
@@ -84,7 +85,7 @@ public class BottomBarController : MonoBehaviour
                 return;
             }
 
-            if (IsBlockingSoundPlaying())
+            if (!skipping && IsBlockingSoundPlaying())
             {
                 return;
             }
@@ -160,6 +161,64 @@ public class BottomBarController : MonoBehaviour
                 }
             }
         }
+    }
+
+    // Fast-forwards through dialogue, still running sprite and music actions, until a choice or ending appears.
+    public void SkipToNextChoice()
+    {
+        if (gameController == null || currentScene == null
+            || gameController.GetCurrentState() != GameController.State.IDLE
+            || waitingForSentenceChoice || waitingForBranchChoice)
+        {
+            return;
+        }
+
+        if (state == State.PLAYING)
+        {
+            if (currentTextCoroutine != null)
+            {
+                StopCoroutine(currentTextCoroutine);
+            }
+
+            barText.text = currentFullText;
+            state = State.COMPLETED;
+        }
+
+        skipping = true;
+        const int maxSteps = 5000;
+        for (int step = 0; step < maxSteps && HasNextLine(); step++)
+        {
+            AdvanceSentence();
+            if (gameController.GetCurrentState() != GameController.State.IDLE || waitingForSentenceChoice || waitingForBranchChoice)
+            {
+                break;
+            }
+        }
+        skipping = false;
+
+        // Instant lines skip TypeText, which is what normally starts the auto-advance on a scene's last line.
+        if (state == State.COMPLETED
+            && autoAdvanceCoroutine == null
+            && gameController.GetCurrentState() == GameController.State.IDLE
+            && ShouldAutoAdvanceTerminalLine())
+        {
+            autoAdvanceCoroutine = StartCoroutine(AutoAdvanceTerminalLine());
+        }
+    }
+
+    private bool HasNextLine()
+    {
+        if (activeBranchChoiceLines != null && branchChoiceLineIndex + 1 < activeBranchChoiceLines.Count)
+        {
+            return true;
+        }
+
+        if (activeBranchSentences != null && branchSentenceIndex + 1 < activeBranchSentences.Count)
+        {
+            return true;
+        }
+
+        return !IsLastSentence();
     }
 
     private void TransitionFromStoryEnd()
@@ -708,10 +767,19 @@ public class BottomBarController : MonoBehaviour
 
         string resolvedText = TextTemplate.Resolve(text);
         AudioClip blipClip = speaker != null ? speaker.blip : null;
-        currentTextCoroutine = StartCoroutine(TypeText(resolvedText, blipClip));
-        if (blipClip != null && gameController != null && gameController.audioController != null)
+        if (skipping)
         {
-            gameController.audioController.PlayBlip(blipClip);
+            barText.text = resolvedText;
+            currentFullText = resolvedText;
+            state = State.COMPLETED;
+        }
+        else
+        {
+            currentTextCoroutine = StartCoroutine(TypeText(resolvedText, blipClip));
+            if (blipClip != null && gameController != null && gameController.audioController != null)
+            {
+                gameController.audioController.PlayBlip(blipClip);
+            }
         }
 
         if (speaker != null)
@@ -728,7 +796,7 @@ public class BottomBarController : MonoBehaviour
 
         if (gameController != null && gameController.audioController != null)
         {
-            gameController.audioController.PlayAudio(music, music2, sound);
+            gameController.audioController.PlayAudio(music, music2, skipping ? null : sound);
         }
     }
 
