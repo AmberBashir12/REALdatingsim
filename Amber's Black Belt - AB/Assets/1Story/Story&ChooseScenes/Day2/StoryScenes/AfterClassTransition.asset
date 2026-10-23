@@ -28,7 +28,5 @@ MonoBehaviour:
   nextScene: {fileID: 11400000, guid: a0b3bce9ca4e99a4abdd941b3a598c0a, type: 2}
   alternativeScenes:
   - requiredChoiceKeys:
-    - 
+    - niceToEleanor
     alternativeScene: {fileID: 11400000, guid: daf3fe97ef6fa354596d4f60f6442e96, type: 2}
-  - requiredChoiceKeys: []
-    alternativeScene: {fileID: 11400000, guid: 824517cfe4e0af147a406dba0c4b4ac5, type: 2}
