@@ -15,7 +15,7 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'Maha cracks her knuckles.'
+    text: Maha cracks her knuckles.
     actions: []
     choice:
       prompt: 
@@ -26,7 +26,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'What follows is very fast, and very one sided.'
+    text: What follows is very fast, and very one sided.
     actions: []
     choice:
       prompt: 
@@ -37,7 +37,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'A punch to the jaw. A knee to the stomach.'
+    text: A punch to the jaw. A knee to the stomach.
     actions: []
     choice:
       prompt: 
@@ -48,7 +48,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'A kick when he is already on the ground.'
+    text: A kick when he is already on the ground.
     actions: []
     choice:
       prompt: 
@@ -59,7 +59,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'Sael is out cold in under a minute.'
+    text: Sael is out cold in under a minute.
     actions: []
     choice:
       prompt: 

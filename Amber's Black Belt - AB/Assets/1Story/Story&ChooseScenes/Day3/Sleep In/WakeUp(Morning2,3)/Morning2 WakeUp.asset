@@ -18,8 +18,15 @@ MonoBehaviour:
     text: Ughhhh, so tired
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
+      spriteIndex: 6
+      actionType: 1
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 7
+      actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -36,8 +43,8 @@ MonoBehaviour:
     text: No one's here to greet me today
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
+      spriteIndex: 7
+      actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -54,8 +61,8 @@ MonoBehaviour:
     text: Ill just go to class
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
+      spriteIndex: 7
+      actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}

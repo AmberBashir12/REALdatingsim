@@ -16,7 +16,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Ugh, what's with her? Eleanor, are you okay?
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 1
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -27,7 +41,28 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Why?! I don't get why she hates me so much!
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -38,7 +73,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: ...Do you need to go to the infirmary? I don't know where it is, though.
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -49,7 +98,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: No, it's fine. Aria's weak.
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -60,7 +123,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Damn, okay.
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -71,7 +148,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: I don't get why she hates me so much. Like... what did I do?
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -82,7 +173,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: What happened?
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -93,7 +198,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Hehe, you asked just like I expected. But I don't even know.
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -103,8 +222,23 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-    text: One day, she just started being mean to me after a show in middle school. My aunt and brother were there.
-    actions: []
+    text: One day, she just started being mean to me after a show in middle school.
+      My aunt and brother were there.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -115,7 +249,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Yeah, that's strange.
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -126,7 +274,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: ...I'm glad you stayed with me rather than chasing her.
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -137,7 +299,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: My friend is more important.
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -148,7 +324,21 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Hehe. Thanks, {playerName}.
-    actions: []
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []

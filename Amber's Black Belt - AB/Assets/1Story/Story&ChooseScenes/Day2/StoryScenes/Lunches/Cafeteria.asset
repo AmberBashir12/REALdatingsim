@@ -18,8 +18,15 @@ MonoBehaviour:
     text: Wow cafeteria's packed
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
+      spriteIndex: 12
+      actionType: 1
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -36,8 +43,8 @@ MonoBehaviour:
     text: I already got my lunch so what should I do?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
+      spriteIndex: 13
+      actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -54,8 +61,8 @@ MonoBehaviour:
     text: I already got my lunch so what should I do?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
+      spriteIndex: 13
+      actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -70,7 +77,14 @@ MonoBehaviour:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
           text: Guess ill sit alone
-          actions: []
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
           music: {fileID: 0}
           music2: {fileID: 0}
           sound: {fileID: 0}

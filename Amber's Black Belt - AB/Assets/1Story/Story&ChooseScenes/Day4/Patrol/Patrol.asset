@@ -15,19 +15,52 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'You and the president walk through the school hallways.'
+    text: You and the president walk through the school hallways.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 1
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
+    text: Patrol is simple. We walk the halls and make sure everyone is where they
+      should be.
+    actions:
+    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 0
       actionType: 1
-      coords: {x: -450, y: 0}
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 0
-      actionType: 1
-      coords: {x: -100, y: 0}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -40,44 +73,19 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-    text: 'Patrol is simple. We walk the halls and make sure everyone is where they should be.'
+    text: If a student is out of class during lessons, ask for a hall pass.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
-      coords: {x: -450, y: 0}
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 1
       actionType: 4
-      coords: {x: -100, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    choice:
-      prompt: 
-      options: []
-    endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 0}
-  - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-    text: 'If a student is out of class during lessons, ask for a hall pass.'
-    actions:
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: -450, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 1
-      actionType: 4
-      coords: {x: -100, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -90,19 +98,19 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'What if they do not have one?'
+    text: What if they do not have one?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 13
       actionType: 4
-      coords: {x: -450, y: 0}
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: -100, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -115,19 +123,19 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-    text: 'Then you walk them back to class. No raised voices. No threats.'
+    text: Then you walk them back to class. No raised voices. No threats.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
-      coords: {x: -450, y: 0}
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 1
       actionType: 4
-      coords: {x: -100, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -140,19 +148,19 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'Got it.'
+    text: Got it.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 13
       actionType: 4
-      coords: {x: -450, y: 0}
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: -100, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -165,19 +173,20 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-    text: 'Watch the doors and windows too. A door left open means someone is hiding something.'
+    text: Watch the doors and windows too. A door left open means someone is hiding
+      something.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
-      coords: {x: -450, y: 0}
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 1
       actionType: 4
-      coords: {x: -100, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -190,19 +199,19 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'Isnt that a little paranoid?'
+    text: Isnt that a little paranoid?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 13
       actionType: 4
-      coords: {x: -450, y: 0}
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: -100, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -215,19 +224,19 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-    text: 'It is observant.'
+    text: It is observant.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
-      coords: {x: -450, y: 0}
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 1
       actionType: 4
-      coords: {x: -100, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -240,19 +249,19 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-    text: 'Keep your eyes up and your hands visible. People relax when you look calm.'
+    text: Keep your eyes up and your hands visible. People relax when you look calm.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
-      coords: {x: -450, y: 0}
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 1
       actionType: 4
-      coords: {x: -100, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -265,30 +274,19 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'A few students stiffen as the president walks past. A few wave shyly.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
-    endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 0}
-  - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'Everyone seems to respect you.'
+    text: A few students stiffen as the president walks past. A few wave shyly.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 4
-      coords: {x: -450, y: 0}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: -100, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -300,20 +298,20 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-    text: 'Respect is earned. Fear is borrowed.'
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Everyone seems to respect you.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: -450, y: 0}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 1
-      actionType: 4
-      coords: {x: -100, y: 0}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -326,19 +324,44 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-    text: 'Now, the reception office. There is more to learn there.'
+    text: Respect is earned. Fear is borrowed.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
-      coords: {x: -450, y: 0}
+      coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 1
       actionType: 4
-      coords: {x: -100, y: 0}
+      coords: {x: 200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
+    text: Now, the reception office. There is more to learn there.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -200, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0

@@ -15,12 +15,19 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'That night, in your dorm.'
+    text: That night, in your dorm.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 1
-      coords: {x: -450, y: 0}
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -33,12 +40,12 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'Her father.. is a mafia boss..'
+    text: Her father.. is a mafia boss..
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 13
       actionType: 4
-      coords: {x: -450, y: 0}
+      coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -51,12 +58,12 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'And I just promised to keep it a secret..'
+    text: And I just promised to keep it a secret..
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 13
       actionType: 4
-      coords: {x: -450, y: 0}
+      coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -69,12 +76,12 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'I cant stop thinking about it.'
+    text: I cant stop thinking about it.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 13
       actionType: 4
-      coords: {x: -450, y: 0}
+      coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -87,30 +94,30 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 1
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'How do I feel about all this?'
+    text: How do I feel about all this?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 13
       actionType: 4
-      coords: {x: -450, y: 0}
+      coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     choice:
       prompt: 
       options:
-      - text: 'Nervous'
+      - text: Nervous
         requiredChoiceKeys: []
         choiceKeyToUnlock: FeelNervous
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: 'My hands wont stop shaking..'
+          text: My hands wont stop shaking..
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 13
             actionType: 4
-            coords: {x: -450, y: 0}
+            coords: {x: 0, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -123,12 +130,12 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: 'What if I get dragged into something I cant handle?'
+          text: What if I get dragged into something I cant handle?
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 13
             actionType: 4
-            coords: {x: -450, y: 0}
+            coords: {x: 0, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -141,8 +148,15 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-          text: 'You stare at the ceiling for hours, your heart racing.'
-          actions: []
+          text: You stare at the ceiling for hours, your heart racing.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
           music: {fileID: 0}
           music2: {fileID: 0}
           sound: {fileID: 0}
@@ -150,18 +164,18 @@ MonoBehaviour:
             prompt: 
             options: []
           endingScene: {fileID: 0}
-      - text: 'Apathetic'
+      - text: Apathetic
         requiredChoiceKeys: []
         choiceKeyToUnlock: FeelApathetic
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: '...'
+          text: ...
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 13
             actionType: 4
-            coords: {x: -450, y: 0}
+            coords: {x: 0, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -174,12 +188,12 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: 'Honestly, I do not feel much of anything.'
+          text: Honestly, I do not feel much of anything.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 13
             actionType: 4
-            coords: {x: -450, y: 0}
+            coords: {x: 0, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -192,12 +206,12 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: 'Maybe I should be more scared. But I am not.'
+          text: Maybe I should be more scared. But I am not.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 0
+            spriteIndex: 13
             actionType: 4
-            coords: {x: -450, y: 0}
+            coords: {x: 0, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -210,8 +224,15 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-          text: 'You close your eyes, completely calm.'
-          actions: []
+          text: You close your eyes, completely calm.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
           music: {fileID: 0}
           music2: {fileID: 0}
           sound: {fileID: 0}
@@ -225,8 +246,15 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'Morning comes sooner than you expected.'
-    actions: []
+    text: Morning comes sooner than you expected.
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []

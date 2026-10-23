@@ -15,6 +15,14 @@ MonoBehaviour:
   speakerName: Aria
   textColor: {r: 0.9, g: 0.4, b: 0.6, a: 1}
   sprites:
-  - {fileID: 0}
-  prefab: {fileID: 8982040256849117368, guid: e401d76071e927241894dfcce9ddd8b1, type: 3}
+  - {fileID: 21300000, guid: 6aab61d63c4554d40bb2505cd15f2e9d, type: 3}
+  - {fileID: 21300000, guid: 670a79259e1b43f4aa6d8fb14de69b9d, type: 3}
+  - {fileID: 21300000, guid: 44845dc1bc30ca44ab183fc555a21aa9, type: 3}
+  - {fileID: 21300000, guid: bc757b7cd2d63d740ac4b0aefc616d2a, type: 3}
+  - {fileID: 21300000, guid: 431ea2fa5144acb428916fe49a231439, type: 3}
+  - {fileID: 21300000, guid: dcac4d882adaa73468c7bfde392a6d8b, type: 3}
+  - {fileID: 21300000, guid: 24f1a981c48a3024ba762a37b9496970, type: 3}
+  - {fileID: 21300000, guid: eb1edd135498cab479c683b3df09cd36, type: 3}
+  - {fileID: 21300000, guid: c7ec9cbe695b33c418e6b9266459dbea, type: 3}
+  prefab: {fileID: -1492987450203322265, guid: c2868f9b3aa1fb94db3c232331346797, type: 3}
   blip: {fileID: 0}

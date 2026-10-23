@@ -175,8 +175,25 @@ public class BottomBarController : MonoBehaviour
             return;
         }
 
+        HideSceneSprites();
         GameScene nextScene = currentScene.GetNextScene();
         gameController.PlayScene(nextScene, -1, true);
+    }
+
+    private void HideSceneSprites()
+    {
+        if (currentScene.name.IndexOf("Transition", System.StringComparison.OrdinalIgnoreCase) >= 0)
+        {
+            return;
+        }
+
+        foreach (SpriteController controller in sprites.Values)
+        {
+            if (controller != null)
+            {
+                controller.Hide();
+            }
+        }
     }
 
     private void SetEndingReturnButtonVisible(bool visible)
@@ -368,6 +385,8 @@ public class BottomBarController : MonoBehaviour
 
     private void ShowSentenceChoice(StoryScene.Sentence sentence)
     {
+        ActSpeakers(sentence.actions);
+
         List<StoryScene.Sentence.ChoiceOption> options = sentence.choice.options;
         if (options == null || options.Count == 0)
         {
@@ -520,6 +539,8 @@ public class BottomBarController : MonoBehaviour
 
     private void ShowBranchChoice(StoryScene.FollowUpSentence followUpSentence)
     {
+        ActSpeakers(followUpSentence.actions);
+
         List<StoryScene.FollowUpChoiceOption> options = followUpSentence.choice.options;
         if (options == null || options.Count == 0)
         {

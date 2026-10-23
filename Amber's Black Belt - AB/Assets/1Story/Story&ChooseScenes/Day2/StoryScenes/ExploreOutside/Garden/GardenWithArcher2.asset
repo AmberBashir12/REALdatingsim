@@ -17,17 +17,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Woww, the garden is so nice!
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 1
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
-      actionType: 0
+      actionType: 1
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -49,17 +56,10 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: And huge too!
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -83,15 +83,15 @@ MonoBehaviour:
     actions:
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+      actionType: 1
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -99,6 +99,13 @@ MonoBehaviour:
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -113,17 +120,10 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Yea its pretty right?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -131,6 +131,13 @@ MonoBehaviour:
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -145,17 +152,10 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Oh also,
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -163,6 +163,13 @@ MonoBehaviour:
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -177,17 +184,10 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: What school did you transfer from?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -195,6 +195,13 @@ MonoBehaviour:
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -209,17 +216,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: It probably wasnt good enough for you
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -234,17 +248,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Especially with how charming you are
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -259,17 +280,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Especially with how charming you are
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -292,17 +320,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Oh hmm.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -325,17 +360,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Technically I was homeschooled
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -358,17 +400,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: oh.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -391,17 +440,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: But how did you know?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -424,17 +480,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: About what?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -457,17 +520,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: That im new and transferred here?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -490,17 +560,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: I saw you looking around at the soccer field.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -523,17 +600,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: You looked so lost it was cute.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -556,17 +640,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: You looked so lost it was cute.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -586,6 +677,13 @@ MonoBehaviour:
           text: Really!? I looked like that!?
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -595,7 +693,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -611,6 +709,13 @@ MonoBehaviour:
           text: Yea lol
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -618,9 +723,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -639,17 +744,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: But really, it was just the fact ive never seen you before.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -669,6 +781,13 @@ MonoBehaviour:
           text: Really!? I looked like that!?
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -678,7 +797,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -694,6 +813,13 @@ MonoBehaviour:
           text: Yea lol
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -701,9 +827,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -722,17 +848,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Plus the rumours going around.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -752,6 +885,13 @@ MonoBehaviour:
           text: Really!? I looked like that!?
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -761,7 +901,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -777,6 +917,13 @@ MonoBehaviour:
           text: Yea lol
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -784,9 +931,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -805,17 +952,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Hmm, I see.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -835,6 +989,13 @@ MonoBehaviour:
           text: Really!? I looked like that!?
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -844,7 +1005,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -860,6 +1021,13 @@ MonoBehaviour:
           text: Yea lol
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -867,9 +1035,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -888,17 +1056,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Wait what rumours?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -918,6 +1093,13 @@ MonoBehaviour:
           text: Really!? I looked like that!?
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -927,7 +1109,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -943,6 +1125,13 @@ MonoBehaviour:
           text: Yea lol
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -950,9 +1139,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -971,17 +1160,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: What do they say?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1001,6 +1197,13 @@ MonoBehaviour:
           text: Really!? I looked like that!?
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1010,7 +1213,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1026,6 +1229,13 @@ MonoBehaviour:
           text: Yea lol
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1033,9 +1243,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1054,17 +1264,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: The rumours...?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1084,6 +1301,13 @@ MonoBehaviour:
           text: Really!? I looked like that!?
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1093,7 +1317,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1109,6 +1333,13 @@ MonoBehaviour:
           text: Yea lol
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1116,9 +1347,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1137,17 +1368,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Something like, "The new student is really pretty."
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1167,6 +1405,13 @@ MonoBehaviour:
           text: Really!? I looked like that!?
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1176,7 +1421,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1192,6 +1437,13 @@ MonoBehaviour:
           text: Yea lol
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1199,9 +1451,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1220,17 +1472,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Which is definitely true.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1250,6 +1509,13 @@ MonoBehaviour:
           text: Really!? I looked like that!?
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1259,7 +1525,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1275,6 +1541,13 @@ MonoBehaviour:
           text: Yea lol
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1282,9 +1555,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1303,17 +1576,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Which is definitely true.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1333,6 +1613,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1342,7 +1629,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1358,6 +1645,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1367,7 +1661,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1383,6 +1677,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1390,9 +1691,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1411,17 +1712,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: And there was another one like, "The new student is coming this week."
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1441,6 +1749,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1450,7 +1765,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1466,6 +1781,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1475,7 +1797,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1491,6 +1813,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1498,9 +1827,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1519,17 +1848,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: A few others as well. You were the talk of the school for a few days
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1549,6 +1885,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1558,7 +1901,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1574,6 +1917,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1583,7 +1933,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1599,6 +1949,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1606,9 +1963,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1627,17 +1984,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Oh wow really? Do you guys not usually get new students?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1657,6 +2021,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1666,7 +2037,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1682,6 +2053,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1691,7 +2069,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1707,6 +2085,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1714,9 +2099,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1735,17 +2120,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Yea its rare. Most people here have been attending this school since elementary.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1765,6 +2157,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1774,7 +2173,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1790,6 +2189,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1799,7 +2205,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1815,6 +2221,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1822,9 +2235,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1843,17 +2256,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Alot of us know eachother pretty well.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1873,6 +2293,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1882,7 +2309,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1898,6 +2325,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1907,7 +2341,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1923,6 +2357,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1930,9 +2371,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -1951,17 +2392,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: A big community then.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -1981,6 +2429,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -1990,7 +2445,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2006,6 +2461,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2015,7 +2477,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2031,6 +2493,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2038,9 +2507,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2059,17 +2528,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Yup, but for me it gets pretty annoying.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -2089,6 +2565,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2098,7 +2581,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2114,6 +2597,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2123,7 +2613,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2139,6 +2629,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2146,9 +2643,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2167,17 +2664,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: How come?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -2197,6 +2701,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2206,7 +2717,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2222,6 +2733,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2231,7 +2749,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2247,6 +2765,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2254,9 +2779,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2275,17 +2800,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Just hard to meet new people.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -2305,6 +2837,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2314,7 +2853,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2330,6 +2869,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2339,7 +2885,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2355,6 +2901,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2362,9 +2915,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2383,17 +2936,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Yea must be boring sometimes
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -2413,6 +2973,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2422,7 +2989,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2438,6 +3005,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2447,7 +3021,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2463,6 +3037,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2470,9 +3051,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2491,17 +3072,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: So imagine my happiness when I heard a someone new was coming!
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -2521,6 +3109,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2530,7 +3125,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2546,6 +3141,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2555,7 +3157,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2571,6 +3173,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2578,9 +3187,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2599,17 +3208,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Cmon, it cant be that good.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -2629,6 +3245,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2638,7 +3261,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2654,6 +3277,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2663,7 +3293,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2679,6 +3309,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2686,9 +3323,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2707,17 +3344,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: So, how is it meeting me?
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -2737,6 +3381,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2746,7 +3397,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2762,6 +3413,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2771,7 +3429,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2787,6 +3445,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2794,9 +3459,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2815,17 +3480,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Totally better than i ever expected.
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -2845,6 +3517,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2854,7 +3533,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2870,6 +3549,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2879,7 +3565,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2895,6 +3581,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2902,9 +3595,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2923,17 +3616,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Oh wait, the time. Its almost class
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -2953,6 +3653,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2962,7 +3669,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -2978,6 +3685,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -2987,7 +3701,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3003,6 +3717,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3010,9 +3731,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3031,17 +3752,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: I didnt even notice
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -3061,6 +3789,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3070,7 +3805,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3086,6 +3821,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3095,7 +3837,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3111,6 +3853,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3118,9 +3867,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3139,17 +3888,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: You know, youre actually in my class
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -3169,6 +3925,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3178,7 +3941,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3194,6 +3957,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3203,7 +3973,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3219,6 +3989,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3226,9 +4003,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3247,17 +4024,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: We should go together!
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+      spriteIndex: 1
+      actionType: 4
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -3277,6 +4061,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3286,7 +4077,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3302,6 +4093,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3311,7 +4109,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3327,6 +4125,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3334,9 +4139,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3355,17 +4160,24 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Alright
     actions:
-    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
       spriteIndex: 0
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -3385,6 +4197,13 @@ MonoBehaviour:
           text: Hehe, That was smooth
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3394,7 +4213,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3410,6 +4229,13 @@ MonoBehaviour:
           text: Thanks tho
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3419,7 +4245,7 @@ MonoBehaviour:
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
             spriteIndex: 0
             actionType: 0
-            coords: {x: 0, y: 0}
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
@@ -3435,6 +4261,13 @@ MonoBehaviour:
           text: No need to say thanks its just the truth.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 12
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: af5ae33b41563334e8edfe6a8a48e56d, type: 2}
             spriteIndex: 0
             actionType: 0
             coords: {x: 0, y: 0}
@@ -3442,9 +4275,9 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-            spriteIndex: 0
-            actionType: 0
-            coords: {x: 0, y: 0}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
