@@ -223,7 +223,7 @@ MonoBehaviour:
       - text: Yea.
         requiredChoiceKeys:
         - ILikeItEleanorLunch
-        choiceKeyToUnlock: EleanorFriends
+        choiceKeyToUnlock: 
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
@@ -327,7 +327,7 @@ MonoBehaviour:
       - text: Yea..
         requiredChoiceKeys:
         - ItsKindaAnnoyingEleanorLunch
-        choiceKeyToUnlock: KnowEleanorYes
+        choiceKeyToUnlock: 
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
@@ -495,7 +495,7 @@ MonoBehaviour:
             options:
             - text: I Will
               requiredChoiceKeys: []
-              choiceKeyToUnlock: JoinMahaClique
+              choiceKeyToUnlock: 
               followUpLines:
               - lineType: 0
                 speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
@@ -531,7 +531,7 @@ MonoBehaviour:
                 endingScene: {fileID: 0}
             - text: No thanks
               requiredChoiceKeys: []
-              choiceKeyToUnlock: RefuseMahaClique
+              choiceKeyToUnlock: 
               followUpLines:
               - lineType: 0
                 speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
@@ -594,7 +594,7 @@ MonoBehaviour:
       - text: No
         requiredChoiceKeys:
         - ItsKindaAnnoyingEleanorLunch
-        choiceKeyToUnlock: KnowEleanorNo
+        choiceKeyToUnlock: 
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
@@ -696,7 +696,7 @@ MonoBehaviour:
             options:
             - text: ....
               requiredChoiceKeys: []
-              choiceKeyToUnlock: StaySilent
+              choiceKeyToUnlock: 
               followUpLines:
               - lineType: 0
                 speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
@@ -724,7 +724,7 @@ MonoBehaviour:
                 endingScene: {fileID: 0}
             - text: Brat
               requiredChoiceKeys: []
-              choiceKeyToUnlock: TalkBack
+              choiceKeyToUnlock: 
               followUpLines:
               - lineType: 0
                 speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
@@ -788,22 +788,5 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 0}
-  nextScene: {fileID: 11400000, guid: 3408fc55025e0754490b6eeb81dc7667, type: 2}
-  alternativeScenes:
-  - requiredChoiceKeys:
-    - JoinMahaClique
-    alternativeScene: {fileID: 11400000, guid: 9d2452749a9f4d23981b2d90a6f24b60, type: 2}
-  - requiredChoiceKeys:
-    - RefuseMahaClique
-    alternativeScene: {fileID: 11400000, guid: 1c6d881d1dd2a0643843f78d5ac59ea5, type: 2}
-  - requiredChoiceKeys:
-    - KnowEleanorNo
-    - StaySilent
-    alternativeScene: {fileID: 11400000, guid: abf7884ec61e5c842a1c92d532c19050, type: 2}
-  - requiredChoiceKeys:
-    - KnowEleanorNo
-    - TalkBack
-    alternativeScene: {fileID: 11400000, guid: d9a87d68b0ccca64bbf3358868157122, type: 2}
-  - requiredChoiceKeys:
-    - KnowEleanorNo
-    alternativeScene: {fileID: 11400000, guid: ce419828d96baca468d21ede5226fc10, type: 2}
+  nextScene: {fileID: 0}
+  alternativeScenes: []

@@ -12,7 +12,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
   m_Name: Room339(AftermathOfHairGrab)
   m_EditorClassIdentifier: 
-  sentences: []
+  sentences:
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: What's wrong with you?!
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+    text: Shut up!!!
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Wha-where are you going?!
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 1
+    speaker: {fileID: 0}
+    text: 
+    actions: []
+    choice:
+      prompt: What will you do?
+      options:
+      - text: Confront Aria
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: confront_aria
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Get back here-!!
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: Comfort Eleanor
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: comfort_eleanor
+        followUpSentences: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
   background: {fileID: 0}
-  nextScene: {fileID: 0}
-  alternativeScenes: []
+  nextScene: {fileID: 11400000, guid: b61984f7a49998b4dbae7d7aa9c04736, type: 2}
+  alternativeScenes:
+  - requiredChoiceKeys:
+    - confront_aria
+    alternativeScene: {fileID: 11400000, guid: c024d745bbfe9014fb893f85c7372da9, type: 2}
+  - requiredChoiceKeys:
+    - comfort_eleanor
+    alternativeScene: {fileID: 11400000, guid: b61984f7a49998b4dbae7d7aa9c04736, type: 2}
