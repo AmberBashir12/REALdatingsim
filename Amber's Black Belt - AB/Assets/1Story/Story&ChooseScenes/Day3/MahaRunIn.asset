@@ -15,7 +15,7 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: .....
+    text: Getting ready for school is so boring
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -1104,7 +1104,7 @@ MonoBehaviour:
           endingScene: {fileID: 0}
       - text: No
         requiredChoiceKeys:
-        - ItsKindaAnnoyingEleanorLunch
+        - 
         choiceKeyToUnlock: 
         followUpSentences:
         - followUpType: 0
@@ -1564,7 +1564,7 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: d25cb78adbfb1b041aad17b6285537a4, type: 3}
   nextScene: {fileID: 11400000, guid: 53ad77f25bc722747b81b5aa8328441b, type: 2}
   alternativeScenes:
   - requiredChoiceKeys:

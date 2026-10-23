@@ -149,6 +149,35 @@ public static partial class StorySceneActionProcessor
             return positions != null ? staged : original;
         }
 
+        // A sprite index that is neither the generated pair nor an old soccer-outfit default was picked by hand.
+        private int AuthoredExpression(List<SceneAction> existing, Speaker member, int neutralIndex, int talkIndex)
+        {
+            foreach (SceneAction action in existing ?? new List<SceneAction>())
+            {
+                bool isExpression = action.actionType == ActionType.NONE
+                    || action.actionType == ActionType.BOUNCE
+                    || action.actionType == ActionType.APPEAR;
+                if (action.speaker != member || !isExpression
+                    || action.spriteIndex == neutralIndex || action.spriteIndex == talkIndex)
+                {
+                    continue;
+                }
+
+                bool staleSoccer = !IsSoccerScene(assetPath)
+                    && member.sprites != null
+                    && action.spriteIndex >= 0
+                    && action.spriteIndex < member.sprites.Count
+                    && member.sprites[action.spriteIndex] != null
+                    && IsSoccerSprite(member.sprites[action.spriteIndex]);
+                if (!staleSoccer)
+                {
+                    return action.spriteIndex;
+                }
+            }
+
+            return -1;
+        }
+
         private Vector2 PositionOf(Speaker speaker)
         {
             return positions != null && positions.TryGetValue(speaker, out Vector2 position) ? position : Vector2.zero;
@@ -292,8 +321,9 @@ public static partial class StorySceneActionProcessor
             List<SceneAction> actions = new List<SceneAction>();
             foreach (Speaker arrival in arrivals)
             {
-                GetSpriteIndices(arrival, assetPath, out int neutralIndex, out _);
-                actions.Add(CreateAction(arrival, neutralIndex, ActionType.APPEAR, PositionOf(arrival)));
+                GetSpriteIndices(arrival, assetPath, out int neutralIndex, out int talkIndex);
+                int authored = AuthoredExpression(existing, arrival, neutralIndex, talkIndex);
+                actions.Add(CreateAction(arrival, authored >= 0 ? authored : neutralIndex, ActionType.APPEAR, PositionOf(arrival)));
             }
 
             foreach (SceneAction move in authoredMoves)
@@ -307,10 +337,11 @@ public static partial class StorySceneActionProcessor
             foreach (Speaker member in Cast.Where(cast => state.Contains(cast) || arrivals.Contains(cast)))
             {
                 GetSpriteIndices(member, assetPath, out int neutralIndex, out int talkIndex);
+                int authored = AuthoredExpression(existing, member, neutralIndex, talkIndex);
                 bool speaking = member == actor;
                 actions.Add(CreateAction(
                     member,
-                    speaking ? talkIndex : neutralIndex,
+                    authored >= 0 ? authored : (speaking ? talkIndex : neutralIndex),
                     speaking ? ActionType.BOUNCE : ActionType.NONE,
                     PositionOf(member)));
             }

@@ -25,4 +25,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: eb1edd135498cab479c683b3df09cd36, type: 3}
   - {fileID: 21300000, guid: c7ec9cbe695b33c418e6b9266459dbea, type: 3}
   prefab: {fileID: -1492987450203322265, guid: c2868f9b3aa1fb94db3c232331346797, type: 3}
-  blip: {fileID: 0}
+  blip: {fileID: 8300000, guid: 6a4dfa6808d34e34c8214cbdd3a2122f, type: 3}

@@ -40,8 +40,8 @@ public static partial class StorySceneActionProcessor
         Debug.Log($"Speaker actions applied to {changedScenes} eligible scenes and {changedLines} sentence blocks. Speakers without usable sprite/prefab data were skipped: {string.Join(", ", skippedSpeakers)}");
     }
 
-    // Usage: Unity -batchmode -executeMethod StorySceneActionProcessor.TestScenes -scenePath "Assets/a.asset;Assets/b.asset"
-    public static void TestScenes()
+    // Usage: Unity -batchmode -executeMethod StorySceneActionProcessor.StageScenes -scenePath "Assets/a.asset;Assets/b.asset"
+    public static void StageScenes()
     {
         string[] args = Environment.GetCommandLineArgs();
         int flag = Array.IndexOf(args, "-scenePath");
@@ -62,7 +62,7 @@ public static partial class StorySceneActionProcessor
         }
 
         AssetDatabase.SaveAssets();
-        Debug.Log($"Test staging of {scenePaths.Length} scenes: {stagedLines} lines. Skipped speakers: {string.Join(", ", skippedSpeakers)}");
+        Debug.Log($"Staged {scenePaths.Length} scenes: {stagedLines} lines. Skipped speakers: {string.Join(", ", skippedSpeakers)}");
     }
 
     private static void ProcessScene(StoryScene scene, string assetPath, HashSet<string> skippedSpeakers, ref int changedLines)
@@ -211,29 +211,41 @@ public static partial class StorySceneActionProcessor
             return;
         }
 
-        int firstValidIndex = speaker.sprites.FindIndex(sprite => sprite != null);
+        bool soccerScene = IsSoccerScene(assetPath);
+        bool hasSchoolOutfit = speaker.sprites.Any(sprite => sprite != null && !IsSoccerSprite(sprite));
+        bool Allowed(Sprite sprite) => sprite != null && (soccerScene || !hasSchoolOutfit || !IsSoccerSprite(sprite));
+
+        int firstValidIndex = speaker.sprites.FindIndex(Allowed);
         if (firstValidIndex < 0)
         {
             return;
         }
 
-        int normalIndex = speaker.sprites.FindIndex(sprite => sprite != null
-            && NormalizeSpriteName(Path.GetFileNameWithoutExtension(AssetDatabase.GetAssetPath(sprite))).Contains("normal")
-            && !NormalizeSpriteName(Path.GetFileNameWithoutExtension(AssetDatabase.GetAssetPath(sprite))).Contains("talk"));
+        int normalIndex = speaker.sprites.FindIndex(sprite => Allowed(sprite)
+            && SpriteName(sprite).Contains("normal")
+            && !SpriteName(sprite).Contains("talk"));
+        if (normalIndex < 0)
+        {
+            normalIndex = speaker.sprites.FindIndex(sprite => Allowed(sprite)
+                && SpriteName(sprite).Contains("nonchalant")
+                && !SpriteName(sprite).Contains("talk"));
+        }
+
         neutralIndex = normalIndex >= 0 ? normalIndex : firstValidIndex;
 
-        string neutralName = NormalizeSpriteName(Path.GetFileNameWithoutExtension(AssetDatabase.GetAssetPath(speaker.sprites[neutralIndex])));
+        string neutralName = SpriteName(speaker.sprites[neutralIndex]);
         int matchingTalkIndex = -1;
+        int normalTalkIndex = -1;
         int firstTalkIndex = -1;
         for (int i = 0; i < speaker.sprites.Count; i++)
         {
             Sprite sprite = speaker.sprites[i];
-            if (sprite == null)
+            if (!Allowed(sprite))
             {
                 continue;
             }
 
-            string spriteName = NormalizeSpriteName(Path.GetFileNameWithoutExtension(AssetDatabase.GetAssetPath(sprite)));
+            string spriteName = SpriteName(sprite);
             if (!spriteName.Contains("talk"))
             {
                 continue;
@@ -244,6 +256,11 @@ public static partial class StorySceneActionProcessor
                 firstTalkIndex = i;
             }
 
+            if (normalTalkIndex < 0 && spriteName.Contains("normal") && !spriteName.Contains("smile"))
+            {
+                normalTalkIndex = i;
+            }
+
             string talkBaseName = spriteName.Replace("talk", string.Empty);
             if (talkBaseName == neutralName || neutralName.StartsWith(talkBaseName) || talkBaseName.StartsWith(neutralName))
             {
@@ -252,7 +269,35 @@ public static partial class StorySceneActionProcessor
             }
         }
 
-        talkIndex = matchingTalkIndex >= 0 ? matchingTalkIndex : (firstTalkIndex >= 0 ? firstTalkIndex : neutralIndex);
+        if (matchingTalkIndex >= 0)
+        {
+            talkIndex = matchingTalkIndex;
+        }
+        else if (normalTalkIndex >= 0)
+        {
+            talkIndex = normalTalkIndex;
+        }
+        else
+        {
+            talkIndex = firstTalkIndex >= 0 ? firstTalkIndex : neutralIndex;
+        }
+    }
+
+    private static string SpriteName(Sprite sprite)
+    {
+        return NormalizeSpriteName(Path.GetFileNameWithoutExtension(AssetDatabase.GetAssetPath(sprite)));
+    }
+
+    private static bool IsSoccerSprite(Sprite sprite)
+    {
+        return SpriteName(sprite).Contains("soccer");
+    }
+
+    private static bool IsSoccerScene(string assetPath)
+    {
+        string path = assetPath.Replace('\\', '/');
+        return path.IndexOf("/SportyGuy/", StringComparison.OrdinalIgnoreCase) >= 0
+            || path.IndexOf("Soccer", StringComparison.OrdinalIgnoreCase) >= 0;
     }
 
     private static string NormalizeSpriteName(string name)
