@@ -15,8 +15,8 @@ MonoBehaviour:
   labels:
   - text: Let him go
     nextScene: {fileID: 11400000, guid: 81757359d9c908b4ea4a6b918f4a315d, type: 2}
-    choiceKeyToUnlock: 
+    choiceKeyToUnlock: LetThiefGo
   - text: Stop him
     nextScene: {fileID: 11400000, guid: e4615c41a7cdc7845b5c10c8899ed11e, type: 2}
-    choiceKeyToUnlock: 
+    choiceKeyToUnlock: StoppedThief
   additionalLabels: []

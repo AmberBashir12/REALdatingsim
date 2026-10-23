@@ -6673,5 +6673,8 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: efa8226b35cafac44949057d9b03826e, type: 3}
-  nextScene: {fileID: 11400000}
-  alternativeScenes: []
+  nextScene: {fileID: 11400000, guid: 67000cb6ad8b420fbde8b7f409defc29, type: 2}
+  alternativeScenes:
+  - requiredChoiceKeys:
+    - MahaTruth
+    alternativeScene: {fileID: 11400000, guid: 98fc4c8c159945abab3ca56dc2be6b47, type: 2}

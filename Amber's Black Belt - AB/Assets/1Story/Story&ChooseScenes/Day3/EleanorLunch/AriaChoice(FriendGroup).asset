@@ -9,10 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 412dca171f510ae4a91e62bb794a7ff5, type: 3}
   m_Name: AriaChoice(FriendGroup)
   m_EditorClassIdentifier: 
-  sentences: []
-  background: {fileID: 0}
-  nextScene: {fileID: 0}
-  alternativeScenes: []
+  labels:
+  - text: Sit with Aria
+    nextScene: {fileID: 11400000, guid: e5271800855e4cc44aeca4ee9594831f, type: 2}
+    choiceKeyToUnlock: FailedReconciliation
+  - text: Stay with Eleanor
+    nextScene: {fileID: 11400000, guid: d06bf59ace53aa145903f3a0cd6be269, type: 2}
+    choiceKeyToUnlock: LoversPath
+  - text: Push her to go bigger on stage
+    nextScene: {fileID: 11400000, guid: 1aa76ce5642b61344aac4984feb478d3, type: 2}
+    choiceKeyToUnlock: CelebrityPath
+  additionalLabels: []

@@ -51,4 +51,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   background: {fileID: 0}
   nextScene: {fileID: 0}
-  alternativeScenes: []
+  alternativeScenes:
+  - requiredChoiceKeys:
+    - StudentCouncilTest
+    alternativeScene: {fileID: 11400000, guid: 14b86d3e1cf348c78b279d4c4701a3c3, type: 2}
