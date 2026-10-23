@@ -140,4 +140,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   background: {fileID: 0}
   nextScene: {fileID: 11400000, guid: d080d6ee9f267a84793e1564d558fb4b, type: 2}
-  alternativeScenes: []
+  alternativeScenes:
+  - requiredChoiceKeys:
+    - 
+    alternativeScene: {fileID: 11400000, guid: 7ab22d67af7d8444cab42d79624182a5, type: 2}
