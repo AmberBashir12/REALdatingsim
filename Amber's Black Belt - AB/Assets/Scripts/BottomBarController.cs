@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using JetBrains.Annotations;
-using System;
 
 public class BottomBarController : MonoBehaviour
 {
     public TextMeshProUGUI barText;
     public TextMeshProUGUI personNameText;
+    [SerializeField] private EndingReturnToMenuButton endingReturnToMenuButton;
 
     private int sentenceIndex = -1;
     public StoryScene currentScene;
@@ -18,8 +17,6 @@ public class BottomBarController : MonoBehaviour
 
     public Dictionary<Speaker, SpriteController> sprites = new Dictionary<Speaker, SpriteController>();
 
-    // public Speaker[] Speakers;
-    // public SpriteController[] SpriteControllers;
     public GameObject spritesPrefab;
 
     private enum State
@@ -27,9 +24,260 @@ public class BottomBarController : MonoBehaviour
         PLAYING, COMPLETED
     }
 
-    private void Start()
+    private Coroutine currentTextCoroutine;
+    private Coroutine autoAdvanceCoroutine;
+    private string currentFullText = "";
+    private GameController gameController;
+    [SerializeField] private float inputCooldownSeconds = 0.08f;
+    [SerializeField] private float spriteHideDestroyDelay = 0.5f;
+    private float lastAdvanceInputTime = -999f;
+    private bool waitingForSentenceChoice = false;
+    private List<StoryScene.FollowUpSentence> activeBranchSentences;
+    private int branchSentenceIndex = -1;
+    private List<int> visibleSentenceChoiceOptionIndices = new List<int>();
+    private bool waitingForBranchChoice = false;
+    private List<StoryScene.FollowUpLine> activeBranchChoiceLines;
+    private int branchChoiceLineIndex = -1;
+    private List<int> visibleBranchChoiceOptionIndices = new List<int>();
+    private bool skipping;
+
+    private void Awake()
     {
         animator = GetComponent<Animator>();
+        gameController = FindObjectOfType<GameController>();
+
+        if (endingReturnToMenuButton == null)
+        {
+            endingReturnToMenuButton = FindObjectOfType<EndingReturnToMenuButton>(true);
+        }
+    }
+
+    private void Update()
+    {
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && gameController.GetCurrentState() == GameController.State.IDLE) // Left mouse click or spacebar, only when game is idle
+        {
+            if (Time.unscaledTime - lastAdvanceInputTime < inputCooldownSeconds)
+            {
+                return;
+            }
+
+            lastAdvanceInputTime = Time.unscaledTime;
+            AdvanceSentence();
+        }
+    }
+
+    private void AdvanceSentence()
+    {
+        if (state == State.PLAYING)
+        {
+            // Skip to the end of current text
+            if (currentTextCoroutine != null)
+            {
+                StopCoroutine(currentTextCoroutine);
+            }
+            barText.text = currentFullText;
+            state = State.COMPLETED;
+        }
+        else if (state == State.COMPLETED)
+        {
+            if (waitingForSentenceChoice || waitingForBranchChoice)
+            {
+                return;
+            }
+
+            if (!skipping && IsBlockingSoundPlaying())
+            {
+                return;
+            }
+
+            if (activeBranchChoiceLines != null)
+            {
+                if (branchChoiceLineIndex + 1 < activeBranchChoiceLines.Count)
+                {
+                    branchChoiceLineIndex++;
+                    ShowFollowUpLine(activeBranchChoiceLines[branchChoiceLineIndex]);
+                    return;
+                }
+
+                activeBranchChoiceLines = null;
+                branchChoiceLineIndex = -1;
+            }
+
+            if (activeBranchSentences != null)
+            {
+                if (branchSentenceIndex + 1 < activeBranchSentences.Count)
+                {
+                    branchSentenceIndex++;
+                    StoryScene.FollowUpSentence followUpSentence = activeBranchSentences[branchSentenceIndex];
+                    if (followUpSentence.followUpType == StoryScene.FollowUpSentence.FollowUpType.CHOICE)
+                    {
+                        ShowBranchChoice(followUpSentence);
+                        return;
+                    }
+
+                    if (followUpSentence.followUpType == StoryScene.FollowUpSentence.FollowUpType.ENDING)
+                    {
+                        if (gameController == null)
+                        {
+                            gameController = FindObjectOfType<GameController>();
+                        }
+
+                        if (gameController != null)
+                        {
+                            if (followUpSentence.endingScene == null)
+                            {
+                                Debug.LogWarning($"StoryScene '{currentScene?.name}' follow-up sentence {branchSentenceIndex} is ENDING but has no endingScene assigned.");
+                                TransitionFromStoryEnd();
+                                return;
+                            }
+
+                            gameController.PlayScene(followUpSentence.endingScene, -1, true);
+                            return;
+                        }
+
+                        Debug.LogWarning("Cannot switch to EndingScene because GameController was not found.");
+                        return;
+                    }
+
+                    ShowFollowUpSentence(followUpSentence);
+                    return;
+                }
+
+                activeBranchSentences = null;
+                branchSentenceIndex = -1;
+            }
+
+            // Move to next sentence
+            if (!IsLastSentence())
+            {
+                PlayNextSentence();
+            }
+            else
+            {
+                // We're at the last sentence, move to the next scene
+                if (gameController != null && currentScene != null)
+                {
+                    TransitionFromStoryEnd();
+                }
+            }
+        }
+    }
+
+    // Fast-forwards through dialogue, still running sprite and music actions, until a choice or ending appears.
+    public void SkipToNextChoice()
+    {
+        if (gameController == null || currentScene == null
+            || gameController.GetCurrentState() != GameController.State.IDLE
+            || waitingForSentenceChoice || waitingForBranchChoice)
+        {
+            return;
+        }
+
+        if (state == State.PLAYING)
+        {
+            if (currentTextCoroutine != null)
+            {
+                StopCoroutine(currentTextCoroutine);
+            }
+
+            barText.text = currentFullText;
+            state = State.COMPLETED;
+        }
+
+        skipping = true;
+        const int maxSteps = 5000;
+        for (int step = 0; step < maxSteps && HasNextLine(); step++)
+        {
+            AdvanceSentence();
+            if (gameController.GetCurrentState() != GameController.State.IDLE || waitingForSentenceChoice || waitingForBranchChoice)
+            {
+                break;
+            }
+        }
+        skipping = false;
+
+        // Instant lines skip TypeText, which is what normally starts the auto-advance on a scene's last line.
+        if (state == State.COMPLETED
+            && autoAdvanceCoroutine == null
+            && gameController.GetCurrentState() == GameController.State.IDLE
+            && ShouldAutoAdvanceTerminalLine())
+        {
+            autoAdvanceCoroutine = StartCoroutine(AutoAdvanceTerminalLine());
+        }
+    }
+
+    private bool HasNextLine()
+    {
+        if (activeBranchChoiceLines != null && branchChoiceLineIndex + 1 < activeBranchChoiceLines.Count)
+        {
+            return true;
+        }
+
+        if (activeBranchSentences != null && branchSentenceIndex + 1 < activeBranchSentences.Count)
+        {
+            return true;
+        }
+
+        return !IsLastSentence();
+    }
+
+    private void TransitionFromStoryEnd()
+    {
+        if (gameController == null || currentScene == null)
+        {
+            return;
+        }
+
+        if (currentScene is EndingScene)
+        {
+            SetEndingReturnButtonVisible(true);
+            return;
+        }
+
+        HideSceneSprites();
+        GameScene nextScene = currentScene.GetNextScene();
+        gameController.PlayScene(nextScene, -1, true);
+    }
+
+    private void HideSceneSprites()
+    {
+        if (currentScene.name.IndexOf("Transition", System.StringComparison.OrdinalIgnoreCase) >= 0)
+        {
+            return;
+        }
+
+        foreach (SpriteController controller in sprites.Values)
+        {
+            if (controller != null)
+            {
+                controller.Hide();
+            }
+        }
+    }
+
+    private void SetEndingReturnButtonVisible(bool visible)
+    {
+        if (endingReturnToMenuButton == null)
+        {
+            endingReturnToMenuButton = FindObjectOfType<EndingReturnToMenuButton>(true);
+        }
+
+        if (endingReturnToMenuButton != null)
+        {
+            endingReturnToMenuButton.SetVisible(visible);
+        }
+    }
+
+    private bool IsBlockingSoundPlaying()
+    {
+        if (gameController == null)
+        {
+            gameController = FindObjectOfType<GameController>();
+        }
+
+        return gameController != null
+            && gameController.audioController != null
+            && gameController.audioController.IsSoundPlaying();
     }
 
     public void Hide()
@@ -61,10 +309,56 @@ public class BottomBarController : MonoBehaviour
         barText.text = "";
     }
 
+    private void ClearSprites()
+    {
+        // Destroy all sprite GameObjects and clear the dictionary
+        foreach (var controller in sprites.Values)
+        {
+            if (controller != null && controller.gameObject != null)
+            {
+                Destroy(controller.gameObject);
+            }
+        }
+        sprites.Clear();
+    }
+
+    private IEnumerator DestroySpriteAfterDelay(SpriteController controller)
+    {
+        yield return new WaitForSeconds(spriteHideDestroyDelay);
+
+        if (controller != null && controller.gameObject != null)
+        {
+            Destroy(controller.gameObject);
+        }
+    }
+
     public void PlayScene(StoryScene scene)
     {
+        PlayScene(scene, -1);
+    }
+
+    public void PlayScene(StoryScene scene, int startSentenceIndex)
+    {
+        // Clear previous speakers before starting a new scene
+        ClearSprites();
+        SetEndingReturnButtonVisible(false);
+
+        if (autoAdvanceCoroutine != null)
+        {
+            StopCoroutine(autoAdvanceCoroutine);
+            autoAdvanceCoroutine = null;
+        }
+        
         currentScene = scene;
-        sentenceIndex = -1;
+        sentenceIndex = startSentenceIndex - 1;
+        waitingForSentenceChoice = false;
+        activeBranchSentences = null;
+        branchSentenceIndex = -1;
+        waitingForBranchChoice = false;
+        activeBranchChoiceLines = null;
+        branchChoiceLineIndex = -1;
+        visibleSentenceChoiceOptionIndices.Clear();
+        visibleBranchChoiceOptionIndices.Clear();
 
         if (currentScene == null)
         {
@@ -85,6 +379,11 @@ public class BottomBarController : MonoBehaviour
         }
         else
         {
+            if (startSentenceIndex < 0 || startSentenceIndex >= currentScene.sentences.Count)
+            {
+                sentenceIndex = -1;
+            }
+
             PlayNextSentence();
         }
     }
@@ -94,7 +393,7 @@ public class BottomBarController : MonoBehaviour
         // Ensure currentScene and its sentences are valid before proceeding
         if (currentScene == null || currentScene.sentences == null || currentScene.sentences.Count == 0)
         {
-            Debug.LogError("PlayNextSentence called, but currentScene is null or has no sentences.");
+            Debug.LogWarning("PlayNextSentence called, but currentScene is null or has no sentences.");
             state = State.COMPLETED; // Mark as completed to prevent getting stuck
             return;
         }
@@ -109,26 +408,396 @@ public class BottomBarController : MonoBehaviour
 
         sentenceIndex++; // Increment sentenceIndex *before* using it
 
-        StartCoroutine(TypeText(currentScene.sentences[sentenceIndex].text));
-        
-        Speaker speaker = currentScene.sentences[sentenceIndex].speaker;
+        StoryScene.Sentence sentence = currentScene.sentences[sentenceIndex];
+        if (sentence.sentenceType == StoryScene.Sentence.SentenceType.ENDING)
+        {
+            if (gameController == null)
+            {
+                gameController = FindObjectOfType<GameController>();
+            }
+
+            if (gameController != null)
+            {
+                if (sentence.endingScene == null)
+                {
+                    Debug.LogWarning($"StoryScene '{currentScene?.name}' sentence {sentenceIndex} is ENDING but has no endingScene assigned.");
+                    TransitionFromStoryEnd();
+                    return;
+                }
+
+                gameController.PlayScene(sentence.endingScene, -1, true);
+                return;
+            }
+
+            Debug.LogWarning("Cannot switch to EndingScene because GameController was not found.");
+            return;
+        }
+
+        if (sentence.sentenceType == StoryScene.Sentence.SentenceType.CHOICE)
+        {
+            ShowSentenceChoice(sentence);
+            return;
+        }
+
+        ShowSentence(sentence);
+    }
+
+    private void ShowSentenceChoice(StoryScene.Sentence sentence)
+    {
+        ActSpeakers(sentence.actions);
+
+        List<StoryScene.Sentence.ChoiceOption> options = sentence.choice.options;
+        if (options == null || options.Count == 0)
+        {
+            if (!IsLastSentence())
+            {
+                PlayNextSentence();
+            }
+            else if (gameController != null && currentScene != null)
+            {
+                TransitionFromStoryEnd();
+            }
+            return;
+        }
+
+        barText.text = TextTemplate.Resolve(sentence.choice.prompt);
+        personNameText.text = "";
+        state = State.COMPLETED;
+
+        List<string> optionTexts = new List<string>();
+        visibleSentenceChoiceOptionIndices.Clear();
+        for (int i = 0; i < options.Count; i++)
+        {
+            StoryScene.Sentence.ChoiceOption option = options[i];
+            if (!AreRequiredChoiceKeysUnlocked(option.requiredChoiceKeys))
+            {
+                continue;
+            }
+
+            optionTexts.Add(TextTemplate.Resolve(option.text));
+            visibleSentenceChoiceOptionIndices.Add(i);
+        }
+
+        if (optionTexts.Count == 0)
+        {
+            Debug.LogWarning($"StoryScene '{currentScene?.name}' sentence {sentenceIndex} has no available choice options (all locked or empty).");
+
+            if (!IsLastSentence())
+            {
+                PlayNextSentence();
+            }
+            else if (gameController != null && currentScene != null)
+            {
+                TransitionFromStoryEnd();
+            }
+            return;
+        }
+
+        waitingForSentenceChoice = true;
+
+        if (gameController != null)
+        {
+            gameController.SetChooseState(true);
+        }
+
+        if (gameController != null && gameController.chooseController != null)
+        {
+            gameController.chooseController.SetupInlineChoose(optionTexts, OnSentenceChoiceSelected);
+        }
+        else
+        {
+            waitingForSentenceChoice = false;
+            if (gameController != null)
+            {
+                gameController.SetChooseState(false);
+            }
+            Debug.LogWarning("ChooseController reference is missing on GameController. Cannot show sentence choice.");
+        }
+    }
+
+    private void OnSentenceChoiceSelected(int optionIndex)
+    {
+        waitingForSentenceChoice = false;
+
+        if (gameController != null)
+        {
+            gameController.SetChooseState(false);
+        }
+
+        if (currentScene == null || currentScene.sentences == null || sentenceIndex < 0 || sentenceIndex >= currentScene.sentences.Count)
+        {
+            return;
+        }
+
+        StoryScene.Sentence choiceSentence = currentScene.sentences[sentenceIndex];
+        List<StoryScene.Sentence.ChoiceOption> options = choiceSentence.choice.options;
+        if (options == null || optionIndex < 0 || optionIndex >= visibleSentenceChoiceOptionIndices.Count)
+        {
+            return;
+        }
+
+        int sourceOptionIndex = visibleSentenceChoiceOptionIndices[optionIndex];
+        if (sourceOptionIndex < 0 || sourceOptionIndex >= options.Count)
+        {
+            return;
+        }
+
+        StoryScene.Sentence.ChoiceOption selectedOption = options[sourceOptionIndex];
+
+        if (!string.IsNullOrEmpty(selectedOption.choiceKeyToUnlock) && GameStateManager.Instance != null)
+        {
+            GameStateManager.Instance.UnlockChoice(selectedOption.choiceKeyToUnlock);
+        }
+
+        if (selectedOption.followUpSentences != null && selectedOption.followUpSentences.Count > 0)
+        {
+            activeBranchSentences = selectedOption.followUpSentences;
+            branchSentenceIndex = -1;
+            AdvanceSentence();
+            return;
+        }
+
+        if (!IsLastSentence())
+        {
+            PlayNextSentence();
+        }
+        else if (gameController != null && currentScene != null)
+        {
+            TransitionFromStoryEnd();
+        }
+    }
+
+    private bool AreRequiredChoiceKeysUnlocked(List<string> requiredChoiceKeys)
+    {
+        if (requiredChoiceKeys == null || requiredChoiceKeys.Count == 0)
+        {
+            return true;
+        }
+
+        if (GameStateManager.Instance == null)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < requiredChoiceKeys.Count; i++)
+        {
+            string requiredKey = requiredChoiceKeys[i];
+            if (string.IsNullOrEmpty(requiredKey))
+            {
+                continue;
+            }
+
+            if (!GameStateManager.Instance.IsChoiceUnlocked(requiredKey))
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private void ShowBranchChoice(StoryScene.FollowUpSentence followUpSentence)
+    {
+        ActSpeakers(followUpSentence.actions);
+
+        List<StoryScene.FollowUpChoiceOption> options = followUpSentence.choice.options;
+        if (options == null || options.Count == 0)
+        {
+            AdvanceSentence();
+            return;
+        }
+
+        barText.text = TextTemplate.Resolve(followUpSentence.choice.prompt);
+        personNameText.text = "";
+        state = State.COMPLETED;
+
+        List<string> optionTexts = new List<string>();
+        visibleBranchChoiceOptionIndices.Clear();
+        for (int i = 0; i < options.Count; i++)
+        {
+            StoryScene.FollowUpChoiceOption option = options[i];
+            if (!AreRequiredChoiceKeysUnlocked(option.requiredChoiceKeys))
+            {
+                continue;
+            }
+
+            optionTexts.Add(TextTemplate.Resolve(option.text));
+            visibleBranchChoiceOptionIndices.Add(i);
+        }
+
+        if (optionTexts.Count == 0)
+        {
+            AdvanceSentence();
+            return;
+        }
+
+        waitingForBranchChoice = true;
+
+        if (gameController != null)
+        {
+            gameController.SetChooseState(true);
+        }
+
+        if (gameController != null && gameController.chooseController != null)
+        {
+            gameController.chooseController.SetupInlineChoose(optionTexts, OnBranchChoiceSelected);
+        }
+        else
+        {
+            waitingForBranchChoice = false;
+            if (gameController != null)
+            {
+                gameController.SetChooseState(false);
+            }
+            Debug.LogWarning("ChooseController reference is missing on GameController. Cannot show branch choice.");
+        }
+    }
+
+    private void OnBranchChoiceSelected(int optionIndex)
+    {
+        waitingForBranchChoice = false;
+
+        if (gameController != null)
+        {
+            gameController.SetChooseState(false);
+        }
+
+        if (activeBranchSentences == null || branchSentenceIndex < 0 || branchSentenceIndex >= activeBranchSentences.Count)
+        {
+            return;
+        }
+
+        StoryScene.FollowUpSentence choiceSentence = activeBranchSentences[branchSentenceIndex];
+        List<StoryScene.FollowUpChoiceOption> options = choiceSentence.choice.options;
+        if (options == null || optionIndex < 0 || optionIndex >= visibleBranchChoiceOptionIndices.Count)
+        {
+            return;
+        }
+
+        int sourceOptionIndex = visibleBranchChoiceOptionIndices[optionIndex];
+        if (sourceOptionIndex < 0 || sourceOptionIndex >= options.Count)
+        {
+            return;
+        }
+
+        StoryScene.FollowUpChoiceOption selectedOption = options[sourceOptionIndex];
+
+        if (!string.IsNullOrEmpty(selectedOption.choiceKeyToUnlock) && GameStateManager.Instance != null)
+        {
+            GameStateManager.Instance.UnlockChoice(selectedOption.choiceKeyToUnlock);
+        }
+
+        if (selectedOption.followUpLines != null && selectedOption.followUpLines.Count > 0)
+        {
+            activeBranchChoiceLines = selectedOption.followUpLines;
+            branchChoiceLineIndex = 0;
+            ShowFollowUpLine(activeBranchChoiceLines[branchChoiceLineIndex]);
+            return;
+        }
+
+        if (IsAtTerminalBranchChoice())
+        {
+            activeBranchSentences = null;
+            branchSentenceIndex = -1;
+            TransitionFromStoryEnd();
+            return;
+        }
+
+        AdvanceSentence();
+    }
+
+    private void ShowSentence(StoryScene.Sentence sentence)
+    {
+        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.music2, sentence.sound);
+    }
+
+    private void ShowFollowUpSentence(StoryScene.FollowUpSentence sentence)
+    {
+        ShowDialogueSentence(sentence.speaker, sentence.text, sentence.actions, sentence.music, sentence.music2, sentence.sound);
+    }
+
+    private void ShowFollowUpLine(StoryScene.FollowUpLine line)
+    {
+        if (line.lineType == StoryScene.FollowUpLine.LineType.ENDING)
+        {
+            if (gameController == null)
+            {
+                gameController = FindObjectOfType<GameController>();
+            }
+
+            if (gameController != null)
+            {
+                if (line.endingScene == null)
+                {
+                    Debug.LogWarning($"StoryScene '{currentScene?.name}' follow-up line {branchChoiceLineIndex} is ENDING but has no endingScene assigned.");
+                    activeBranchChoiceLines = null;
+                    branchChoiceLineIndex = -1;
+                    AdvanceSentence();
+                    return;
+                }
+
+                gameController.PlayScene(line.endingScene, -1, true);
+                return;
+            }
+
+            Debug.LogWarning("Cannot switch to EndingScene because GameController was not found.");
+            return;
+        }
+
+        ShowDialogueSentence(line.speaker, line.text, line.actions, line.music, line.music2, line.sound);
+    }
+
+    private void ShowDialogueSentence(Speaker speaker, string text, List<StoryScene.Sentence.Action> actions, AudioClip music, AudioClip music2, AudioClip sound)
+    {
+        if (gameController == null)
+        {
+            gameController = FindObjectOfType<GameController>();
+        }
+
+        if (autoAdvanceCoroutine != null)
+        {
+            StopCoroutine(autoAdvanceCoroutine);
+            autoAdvanceCoroutine = null;
+        }
+
+        if (currentTextCoroutine != null)
+        {
+            StopCoroutine(currentTextCoroutine);
+        }
+
+        string resolvedText = TextTemplate.Resolve(text);
+        AudioClip blipClip = speaker != null ? speaker.blip : null;
+        if (skipping)
+        {
+            barText.text = resolvedText;
+            currentFullText = resolvedText;
+            state = State.COMPLETED;
+        }
+        else
+        {
+            currentTextCoroutine = StartCoroutine(TypeText(resolvedText, blipClip));
+            if (blipClip != null && gameController != null && gameController.audioController != null)
+            {
+                gameController.audioController.PlayBlip(blipClip);
+            }
+        }
+
         if (speaker != null)
         {
-            personNameText.text = speaker.speakerName;
+            personNameText.text = TextTemplate.Resolve(speaker.speakerName);
             personNameText.color = speaker.textColor;
         }
         else
         {
-            personNameText.text = ""; // Clear name if no speaker
-            // Optional: Log a warning if a speaker is expected but is null for this sentence
-            // Debug.LogWarning($"Sentence {sentenceIndex} in scene '{currentScene.name}' has a null speaker.");
+            personNameText.text = "";
         }
-        ActSpeakers();
-    }
 
-    public bool IsCompleted()
-    {
-        return state == State.COMPLETED;
+        ActSpeakers(actions);
+
+        if (gameController != null && gameController.audioController != null)
+        {
+            gameController.audioController.PlayAudio(music, music2, skipping ? null : sound);
+        }
     }
 
     public bool IsLastSentence()
@@ -141,10 +810,11 @@ public class BottomBarController : MonoBehaviour
         return sentenceIndex + 1 >= currentScene.sentences.Count;
     }
 
-    private IEnumerator TypeText(string text)
+    private IEnumerator TypeText(string text, AudioClip blipClip)
     {
         barText.text = "";
         state = State.PLAYING;
+        currentFullText = text;
         int wordIndex = 0;
 
         float normalDelay = 0.05f;
@@ -160,14 +830,93 @@ public class BottomBarController : MonoBehaviour
         }
         
         state = State.COMPLETED;
+
+        if (ShouldAutoAdvanceTerminalLine())
+        {
+            autoAdvanceCoroutine = StartCoroutine(AutoAdvanceTerminalLine());
+        }
     }
 
-    private void ActSpeakers()
+    private bool ShouldAutoAdvanceTerminalLine()
     {
-        List<StoryScene.Sentence.Action> actions = currentScene.sentences[sentenceIndex].actions;
+        if (waitingForSentenceChoice || waitingForBranchChoice)
+        {
+            return false;
+        }
+
+        if (activeBranchChoiceLines != null)
+        {
+            bool isLastBranchLine = branchChoiceLineIndex >= 0 && branchChoiceLineIndex == activeBranchChoiceLines.Count - 1;
+            bool branchEndsAfterLine = activeBranchSentences == null
+                || branchSentenceIndex + 1 >= activeBranchSentences.Count;
+            return isLastBranchLine && branchEndsAfterLine && IsLastSentence();
+        }
+
+        if (activeBranchSentences != null)
+        {
+            bool isLastBranchSentence = branchSentenceIndex >= 0 && branchSentenceIndex == activeBranchSentences.Count - 1;
+            return isLastBranchSentence && IsLastSentence();
+        }
+
+        return IsLastSentence();
+    }
+
+    private IEnumerator AutoAdvanceTerminalLine()
+    {
+        yield return null;
+
+        while (IsBlockingSoundPlaying())
+        {
+            yield return null;
+        }
+
+        if (state == State.COMPLETED && !waitingForSentenceChoice && !waitingForBranchChoice)
+        {
+            if (IsAtTerminalBranchLine())
+            {
+                activeBranchChoiceLines = null;
+                branchChoiceLineIndex = -1;
+                activeBranchSentences = null;
+                branchSentenceIndex = -1;
+                TransitionFromStoryEnd();
+                autoAdvanceCoroutine = null;
+                yield break;
+            }
+
+            AdvanceSentence();
+        }
+
+        autoAdvanceCoroutine = null;
+    }
+
+    private bool IsAtTerminalBranchChoice()
+    {
+        return activeBranchSentences != null
+            && branchSentenceIndex >= 0
+            && branchSentenceIndex == activeBranchSentences.Count - 1
+            && IsLastSentence();
+    }
+
+    private bool IsAtTerminalBranchLine()
+    {
+        return activeBranchChoiceLines != null
+            && branchChoiceLineIndex >= 0
+            && branchChoiceLineIndex == activeBranchChoiceLines.Count - 1
+            && activeBranchSentences != null
+            && branchSentenceIndex >= 0
+            && branchSentenceIndex == activeBranchSentences.Count - 1
+            && IsLastSentence();
+    }
+
+    private void ActSpeakers(List<StoryScene.Sentence.Action> actions)
+    {
+        if (actions == null)
+        {
+            return;
+        }
+
         for (int i = 0; i < actions.Count; i++)
         {
-            Debug.Log(i);
             ActSpeaker(actions[i]);
         }
     }
@@ -175,6 +924,25 @@ public class BottomBarController : MonoBehaviour
     private void ActSpeaker(StoryScene.Sentence.Action action)
     {
         SpriteController controller = null;
+        float tintStrength = action.tintOpacity;
+        if (tintStrength <= 0f && action.tintColor.a > 0f)
+        {
+            tintStrength = action.tintColor.a;
+        }
+
+        Color tintTarget = new Color(action.tintColor.r, action.tintColor.g, action.tintColor.b, 1f);
+        Color resolvedTint = Color.Lerp(Color.white, tintTarget, Mathf.Clamp01(tintStrength));
+
+        if (action.speaker == null)
+        {
+            if (action.actionType != StoryScene.Sentence.Action.Type.NONE)
+            {
+                Debug.LogWarning($"Skipped sprite action '{action.actionType}' because no speaker was assigned.");
+            }
+
+            return;
+        }
+
         switch (action.actionType)
         {
             case StoryScene.Sentence.Action.Type.APPEAR:
@@ -190,18 +958,17 @@ public class BottomBarController : MonoBehaviour
                     {
                         controller = sprites[action.speaker];
                     }
-                    Debug.Log($"Speaker: {action.speaker}, Sprites: {action.speaker.sprites}, Index: {action.spriteIndex}");
                     if (action.speaker.sprites == null || action.speaker.sprites.Count <= action.spriteIndex || action.speaker.sprites[action.spriteIndex] == null)
                     {
-                        Debug.LogError("Sprite reference is missing or index is out of range!");
+                        Debug.LogWarning("Sprite reference is missing or index is out of range!");
                     }
-                    Debug.Log(action.speaker.sprites[0] == null);
                     controller.Setup(action.speaker.sprites[action.spriteIndex]);
+                    controller.SetTint(resolvedTint);
                     controller.Show(action.coords);
                 }
                 catch (UnassignedReferenceException)
                 {
-                    Debug.LogError($"Failed to instantiate sprite for speaker: {action.speaker.speakerName}. Make sure the prefab is assigned.");
+                    Debug.LogWarning($"Failed to instantiate sprite for speaker: {action.speaker.speakerName}. Make sure the prefab is assigned.");
                 }
 
                 return;
@@ -224,7 +991,7 @@ public class BottomBarController : MonoBehaviour
                     controller = sprites[action.speaker];
                     controller.Hide();
                     sprites.Remove(action.speaker);
-                    Destroy(controller.gameObject);
+                    StartCoroutine(DestroySpriteAfterDelay(controller));
                 }
                 else
                 {
@@ -236,7 +1003,15 @@ public class BottomBarController : MonoBehaviour
                 if (sprites.ContainsKey(action.speaker))
                 {
                     controller = sprites[action.speaker];
-                    controller.SwitchSprite(action.speaker.sprites[action.spriteIndex]);
+                    if (action.speaker != null && action.speaker.sprites != null && action.spriteIndex >= 0 && action.spriteIndex < action.speaker.sprites.Count)
+                    {
+                        Sprite targetSprite = action.speaker.sprites[action.spriteIndex];
+                        if (targetSprite != null)
+                        {
+                            controller.Setup(targetSprite);
+                        }
+                    }
+                    controller.SetTint(resolvedTint);
                 }
                 else
                 {
@@ -248,11 +1023,20 @@ public class BottomBarController : MonoBehaviour
                 if (sprites.ContainsKey(action.speaker))
                 {
                     controller = sprites[action.speaker];
+                    if (action.speaker != null && action.speaker.sprites != null && action.spriteIndex >= 0 && action.spriteIndex < action.speaker.sprites.Count)
+                    {
+                        Sprite targetSprite = action.speaker.sprites[action.spriteIndex];
+                        if (targetSprite != null)
+                        {
+                            controller.Setup(targetSprite);
+                        }
+                    }
+                    controller.SetTint(resolvedTint);
                     controller.Bounce();
                 }
                 else
                 {
-                    Debug.LogWarning($"it didnt work bruh");
+                    Debug.LogWarning($"Attempted to bounce non-existent sprite for speaker: {action.speaker.speakerName}");
                 }
                 return;
         }

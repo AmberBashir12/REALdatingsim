@@ -1,23 +1,63 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     public GameScene currentScene;
     public BottomBarController bottomBar;
-    public SpriteSwitcher backgroundController;
+    public BackgroundSwitcher backgroundController;
     public ChooseController chooseController;
+    public AudioController audioController;
+    public ExplorationController explorationController;
+    public CanvasGroup fadePanel;
+    public float fadeDuration = 1f;
+    private Image fadeImage;
+    private int pendingStoryStartSentenceIndex = -1;
 
     private State state = State.IDLE;
+    private State prePauseState = State.IDLE;
 
-    private enum State
+    public enum State
     {
-        IDLE, ANIMATE, CHOOSE
+        IDLE, ANIMATE, CHOOSE, EXPLORE, PAUSED
+    }
+
+    public State GetCurrentState()
+    {
+        return state;
+    }
+
+    public bool IsPaused()
+    {
+        return state == State.PAUSED;
+    }
+
+    public void SetPaused(bool paused)
+    {
+        if (paused)
+        {
+            if (state != State.PAUSED)
+            {
+                prePauseState = state;
+            }
+            state = State.PAUSED;
+        }
+        else
+        {
+            state = prePauseState;
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
+        if (fadePanel != null)
+        {
+            fadePanel.gameObject.SetActive(true);
+            fadeImage = fadePanel.GetComponent<Image>();
+        }
+        StartCoroutine(FadeInFromBlack());
         if (currentScene is StoryScene)
         {
             StoryScene storyScene = currentScene as StoryScene;
@@ -25,31 +65,95 @@ public class GameController : MonoBehaviour
             backgroundController.SetImage(storyScene.background);
         }
     }
-    // Update is called once per frame
-    void Update()
+
+    private IEnumerator FadeInFromBlack()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        yield return FadePanel(1f, 0f, disableOnComplete: true);
+    }
+
+    private IEnumerator FadeOutToBlack()
+    {
+        yield return FadePanel(0f, 1f, disableOnComplete: false);
+    }
+
+    private IEnumerator FadePanel(float startAlpha, float endAlpha, bool disableOnComplete)
+    {
+        if (fadePanel == null)
         {
-            if (state == State.IDLE && bottomBar.IsCompleted())
+            yield break;
+        }
+
+        fadePanel.gameObject.SetActive(true);
+        SetFadeAlpha(startAlpha);
+
+        float elapsedTime = 0f;
+        if (fadeDuration <= 0f)
+        {
+            SetFadeAlpha(endAlpha);
+        }
+        else
+        {
+            while (elapsedTime < fadeDuration)
             {
-                if (bottomBar.IsLastSentence())
-                {
-                    PlayScene((currentScene as StoryScene).nextScene);
-                }
-                else
-                {
-                    bottomBar.PlayNextSentence();
-                }
+                elapsedTime += Time.deltaTime;
+                float progress = Mathf.Clamp01(elapsedTime / fadeDuration);
+                SetFadeAlpha(Mathf.Lerp(startAlpha, endAlpha, progress));
+                yield return null;
             }
+        }
+
+        SetFadeAlpha(endAlpha);
+
+        if (disableOnComplete)
+        {
+            fadePanel.gameObject.SetActive(false);
         }
     }
 
+    private void SetFadeAlpha(float alpha)
+    {
+        fadePanel.alpha = alpha;
+
+        // Fallback for cases where CanvasGroup alpha isn't affecting the panel Image.
+        if (fadeImage != null)
+        {
+            Color color = fadeImage.color;
+            color.a = alpha;
+            fadeImage.color = color;
+        }
+    }
+    // Story dialogue input is handled by BottomBarController.
+    // Keeping input handling in one place avoids frame-order dependent double-advances.
+
     public void PlayScene(GameScene scene)
     {
-        StartCoroutine(SwitchScene(scene));
+        PlayScene(scene, -1, false);
     }
 
-    private IEnumerator SwitchScene(GameScene scene)
+    public void SetChooseState(bool isChoosing)
+    {
+        if (isChoosing)
+        {
+            state = State.CHOOSE;
+        }
+        else if (state == State.CHOOSE)
+        {
+            state = State.IDLE;
+        }
+    }
+
+    public void PlayScene(GameScene scene, int startSentenceIndex)
+    {
+        PlayScene(scene, startSentenceIndex, false);
+    }
+
+    public void PlayScene(GameScene scene, int startSentenceIndex, bool useStoryFadeTransition)
+    {
+        pendingStoryStartSentenceIndex = startSentenceIndex;
+        StartCoroutine(SwitchScene(scene, useStoryFadeTransition));
+    }
+
+    private IEnumerator SwitchScene(GameScene scene, bool useStoryFadeTransition)
     {
         state = State.ANIMATE;
 
@@ -64,8 +168,17 @@ public class GameController : MonoBehaviour
             yield break; // Exit coroutine
         }
 
-        currentScene = scene;  
-        bottomBar.Hide();
+        if (useStoryFadeTransition)
+        {
+            yield return StartCoroutine(FadeOutToBlack());
+        }
+
+        currentScene = scene;
+        // Hide bottom bar only for non-story scenes
+        if (!(scene is StoryScene))
+        {
+            bottomBar.Hide();
+        }
         yield return new WaitForSeconds(1f);
 
         if (scene is StoryScene storyScene)
@@ -74,13 +187,19 @@ public class GameController : MonoBehaviour
                 Debug.LogWarning($"StoryScene '{storyScene.name}' has no background assigned.");
             }
             backgroundController.SwitchImage(storyScene.background);
-            
-            yield return new WaitForSeconds(1f);
+
+            yield return new WaitForSeconds(0.5f);
             bottomBar.Show();
             bottomBar.ClearText();
-            yield return new WaitForSeconds(1f);
+            // Reset exploration dialogue panel when returning to story
+            if (explorationController != null)
+            {
+                explorationController.ResetDialoguePanel();
+            }
+            yield return new WaitForSeconds(0.5f);
             
-            bottomBar.PlayScene(storyScene); // PlayScene in BottomBarController will handle empty sentences
+            bottomBar.PlayScene(storyScene, pendingStoryStartSentenceIndex); // PlayScene in BottomBarController will handle empty sentences
+            pendingStoryStartSentenceIndex = -1;
             state = State.IDLE; // Reset state to IDLE
         }
         else if (scene is ChooseScene chooseScene) 
@@ -88,14 +207,29 @@ public class GameController : MonoBehaviour
             state = State.CHOOSE;
             chooseController.SetupChoose(chooseScene); 
         }
+        else if (scene is ExplorationScene explorationScene)
+        {
+            state = State.EXPLORE;
+            explorationController.SetupExplorationScene(explorationScene);
+        }
         else
         {
-            Debug.LogError($"Loaded scene '{scene.name}' is not a StoryScene or ChooseScene. Type: {scene.GetType()}. Cannot proceed.");
+            Debug.LogError($"Loaded scene '{scene.name}' is not a StoryScene, ChooseScene, or ExplorationScene. Type: {scene.GetType()}. Cannot proceed.");
             if (bottomBar.IsHidden)
             {
                 bottomBar.Show();
             }
             state = State.IDLE; // Revert to IDLE
         }
+
+        if (useStoryFadeTransition)
+        {
+            yield return StartCoroutine(FadeInFromBlack());
+        }
+    }
+
+    public void PlayAudio(StoryScene.Sentence sentence)
+    {
+        audioController.PlayAudio(sentence.music, sentence.music2, sentence.sound);
     }
 }

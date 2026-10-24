@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412dca171f510ae4a91e62bb794a7ff5, type: 3}
+  m_Name: MahaRoom339Choose
+  m_EditorClassIdentifier: 
+  labels:
+  - text: Whatever
+    nextScene: {fileID: 11400000, guid: 3e04639f88e0d7145bbe3c53614153e5, type: 2}
+    choiceKeyToUnlock: 
+  - text: Bullying is wrong
+    nextScene: {fileID: 11400000, guid: d9a87d68b0ccca64bbf3358868157122, type: 2}
+    choiceKeyToUnlock: 
+  - text: Tell Student Council
+    nextScene: {fileID: 11400000, guid: c1da435653d34bee9cdc31e7620f7537, type: 2}
+    choiceKeyToUnlock: 
+  additionalLabels: []

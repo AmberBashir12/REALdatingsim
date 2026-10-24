@@ -8,4 +8,5 @@ public class Speaker : ScriptableObject
     public Color textColor;
     public List<Sprite> sprites;
     public SpriteController prefab;
+    public AudioClip blip;
 }

@@ -18,20 +18,43 @@ public class SpriteController : MonoBehaviour
     {
         switcher.SetImage(sprite);
     }
-    public void Show(Vector2 coords)
+
+    public void SetTint(Color color)
     {
-        animator.SetTrigger("Show");
-        rect.localPosition = coords;
+        switcher.SetTint(color);
     }
 
-     public void Bounce()
+    public void ResetTint()
     {
-        animator.SetTrigger("Bounce");
+        switcher.SetTint(Color.white);
+    }
+
+    public void Show(Vector2 coords)
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("Show");
+        }
+        if (rect != null)
+        {
+            rect.localPosition = coords;
+        }
+    }
+
+    public void Bounce()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("Bounce");
+        }
     }
 
     public void Hide()
     {
-        animator.SetTrigger("Hide");
+        if (animator != null)
+        {
+            animator.SetTrigger("Hide");
+        }
     }
 
     public void Move(Vector2 coords, float speed)
