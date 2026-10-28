@@ -16,8 +16,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: You'll stay with me now, right?
-    actions: []
-    choice:
+    actions: []    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -38,8 +37,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Woo!
-    actions: []
-    choice:
+    actions: []    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -61,8 +59,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: ...?
-    actions: []
-    choice:
+    actions: []    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -83,8 +80,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: ...Okay!
-    actions: []
-    choice:
+    actions: []    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}

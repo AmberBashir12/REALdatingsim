@@ -16,8 +16,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
     text: Knew youd fit in with us.
-    actions: []
-    choice:
+    actions: []    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -60,8 +59,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: ...Okay.
-    actions: []
-    choice:
+    actions: []    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}

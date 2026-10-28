@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: d0b7a099455ebe743879cffc04da882b, type: 2}
+    speaker: {fileID: 0}
     text: Mmmm! I feel  really good right now!
     actions: []
     choice:
@@ -25,7 +25,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: d0b7a099455ebe743879cffc04da882b, type: 2}
+    speaker: {fileID: 0}
     text: Actually what do you think  about doing this everyday?
     actions: []
     choice:
@@ -36,7 +36,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: d0b7a099455ebe743879cffc04da882b, type: 2}
+    speaker: {fileID: 0}
     text: We can go to all kinds of stores
     actions: []
     choice:
@@ -58,7 +58,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: d0b7a099455ebe743879cffc04da882b, type: 2}
+    speaker: {fileID: 0}
     text: Come find me everyday, okay~?
     actions: []
     choice:
@@ -90,6 +90,6 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: b10bf940f07c1474f8a336dbeef165da, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []

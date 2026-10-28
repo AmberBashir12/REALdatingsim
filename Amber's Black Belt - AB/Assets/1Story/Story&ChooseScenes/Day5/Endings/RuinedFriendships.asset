@@ -16,8 +16,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: d0b7a099455ebe743879cffc04da882b, type: 2}
     text: I said sorry, Eleanor. What else do you want?
-    actions: []
-    choice:
+    actions: []    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -27,8 +26,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: I want peace. Just not with either of you.
-    actions: []
-    choice:
+    actions: []    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -38,8 +36,7 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: And {playerName}, if you picked her, then please leave me alone too.
-    actions: []
-    choice:
+    actions: []    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}

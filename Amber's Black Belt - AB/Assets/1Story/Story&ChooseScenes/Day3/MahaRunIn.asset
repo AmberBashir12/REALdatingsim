@@ -852,7 +852,7 @@ MonoBehaviour:
             options:
             - text: I Will
               requiredChoiceKeys: []
-              choiceKeyToUnlock: 
+              choiceKeyToUnlock: AcceptedMahaLunch
               followUpLines:
               - lineType: 0
                 speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
@@ -1105,7 +1105,7 @@ MonoBehaviour:
       - text: No
         requiredChoiceKeys:
         - 
-        choiceKeyToUnlock: 
+        choiceKeyToUnlock: NoThanks
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
@@ -1568,5 +1568,16 @@ MonoBehaviour:
   nextScene: {fileID: 11400000, guid: 53ad77f25bc722747b81b5aa8328441b, type: 2}
   alternativeScenes:
   - requiredChoiceKeys:
+    - AcceptedMahaLunch
+    alternativeScene: {fileID: 11400000, guid: 4f18b7500c1845c2929e8de954297428, type: 2}
+  - requiredChoiceKeys:
     - FakeFriendAfterMaha
     alternativeScene: {fileID: 11400000, guid: 1c6d881d1dd2a0643843f78d5ac59ea5, type: 2}
+  - requiredChoiceKeys:
+    - ItsKindaAnnoyingEleanorLunch
+    - NoThanks
+    alternativeScene: {fileID: 11400000, guid: ce419828d96baca468d21ede5226fc10, type: 2}
+  - requiredChoiceKeys:
+    - ILikeItEleanorLunch
+    - NoThanks
+    alternativeScene: {fileID: 11400000, guid: ce419828d96baca468d21ede5226fc10, type: 2}

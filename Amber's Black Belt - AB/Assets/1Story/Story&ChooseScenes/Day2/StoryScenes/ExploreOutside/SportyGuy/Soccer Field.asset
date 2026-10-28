@@ -1565,7 +1565,7 @@ MonoBehaviour:
                 endingScene: {fileID: 0}
               - lineType: 0
                 speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-                text: Im just gonna go to the garden
+                text: Im just gonna go to class
                 actions:
                 - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
                   spriteIndex: 13
@@ -2384,7 +2384,7 @@ MonoBehaviour:
   alternativeScenes:
   - requiredChoiceKeys:
     - GardenOrClass
-    alternativeScene: {fileID: 11400000, guid: 6df4e3843e4b18c4d91f9070ba8435a7, type: 2}
+    alternativeScene: {fileID: 11400000, guid: ed2c8eed1d7a147418943c553fca94ee, type: 2}
   - requiredChoiceKeys:
     - MahaAppearance
     alternativeScene: {fileID: 11400000, guid: 5f488434b48f3744a9ba6db4bc352136, type: 2}

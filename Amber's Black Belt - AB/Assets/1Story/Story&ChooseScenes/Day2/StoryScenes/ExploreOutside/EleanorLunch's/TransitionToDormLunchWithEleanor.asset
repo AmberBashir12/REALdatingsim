@@ -72,5 +72,5 @@ MonoBehaviour:
   nextScene: {fileID: 11400000, guid: bff4613867557ff41ba0edaa9d7ef08d, type: 2}
   alternativeScenes:
   - requiredChoiceKeys:
-    - dontRemember
+    - Improvement
     alternativeScene: {fileID: 11400000, guid: 15dc86bdb6e8a764a88bed8fa4256f7a, type: 2}

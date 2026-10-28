@@ -938,7 +938,7 @@ MonoBehaviour:
           endingScene: {fileID: 0}
       - text: Theres room for improvement.
         requiredChoiceKeys: []
-        choiceKeyToUnlock: 
+        choiceKeyToUnlock: Improvement
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
