@@ -61,4 +61,4 @@ MonoBehaviour:
   alternativeScenes:
   - requiredChoiceKeys:
     - StudentCouncilTest
-    alternativeScene: {fileID: 11400000, guid: 14b86d3e1cf348c78b279d4c4701a3c3, type: 2}
+    alternativeScene: {fileID: 11400000, guid: 25a9a0591f534c1da2f2cdef6aa44c10, type: 2}

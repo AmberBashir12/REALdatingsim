@@ -15,7 +15,7 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'You don''t remember walking home.'
+    text: You don't remember walking home.
     actions: []
     choice:
       prompt: 
@@ -26,7 +26,8 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'Your dorm is quiet. You sit on the edge of the bed, still in your uniform, staring at nothing.'
+    text: Your dorm is quiet. You sit on the edge of the bed, still in your uniform,
+      staring at nothing.
     actions: []
     choice:
       prompt: 
@@ -37,7 +38,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'He called me pretty. He said I looked cute when I was lost.'
+    text: He called me pretty. He said I looked cute when I was lost.
     actions: []
     choice:
       prompt: 
@@ -48,7 +49,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'The garden. The plaza. The park. Did any of it mean anything?'
+    text: The garden. The plaza. The park. Did any of it mean anything?
     actions: []
     choice:
       prompt: 
@@ -59,40 +60,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'Every sweet word he said, you believed. That is what hurts the most.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
-    endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 0}
-  - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
-    text: 'Archer: Please pick up. It''s not what you think.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
-    endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 0}
-  - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
-    text: 'Archer: I''m outside your dorm.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
-    endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 0}
-  - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 17c3be5e8abd4e640901a80e2bcdf9ce, type: 2}
-    text: 'Archer: Please, {playerName}.'
+    text: Every sweet word he said, you believed. That is what hurts the most.
     actions: []
     choice:
       prompt: 
@@ -103,7 +71,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'You switch off the phone. Fourteen unread messages become thirty. You do not open a single one.'
+    text: Archer probably still believes you know nothing
     actions: []
     choice:
       prompt: 
@@ -114,7 +82,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'In the morning the alarm rings. You lie there and stare at the ceiling.'
+    text: But why did his friend snitch on him?
     actions: []
     choice:
       prompt: 
@@ -123,9 +91,9 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  - sentenceType: 1
+  - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'What do you do?'
+    text: 'Youre too tired to ponder '
     actions: []
     choice:
       prompt: 
@@ -136,7 +104,7 @@ MonoBehaviour:
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: 'I can''t hide in here forever.'
+          text: I can't hide in here forever.
           actions: []
           music: {fileID: 0}
           music2: {fileID: 0}
@@ -164,6 +132,88 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: f37115422c70eee46962c3d53b7d9c63, type: 3}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+    text: You can only think about what youll do tommorrow
+    actions: []
+    choice:
+      prompt: 
+      options:
+      - text: Go to school
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I can't hide in here forever.
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: Stay in bed
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 2
+          speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+          text: 
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 11400000, guid: f756b6becfac4cf7b6becb8311d43598, type: 2}
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 1
+    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+    text: What do you do?
+    actions: []
+    choice:
+      prompt: 
+      options:
+      - text: Go to school
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I can't hide in here forever.
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: Stay in bed
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 2
+          speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+          text: 
+          actions: []
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 11400000, guid: f756b6becfac4cf7b6becb8311d43598, type: 2}
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  background: {fileID: 21300000, guid: b461f96f2cf5a204b95a42cd3f6ce51f, type: 3}
   nextScene: {fileID: 11400000, guid: bc8b06aaf9b440159ce1221c1b1ecd43, type: 2}
   alternativeScenes: []
