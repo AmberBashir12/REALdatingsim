@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 658169cdd038f9a4b85d22255e392255, type: 3}
   m_Name: SickExcuse
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
@@ -19,20 +19,20 @@ MonoBehaviour:
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
-      actionType: 1
+      actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 1
-      actionType: 1
+      actionType: 0
       coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
     text: I saw you at school all week. I also saw you eating out.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -51,10 +51,11 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-    text: That's a pathetic excuse. Don't try for the council again. This tells me enough about you.
+    text: That's a pathetic excuse. Don't try for the council again. This tells me
+      enough about you.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -65,7 +66,7 @@ MonoBehaviour:
     text: The president turns away. The opportunity is gone.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -73,15 +74,15 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: Ending: No Second Chance
+    text: bro crazy
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 9812d653554bfd64d959817233034f0e, type: 3}
+  background: {fileID: 21300000, guid: 849e5966a68b94c44bf30876408302db, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []

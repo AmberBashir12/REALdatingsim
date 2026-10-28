@@ -15,18 +15,18 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'I am telling the student council.'
+    text: I am telling the student council.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
-      actionType: 1
+      actionType: 0
       coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
       spriteIndex: 0
-      actionType: 1
+      actionType: 0
       coords: {x: -100, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-    text: '...'
+    text: ...
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-    text: 'Go ahead. Nobody will listen.'
+    text: Go ahead. Nobody will listen.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'You walk to the student council room and knock.'
+    text: You walk to the student council room and knock.
     actions: []
     choice:
       prompt: 
@@ -122,7 +122,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'The president listens quietly, then writes your report.'
+    text: The president listens quietly, then writes your report.
     actions: []
     choice:
       prompt: 
@@ -133,7 +133,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'Maha is called in the next day. Her table is empty at lunch.'
+    text: Maha is called in the next day. Her table is empty at lunch.
     actions: []
     choice:
       prompt: 
@@ -153,6 +153,6 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 38ab5ae27e50c2b48bb346d9e1d11642, type: 3}
+  background: {fileID: 21300000, guid: 52695fa981ff96d45a078fc6288346e1, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []

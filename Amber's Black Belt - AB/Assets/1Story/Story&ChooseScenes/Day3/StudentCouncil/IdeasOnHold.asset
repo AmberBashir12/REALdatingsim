@@ -11,19 +11,41 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 658169cdd038f9a4b85d22255e392255, type: 3}
   m_Name: IdeasOnHold
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: You keep the idea to yourself for now and leave the hallway.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 9812d653554bfd64d959817233034f0e, type: 3}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+    text: Haha to be continued
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+    text: Scp route too hard
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  background: {fileID: 21300000, guid: a2c2b36669e51f64bb1c563e9edac348, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []

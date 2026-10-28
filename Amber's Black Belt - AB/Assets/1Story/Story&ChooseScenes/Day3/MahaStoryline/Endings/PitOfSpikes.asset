@@ -15,7 +15,7 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'You could not stand being in the same room as Mother.'
+    text: You could not stand being in the same room as Mother.
     actions: []
     choice:
       prompt: 
@@ -26,7 +26,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'So you jumped into a pit of spikes.'
+    text: So you jumped into a pit of spikes.
     actions: []
     choice:
       prompt: 
@@ -46,6 +46,6 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 71f418bb1e2acc940b92201af2318ee9, type: 3}
+  background: {fileID: 21300000, guid: 7af94ca8cf9c57449897b210b61c1082, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []

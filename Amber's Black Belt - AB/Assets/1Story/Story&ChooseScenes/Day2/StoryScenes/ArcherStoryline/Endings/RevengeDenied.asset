@@ -15,11 +15,11 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'Liam''s tray is gone. So is your plan.'
+    text: Liam's tray is gone. So is your plan.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
-      actionType: 1
+      actionType: 0
       coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -33,7 +33,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: 'Great. Just great.'
+    text: Great. Just great.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -51,7 +51,8 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'Without Liam you have no way to get back at Archer. You''re not brave enough to do it alone, and not cruel enough to try someone else.'
+    text: Without Liam you have no way to get back at Archer. You're not brave enough
+      to do it alone, and not cruel enough to try someone else.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -69,7 +70,8 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'Archer keeps texting. You keep not answering. Slowly, the anger fades into something quieter, and the revenge you wanted turns into nothing at all.'
+    text: Archer keeps texting. You keep not answering. Slowly, the anger fades into
+      something quieter, and the revenge you wanted turns into nothing at all.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -103,6 +105,6 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 534dcfa249c492b418717bbb1e678038, type: 3}
+  background: {fileID: 21300000, guid: de3eab31d1590c24d809cb55600ec52f, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []

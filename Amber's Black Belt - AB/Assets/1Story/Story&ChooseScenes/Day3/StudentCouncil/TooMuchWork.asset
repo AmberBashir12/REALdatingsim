@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 658169cdd038f9a4b85d22255e392255, type: 3}
   m_Name: TooMuchWork
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
@@ -19,20 +19,20 @@ MonoBehaviour:
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
-      actionType: 1
+      actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 1
-      actionType: 1
+      actionType: 0
       coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -40,10 +40,43 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-    text: If you still want to join, try again next year. You'll have more time to prepare.
+    text: I recommend you try again next year, {playerName}
     actions: []
     choice:
-      prompt:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
+    text: You'll have more time to prepare
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Okay, I will
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
+    text: Good, you'll definitely be well liked by the other members
+    actions: []
+    choice:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -51,26 +84,16 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: You leave the conversation with another chance next year, if you choose to take it.
+    text: You leave the conversation with another chance next year, if you choose
+      to take it.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: Ending: Not Ready Yet
-    actions: []
-    choice:
-      prompt:
-      options: []
-    endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 9812d653554bfd64d959817233034f0e, type: 3}
+  background: {fileID: 21300000, guid: 2f2132d635f346645b76be6e9f763f73, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []
