@@ -576,11 +576,47 @@ MonoBehaviour:
       - text: I like it
         requiredChoiceKeys: []
         choiceKeyToUnlock: ILikeItEleanorLunch
-        followUpSentences: []
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 0}
+          text: 
+          actions:
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
       - text: 'Its kinda annoying '
         requiredChoiceKeys: []
         choiceKeyToUnlock: ItsKindaAnnoyingEleanorLunch
-        followUpSentences: []
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 0}
+          text: 
+          actions:
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}

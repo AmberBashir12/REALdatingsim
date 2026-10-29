@@ -946,21 +946,36 @@ public class BottomBarController : MonoBehaviour
         switch (action.actionType)
         {
             case StoryScene.Sentence.Action.Type.APPEAR:
+                if (action.speaker.prefab == null || spritesPrefab == null)
+                {
+                    Debug.LogWarning($"Skipped APPEAR action for speaker '{action.speaker.speakerName}' because its prefab or sprite container is missing.");
+                    return;
+                }
+
+                if (action.speaker.sprites == null || action.spriteIndex < 0 || action.spriteIndex >= action.speaker.sprites.Count || action.speaker.sprites[action.spriteIndex] == null)
+                {
+                    Debug.LogWarning($"Skipped APPEAR action for speaker '{action.speaker.speakerName}' because sprite index {action.spriteIndex} is missing or out of range.");
+                    return;
+                }
+
                 try
                 {
                     if (!sprites.ContainsKey(action.speaker))
                     {
-                        controller = Instantiate(action.speaker.prefab.gameObject, spritesPrefab.transform)
-                            .GetComponent<SpriteController>();
+                        GameObject spriteObject = Instantiate(action.speaker.prefab.gameObject, spritesPrefab.transform);
+                        controller = spriteObject.GetComponent<SpriteController>();
+                        if (controller == null)
+                        {
+                            Debug.LogWarning($"Skipped APPEAR action for speaker '{action.speaker.speakerName}' because its prefab has no SpriteController.");
+                            Destroy(spriteObject);
+                            return;
+                        }
+
                         sprites.Add(action.speaker, controller);
                     }
                     else
                     {
                         controller = sprites[action.speaker];
-                    }
-                    if (action.speaker.sprites == null || action.speaker.sprites.Count <= action.spriteIndex || action.speaker.sprites[action.spriteIndex] == null)
-                    {
-                        Debug.LogWarning("Sprite reference is missing or index is out of range!");
                     }
                     controller.Setup(action.speaker.sprites[action.spriteIndex]);
                     controller.SetTint(resolvedTint);

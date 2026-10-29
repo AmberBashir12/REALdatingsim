@@ -190,6 +190,24 @@ MonoBehaviour:
             prompt: 
             options: []
           endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 0}
+          text: 
+          actions:
+          - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
       - text: Eleanor
         requiredChoiceKeys: []
         choiceKeyToUnlock: Day4ChoseEleanor
@@ -256,6 +274,24 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 0}
+          text: 
+          actions:
+          - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
   background: {fileID: 21300000, guid: d0f63714b3fb18048ac3a6fda86a2b71, type: 3}
   nextScene: {fileID: 11400000, guid: 1eb08b35cbc0a0340886b8495631b804, type: 2}
   alternativeScenes:

@@ -1577,7 +1577,3 @@ MonoBehaviour:
     - ItsKindaAnnoyingEleanorLunch
     - NoThanks
     alternativeScene: {fileID: 11400000, guid: ce419828d96baca468d21ede5226fc10, type: 2}
-  - requiredChoiceKeys:
-    - ILikeItEleanorLunch
-    - NoThanks
-    alternativeScene: {fileID: 11400000, guid: ce419828d96baca468d21ede5226fc10, type: 2}

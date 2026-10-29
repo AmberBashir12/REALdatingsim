@@ -155,7 +155,25 @@ MonoBehaviour:
       - text: Ignore
         requiredChoiceKeys: []
         choiceKeyToUnlock: 
-        followUpSentences: []
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 0}
+          text: 
+          actions:
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
       - text: Look inside
         requiredChoiceKeys: []
         choiceKeyToUnlock: EleanorAppearance
@@ -314,6 +332,24 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 0}
+          text: 
+          actions:
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
   background: {fileID: 21300000, guid: 9812d653554bfd64d959817233034f0e, type: 3}
   nextScene: {fileID: 11400000, guid: b41d421048614bb418449bbbe3d5f9b0, type: 2}
   alternativeScenes:
