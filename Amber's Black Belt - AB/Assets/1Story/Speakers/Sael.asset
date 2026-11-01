@@ -15,7 +15,7 @@ MonoBehaviour:
   speakerName: Sael
   textColor: {r: 0, g: 0, b: 0, a: 1}
   sprites:
-  - {fileID: 21300000, guid: 9ca63744b53313d49a6a74203842fdb3, type: 3}
-  - {fileID: 21300000, guid: 1de550d97ae3af34c8d53ac683d81d33, type: 3}
+  - {fileID: 21300000, guid: 7dd56306e0c7c964c989359fb3d6af9c, type: 3}
+  - {fileID: 21300000, guid: 7dd56306e0c7c964c989359fb3d6af9c, type: 3}
   prefab: {fileID: 934540294316633314, guid: 05e76c0e1031ddf4fb6a17e6a4931617, type: 3}
   blip: {fileID: 0}

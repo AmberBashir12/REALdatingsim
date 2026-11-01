@@ -224,8 +224,8 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 98d062f3129049b2b5d30d3282c48f0f, type: 2}
-    text: ...Jun.
+    speaker: {fileID: 11400000, guid: 9ee90e6260886174ea2f1115333d6143, type: 2}
+    text: Theodora
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -256,7 +256,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 98d062f3129049b2b5d30d3282c48f0f, type: 2}
+    speaker: {fileID: 0}
     text: Nice to meet you, I guess.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -416,7 +416,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 98d062f3129049b2b5d30d3282c48f0f, type: 2}
+    speaker: {fileID: 0}
     text: Ugh. Eleanor.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -448,7 +448,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 98d062f3129049b2b5d30d3282c48f0f, type: 2}
+    speaker: {fileID: 0}
     text: She plays that guitar like the whole school wants to listen.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -491,7 +491,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-      spriteIndex: 1
+      spriteIndex: 3
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -544,7 +544,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 98d062f3129049b2b5d30d3282c48f0f, type: 2}
+    speaker: {fileID: 0}
     text: Every. Single. Time.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}

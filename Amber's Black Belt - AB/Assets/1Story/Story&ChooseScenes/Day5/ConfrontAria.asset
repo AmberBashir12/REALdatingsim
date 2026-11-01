@@ -19,7 +19,7 @@ MonoBehaviour:
     actions:
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
       spriteIndex: 0
-      actionType: 1
+      actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -32,7 +32,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 18
       actionType: 1
       coords: {x: -450, y: 0}
       moveSpeed: 0
@@ -53,25 +53,25 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: You're crazy!
     actions:
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
       spriteIndex: 0
-      actionType: 1
+      actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 18
       actionType: 0
       coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 1
+      spriteIndex: 0
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -89,28 +89,28 @@ MonoBehaviour:
     text: Ugh, just shut up!!
     actions:
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: 0
-      actionType: 1
+      spriteIndex: 7
+      actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 15
       actionType: 0
       coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
+      spriteIndex: 2
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: 1
+      spriteIndex: 7
       actionType: 4
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
     text: What the...?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 13
+      spriteIndex: 16
       actionType: 4
       coords: {x: -450, y: 0}
       moveSpeed: 0
@@ -384,7 +384,7 @@ MonoBehaviour:
           text: Ugh, NO!!
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 12
+            spriteIndex: 18
             actionType: 0
             coords: {x: -450, y: 0}
             moveSpeed: 0
@@ -493,13 +493,13 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
           choice:
             prompt: 
             options: []
           endingScene: {fileID: 0}
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
       - text: Don't care, I'm reporting to staff.
         requiredChoiceKeys: []
         choiceKeyToUnlock: aria_apologizes
@@ -605,14 +605,14 @@ MonoBehaviour:
           text: No, no! I'll apologize, okay?!
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-            spriteIndex: 12
+            spriteIndex: 16
             actionType: 0
             coords: {x: -450, y: 0}
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-            spriteIndex: 0
+            spriteIndex: 4
             actionType: 0
             coords: {x: 0, y: 0}
             moveSpeed: 0
@@ -668,31 +668,31 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-        - followUpType: 0
-          speaker: {fileID: 0}
-          text: 
-          actions:
-          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-            spriteIndex: -1
-            actionType: 3
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-            spriteIndex: -1
-            actionType: 3
-            coords: {x: 0, y: 0}
-            moveSpeed: 0
-            tintColor: {r: 0, g: 0, b: 0, a: 0}
-            tintOpacity: 0
-          choice:
-            prompt: 
-            options: []
-          endingScene: {fileID: 0}
-          music: {fileID: 0}
-          music2: {fileID: 0}
-          sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 0}
+    text: 
+    actions:
+    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+      spriteIndex: -1
+      actionType: 3
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+      spriteIndex: -1
+      actionType: 3
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
   background: {fileID: 21300000, guid: 9812d653554bfd64d959817233034f0e, type: 3}
   nextScene: {fileID: 11400000, guid: e18d3fd9c4e257747bd05ee60ab19f80, type: 2}
   alternativeScenes:

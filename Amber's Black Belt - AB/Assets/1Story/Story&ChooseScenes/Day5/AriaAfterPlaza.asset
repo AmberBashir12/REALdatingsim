@@ -25,7 +25,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: 0
+      spriteIndex: 2
       actionType: 1
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
     text: I'm not interested. Just go talk to Eleanor.
     actions:
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: -1
+      spriteIndex: 1
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0

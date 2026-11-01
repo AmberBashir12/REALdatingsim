@@ -19,7 +19,4 @@ MonoBehaviour:
   - text: Bullying is wrong
     nextScene: {fileID: 11400000, guid: d9a87d68b0ccca64bbf3358868157122, type: 2}
     choiceKeyToUnlock: 
-  - text: Tell Student Council
-    nextScene: {fileID: 11400000, guid: c1da435653d34bee9cdc31e7620f7537, type: 2}
-    choiceKeyToUnlock: 
   additionalLabels: []

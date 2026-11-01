@@ -37,7 +37,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: By the end of the month, nobody remembers who led the cult before her.
+    text: Maha immediately takes over the place
     actions: []
     choice:
       prompt: 
@@ -48,7 +48,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: Maha is the new leader.
+    text: She comes back to the school only to find you
     actions: []
     choice:
       prompt: 
@@ -59,7 +59,29 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: 'Ending: The New Mother'
+    text: She implores that you lead the cult with her
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+    text: You agree after some persuasion
+    actions: []
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+    text: 'Ending: New Leader'
     actions: []
     choice:
       prompt: 

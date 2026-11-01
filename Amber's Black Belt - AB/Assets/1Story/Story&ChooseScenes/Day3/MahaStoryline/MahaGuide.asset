@@ -189,7 +189,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-      spriteIndex: 1
+      spriteIndex: 3
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -402,6 +402,6 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: f1ad4b3962c809745ae54d69d0561d1c, type: 3}
+  background: {fileID: 21300000, guid: c358f4db477508b489418326b04695fb, type: 3}
   nextScene: {fileID: 11400000, guid: c4ee7e6c30a646a398d5dbb7727ed0f5, type: 2}
   alternativeScenes: []

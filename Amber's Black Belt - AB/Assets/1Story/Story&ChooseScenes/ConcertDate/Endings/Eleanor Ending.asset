@@ -16,7 +16,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Woo Eleanor you killed it up there!
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -37,7 +38,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Yea!
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -47,7 +49,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Yea..
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -68,7 +71,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Theres only one person I really want to impress though.
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -89,7 +93,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Ah um- {PlayerName} I like you!!
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -99,7 +104,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: I know im awkward and such but still!
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -109,7 +115,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: I really like you and will you please be my girlfriend?
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -141,7 +148,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Gasp*
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -151,7 +159,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Yayyyy!!!!
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -161,7 +170,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: Ive never been more happy ever!!
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -171,7 +181,8 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: '{playerName} please continue supporting me '
-    actions: []    choice:
+    actions: []
+    choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
@@ -200,6 +211,6 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 054a774d14f97924fae189022a43518f, type: 3}
+  background: {fileID: 21300000, guid: c466678137a51dd4f846eea7a7063951, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []

@@ -15,20 +15,20 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: You spot Eleanor at the end of the hallway. She hurries over, nearly losing
-      her balance as she waves.
+    text: You and Eleanor are hanging out in the hallway, enjoying a little time
+      together.
     actions:
-    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 1
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
       actionType: 1
-      coords: {x: -200, y: 0}
+      coords: {x: -400, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 1
-      actionType: 4
-      coords: {x: -200, y: 0}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: -100, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -41,22 +41,11 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-    text: 
-    actions: []
-    choice:
-      prompt: 
-      options: []
-    endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 0}
-  - sentenceType: 0
-    speaker: {fileID: 0}
-    text: 
+    text: Im glad we got to spend some time together today.
     actions:
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: -1
-      actionType: 3
+      spriteIndex: 10
+      actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -68,6 +57,582 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+    text: As you keep talking, Aria spots you and walks over.
+    actions:
+    - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+      spriteIndex: 2
+      actionType: 1
+      coords: {x: 300, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+    text: Hey, {playerName}! Want to hang out together during lunch again?
+    actions:
+    - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+      spriteIndex: 3
+      actionType: 4
+      coords: {x: 450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Oh hey Aria
+    actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+    text: Not really, last time was kinda uncomfortable
+    actions:
+    - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+      spriteIndex: 2
+      actionType: 0
+      coords: {x: 450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 13
+      actionType: 4
+      coords: {x: 450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options:
+      - text: Okay, I'll come
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Okay, I'll come.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: -1
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+          text: Wait, what? You promised the other day that you would sit with me
+            today!
+          actions:
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: 1
+            actionType: 0
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: -1
+            actionType: 4
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: I'm sorry, Eleanor. I did promise, but I have to go with Aria. I'm
+            sorry.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 17
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: -1
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+          text: You leave with Aria.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: No thanks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: Day4HallwayWithElleanor_NoAriaLunch
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: No thanks.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: -1
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+          text: ...
+          actions:
+          - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+            spriteIndex: 3
+            actionType: 0
+            coords: {x: 450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+          text: Aw, Aria. I thought you had lots of friends. Guess you will have
+            to find someone else.
+          actions:
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Sorry, Aria.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 17
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+          text: You and Eleanor leave together.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 0
+    speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+    text: Then dont worry about them. We can hang out just the two of us. I would
+      rather spend lunch with you anyway.
+    actions:
+    - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+      spriteIndex: 3
+      actionType: 4
+      coords: {x: 450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options: []
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
+  - sentenceType: 1
+    speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+    text: So, want to spend lunch with just me?
+    actions:
+    - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+      spriteIndex: 3
+      actionType: 4
+      coords: {x: 450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
+    choice:
+      prompt: 
+      options:
+      - text: Okay, I'll come
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: 
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Okay, I'll come.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: -1
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+          text: Wait, what? You promised the other day that you would sit with me
+            today!
+          actions:
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: 1
+            actionType: 0
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: -1
+            actionType: 4
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: sorry Eleanor. We'll go next time
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 17
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: -1
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+          text: You leave with Aria.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+      - text: No thanks
+        requiredChoiceKeys: []
+        choiceKeyToUnlock: Day4HallwayWithElleanor_NoAriaLunch
+        followUpSentences:
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: No thanks.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 13
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: -1
+            actionType: 4
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+          text: ...
+          actions:
+          - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+            spriteIndex: 1
+            actionType: 0
+            coords: {x: 450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+          text: Aw, Aria. I thought you had lots of friends. Guess you will have
+            to find someone else.
+          actions:
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: 1
+            actionType: 4
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+          text: Sorry, Aria.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: 17
+            actionType: 0
+            coords: {x: -450, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+        - followUpType: 0
+          speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
+          text: You and Eleanor leave together.
+          actions:
+          - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
+            spriteIndex: -1
+            actionType: 3
+            coords: {x: 0, y: 0}
+            moveSpeed: 0
+            tintColor: {r: 0, g: 0, b: 0, a: 0}
+            tintOpacity: 0
+          music: {fileID: 0}
+          music2: {fileID: 0}
+          sound: {fileID: 0}
+          choice:
+            prompt: 
+            options: []
+          endingScene: {fileID: 0}
+    endingScene: {fileID: 0}
+    music: {fileID: 0}
+    music2: {fileID: 0}
+    sound: {fileID: 0}
   background: {fileID: 21300000, guid: 9812d653554bfd64d959817233034f0e, type: 3}
-  nextScene: {fileID: 0}
-  alternativeScenes: []
+  nextScene: {fileID: 11400000, guid: 2861cfac366622644a83a77c55ac9123, type: 2}
+  alternativeScenes:
+  - requiredChoiceKeys:
+    - Day4HallwayWithElleanor_NoAriaLunch
+    alternativeScene: {fileID: 11400000, guid: 1eb08b35cbc0a0340886b8495631b804, type: 2}

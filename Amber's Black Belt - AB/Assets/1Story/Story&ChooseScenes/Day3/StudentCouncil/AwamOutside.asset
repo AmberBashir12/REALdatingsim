@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e8c93291e0eaf643b9bec9253640f5a, type: 3}
   m_Name: AwamOutside
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
@@ -32,7 +32,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
     text: Hey, you're Awam, right?
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
     text: Yes. I'll add your name to the list right now.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
     text: Okay.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -76,7 +76,7 @@ MonoBehaviour:
     text: ...
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
     text: There's less than a one percent chance you'll get into the student council.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
     text: ...?
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -106,10 +106,11 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 9dfdcc12af69142438769df6e9e883eb, type: 2}
-    text: The other students have been preparing for months. You'll need to do something exceptional in just one week.
+    text: The other students have been preparing for months. You'll need to do something
+      exceptional in just one week.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -120,7 +121,7 @@ MonoBehaviour:
     text: Wow. That sucks.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -131,7 +132,7 @@ MonoBehaviour:
     text: Good luck.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -142,7 +143,7 @@ MonoBehaviour:
     text: Thanks.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
@@ -153,12 +154,12 @@ MonoBehaviour:
     text: You walk down the hallway, trying to think of a way to stand out.
     actions: []
     choice:
-      prompt:
+      prompt: 
       options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: 9812d653554bfd64d959817233034f0e, type: 3}
+  background: {fileID: 21300000, guid: 5866a525a75f17f4e9ba21bfc663041c, type: 3}
   nextScene: {fileID: 11400000, guid: d56c33f8b57643e799bf1f1ef3ec5cef, type: 2}
   alternativeScenes: []

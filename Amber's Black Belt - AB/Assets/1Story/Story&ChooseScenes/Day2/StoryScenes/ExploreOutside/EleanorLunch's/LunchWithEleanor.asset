@@ -17,13 +17,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Room 339.....
     actions:
-    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
-      actionType: 1
-      coords: {x: -200, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
       actionType: 1
@@ -31,24 +24,10 @@ MonoBehaviour:
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 13
       actionType: 4
       coords: {x: -450, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -67,13 +46,6 @@ MonoBehaviour:
       spriteIndex: 13
       actionType: 4
       coords: {x: -450, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
@@ -99,13 +71,6 @@ MonoBehaviour:
       spriteIndex: 12
       actionType: 0
       coords: {x: -450, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0

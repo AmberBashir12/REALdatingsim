@@ -168,7 +168,7 @@ MonoBehaviour:
     text: Hey teach.
     actions:
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 1
       coords: {x: 500, y: 0}
       moveSpeed: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 1
+      spriteIndex: 14
       actionType: 4
       coords: {x: 500, y: 0}
       moveSpeed: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 1
+      spriteIndex: 14
       actionType: 4
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -317,7 +317,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 1
+      spriteIndex: 14
       actionType: 4
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -349,7 +349,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 12
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -381,7 +381,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 1
+      spriteIndex: 14
       actionType: 4
       coords: {x: 450, y: 0}
       moveSpeed: 0

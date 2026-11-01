@@ -220,14 +220,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 1
       coords: {x: 350, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 1
       coords: {x: 100, y: 0}
       moveSpeed: 0
@@ -252,14 +252,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 1
+      spriteIndex: 5
       actionType: 4
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -284,14 +284,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -317,14 +317,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -350,14 +350,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -382,14 +382,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -414,14 +414,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -446,7 +446,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -478,14 +478,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -510,14 +510,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -542,14 +542,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -574,14 +574,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -607,14 +607,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
-      spriteIndex: 0
+      spriteIndex: 5
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0

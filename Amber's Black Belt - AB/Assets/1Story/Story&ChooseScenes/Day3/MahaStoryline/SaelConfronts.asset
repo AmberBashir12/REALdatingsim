@@ -310,7 +310,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-      spriteIndex: 1
+      spriteIndex: 3
       actionType: 4
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-      spriteIndex: 1
+      spriteIndex: 3
       actionType: 4
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
           - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-            spriteIndex: 1
+            spriteIndex: 3
             actionType: 4
             coords: {x: 450, y: 0}
             moveSpeed: 0
@@ -677,8 +677,7 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-          text: I did leave them. Just let him say it. Please, I just want him to
-            stop yelling.
+          text: I did leave them. Just let him say it.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
             spriteIndex: 13
@@ -710,7 +709,7 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-          text: You are taking his side?!
+          text: Youre taking his side?!
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
             spriteIndex: 12
@@ -742,7 +741,7 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-          text: ...I do not even know what to say to that.
+          text: Girllll, I dont even know what to say
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
             spriteIndex: 12
@@ -842,7 +841,7 @@ MonoBehaviour:
           endingScene: {fileID: 0}
         - followUpType: 0
           speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-          text: ...But fine. I will do it.
+          text: ...But fine. Ill do it.
           actions:
           - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
             spriteIndex: 12

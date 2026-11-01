@@ -15,7 +15,8 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: Maha leads you away from Room 339 and into Room 127. Two students are waiting around a cluster of desks.
+    text: Maha leads you away from Room 339 and into Room 127. Two students are waiting
+      around a cluster of desks.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -32,7 +33,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: 0
+      spriteIndex: 2
       actionType: 1
       coords: {x: 150, y: 0}
       moveSpeed: 0
@@ -54,7 +55,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-    text: Everyone, this is {playerName}. They are new here, so try to make them feel welcome.
+    text: Everyone, this is {playerName}. Theyre new here.
     actions: []
     choice:
       prompt: 
@@ -68,7 +69,7 @@ MonoBehaviour:
     text: Hi, I'm Aria. Maha has told us a little about you.
     actions:
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: -1
+      spriteIndex: 3
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -83,7 +84,8 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 9ee90e6260886174ea2f1115333d6143, type: 2}
-    text: I'm Theodora. It's nice to meet you. We were just figuring out what to do with lunch.
+    text: I'm Theodora. It's nice to meet you. We were just figuring out what to
+      do with lunch.
     actions: []
     choice:
       prompt: 
@@ -105,7 +107,8 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-    text: It is. They are my friends. Sit down before Aria decides the introductions need a second round.
+    text: It is. They are my friends. Sit down before Aria decides the introductions
+      need a second round.
     actions: []
     choice:
       prompt: 
@@ -119,7 +122,7 @@ MonoBehaviour:
     text: I only do that when people look like they forgot my name.
     actions:
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: -1
+      spriteIndex: 3
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -148,7 +151,7 @@ MonoBehaviour:
     text: See? This is what I have to put up with.
     actions:
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: -1
+      spriteIndex: 3
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -163,7 +166,8 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-    text: Speaking of putting up with things, Eleanor is still camped out in Room 339.
+    text: Speaking of putting up with things, Eleanor is still camped out in Room
+      339.
     actions: []
     choice:
       prompt: 
@@ -174,10 +178,11 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-    text: She practices her song there like the whole school is supposed to stop and listen.
+    text: She practices her song there like the whole school is supposed to stop
+      and listen.
     actions:
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: -1
+      spriteIndex: 1
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -192,7 +197,8 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 9ee90e6260886174ea2f1115333d6143, type: 2}
-    text: And if anyone asks for the room, she acts as if they are trying to ruin her future.
+    text: And if anyone asks for the room, she acts as if they are trying to ruin
+      her future.
     actions: []
     choice:
       prompt: 
@@ -203,7 +209,8 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-    text: She keeps to herself, then gets upset when no one is around to hear her out.
+    text: She keeps to herself, then gets upset when no one is around to hear her
+      out.
     actions: []
     choice:
       prompt: 
@@ -228,7 +235,7 @@ MonoBehaviour:
     text: Yeah. I don't really want to be around her.
     actions:
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: -1
+      spriteIndex: 1
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0

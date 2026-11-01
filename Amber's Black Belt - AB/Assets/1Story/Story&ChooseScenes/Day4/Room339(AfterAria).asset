@@ -25,14 +25,14 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 13
       actionType: 1
-      coords: {x: -200, y: 0}
+      coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 13
       actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -50,8 +50,8 @@ MonoBehaviour:
     text: Oh! Hi {playerName}!
     actions:
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
-      actionType: 1
+      spriteIndex: 1
+      actionType: 0
       coords: {x: 200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
     text: So how was lunch with Aria and her friends yesterday?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 14
       actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -132,14 +132,14 @@ MonoBehaviour:
     text: It was fun, they were really friendly.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 13
+      spriteIndex: 14
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
+      spriteIndex: 9
       actionType: 0
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
     text: ....Probably not
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 13
+      spriteIndex: 16
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -232,14 +232,14 @@ MonoBehaviour:
     text: Oh really!?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 16
       actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 1
+      spriteIndex: 7
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
     text: 'Yea, one of her friends I didnt really like '
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 13
+      spriteIndex: 18
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
     text: ?? Hmm who could it be?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 16
       actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
     text: Oh well whatever, youll come sit with me during lunch right?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 13
       actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
     text: I was just worried you wouldnt come back
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 13
       actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -382,14 +382,14 @@ MonoBehaviour:
     text: Yayyy!!
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 14
       actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 1
+      spriteIndex: 10
       actionType: 4
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -417,24 +417,6 @@ MonoBehaviour:
       spriteIndex: 1
       actionType: 4
       coords: {x: 200, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    choice:
-      prompt: 
-      options: []
-    endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
-    sound: {fileID: 0}
-  - sentenceType: 0
-    speaker: {fileID: 0}
-    text: 
-    actions:
-    - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: -1
-      actionType: 3
-      coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0

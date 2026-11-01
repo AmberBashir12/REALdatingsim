@@ -20,19 +20,19 @@ MonoBehaviour:
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
       spriteIndex: 0
       actionType: 1
-      coords: {x: 200, y: 0}
+      coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
       spriteIndex: 0
       actionType: 1
-      coords: {x: -200, y: 0}
+      coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 13
       actionType: 1
       coords: {x: -450, y: 0}
       moveSpeed: 0
@@ -72,10 +72,10 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-    text: You get ONE good friend and you let it get to your head!?
+    text: You get one good friend and you let it get to your head!?
     actions:
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 1
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -108,28 +108,28 @@ MonoBehaviour:
       who made me an outcast!
     actions:
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
-      actionType: 1
+      spriteIndex: 3
+      actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 15
       actionType: 0
       coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: 0
+      spriteIndex: 6
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 1
+      spriteIndex: 3
       actionType: 4
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-    text: You know that was MAHA not me!
+    text: You know that was maha not me!
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -176,7 +176,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-    text: IT WAS BOTH OF YOU!!
+    text: It was both of you!!
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -243,17 +243,17 @@ MonoBehaviour:
     text: What do you mean? I won't leave her.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 13
-      actionType: 4
-      coords: {x: -450, y: 0}
-      moveSpeed: 0
+      spriteIndex: 14
+      actionType: 2
+      coords: {x: 0, y: 0}
+      moveSpeed: 3
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
       spriteIndex: 0
-      actionType: 0
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
+      actionType: 2
+      coords: {x: -300, y: 0}
+      moveSpeed: 1
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
@@ -275,7 +275,7 @@ MonoBehaviour:
     text: Wha- When did you get here!?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 16
       actionType: 0
       coords: {x: -450, y: 0}
       moveSpeed: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
+      spriteIndex: 8
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -336,17 +336,17 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-    text: Seriously, what are you even saying to Eleanor Aria!?
+    text: Seriously, what are you even saying to Eleanor, Aria!?
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 13
+      spriteIndex: 18
       actionType: 4
       coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: 0
+      spriteIndex: 6
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
@@ -371,21 +371,21 @@ MonoBehaviour:
     text: Youre acting like a prick!
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 13
+      spriteIndex: 18
       actionType: 4
       coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: 0
+      spriteIndex: 6
       actionType: 0
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
+      spriteIndex: 2
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -403,21 +403,21 @@ MonoBehaviour:
     text: A prick huh.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 15
       actionType: 0
       coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: 1
+      spriteIndex: 7
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
+      spriteIndex: 2
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0
@@ -435,21 +435,21 @@ MonoBehaviour:
     text: Ill show you prick!
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 15
       actionType: 0
       coords: {x: -450, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: aeb00bc743a24afb90dffce6ca9a83f1, type: 2}
-      spriteIndex: 1
+      spriteIndex: 7
       actionType: 4
       coords: {x: 0, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
+      spriteIndex: 2
       actionType: 0
       coords: {x: 450, y: 0}
       moveSpeed: 0

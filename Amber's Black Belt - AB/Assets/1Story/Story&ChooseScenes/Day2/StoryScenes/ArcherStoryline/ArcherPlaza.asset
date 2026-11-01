@@ -129,11 +129,12 @@ MonoBehaviour:
         followUpSentences: []
       - text: Park
         requiredChoiceKeys: []
-        choiceKeyToUnlock: 
+        choiceKeyToUnlock: Park
         followUpSentences: []
       - text: Restuarant
-        requiredChoiceKeys: []
-        choiceKeyToUnlock: 
+        requiredChoiceKeys:
+        - DateChoiceRestaurant
+        choiceKeyToUnlock: Restaurant123
         followUpSentences:
         - followUpType: 0
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -165,8 +166,8 @@ MonoBehaviour:
   nextScene: {fileID: 11400000, guid: c109758591454ed38a343eed1bc22b0d, type: 2}
   alternativeScenes:
   - requiredChoiceKeys:
-    - 
+    - Park
     alternativeScene: {fileID: 11400000, guid: 28be7104f1ff4413854de2992bbabe9e, type: 2}
   - requiredChoiceKeys:
-    - 
-    alternativeScene: {fileID: 11400000, guid: 5649d94b38514397ba66af3edabd18e2, type: 2}
+    - Restaurant123
+    alternativeScene: {fileID: 11400000, guid: e05fb2879f6446b9a1bf80c00fa798a0, type: 2}

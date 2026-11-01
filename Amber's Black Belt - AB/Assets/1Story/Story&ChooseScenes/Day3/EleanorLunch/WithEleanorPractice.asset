@@ -25,7 +25,7 @@ MonoBehaviour:
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 13
       actionType: 1
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
     text: Ill wait-
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 13
+      spriteIndex: 17
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
     text: No no I am!!
     actions:
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
+      spriteIndex: 1
       actionType: 1
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -161,14 +161,14 @@ MonoBehaviour:
     text: Oh thats good to hear.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 13
+      spriteIndex: 15
       actionType: 4
       coords: {x: -200, y: 0}
       moveSpeed: 0
       tintColor: {r: 0, g: 0, b: 0, a: 0}
       tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
-      spriteIndex: 0
+      spriteIndex: 9
       actionType: 0
       coords: {x: 200, y: 0}
       moveSpeed: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
     text: 'Wait- I wanted to say, '
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 16
       actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
     text: Yes I should!!
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
+      spriteIndex: 14
       actionType: 0
       coords: {x: -200, y: 0}
       moveSpeed: 0

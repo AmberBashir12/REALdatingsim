@@ -224,8 +224,8 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 98d062f3129049b2b5d30d3282c48f0f, type: 2}
-    text: ...Jun.
+    speaker: {fileID: 0}
+    text: Theodora
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
@@ -256,7 +256,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 98d062f3129049b2b5d30d3282c48f0f, type: 2}
+    speaker: {fileID: 0}
     text: Nice to meet you, I guess.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -480,7 +480,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 98d062f3129049b2b5d30d3282c48f0f, type: 2}
+    speaker: {fileID: 0}
     text: Thats a bit much.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -928,7 +928,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 98d062f3129049b2b5d30d3282c48f0f, type: 2}
+    speaker: {fileID: 0}
     text: Ive heard all of this in a documentary.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -960,7 +960,7 @@ MonoBehaviour:
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
-    speaker: {fileID: 11400000, guid: 98d062f3129049b2b5d30d3282c48f0f, type: 2}
+    speaker: {fileID: 0}
     text: Every cult is the same.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
@@ -993,7 +993,7 @@ MonoBehaviour:
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-    text: Shush, Jun. Let them talk.
+    text: Shush. Let them talk.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12

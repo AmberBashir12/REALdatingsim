@@ -303,7 +303,7 @@ MonoBehaviour:
     music: {fileID: 0}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: f1ad4b3962c809745ae54d69d0561d1c, type: 3}
+  background: {fileID: 21300000, guid: dd2715431ed63234080b05d709466cf6, type: 3}
   nextScene: {fileID: 11400000, guid: cc2fcd7bdb5e4d56afab0327ef4d7cdd, type: 2}
   alternativeScenes:
   - requiredChoiceKeys:
