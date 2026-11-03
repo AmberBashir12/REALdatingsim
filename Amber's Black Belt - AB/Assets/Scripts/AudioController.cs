@@ -51,6 +51,28 @@ public class AudioController : MonoBehaviour
         }
     }
 
+    public void StopMusic()
+    {
+        if (musicSwitchCoroutine != null)
+        {
+            StopCoroutine(musicSwitchCoroutine);
+            musicSwitchCoroutine = null;
+        }
+
+        if (musicSource != null)
+        {
+            if (musicSource.isPlaying)
+            {
+                musicSource.Stop();
+            }
+
+            musicSource.clip = null;
+            musicSource.volume = targetMusicVolume;
+        }
+
+        StopSecondaryMusic();
+    }
+
     public bool IsSoundPlaying()
     {
         if (!blockingSoundActive || soundSource == null)

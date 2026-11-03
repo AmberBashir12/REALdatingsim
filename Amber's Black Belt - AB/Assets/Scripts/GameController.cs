@@ -86,6 +86,7 @@ public class GameController : MonoBehaviour
                 backgroundController.SetImage(preview.Background);
             }
         }
+        StopMusicIfRequested(currentScene);
         if (fadePanel != null)
         {
             fadePanel.gameObject.SetActive(true);
@@ -232,6 +233,7 @@ public class GameController : MonoBehaviour
         }
 
         currentScene = scene;
+        StopMusicIfRequested(scene);
         CaptureSceneStartChoices();
         // Hide bottom bar only for non-story scenes
         if (!(scene is StoryScene))
@@ -284,6 +286,20 @@ public class GameController : MonoBehaviour
         if (useStoryFadeTransition)
         {
             yield return StartCoroutine(FadeInFromBlack());
+        }
+    }
+
+    private void StopMusicIfRequested(GameScene scene)
+    {
+        if (scene is StoryScene storyScene && storyScene.stopMusicOnStart)
+        {
+            if (audioController == null)
+            {
+                Debug.LogWarning($"Scene '{storyScene.name}' requests music to stop, but no AudioController is assigned.");
+                return;
+            }
+
+            audioController.StopMusic();
         }
     }
 

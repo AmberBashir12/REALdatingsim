@@ -216,7 +216,7 @@ MonoBehaviour:
     music: {fileID: 8300000, guid: 96699ff3cc1afe64b8a9c25bcc9b1c96, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
-  background: {fileID: 21300000, guid: b461f96f2cf5a204b95a42cd3f6ce51f, type: 3}
+  background: {fileID: 21300000, guid: c836047b832784f42b5405a97c483212, type: 3}
   nextScene: {fileID: 11400000, guid: 784f0514a96d6dd49a80141d1b2a4d53, type: 2}
   alternativeScenes:
   - requiredChoiceKeys:

@@ -221,6 +221,11 @@ public class MenuController : MonoBehaviour
             return;
         }
 
+        if (GameStateManager.Instance != null)
+        {
+            GameStateManager.Instance.ResetGameState();
+        }
+
         isStartingGame = true;
         StartCoroutine(FadeToBlackAndLoad());
     }

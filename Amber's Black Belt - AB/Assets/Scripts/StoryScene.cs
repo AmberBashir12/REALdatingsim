@@ -8,6 +8,7 @@ public class StoryScene : GameScene
 {
     public List<Sentence> sentences;
     public Sprite background;
+    public bool stopMusicOnStart;
     public GameScene nextScene;
     public List<AlternativeScenes> alternativeScenes;
     
@@ -177,5 +178,4 @@ public class StoryScene : GameScene
 }
 
 public class GameScene : ScriptableObject { }
-
 

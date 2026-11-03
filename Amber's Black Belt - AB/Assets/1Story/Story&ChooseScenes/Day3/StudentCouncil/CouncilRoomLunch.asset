@@ -15,8 +15,8 @@ MonoBehaviour:
   sentences:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
-    text: You stop outside the student council room. The vice president is standing
-      by the door.
+    text: The next day, You stop outside the student council room. The vice president
+      is standing by the door.
     actions:
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 12
