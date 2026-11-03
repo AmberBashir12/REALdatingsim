@@ -11,6 +11,7 @@ public class BackgroundSwitcher : MonoBehaviour
     public Image Image1;
     public Image Image2;
     private Animator animator;
+    public Sprite CurrentBackground { get; private set; }
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class BackgroundSwitcher : MonoBehaviour
 
     public void SwitchImage(Sprite sprite)
     {
+        CurrentBackground = sprite;
         if(!isSwitched)
         {
             Image1.sprite = sprite;
@@ -33,6 +35,7 @@ public class BackgroundSwitcher : MonoBehaviour
     }
     public void SetImage(Sprite sprite)
     {
+        CurrentBackground = sprite;
         if (!isSwitched)
         {
             Image1.sprite = sprite;

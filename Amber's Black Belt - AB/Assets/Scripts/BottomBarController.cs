@@ -14,6 +14,7 @@ public class BottomBarController : MonoBehaviour
     private State state = State.COMPLETED;
     private Animator animator;
     public bool IsHidden = false;
+    public bool IsWaitingForChoice => waitingForSentenceChoice || waitingForBranchChoice;
 
     public Dictionary<Speaker, SpriteController> sprites = new Dictionary<Speaker, SpriteController>();
 
@@ -865,7 +866,7 @@ public class BottomBarController : MonoBehaviour
     {
         yield return null;
 
-        while (IsBlockingSoundPlaying())
+        while (Time.timeScale == 0f || IsBlockingSoundPlaying())
         {
             yield return null;
         }
@@ -1057,5 +1058,3 @@ public class BottomBarController : MonoBehaviour
         }
     }
 }
-
-

@@ -9,13 +9,17 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] public GameObject pauseMenuUI;
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button skipButton;
+    [SerializeField] private GameObject saveSlotCanvas;
 
     private static bool IsPaused = false;
+    private GameController gameController;
 
     void Awake()
     {
         // The flag is static, so it survives scene loads such as returning to the main menu while paused.
         IsPaused = false;
+        gameController = FindObjectOfType<GameController>();
+        Time.timeScale = 1f;
 
         if (resumeButton == null)
         {
@@ -35,6 +39,11 @@ public class PauseMenu : MonoBehaviour
         if (skipButton != null)
         {
             skipButton.onClick.AddListener(SkipToNextChoice);
+        }
+        pauseMenuUI.SetActive(false);
+        if (saveSlotCanvas != null)
+        {
+            saveSlotCanvas.SetActive(false);
         }
     }
 
@@ -73,8 +82,16 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        if (saveSlotCanvas != null)
+        {
+            saveSlotCanvas.SetActive(false);
+        }
         Time.timeScale = 1f;
         IsPaused = false;
+        if (gameController != null && gameController.IsPaused())
+        {
+            gameController.SetPaused(false);
+        }
     }
 
     public void Pause()
@@ -82,5 +99,9 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         IsPaused = true;
+        if (gameController != null)
+        {
+            gameController.SetPaused(true);
+        }
     }
 }

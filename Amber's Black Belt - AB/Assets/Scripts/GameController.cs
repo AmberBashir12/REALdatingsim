@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour
 
     private State state = State.IDLE;
     private State prePauseState = State.IDLE;
+    public SaveSceneCatalog saveCatalog;
+    public bool IsTransitioning => state == State.ANIMATE || (state == State.PAUSED && prePauseState == State.ANIMATE);
 
     public enum State
     {
@@ -50,8 +52,38 @@ public class GameController : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
+        yield return null;
+        SceneSlotData saved = SceneSaveSlots.TakePendingLoad();
+        Sprite loadedBackground = null;
+        if (saved != null)
+        {
+            SaveSceneCatalog.Entry entry = saveCatalog != null ? saveCatalog.Find(saved.sceneId) : null;
+            if (entry == null)
+            {
+                Debug.LogError("The saved scene is missing from the save catalog. Loading stopped.");
+                yield break;
+            }
+            currentScene = entry.scene;
+            PlayerProfile.SetName(saved.playerName);
+            PlayerProfile.SetCharacterChoice(saved.characterChoice);
+            if (GameStateManager.Instance == null)
+            {
+                new GameObject("GameStateManager").AddComponent<GameStateManager>();
+            }
+            GameStateManager.Instance.ResetGameState();
+            foreach (string key in saved.choices ?? new string[0])
+            {
+                GameStateManager.Instance.UnlockChoice(key);
+            }
+            SaveSceneCatalog.Entry preview = saveCatalog.Find(saved.backgroundSceneId);
+            loadedBackground = entry.Background != null ? entry.Background : preview?.Background;
+            if (preview != null && preview.Background != null)
+            {
+                backgroundController.SetImage(preview.Background);
+            }
+        }
         if (fadePanel != null)
         {
             fadePanel.gameObject.SetActive(true);
@@ -63,6 +95,23 @@ public class GameController : MonoBehaviour
             StoryScene storyScene = currentScene as StoryScene;
             bottomBar.PlayScene(storyScene);
             backgroundController.SetImage(storyScene.background);
+            state = bottomBar.IsWaitingForChoice ? State.CHOOSE : State.IDLE;
+        }
+        else if (currentScene is ChooseScene chooseScene)
+        {
+            bottomBar.Hide();
+            state = State.CHOOSE;
+            chooseController.SetupChoose(chooseScene);
+        }
+        else if (currentScene is ExplorationScene explorationScene)
+        {
+            bottomBar.Hide();
+            state = State.EXPLORE;
+            explorationController.SetupExplorationScene(explorationScene);
+        }
+        if (saved != null && loadedBackground != null)
+        {
+            backgroundController.Image2.sprite = loadedBackground;
         }
     }
 
@@ -200,7 +249,7 @@ public class GameController : MonoBehaviour
             
             bottomBar.PlayScene(storyScene, pendingStoryStartSentenceIndex); // PlayScene in BottomBarController will handle empty sentences
             pendingStoryStartSentenceIndex = -1;
-            state = State.IDLE; // Reset state to IDLE
+            state = bottomBar.IsWaitingForChoice ? State.CHOOSE : State.IDLE;
         }
         else if (scene is ChooseScene chooseScene) 
         {
