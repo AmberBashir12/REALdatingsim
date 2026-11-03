@@ -42,7 +42,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -163,7 +163,7 @@ MonoBehaviour:
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
           text: Yeah. I do.
           actions: []
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -181,7 +181,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -194,7 +194,7 @@ MonoBehaviour:
             The new friendship feels exciting, though you can't help thinking about
             Eleanor.
           actions: []
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -212,7 +212,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -227,7 +227,7 @@ MonoBehaviour:
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
           text: Eleanor.
           actions: []
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -245,7 +245,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -263,7 +263,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -275,7 +275,7 @@ MonoBehaviour:
           text: Aria leaves before you can think of anything else to say. You're
             flustered, but you don't dwell on it for long.
           actions: []
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -283,7 +283,7 @@ MonoBehaviour:
             options: []
           endingScene: {fileID: 0}
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 1
@@ -315,7 +315,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -326,7 +326,7 @@ MonoBehaviour:
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
           text: Yeah. I do.
           actions: []
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -344,7 +344,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -357,7 +357,7 @@ MonoBehaviour:
             The new friendship feels exciting, though you can't help thinking about
             Eleanor.
           actions: []
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -375,7 +375,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -390,7 +390,7 @@ MonoBehaviour:
           speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
           text: Eleanor.
           actions: []
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -408,7 +408,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -426,7 +426,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -438,7 +438,7 @@ MonoBehaviour:
           text: Aria leaves before you can think of anything else to say. You're
             flustered, but you don't dwell on it for long.
           actions: []
-          music: {fileID: 0}
+          music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -446,7 +446,7 @@ MonoBehaviour:
             options: []
           endingScene: {fileID: 0}
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 483e43f234daddc4392027c7db78187c, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: d0f63714b3fb18048ac3a6fda86a2b71, type: 3}
