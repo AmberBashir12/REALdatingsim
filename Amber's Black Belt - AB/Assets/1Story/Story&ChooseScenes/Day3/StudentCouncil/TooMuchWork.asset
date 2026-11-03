@@ -16,119 +16,71 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
     text: I appreciate your honesty.
-    actions:
-    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 0
-      actionType: 1
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 1
-      actionType: 4
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
     text: I recommend you try again next year, {playerName}
-    actions:
-    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 1
-      actionType: 4
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
     text: You'll have more time to prepare
-    actions:
-    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 1
-      actionType: 4
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Okay, I will
-    actions:
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
-      actionType: 1
-      coords: {x: -450, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 13
-      actionType: 4
-      coords: {x: -450, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
     text: Good, you'll definitely be well liked by the other members
-    actions:
-    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 1
-      actionType: 4
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: You leave the conversation with another chance next year, if you choose
       to take it.
-    actions:
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: 2f2132d635f346645b76be6e9f763f73, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []
+  endingId: b90c20dc328b469d881d663b64a20fd3

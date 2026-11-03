@@ -16,87 +16,60 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
     text: I don't care if you were sick. You could still have taken part.
-    actions:
-    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 0
-      actionType: 1
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 1
-      actionType: 4
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
     text: I saw you at school all week. I also saw you eating out.
-    actions:
-    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 1
-      actionType: 4
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
     text: That's a pathetic excuse. Don't try for the council again. This tells me
       enough about you.
-    actions:
-    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
-      spriteIndex: 1
-      actionType: 4
-      coords: {x: 0, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: The president turns away. The opportunity is gone.
-    actions:
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: bro crazy
-    actions:
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: 849e5966a68b94c44bf30876408302db, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []
+  endingId: c01a3d8bce4c499880e97f768f4a8df2

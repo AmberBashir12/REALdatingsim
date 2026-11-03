@@ -35,7 +35,7 @@ MonoBehaviour:
       prompt:
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
       prompt:
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -71,13 +71,20 @@ MonoBehaviour:
       prompt:
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: I didn't feel like doing it anymore.
     actions:
+    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
       spriteIndex: 13
       actionType: 4
@@ -89,13 +96,20 @@ MonoBehaviour:
       prompt:
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
     text: You chose not to do it? Why?
     actions:
+    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
+      spriteIndex: 12
+      actionType: 0
+      coords: {x: -450, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
       spriteIndex: 1
       actionType: 4
@@ -107,7 +121,7 @@ MonoBehaviour:
       prompt:
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 1
@@ -139,7 +153,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+          music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -150,7 +164,7 @@ MonoBehaviour:
           speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
           text:
           actions:
-          music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+          music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -172,7 +186,7 @@ MonoBehaviour:
             moveSpeed: 0
             tintColor: {r: 0, g: 0, b: 0, a: 0}
             tintOpacity: 0
-          music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+          music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -183,7 +197,7 @@ MonoBehaviour:
           speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
           text:
           actions:
-          music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+          music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
           music2: {fileID: 0}
           sound: {fileID: 0}
           choice:
@@ -191,7 +205,7 @@ MonoBehaviour:
             options: []
           endingScene: {fileID: 11400000, guid: c01a3d8bce4c499880e97f768f4a8df2, type: 2}
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: 9812d653554bfd64d959817233034f0e, type: 3}

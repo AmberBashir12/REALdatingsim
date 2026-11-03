@@ -28,7 +28,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -283,7 +283,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -308,7 +308,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: dbcdd7fd899ffae459c18f2381aea204, type: 3}

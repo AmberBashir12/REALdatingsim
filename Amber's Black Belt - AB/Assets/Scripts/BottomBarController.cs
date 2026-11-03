@@ -370,6 +370,11 @@ public class BottomBarController : MonoBehaviour
             return;
         }
 
+        if (currentScene is EndingScene ending)
+        {
+            ending.MarkObtained();
+        }
+
         if (currentScene.sentences == null || currentScene.sentences.Count == 0)
         {
             Debug.LogWarning($"StoryScene '{currentScene.name}' has no sentences. Marking as completed.");

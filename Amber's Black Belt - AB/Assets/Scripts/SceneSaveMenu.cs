@@ -162,8 +162,7 @@ public class SceneSaveMenu : MonoBehaviour
                 backgroundSceneId = backgroundEntry != null ? backgroundEntry.id : entry.id,
                 playerName = PlayerProfile.Name,
                 characterChoice = PlayerProfile.CharacterChoice,
-                choices = GameStateManager.Instance != null
-                    ? GameStateManager.Instance.GetUnlockedChoices() : new string[0]
+                choices = gameController.SceneStartChoices
             };
             if (SceneSaveSlots.Write(slot, data))
             {

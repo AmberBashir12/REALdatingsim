@@ -543,7 +543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &64118431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -729,7 +729,7 @@ MonoBehaviour:
   gameScene: SampleScene
   clickSound: {fileID: 8300000, guid: 1caf9f6f1fd0c614782e929e96987f25, type: 3}
   fadePanel: {fileID: 309300118}
-  fadeDuration: 1
+  fadeDuration: 0.1
   nameInputField: {fileID: 1242181906}
   selectionPanel: {fileID: 0}
   namePanel: {fileID: 64118430}
@@ -2297,7 +2297,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gallery
+  m_text: 'Endings '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3276,7 +3276,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 39dfa20d2ed72aa4fa3695a57bdb954e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.074
+  m_Volume: 0.231
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3676,12 +3676,12 @@ GameObject:
   - component: {fileID: 1442496110}
   - component: {fileID: 1442496109}
   m_Layer: 5
-  m_Name: GalleryButton
+  m_Name: Endings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1442496108
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3699,7 +3699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -221.99998, y: -44.999985}
+  m_AnchoredPosition: {x: -221.99998, y: -54}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442496109
@@ -3745,7 +3745,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1442496110}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 85342230}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: OpenEndings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1442496110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4387,7 +4399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1865342167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5222,7 +5234,7 @@ RectTransform:
   m_GameObject: {fileID: 2600000001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.7202, y: 2.7202, z: 2.7202}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2600000005}
@@ -5230,7 +5242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -120, y: -50}
+  m_AnchoredPosition: {x: -298, y: -107}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2600000003

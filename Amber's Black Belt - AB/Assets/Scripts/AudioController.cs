@@ -9,6 +9,7 @@ public class AudioController : MonoBehaviour
     public AudioSource soundSource;
     public AudioSource blipSource;
     [SerializeField] private float targetMusicVolume = 0.5f;
+    [SerializeField] private AudioClip schoolMusic;
 
     private Coroutine musicSwitchCoroutine;
     private Coroutine music2SwitchCoroutine;
@@ -145,14 +146,15 @@ public class AudioController : MonoBehaviour
 
     private IEnumerator SwitchMusicOnSource(AudioSource source, AudioClip music, bool isSecondary)
     {
+        float volume = targetMusicVolume * (schoolMusic != null && music == schoolMusic ? 0.25f : 1f);
         source.volume = 0f;
 
         source.clip = music;
         source.Play();
 
-        while (source.volume < targetMusicVolume)
+        while (source.volume < volume)
         {
-            source.volume = Mathf.Min(targetMusicVolume, source.volume + 0.05f);
+            source.volume = Mathf.Min(volume, source.volume + 0.05f);
             yield return new WaitForSeconds(0.05f);
         }
 

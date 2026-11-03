@@ -35,7 +35,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 266342ba2c6aa1748addb2c18dcf2e24, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 266342ba2c6aa1748addb2c18dcf2e24, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 1
@@ -85,7 +85,7 @@ MonoBehaviour:
         choiceKeyToUnlock: 
         followUpSentences: []
     endingScene: {fileID: 0}
-    music: {fileID: 8300000, guid: d364457979697bb40a56c5f70f6cab45, type: 3}
+    music: {fileID: 8300000, guid: 266342ba2c6aa1748addb2c18dcf2e24, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: 9812d653554bfd64d959817233034f0e, type: 3}

@@ -3953,7 +3953,7 @@ MonoBehaviour:
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
-    sound: {fileID: 8300000, guid: 65e7e31c5b217d94686b5ce8726a0ed5, type: 3}
-  background: {fileID: 21300000, guid: 84be4959134b2fb4dbb7d656fd07586e, type: 3}
+    sound: {fileID: 0}
+  background: {fileID: 21300000, guid: 0ce15d38e4dbbbd489f24c83c58c3f0f, type: 3}
   nextScene: {fileID: 11400000, guid: ce6a967e2a7763b4aadf95caf763f879, type: 2}
   alternativeScenes: []

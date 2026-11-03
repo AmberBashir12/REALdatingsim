@@ -126,6 +126,13 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'The president takes her fathers seat, just as planned.'
     actions:
+    - speaker: {fileID: 11400000, guid: 31131cf5c56fa144b8d10d79464f4bf3, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      tintOpacity: 0
     choice:
       prompt: 
       options: []
@@ -191,3 +198,4 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: a2fa8e2766ec7e04388956a325ba3c4d, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []
+  endingId: 2b71cc220df24e7b97f50cac80b5ec33

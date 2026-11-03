@@ -259,6 +259,13 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    public void OpenEndings()
+    {
+        PlayClickSound();
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Endings", LoadSceneMode.Single);
+    }
+
     public void NewGame()
     {
         PlayClickSound();
@@ -320,4 +327,3 @@ public class MenuController : MonoBehaviour
         }
     }
 }
-

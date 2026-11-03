@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 658169cdd038f9a4b85d22255e392255, type: 3}
-  m_Name: TrainTracksDeath
+  m_Name: Train Death
   m_EditorClassIdentifier: 
   sentences:
   - sentenceType: 0
@@ -72,3 +72,4 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: e858bf0a02b76d44f8cdeaa4500da292, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []
+  endingId: e7b2828e83407064cbeae6b184453bed

@@ -101,3 +101,4 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: d7657dd8f37dd1448af71f981f014380, type: 3}
   nextScene: {fileID: 0}
   alternativeScenes: []
+  endingId: 0903e60d8259ee6418745d8f9417e9ff

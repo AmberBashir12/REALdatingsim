@@ -16,26 +16,12 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: The next day, you make your way to Room 339 before lunch. Maha is waiting outside the door.
-    actions:
-    - speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
-      spriteIndex: 12
-      actionType: 1
-      coords: {x: -200, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
-    - speaker: {fileID: 11400000, guid: a55e95743489d504eb111849913139e1, type: 2}
-      spriteIndex: 0
-      actionType: 1
-      coords: {x: 200, y: 0}
-      moveSpeed: 0
-      tintColor: {r: 0, g: 0, b: 0, a: 0}
-      tintOpacity: 0
+    actions: []
     choice:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -46,7 +32,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -57,7 +43,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -68,7 +54,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -79,7 +65,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -90,7 +76,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -101,7 +87,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -112,7 +98,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -123,7 +109,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   - sentenceType: 0
@@ -134,7 +120,7 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     music2: {fileID: 0}
     sound: {fileID: 0}
   background: {fileID: 21300000, guid: d25cb78adbfb1b041aad17b6285537a4, type: 3}

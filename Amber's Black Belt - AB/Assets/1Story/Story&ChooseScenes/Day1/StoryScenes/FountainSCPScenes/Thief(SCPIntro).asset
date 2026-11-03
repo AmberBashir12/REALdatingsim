@@ -21,8 +21,8 @@ MonoBehaviour:
       prompt: 
       options: []
     endingScene: {fileID: 0}
-    music: {fileID: 0}
-    music2: {fileID: 0}
+    music: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
+    music2: {fileID: 8300000, guid: 59ab148e4944db24aa7061606084ec61, type: 3}
     sound: {fileID: 0}
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 67974ff49e7f8514ca1ce5240425f2ce, type: 2}

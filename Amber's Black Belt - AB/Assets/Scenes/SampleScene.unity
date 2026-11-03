@@ -895,7 +895,7 @@ MonoBehaviour:
   audioController: {fileID: 516357578}
   explorationController: {fileID: 416896286}
   fadePanel: {fileID: 723396371}
-  fadeDuration: 3
+  fadeDuration: 1
   saveCatalog: {fileID: 11400000, guid: b8c209fd5afd4f3ca2f8279a62a5fb14, type: 2}
 --- !u!114 &416896284
 MonoBehaviour:
@@ -1493,6 +1493,7 @@ MonoBehaviour:
   soundSource: {fileID: 316851505}
   blipSource: {fileID: 0}
   targetMusicVolume: 0.5
+  schoolMusic: {fileID: 8300000, guid: 266342ba2c6aa1748addb2c18dcf2e24, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

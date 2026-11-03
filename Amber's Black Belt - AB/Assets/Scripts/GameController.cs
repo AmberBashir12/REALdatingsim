@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
     private State state = State.IDLE;
     private State prePauseState = State.IDLE;
     public SaveSceneCatalog saveCatalog;
+    // Saves replay the scene from its start, so they must store the choices from that point.
+    public string[] SceneStartChoices { get; private set; } = new string[0];
     public bool IsTransitioning => state == State.ANIMATE || (state == State.PAUSED && prePauseState == State.ANIMATE);
 
     public enum State
@@ -89,6 +91,7 @@ public class GameController : MonoBehaviour
             fadePanel.gameObject.SetActive(true);
             fadeImage = fadePanel.GetComponent<Image>();
         }
+        CaptureSceneStartChoices();
         StartCoroutine(FadeInFromBlack());
         if (currentScene is StoryScene)
         {
@@ -113,6 +116,12 @@ public class GameController : MonoBehaviour
         {
             backgroundController.Image2.sprite = loadedBackground;
         }
+    }
+
+    private void CaptureSceneStartChoices()
+    {
+        SceneStartChoices = GameStateManager.Instance != null
+            ? GameStateManager.Instance.GetUnlockedChoices() : new string[0];
     }
 
     private IEnumerator FadeInFromBlack()
@@ -223,12 +232,13 @@ public class GameController : MonoBehaviour
         }
 
         currentScene = scene;
+        CaptureSceneStartChoices();
         // Hide bottom bar only for non-story scenes
         if (!(scene is StoryScene))
         {
             bottomBar.Hide();
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
 
         if (scene is StoryScene storyScene)
         {
@@ -237,7 +247,7 @@ public class GameController : MonoBehaviour
             }
             backgroundController.SwitchImage(storyScene.background);
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
             bottomBar.Show();
             bottomBar.ClearText();
             // Reset exploration dialogue panel when returning to story
@@ -245,7 +255,7 @@ public class GameController : MonoBehaviour
             {
                 explorationController.ResetDialoguePanel();
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
             
             bottomBar.PlayScene(storyScene, pendingStoryStartSentenceIndex); // PlayScene in BottomBarController will handle empty sentences
             pendingStoryStartSentenceIndex = -1;
