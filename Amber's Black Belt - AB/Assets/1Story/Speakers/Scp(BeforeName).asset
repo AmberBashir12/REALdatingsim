@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scp(BeforeName)
   m_EditorClassIdentifier: 
   speakerName: ???
-  textColor: {r: 0, g: 0, b: 0, a: 0}
+  textColor: {r: 0.5018867, g: 0, b: 0, a: 1}
   sprites:
   - {fileID: 21300000, guid: bf690a845945e1546aedd0a161ff25c2, type: 3}
   prefab: {fileID: 8781425397434010887, guid: 066730a48f9034a4ba9ab01893032761, type: 3}

@@ -10,7 +10,7 @@ public class GameStateSetup : MonoBehaviour
     
     private void Start()
     {
-        // Ensure GameStateManager exists
+
         if (GameStateManager.Instance == null)
         {
             GameObject gameStateObject = new GameObject("GameStateManager");
@@ -22,7 +22,7 @@ public class GameStateSetup : MonoBehaviour
             GameStateManager.Instance.ResetGameState();
         }
         
-        // Unlock any pre-configured choices (useful for testing)
+
         foreach (string choiceKey in choicesToUnlock)
         {
             if (!string.IsNullOrEmpty(choiceKey))

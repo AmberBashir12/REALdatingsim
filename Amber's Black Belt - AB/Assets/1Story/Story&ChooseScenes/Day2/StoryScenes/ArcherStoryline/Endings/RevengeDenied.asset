@@ -16,9 +16,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Liam's tray is gone. So is your plan.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -26,9 +23,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Great. Just great.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -37,9 +31,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Without Liam you have no way to get back at Archer. You're not brave enough
       to do it alone, and not cruel enough to try someone else.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -48,9 +39,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Archer keeps texting. You keep not answering. Slowly, the anger fades into
       something quieter, and the revenge you wanted turns into nothing at all.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -58,9 +46,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'Ending: Revenge Denied'
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}

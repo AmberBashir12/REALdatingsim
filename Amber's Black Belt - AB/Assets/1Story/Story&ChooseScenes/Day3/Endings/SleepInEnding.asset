@@ -16,10 +16,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Its peaceful in your dorm
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -27,10 +23,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: No sound, no light
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -38,10 +30,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Just sleep
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -49,10 +37,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: What are you going to do about future school payments?
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -60,10 +44,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Its a problem for your future self
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -71,10 +51,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'Ending: Sleep In peacefully'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}

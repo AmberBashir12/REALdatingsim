@@ -10,7 +10,6 @@ public class GameController : MonoBehaviour
     public BackgroundSwitcher backgroundController;
     public ChooseController chooseController;
     public AudioController audioController;
-    public ExplorationController explorationController;
     public CanvasGroup fadePanel;
     public float fadeDuration = 1f;
     private Image fadeImage;
@@ -19,13 +18,13 @@ public class GameController : MonoBehaviour
     private State state = State.IDLE;
     private State prePauseState = State.IDLE;
     public SaveSceneCatalog saveCatalog;
-    // Saves replay the scene from its start, so they must store the choices from that point.
+
     public string[] SceneStartChoices { get; private set; } = new string[0];
     public bool IsTransitioning => state == State.ANIMATE || (state == State.PAUSED && prePauseState == State.ANIMATE);
 
     public enum State
     {
-        IDLE, ANIMATE, CHOOSE, EXPLORE, PAUSED
+        IDLE, ANIMATE, CHOOSE, PAUSED
     }
 
     public State GetCurrentState()
@@ -53,7 +52,7 @@ public class GameController : MonoBehaviour
             state = prePauseState;
         }
     }
-    // Start is called before the first frame update
+
     IEnumerator Start()
     {
         yield return null;
@@ -64,7 +63,6 @@ public class GameController : MonoBehaviour
             SaveSceneCatalog.Entry entry = saveCatalog != null ? saveCatalog.Find(saved.sceneId) : null;
             if (entry == null)
             {
-                Debug.LogError("The saved scene is missing from the save catalog. Loading stopped.");
                 yield break;
             }
             currentScene = entry.scene;
@@ -106,12 +104,6 @@ public class GameController : MonoBehaviour
             bottomBar.Hide();
             state = State.CHOOSE;
             chooseController.SetupChoose(chooseScene);
-        }
-        else if (currentScene is ExplorationScene explorationScene)
-        {
-            bottomBar.Hide();
-            state = State.EXPLORE;
-            explorationController.SetupExplorationScene(explorationScene);
         }
         if (saved != null && loadedBackground != null)
         {
@@ -173,7 +165,7 @@ public class GameController : MonoBehaviour
     {
         fadePanel.alpha = alpha;
 
-        // Fallback for cases where CanvasGroup alpha isn't affecting the panel Image.
+
         if (fadeImage != null)
         {
             Color color = fadeImage.color;
@@ -181,8 +173,8 @@ public class GameController : MonoBehaviour
             fadeImage.color = color;
         }
     }
-    // Story dialogue input is handled by BottomBarController.
-    // Keeping input handling in one place avoids frame-order dependent double-advances.
+
+
 
     public void PlayScene(GameScene scene)
     {
@@ -218,13 +210,12 @@ public class GameController : MonoBehaviour
 
         if (scene == null)
         {
-            Debug.LogError($"Attempted to switch to a null scene. Current scene was '{currentScene?.name}'. Check 'nextScene' assignments in your StoryScene assets.");
-            if (bottomBar.IsHidden) // Ensure bottom bar is visible if we can't proceed
+            if (bottomBar.IsHidden)
             {
                 bottomBar.Show();
             }
-            state = State.IDLE; // Revert to IDLE to allow player interaction or prevent soft lock
-            yield break; // Exit coroutine
+            state = State.IDLE;
+            yield break;
         }
 
         if (useStoryFadeTransition)
@@ -235,7 +226,7 @@ public class GameController : MonoBehaviour
         currentScene = scene;
         StopMusicIfRequested(scene);
         CaptureSceneStartChoices();
-        // Hide bottom bar only for non-story scenes
+
         if (!(scene is StoryScene))
         {
             bottomBar.Hide();
@@ -244,22 +235,14 @@ public class GameController : MonoBehaviour
 
         if (scene is StoryScene storyScene)
         {
-            if (storyScene.background == null) {
-                Debug.LogWarning($"StoryScene '{storyScene.name}' has no background assigned.");
-            }
             backgroundController.SwitchImage(storyScene.background);
 
             yield return new WaitForSeconds(0.25f);
             bottomBar.Show();
             bottomBar.ClearText();
-            // Reset exploration dialogue panel when returning to story
-            if (explorationController != null)
-            {
-                explorationController.ResetDialoguePanel();
-            }
             yield return new WaitForSeconds(0.25f);
             
-            bottomBar.PlayScene(storyScene, pendingStoryStartSentenceIndex); // PlayScene in BottomBarController will handle empty sentences
+            bottomBar.PlayScene(storyScene, pendingStoryStartSentenceIndex);
             pendingStoryStartSentenceIndex = -1;
             state = bottomBar.IsWaitingForChoice ? State.CHOOSE : State.IDLE;
         }
@@ -268,19 +251,13 @@ public class GameController : MonoBehaviour
             state = State.CHOOSE;
             chooseController.SetupChoose(chooseScene); 
         }
-        else if (scene is ExplorationScene explorationScene)
-        {
-            state = State.EXPLORE;
-            explorationController.SetupExplorationScene(explorationScene);
-        }
         else
         {
-            Debug.LogError($"Loaded scene '{scene.name}' is not a StoryScene, ChooseScene, or ExplorationScene. Type: {scene.GetType()}. Cannot proceed.");
             if (bottomBar.IsHidden)
             {
                 bottomBar.Show();
             }
-            state = State.IDLE; // Revert to IDLE
+            state = State.IDLE;
         }
 
         if (useStoryFadeTransition)
@@ -295,7 +272,6 @@ public class GameController : MonoBehaviour
         {
             if (audioController == null)
             {
-                Debug.LogWarning($"Scene '{storyScene.name}' requests music to stop, but no AudioController is assigned.");
                 return;
             }
 

@@ -16,10 +16,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'You follow the president into the estate on trembling legs.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 8300000, guid: e97b35e781946114fa6ba274e2c8c49c, type: 3}
     music2: {fileID: 0}
@@ -27,10 +23,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'The ledger is safe. The organization is strong. The Boss men are everywhere.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 8300000, guid: e97b35e781946114fa6ba274e2c8c49c, type: 3}
     music2: {fileID: 0}
@@ -38,10 +30,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'Your nerves give you away. A choked breath escapes you, and a guard turns around.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 8300000, guid: e97b35e781946114fa6ba274e2c8c49c, type: 3}
     music2: {fileID: 0}
@@ -49,10 +37,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'They grab you before you can run.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 8300000, guid: e97b35e781946114fa6ba274e2c8c49c, type: 3}
     music2: {fileID: 0}
@@ -60,10 +44,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'The president is pulled the other way, shouting your name.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 8300000, guid: e97b35e781946114fa6ba274e2c8c49c, type: 3}
     music2: {fileID: 0}
@@ -71,10 +51,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'Nobody comes to save you.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 8300000, guid: e97b35e781946114fa6ba274e2c8c49c, type: 3}
     music2: {fileID: 0}
@@ -82,10 +58,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'Ending: Too Nervous to Run'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 8300000, guid: e97b35e781946114fa6ba274e2c8c49c, type: 3}
     music2: {fileID: 0}

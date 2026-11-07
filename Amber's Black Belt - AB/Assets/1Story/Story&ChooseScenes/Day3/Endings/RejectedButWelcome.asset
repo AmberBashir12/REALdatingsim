@@ -16,10 +16,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'You were not accepted into the student council.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -27,10 +23,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'But the door is still open.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -38,10 +30,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'Maybe one day you will walk through it again.'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -49,10 +37,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'Ending: Not Quite Council Material'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}

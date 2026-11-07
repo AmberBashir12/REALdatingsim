@@ -12,7 +12,6 @@ public class EndingScene : StoryScene
     {
         if (string.IsNullOrEmpty(endingId))
         {
-            Debug.LogError($"Ending '{name}' has no persistent ID. Unlock could not be saved.");
             return;
         }
 

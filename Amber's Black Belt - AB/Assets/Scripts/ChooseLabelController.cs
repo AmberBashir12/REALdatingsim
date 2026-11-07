@@ -16,10 +16,10 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
     private bool isInlineChoice;
     private int inlineChoiceIndex = -1;
 
-    // Start is called before the first frame update
+
     void Awake()
     {
-        // Get and enable TextMeshPro component
+
         textMesh = GetComponent<TextMeshProUGUI>();
         if (textMesh != null)
         {
@@ -27,13 +27,8 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
             textMesh.color = defaultColor;
         }
 
-        // Enable this script
-        enabled = true;
-    }
 
-    public float GetHeight()
-    {
-        return textMesh.rectTransform.sizeDelta.y * textMesh.rectTransform.localScale.y;
+        enabled = true;
     }
 
     public void Setup(ChooseScene.ChooseLabel label, ChooseController controller, float y)
@@ -44,8 +39,8 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
         labelText = label.text;
         if (textMesh != null)
         {
-            textMesh.text = TextTemplate.Resolve(label.text);
-            textMesh.enabled = true; // Ensure TextMeshPro is enabled when setting up
+            textMesh.text = PlayerProfile.ResolveText(label.text);
+            textMesh.enabled = true;
         }
         this.controller = controller;
 
@@ -65,7 +60,7 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
 
         if (textMesh != null)
         {
-            textMesh.text = TextTemplate.Resolve(text);
+            textMesh.text = PlayerProfile.ResolveText(text);
             textMesh.enabled = true;
         }
 
@@ -73,10 +68,6 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
         position.y = y;
         textMesh.rectTransform.localPosition = position;
     }
-
-
-
-
 
     public void SetChooseScene(ChooseScene chooseScene)
     {
@@ -100,7 +91,7 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
             
             if (chooseScene != null && !string.IsNullOrEmpty(labelText))
             {
-                // Use ChooseScene.TryGetChoiceResult to handle choice key unlocking.
+
                 if (!chooseScene.TryGetChoiceResult(labelText, out result))
                 {
                     result.nextScene = scene;
@@ -125,11 +116,5 @@ public class ChooseLabelController : MonoBehaviour, IPointerClickHandler, IPoint
         {
             textMesh.color = defaultColor;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -55,7 +55,7 @@ public class BottomBarController : MonoBehaviour
 
     private void Update()
     {
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && gameController.GetCurrentState() == GameController.State.IDLE) // Left mouse click or spacebar, only when game is idle
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && gameController.GetCurrentState() == GameController.State.IDLE)
         {
             if (Time.unscaledTime - lastAdvanceInputTime < inputCooldownSeconds)
             {
@@ -71,7 +71,7 @@ public class BottomBarController : MonoBehaviour
     {
         if (state == State.PLAYING)
         {
-            // Skip to the end of current text
+
             if (currentTextCoroutine != null)
             {
                 StopCoroutine(currentTextCoroutine);
@@ -127,7 +127,6 @@ public class BottomBarController : MonoBehaviour
                         {
                             if (followUpSentence.endingScene == null)
                             {
-                                Debug.LogWarning($"StoryScene '{currentScene?.name}' follow-up sentence {branchSentenceIndex} is ENDING but has no endingScene assigned.");
                                 TransitionFromStoryEnd();
                                 return;
                             }
@@ -136,7 +135,6 @@ public class BottomBarController : MonoBehaviour
                             return;
                         }
 
-                        Debug.LogWarning("Cannot switch to EndingScene because GameController was not found.");
                         return;
                     }
 
@@ -148,14 +146,14 @@ public class BottomBarController : MonoBehaviour
                 branchSentenceIndex = -1;
             }
 
-            // Move to next sentence
+
             if (!IsLastSentence())
             {
                 PlayNextSentence();
             }
             else
             {
-                // We're at the last sentence, move to the next scene
+
                 if (gameController != null && currentScene != null)
                 {
                     TransitionFromStoryEnd();
@@ -164,7 +162,7 @@ public class BottomBarController : MonoBehaviour
         }
     }
 
-    // Fast-forwards through dialogue, still running sprite and music actions, until a choice or ending appears.
+
     public void SkipToNextChoice()
     {
         if (gameController == null || currentScene == null
@@ -197,7 +195,7 @@ public class BottomBarController : MonoBehaviour
         }
         skipping = false;
 
-        // Instant lines skip TypeText, which is what normally starts the auto-advance on a scene's last line.
+
         if (state == State.COMPLETED
             && autoAdvanceCoroutine == null
             && gameController.GetCurrentState() == GameController.State.IDLE
@@ -312,7 +310,7 @@ public class BottomBarController : MonoBehaviour
 
     private void ClearSprites()
     {
-        // Destroy all sprite GameObjects and clear the dictionary
+
         foreach (var controller in sprites.Values)
         {
             if (controller != null && controller.gameObject != null)
@@ -340,7 +338,7 @@ public class BottomBarController : MonoBehaviour
 
     public void PlayScene(StoryScene scene, int startSentenceIndex)
     {
-        // Clear previous speakers before starting a new scene
+
         ClearSprites();
         SetEndingReturnButtonVisible(false);
 
@@ -363,10 +361,9 @@ public class BottomBarController : MonoBehaviour
 
         if (currentScene == null)
         {
-            Debug.LogError("BottomBarController.PlayScene was called with a null scene.");
             barText.text = "Error: Scene data is missing.";
             personNameText.text = "";
-            state = State.COMPLETED; // Mark as completed to avoid getting stuck
+            state = State.COMPLETED;
             return;
         }
 
@@ -377,11 +374,10 @@ public class BottomBarController : MonoBehaviour
 
         if (currentScene.sentences == null || currentScene.sentences.Count == 0)
         {
-            Debug.LogWarning($"StoryScene '{currentScene.name}' has no sentences. Marking as completed.");
             barText.text = ""; 
             personNameText.text = ""; 
-            state = State.COMPLETED; // If no sentences, it's immediately completed.
-                                     // GameController will then check IsLastSentence.
+            state = State.COMPLETED;
+
         }
         else
         {
@@ -396,23 +392,21 @@ public class BottomBarController : MonoBehaviour
 
     public void PlayNextSentence()
     {
-        // Ensure currentScene and its sentences are valid before proceeding
+
         if (currentScene == null || currentScene.sentences == null || currentScene.sentences.Count == 0)
         {
-            Debug.LogWarning("PlayNextSentence called, but currentScene is null or has no sentences.");
-            state = State.COMPLETED; // Mark as completed to prevent getting stuck
+            state = State.COMPLETED;
             return;
         }
 
-        // Check if we are trying to play beyond the last sentence
+
         if (sentenceIndex + 1 >= currentScene.sentences.Count)
         {
-            Debug.LogWarning("PlayNextSentence called, but already at/past the last sentence. This should be handled by GameController.");
-            state = State.COMPLETED; // Ensure state is COMPLETED
+            state = State.COMPLETED;
             return;
         }
 
-        sentenceIndex++; // Increment sentenceIndex *before* using it
+        sentenceIndex++;
 
         StoryScene.Sentence sentence = currentScene.sentences[sentenceIndex];
         if (sentence.sentenceType == StoryScene.Sentence.SentenceType.ENDING)
@@ -426,7 +420,6 @@ public class BottomBarController : MonoBehaviour
             {
                 if (sentence.endingScene == null)
                 {
-                    Debug.LogWarning($"StoryScene '{currentScene?.name}' sentence {sentenceIndex} is ENDING but has no endingScene assigned.");
                     TransitionFromStoryEnd();
                     return;
                 }
@@ -435,7 +428,6 @@ public class BottomBarController : MonoBehaviour
                 return;
             }
 
-            Debug.LogWarning("Cannot switch to EndingScene because GameController was not found.");
             return;
         }
 
@@ -466,7 +458,7 @@ public class BottomBarController : MonoBehaviour
             return;
         }
 
-        barText.text = TextTemplate.Resolve(sentence.choice.prompt);
+        barText.text = PlayerProfile.ResolveText(sentence.choice.prompt);
         personNameText.text = "";
         state = State.COMPLETED;
 
@@ -480,13 +472,12 @@ public class BottomBarController : MonoBehaviour
                 continue;
             }
 
-            optionTexts.Add(TextTemplate.Resolve(option.text));
+            optionTexts.Add(PlayerProfile.ResolveText(option.text));
             visibleSentenceChoiceOptionIndices.Add(i);
         }
 
         if (optionTexts.Count == 0)
         {
-            Debug.LogWarning($"StoryScene '{currentScene?.name}' sentence {sentenceIndex} has no available choice options (all locked or empty).");
 
             if (!IsLastSentence())
             {
@@ -517,7 +508,6 @@ public class BottomBarController : MonoBehaviour
             {
                 gameController.SetChooseState(false);
             }
-            Debug.LogWarning("ChooseController reference is missing on GameController. Cannot show sentence choice.");
         }
     }
 
@@ -613,7 +603,7 @@ public class BottomBarController : MonoBehaviour
             return;
         }
 
-        barText.text = TextTemplate.Resolve(followUpSentence.choice.prompt);
+        barText.text = PlayerProfile.ResolveText(followUpSentence.choice.prompt);
         personNameText.text = "";
         state = State.COMPLETED;
 
@@ -627,7 +617,7 @@ public class BottomBarController : MonoBehaviour
                 continue;
             }
 
-            optionTexts.Add(TextTemplate.Resolve(option.text));
+            optionTexts.Add(PlayerProfile.ResolveText(option.text));
             visibleBranchChoiceOptionIndices.Add(i);
         }
 
@@ -655,7 +645,6 @@ public class BottomBarController : MonoBehaviour
             {
                 gameController.SetChooseState(false);
             }
-            Debug.LogWarning("ChooseController reference is missing on GameController. Cannot show branch choice.");
         }
     }
 
@@ -735,7 +724,6 @@ public class BottomBarController : MonoBehaviour
             {
                 if (line.endingScene == null)
                 {
-                    Debug.LogWarning($"StoryScene '{currentScene?.name}' follow-up line {branchChoiceLineIndex} is ENDING but has no endingScene assigned.");
                     activeBranchChoiceLines = null;
                     branchChoiceLineIndex = -1;
                     AdvanceSentence();
@@ -746,7 +734,6 @@ public class BottomBarController : MonoBehaviour
                 return;
             }
 
-            Debug.LogWarning("Cannot switch to EndingScene because GameController was not found.");
             return;
         }
 
@@ -771,7 +758,7 @@ public class BottomBarController : MonoBehaviour
             StopCoroutine(currentTextCoroutine);
         }
 
-        string resolvedText = TextTemplate.Resolve(text);
+        string resolvedText = PlayerProfile.ResolveText(text);
         AudioClip blipClip = speaker != null ? speaker.blip : null;
         if (skipping)
         {
@@ -790,7 +777,7 @@ public class BottomBarController : MonoBehaviour
 
         if (speaker != null)
         {
-            personNameText.text = TextTemplate.Resolve(speaker.speakerName);
+            personNameText.text = PlayerProfile.ResolveText(speaker.speakerName);
             personNameText.color = speaker.textColor;
         }
         else
@@ -810,7 +797,7 @@ public class BottomBarController : MonoBehaviour
     {
         if (currentScene == null || currentScene.sentences == null)
         {
-            // If scene or sentences are null, consider it as if there are no more sentences.
+
             return true; 
         }
         return sentenceIndex + 1 >= currentScene.sentences.Count;
@@ -824,12 +811,12 @@ public class BottomBarController : MonoBehaviour
         int wordIndex = 0;
 
         float normalDelay = 0.05f;
-        float fastDelay = 0.01f; // Adjust as desired
+        float fastDelay = 0.01f;
 
         while (wordIndex < text.Length)
         {
             barText.text += text[wordIndex];
-            // If spacebar is held, use fastDelay, otherwise use normalDelay
+
             float delay = Input.GetKey(KeyCode.Space) ? fastDelay : normalDelay;
             yield return new WaitForSeconds(delay);
             wordIndex++;
@@ -941,11 +928,6 @@ public class BottomBarController : MonoBehaviour
 
         if (action.speaker == null)
         {
-            if (action.actionType != StoryScene.Sentence.Action.Type.NONE)
-            {
-                Debug.LogWarning($"Skipped sprite action '{action.actionType}' because no speaker was assigned.");
-            }
-
             return;
         }
 
@@ -954,13 +936,11 @@ public class BottomBarController : MonoBehaviour
             case StoryScene.Sentence.Action.Type.APPEAR:
                 if (action.speaker.prefab == null || spritesPrefab == null)
                 {
-                    Debug.LogWarning($"Skipped APPEAR action for speaker '{action.speaker.speakerName}' because its prefab or sprite container is missing.");
                     return;
                 }
 
                 if (action.speaker.sprites == null || action.spriteIndex < 0 || action.spriteIndex >= action.speaker.sprites.Count || action.speaker.sprites[action.spriteIndex] == null)
                 {
-                    Debug.LogWarning($"Skipped APPEAR action for speaker '{action.speaker.speakerName}' because sprite index {action.spriteIndex} is missing or out of range.");
                     return;
                 }
 
@@ -972,7 +952,6 @@ public class BottomBarController : MonoBehaviour
                         controller = spriteObject.GetComponent<SpriteController>();
                         if (controller == null)
                         {
-                            Debug.LogWarning($"Skipped APPEAR action for speaker '{action.speaker.speakerName}' because its prefab has no SpriteController.");
                             Destroy(spriteObject);
                             return;
                         }
@@ -989,7 +968,6 @@ public class BottomBarController : MonoBehaviour
                 }
                 catch (UnassignedReferenceException)
                 {
-                    Debug.LogWarning($"Failed to instantiate sprite for speaker: {action.speaker.speakerName}. Make sure the prefab is assigned.");
                 }
 
                 return;
@@ -1000,10 +978,6 @@ public class BottomBarController : MonoBehaviour
                     controller = sprites[action.speaker];
                     controller.Move(action.coords, action.moveSpeed);
                 }
-                else
-                {
-                    Debug.LogWarning($"Attempted to move non-existent sprite for speaker: {action.speaker.speakerName}");
-                }
                 return;
 
             case StoryScene.Sentence.Action.Type.DISAPPEAR:
@@ -1013,10 +987,6 @@ public class BottomBarController : MonoBehaviour
                     controller.Hide();
                     sprites.Remove(action.speaker);
                     StartCoroutine(DestroySpriteAfterDelay(controller));
-                }
-                else
-                {
-                    Debug.LogWarning($"Attempted to hide non-existent sprite for speaker: {action.speaker.speakerName}");
                 }
                 return;
 
@@ -1034,10 +1004,6 @@ public class BottomBarController : MonoBehaviour
                     }
                     controller.SetTint(resolvedTint);
                 }
-                else
-                {
-                    Debug.LogWarning($"Attempted to switch sprite for non-existent speaker: {action.speaker.speakerName}");
-                }
                 return;
 
                  case StoryScene.Sentence.Action.Type.BOUNCE:
@@ -1054,10 +1020,6 @@ public class BottomBarController : MonoBehaviour
                     }
                     controller.SetTint(resolvedTint);
                     controller.Bounce();
-                }
-                else
-                {
-                    Debug.LogWarning($"Attempted to bounce non-existent sprite for speaker: {action.speaker.speakerName}");
                 }
                 return;
         }

@@ -16,7 +16,7 @@ public class PauseMenu : MonoBehaviour
 
     void Awake()
     {
-        // The flag is static, so it survives scene loads such as returning to the main menu while paused.
+
         IsPaused = false;
         gameController = FindObjectOfType<GameController>();
         Time.timeScale = 1f;

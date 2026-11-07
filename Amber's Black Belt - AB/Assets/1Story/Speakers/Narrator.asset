@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Narrator
   m_EditorClassIdentifier: 
   speakerName: Narrator
-  textColor: {r: 0, g: 0, b: 0, a: 0}
+  textColor: {r: 0, g: 0, b: 0, a: 1}
   sprites:
   - {fileID: 0}
   prefab: {fileID: 8982040256849117368, guid: e401d76071e927241894dfcce9ddd8b1, type: 3}

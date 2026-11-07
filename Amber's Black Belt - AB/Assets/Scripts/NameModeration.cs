@@ -17,8 +17,8 @@ public static class NameModeration
             return string.Empty;
         }
 
-        // Allow: letters, digits, space, apostrophe, hyphen.
-        // Collapse multiple spaces.
+
+
         StringBuilder sb = new StringBuilder(trimmed.Length);
         bool lastWasSpace = false;
 
@@ -66,7 +66,7 @@ public static class NameModeration
             return false;
         }
 
-        // Basic anti-spam / unsafe input checks.
+
         string lower = sanitizedName.ToLowerInvariant();
         if (lower.Contains("http") || lower.Contains("www") || lower.Contains("@"))
         {

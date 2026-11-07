@@ -20,7 +20,7 @@ public class ChooseScene : GameScene
     {
         public string text;
         public StoryScene nextScene;
-        public string choiceKeyToUnlock; // Optional: choice key to unlock when this option is selected
+        public string choiceKeyToUnlock;
     }
 
     public StoryScene GetNextScene(string labelText)
@@ -37,19 +37,15 @@ public class ChooseScene : GameScene
     {
         result = new ChoiceResult { nextScene = null };
 
-        // Check regular labels first
+
         foreach (ChooseLabel label in labels)
         {
             if (label.text == labelText)
             {
-                // Unlock new choice if specified
+
                 if (!string.IsNullOrEmpty(label.choiceKeyToUnlock) && GameStateManager.Instance != null)
                 {
                     GameStateManager.Instance.UnlockChoice(label.choiceKeyToUnlock);
-                }
-                else if (GameStateManager.Instance == null)
-                {
-                    Debug.LogWarning("GameStateManager.Instance is null when trying to unlock choice key!");
                 }
 
                 result = new ChoiceResult
@@ -60,11 +56,11 @@ public class ChooseScene : GameScene
             }
         }
 
-        // Check additional labels
+
         AdditionalLabel? additionalLabel = GetAdditionalLabel(labelText);
         if (additionalLabel.HasValue)
         {
-            // Unlock new choice if specified
+
             if (!string.IsNullOrEmpty(additionalLabel.Value.choiceKeyToUnlock) && GameStateManager.Instance != null)
             {
                 GameStateManager.Instance.UnlockChoice(additionalLabel.Value.choiceKeyToUnlock);
@@ -77,7 +73,6 @@ public class ChooseScene : GameScene
             return true;
         }
 
-        Debug.LogWarning($"No matching label found for: '{labelText}'");
         return false;
     }
 
@@ -86,20 +81,19 @@ public class ChooseScene : GameScene
     {
         public string text;
         public StoryScene nextScene;
-        public string requiredChoiceKey; // The choice key that must be unlocked to show this option
-        public string choiceKeyToUnlock; // Optional: choice key to unlock when this option is selected
+        public string requiredChoiceKey;
+        public string choiceKeyToUnlock;
     }
 
     public List<AdditionalLabel> additionalLabels;
 
-    // Get all available choices (base + unlocked additional choices)
+
     public List<ChooseLabel> GetAvailableChoices()
     {
         List<ChooseLabel> availableChoices = new List<ChooseLabel>(labels);
         
         if (GameStateManager.Instance == null)
         {
-            Debug.LogWarning("GameStateManager.Instance is null!");
             return availableChoices;
         }
         
@@ -112,7 +106,7 @@ public class ChooseScene : GameScene
         {
             if (GameStateManager.Instance.IsChoiceUnlocked(additionalLabel.requiredChoiceKey))
             {
-                // Convert AdditionalLabel to ChooseLabel
+
                 ChooseLabel newChoice = new ChooseLabel
                 {
                     text = additionalLabel.text,
@@ -125,7 +119,7 @@ public class ChooseScene : GameScene
         return availableChoices;
     }
 
-    // Get additional label by text (used when choice is selected)
+
     public AdditionalLabel? GetAdditionalLabel(string labelText)
     {
         if (additionalLabels != null)

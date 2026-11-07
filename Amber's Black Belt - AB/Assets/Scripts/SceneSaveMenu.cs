@@ -23,7 +23,6 @@ public class SceneSaveMenu : MonoBehaviour
         if (catalog == null || slotCanvas == null || openButton == null
             || closeButton == null || slotImages == null || slotImages.Length != SceneSaveSlots.Count)
         {
-            Debug.LogError("SceneSaveMenu is missing its canvas, catalog, buttons, or four slot images.");
             enabled = false;
             return;
         }
@@ -33,7 +32,6 @@ public class SceneSaveMenu : MonoBehaviour
             Image image = slotImages[i];
             if (image == null)
             {
-                Debug.LogError($"SceneSaveMenu slot {i + 1} is missing its image.");
                 enabled = false;
                 return;
             }
@@ -120,10 +118,6 @@ public class SceneSaveMenu : MonoBehaviour
                 label.text = entry != null ? entry.scene.name
                     : occupied ? $"Slot {i + 1} - Scene unavailable" : $"Save Slot {i + 1} - Empty";
             }
-            if (occupied && entry == null)
-            {
-                Debug.LogError($"Slot {i + 1} references a scene that is missing from the save catalog.");
-            }
         }
     }
 
@@ -145,7 +139,6 @@ public class SceneSaveMenu : MonoBehaviour
             SaveSceneCatalog.Entry entry = catalog.Find(gameController.currentScene);
             if (entry == null)
             {
-                Debug.LogError($"Current scene '{gameController.currentScene?.name}' is missing from the save catalog.");
                 status.text = "Cannot save: scene is missing from the catalog.";
                 return;
             }
@@ -178,13 +171,11 @@ public class SceneSaveMenu : MonoBehaviour
 
         if (!SceneSaveSlots.TryRead(slot, out SceneSlotData saved) || catalog.Find(saved.sceneId) == null)
         {
-            Debug.LogError($"Slot {slot + 1} is empty, invalid, or references a removed scene.");
             status.text = "This save cannot be loaded.";
             return;
         }
         if (!Application.CanStreamedLevelBeLoaded(gameplayScene))
         {
-            Debug.LogError($"Gameplay scene '{gameplayScene}' is missing from Build Settings.");
             status.text = "Gameplay scene is not available.";
             return;
         }

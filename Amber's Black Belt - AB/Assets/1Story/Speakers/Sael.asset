@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sael
   m_EditorClassIdentifier: 
   speakerName: Sael
-  textColor: {r: 0, g: 0, b: 0, a: 1}
+  textColor: {r: 0.06935157, g: 0.4113207, b: 0.055101454, a: 1}
   sprites:
   - {fileID: 21300000, guid: 7dd56306e0c7c964c989359fb3d6af9c, type: 3}
   - {fileID: 21300000, guid: 7dd56306e0c7c964c989359fb3d6af9c, type: 3}

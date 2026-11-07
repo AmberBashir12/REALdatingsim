@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CM
   m_EditorClassIdentifier: 
   speakerName: Council Member
-  textColor: {r: 0, g: 0, b: 0, a: 0}
+  textColor: {r: 0, g: 0, b: 0, a: 1}
   sprites:
   - {fileID: 21300000, guid: 63e23324022a7844a9f2e9b258775c1b, type: 3}
   - {fileID: 21300000, guid: aa4ed6820de12da40aca38226938cf23, type: 3}

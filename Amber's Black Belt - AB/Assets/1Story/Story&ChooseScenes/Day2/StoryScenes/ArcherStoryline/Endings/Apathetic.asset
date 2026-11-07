@@ -17,10 +17,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Class goes on, and so do the notes. Compliments, bad jokes, a doodle of
       a soccer ball with a tiny heart on it. They pile up on the corner of your desk.
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -29,9 +25,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: You do not even glance at them. You have heard the lines before, and they
       never really landed. Mostly they are just noise between you and the lesson.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -39,9 +32,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Hey, are you even listening to me?
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -49,9 +39,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: ...Sorry, what?
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -60,9 +47,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: You are not being cold on purpose. You simply were not paying attention,
       and that is what bothers him more than a rejection ever could.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -71,9 +55,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Over the next few days Archer tries everything. A drink waiting at your
       desk. A saved seat at lunch. Showing up at the garden "by coincidence".
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -82,9 +63,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Each time you thank him politely and go right back to whatever you were
       doing.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -93,9 +71,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'He keeps waiting for something: a blush, an eye roll, a single flustered
       word. Nothing ever comes.'
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -103,9 +78,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Hey, {playerName}. Can I ask you something honest?
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -113,9 +85,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Sure.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -123,9 +92,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: You dont care at all do you?
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -133,9 +99,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: Umm.. not really
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -143,9 +106,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: He is quiet for a while. Then grins
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -153,9 +113,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Yeah. I kind of figured.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -163,9 +120,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Oh well, this was a waste of time
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -173,9 +127,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Im gonna go find my ex
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -183,9 +134,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: bro...
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -193,9 +141,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: afa34e88127769646b20f600dc2d0b41, type: 2}
     text: Yup bye
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -204,9 +149,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: The next morning your desk is clear. Archer gives you a small wave and
       a nod, then turns back to his friends.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -214,9 +156,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Peace and quiet
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -224,9 +163,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: You realize you hardly think about him at all.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -234,9 +170,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'Ending: Apathetic'
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}

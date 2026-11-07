@@ -16,9 +16,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: The talent show lights go up and Eleanor does not miss a note.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -26,10 +23,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: By the final chorus, students from every class are chanting her name.
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -37,9 +30,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 80dcb48fbb1330d429e183522d24df8f, type: 2}
     text: I cant believe that happened... they want me to perform at festivals.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -47,10 +37,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: You earned it.
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -58,10 +44,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'Ending: Celebrity Eleanor'
-    actions: []
-    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}

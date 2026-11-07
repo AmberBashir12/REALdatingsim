@@ -16,9 +16,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 2e240942c73318642b0f986813494e10, type: 2}
     text: I don't believe you. Archer would never do that.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -26,9 +23,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: e8c7f87539da8214c83b55c1be44b282, type: 2}
     text: ...
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -37,9 +31,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Liam doesn't argue. He only looks at you the way someone looks at a person
       walking toward a closed door, then nods once and walks away.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -48,9 +39,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: You don't go to Room 44. That night Archer texts you a heart and a bad
       joke, and you laugh and text back like nothing happened.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -59,9 +47,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: Maybe Liam was wrong. Maybe he wasn't. You choose not to find out, and
       the not-knowing sits quietly at the back of your mind every time Archer smiles.
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}
@@ -69,9 +54,6 @@ MonoBehaviour:
   - sentenceType: 0
     speaker: {fileID: 11400000, guid: 359f5f6b302fa244c8f52d53c2279cfe, type: 2}
     text: 'Ending: Blind Faith'
-    actions: []    choice:
-      prompt: 
-      options: []
     endingScene: {fileID: 0}
     music: {fileID: 0}
     music2: {fileID: 0}

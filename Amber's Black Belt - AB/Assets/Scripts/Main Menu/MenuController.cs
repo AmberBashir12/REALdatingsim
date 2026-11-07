@@ -37,14 +37,14 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
-        // Make sure these start hidden.
+
         if (selectionPanel == null)
         {
             selectionPanel = GameObject.Find("SelectionPanel");
         }
         if (namePanel == null)
         {
-            // In this scene the name panel root object is currently named "Image".
+
             namePanel = GameObject.Find("Image");
         }
 
@@ -66,7 +66,7 @@ public class MenuController : MonoBehaviour
         {
             nameInputField.characterLimit = nameCharacterLimit;
 
-            // Initialize field from saved value (sanitized).
+
             string initial = NameModeration.Sanitize(PlayerProfile.Name, nameCharacterLimit);
             lastValidName = initial;
 
@@ -74,7 +74,7 @@ public class MenuController : MonoBehaviour
             nameInputField.text = initial;
             suppressNameCallback = false;
 
-            // Auto-wire so you don't have to hook events in the Inspector.
+
             nameInputField.onValueChanged.AddListener(OnNameInputChanged);
             nameInputField.onEndEdit.AddListener(OnNameInputSubmitted);
             nameInputField.onSubmit.AddListener(OnNameInputSubmitted);
@@ -133,7 +133,7 @@ public class MenuController : MonoBehaviour
         ShowNameEntry();
     }
 
-    // Optional: hook this up to the TMP_InputField OnValueChanged/OnEndEdit event.
+
     public void OnNameInputChanged(string value)
     {
         if (suppressNameCallback)
@@ -146,7 +146,7 @@ public class MenuController : MonoBehaviour
             return;
         }
 
-        // Sanitize first (also enforces limit in code).
+
         string sanitized = NameModeration.Sanitize(value, nameCharacterLimit);
 
         if (sanitized != value)
@@ -164,7 +164,7 @@ public class MenuController : MonoBehaviour
         }
         else
         {
-            // Revert to last known good name.
+
             suppressNameCallback = true;
             nameInputField.text = lastValidName;
             suppressNameCallback = false;
@@ -173,7 +173,7 @@ public class MenuController : MonoBehaviour
         }
     }
 
-    // Called when the player presses Enter/Done or otherwise ends editing.
+
     private void OnNameInputSubmitted(string value)
     {
         if (isStartingGame)
@@ -191,7 +191,7 @@ public class MenuController : MonoBehaviour
             return;
         }
 
-        // Run the same sanitize + moderation flow.
+
         string sanitized = NameModeration.Sanitize(value, nameCharacterLimit);
         if (sanitized != value)
         {
@@ -275,10 +275,10 @@ public class MenuController : MonoBehaviour
     {
         PlayClickSound();
 
-        // Flow:
-        // 1) Click New Game => show character selection
-        // 2) Click Female/Male/Other => show name panel
-        // 3) Click New Game again => validate name and load
+
+
+
+
         if (flowState == NewGameFlowState.Idle)
         {
             ShowCharacterSelection();
@@ -287,13 +287,13 @@ public class MenuController : MonoBehaviour
 
         if (flowState == NewGameFlowState.ChoosingCharacter)
         {
-            // Wait until the player chooses a character.
+
             return;
         }
 
         if (!ValidateNameForStart())
         {
-            // Block starting if the name is invalid.
+
             return;
         }
 

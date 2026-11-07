@@ -21,7 +21,6 @@ public class EndingGallery : MonoBehaviour
         {
             if (card.ending == null || card.image == null || card.status == null)
             {
-                Debug.LogError("Ending gallery has an incomplete card assignment.", this);
                 continue;
             }
 
@@ -32,7 +31,6 @@ public class EndingGallery : MonoBehaviour
 
             if (card.ending.background == null)
             {
-                Debug.LogError($"Ending '{card.ending.name}' has no gallery image.", card.ending);
                 continue;
             }
 

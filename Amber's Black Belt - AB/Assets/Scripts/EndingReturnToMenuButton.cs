@@ -14,14 +14,6 @@ public class EndingReturnToMenuButton : MonoBehaviour
         }
     }
 
-    public void SetMainMenuSceneName(string sceneName)
-    {
-        if (!string.IsNullOrEmpty(sceneName))
-        {
-            mainMenuSceneName = sceneName;
-        }
-    }
-
     public void SetVisible(bool visible)
     {
         if (root != null)
@@ -30,7 +22,7 @@ public class EndingReturnToMenuButton : MonoBehaviour
         }
     }
 
-    // Hook this up to your Unity UI Button's OnClick.
+
     public void OnClickReturnToMainMenu()
     {
         Time.timeScale = 1f;

@@ -23,7 +23,6 @@ public static class SceneSaveSlots
         data = null;
         if (slot < 0 || slot >= Count)
         {
-            Debug.LogError($"Invalid save slot: {slot}.");
             return false;
         }
 
@@ -38,13 +37,11 @@ public static class SceneSaveSlots
         }
         catch (ArgumentException exception)
         {
-            Debug.LogError($"Save slot {slot + 1} is corrupt: {exception.Message}");
             return false;
         }
 
         if (data == null || data.version != 1 || string.IsNullOrEmpty(data.sceneId))
         {
-            Debug.LogError($"Save slot {slot + 1} is invalid or unsupported.");
             data = null;
             return false;
         }
@@ -56,7 +53,6 @@ public static class SceneSaveSlots
     {
         if (slot < 0 || slot >= Count || data == null || string.IsNullOrEmpty(data.sceneId))
         {
-            Debug.LogError("Cannot write an invalid scene save.");
             return false;
         }
 

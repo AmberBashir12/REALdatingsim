@@ -8,7 +8,7 @@ public class StorySceneSentenceDrawer : PropertyDrawer
 
     public override bool CanCacheInspectorGUI(SerializedProperty property)
     {
-        return true;
+        return false;
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -26,6 +26,7 @@ public class StorySceneSentenceDrawer : PropertyDrawer
         SerializedProperty endingSceneProp = property.FindPropertyRelative("endingScene");
 
         float y = position.y;
+        bool isEndingScene = property.serializedObject.targetObject is EndingScene;
 
         Rect foldoutRect = new Rect(position.x, y, position.width, EditorGUIUtility.singleLineHeight);
         property.isExpanded = EditorGUI.Foldout(foldoutRect, property.isExpanded, label, true);
@@ -35,35 +36,46 @@ public class StorySceneSentenceDrawer : PropertyDrawer
         {
             EditorGUI.indentLevel++;
 
-            DrawProperty(ref y, position, sentenceTypeProp);
-
-            bool isChoice = sentenceTypeProp.enumValueIndex == (int)StoryScene.Sentence.SentenceType.CHOICE;
-            bool isEnding = sentenceTypeProp.enumValueIndex == (int)StoryScene.Sentence.SentenceType.ENDING;
-            if (isChoice)
-            {
-                SerializedProperty promptProp = choiceProp.FindPropertyRelative("prompt");
-                SerializedProperty optionsProp = choiceProp.FindPropertyRelative("options");
-
-                DrawProperty(ref y, position, promptProp);
-                DrawProperty(ref y, position, optionsProp, true);
-            }
-            else if (isEnding)
-            {
-                EditorGUI.PropertyField(
-                    new Rect(position.x, y, position.width, EditorGUIUtility.singleLineHeight),
-                    endingSceneProp,
-                    new GUIContent("Ending Scene (Input)")
-                );
-                y += EditorGUIUtility.singleLineHeight + Spacing;
-            }
-            else
+            if (isEndingScene)
             {
                 DrawProperty(ref y, position, speakerProp);
                 DrawProperty(ref y, position, textProp);
-                DrawProperty(ref y, position, actionsProp, true);
                 DrawProperty(ref y, position, musicProp);
                 DrawProperty(ref y, position, music2Prop);
                 DrawProperty(ref y, position, soundProp);
+            }
+            else
+            {
+                DrawProperty(ref y, position, sentenceTypeProp);
+
+                bool isChoice = sentenceTypeProp.enumValueIndex == (int)StoryScene.Sentence.SentenceType.CHOICE;
+                bool isEnding = sentenceTypeProp.enumValueIndex == (int)StoryScene.Sentence.SentenceType.ENDING;
+                if (isChoice)
+                {
+                    SerializedProperty promptProp = choiceProp.FindPropertyRelative("prompt");
+                    SerializedProperty optionsProp = choiceProp.FindPropertyRelative("options");
+
+                    DrawProperty(ref y, position, promptProp);
+                    DrawProperty(ref y, position, optionsProp, true);
+                }
+                else if (isEnding)
+                {
+                    EditorGUI.PropertyField(
+                        new Rect(position.x, y, position.width, EditorGUIUtility.singleLineHeight),
+                        endingSceneProp,
+                        new GUIContent("Ending Scene (Input)")
+                    );
+                    y += EditorGUIUtility.singleLineHeight + Spacing;
+                }
+                else
+                {
+                    DrawProperty(ref y, position, speakerProp);
+                    DrawProperty(ref y, position, textProp);
+                    DrawProperty(ref y, position, actionsProp, true);
+                    DrawProperty(ref y, position, musicProp);
+                    DrawProperty(ref y, position, music2Prop);
+                    DrawProperty(ref y, position, soundProp);
+                }
             }
 
             EditorGUI.indentLevel--;
@@ -85,6 +97,7 @@ public class StorySceneSentenceDrawer : PropertyDrawer
         SerializedProperty endingSceneProp = property.FindPropertyRelative("endingScene");
 
         float height = EditorGUIUtility.singleLineHeight;
+        bool isEndingScene = property.serializedObject.targetObject is EndingScene;
 
         if (!property.isExpanded)
         {
@@ -92,30 +105,41 @@ public class StorySceneSentenceDrawer : PropertyDrawer
         }
 
         height += Spacing;
-        height += EditorGUI.GetPropertyHeight(sentenceTypeProp, false) + Spacing;
-
-        bool isChoice = sentenceTypeProp.enumValueIndex == (int)StoryScene.Sentence.SentenceType.CHOICE;
-        bool isEnding = sentenceTypeProp.enumValueIndex == (int)StoryScene.Sentence.SentenceType.ENDING;
-        if (isChoice)
-        {
-            SerializedProperty promptProp = choiceProp.FindPropertyRelative("prompt");
-            SerializedProperty optionsProp = choiceProp.FindPropertyRelative("options");
-
-            height += EditorGUI.GetPropertyHeight(promptProp, false) + Spacing;
-            height += EditorGUI.GetPropertyHeight(optionsProp, true) + Spacing;
-        }
-        else if (isEnding)
-        {
-            height += EditorGUI.GetPropertyHeight(endingSceneProp, false) + Spacing;
-        }
-        else
+        if (isEndingScene)
         {
             height += EditorGUI.GetPropertyHeight(speakerProp, false) + Spacing;
             height += EditorGUI.GetPropertyHeight(textProp, false) + Spacing;
-            height += EditorGUI.GetPropertyHeight(actionsProp, true) + Spacing;
             height += EditorGUI.GetPropertyHeight(musicProp, false) + Spacing;
             height += EditorGUI.GetPropertyHeight(music2Prop, false) + Spacing;
             height += EditorGUI.GetPropertyHeight(soundProp, false) + Spacing;
+        }
+        else
+        {
+            height += EditorGUI.GetPropertyHeight(sentenceTypeProp, false) + Spacing;
+
+            bool isChoice = sentenceTypeProp.enumValueIndex == (int)StoryScene.Sentence.SentenceType.CHOICE;
+            bool isEnding = sentenceTypeProp.enumValueIndex == (int)StoryScene.Sentence.SentenceType.ENDING;
+            if (isChoice)
+            {
+                SerializedProperty promptProp = choiceProp.FindPropertyRelative("prompt");
+                SerializedProperty optionsProp = choiceProp.FindPropertyRelative("options");
+
+                height += EditorGUI.GetPropertyHeight(promptProp, false) + Spacing;
+                height += EditorGUI.GetPropertyHeight(optionsProp, true) + Spacing;
+            }
+            else if (isEnding)
+            {
+                height += EditorGUI.GetPropertyHeight(endingSceneProp, false) + Spacing;
+            }
+            else
+            {
+                height += EditorGUI.GetPropertyHeight(speakerProp, false) + Spacing;
+                height += EditorGUI.GetPropertyHeight(textProp, false) + Spacing;
+                height += EditorGUI.GetPropertyHeight(actionsProp, true) + Spacing;
+                height += EditorGUI.GetPropertyHeight(musicProp, false) + Spacing;
+                height += EditorGUI.GetPropertyHeight(music2Prop, false) + Spacing;
+                height += EditorGUI.GetPropertyHeight(soundProp, false) + Spacing;
+            }
         }
 
         return height;
@@ -137,7 +161,7 @@ public class StorySceneFollowUpSentenceDrawer : PropertyDrawer
 
     public override bool CanCacheInspectorGUI(SerializedProperty property)
     {
-        return true;
+        return false;
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

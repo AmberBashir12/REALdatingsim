@@ -34,16 +34,9 @@ public class AudioController : MonoBehaviour
             PlayMusicOnSource(musicSource, false, music);
         }
 
-        if (music2 != null)
+        if (music2 != null && musicSource2 != null)
         {
-            if (musicSource2 == null)
-            {
-                Debug.LogWarning($"{nameof(AudioController)} is missing {nameof(musicSource2)} but was asked to play a second music clip '{music2.name}'.");
-            }
-            else
-            {
-                PlayMusicOnSource(musicSource2, true, music2);
-            }
+            PlayMusicOnSource(musicSource2, true, music2);
         }
         else if (music != null)
         {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Phone
   m_EditorClassIdentifier: 
   speakerName: Phone
-  textColor: {r: 0, g: 0, b: 0, a: 0}
+  textColor: {r: 0, g: 0, b: 0, a: 1}
   sprites:
   - {fileID: 21300000, guid: 654f0ba16e676c44abd6df64e70a735a, type: 3}
   - {fileID: 21300000, guid: dd1312ee3dd64014e9313429844711d7, type: 3}

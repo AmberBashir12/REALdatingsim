@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Cat Boy
   m_EditorClassIdentifier: 
   speakerName: Cat Boy
-  textColor: {r: 0, g: 0.3633132, b: 1, a: 0}
+  textColor: {r: 0, g: 0.3633132, b: 1, a: 1}
   sprites:
   - {fileID: 21300000, guid: 0e5f4f08f42dc684db563ae66aef318b, type: 3}
   prefab: {fileID: 2177461010597799455, guid: 6e881dc980332b44dae7721ba3629e83, type: 3}
+  blip: {fileID: 0}

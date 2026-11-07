@@ -10,8 +10,7 @@ public class SaveSceneCatalog : ScriptableObject
         public string id;
         public GameScene scene;
 
-        public Sprite Background => scene is StoryScene story ? story.background
-            : scene is ExplorationScene exploration ? exploration.background : null;
+        public Sprite Background => scene is StoryScene story ? story.background : null;
     }
 
     [Tooltip("Stable scene asset GUIDs. After adding scenes, use Refresh Scene Catalog from this asset's context menu.")]

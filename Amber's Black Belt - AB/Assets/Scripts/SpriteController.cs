@@ -24,11 +24,6 @@ public class SpriteController : MonoBehaviour
         switcher.SetTint(color);
     }
 
-    public void ResetTint()
-    {
-        switcher.SetTint(Color.white);
-    }
-
     public void Show(Vector2 coords)
     {
         if (animator != null)
@@ -72,13 +67,5 @@ public class SpriteController : MonoBehaviour
         }
     }
 
-    public void SwitchSprite(Sprite sprite)
-    {
-        if(switcher.GetImage() != sprite)
-        {
-            switcher.SwitchImage(sprite);
-        }
-    }
 }
-
 

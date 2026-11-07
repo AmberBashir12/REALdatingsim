@@ -129,11 +129,11 @@ public class StoryScene : GameScene
     [System.Serializable]
     public struct AlternativeScenes
     {
-        public List<string> requiredChoiceKeys; // All keys that must be unlocked to access this alternative scene
+        public List<string> requiredChoiceKeys;
         public StoryScene alternativeScene;
     }
 
-    // Get the next scene, checking for unlocked alternatives first
+
     public GameScene GetNextScene()
     {
         if (alternativeScenes != null && GameStateManager.Instance != null)
@@ -172,7 +172,7 @@ public class StoryScene : GameScene
             }
         }
         
-        // No alternative scene found, use the default next scene
+
         return nextScene;
     }
 }

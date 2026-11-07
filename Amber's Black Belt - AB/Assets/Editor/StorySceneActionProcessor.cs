@@ -37,10 +37,9 @@ public static partial class StorySceneActionProcessor
         }
 
         AssetDatabase.SaveAssets();
-        Debug.Log($"Speaker actions applied to {changedScenes} eligible scenes and {changedLines} sentence blocks. Speakers without usable sprite/prefab data were skipped: {string.Join(", ", skippedSpeakers)}");
     }
 
-    // Usage: Unity -batchmode -executeMethod StorySceneActionProcessor.StageScenes -scenePath "Assets/a.asset;Assets/b.asset"
+
     public static void StageScenes()
     {
         string[] args = Environment.GetCommandLineArgs();
@@ -62,7 +61,6 @@ public static partial class StorySceneActionProcessor
         }
 
         AssetDatabase.SaveAssets();
-        Debug.Log($"Staged {scenePaths.Length} scenes: {stagedLines} lines. Skipped speakers: {string.Join(", ", skippedSpeakers)}");
     }
 
     private static void ProcessScene(StoryScene scene, string assetPath, HashSet<string> skippedSpeakers, ref int changedLines)
@@ -98,7 +96,6 @@ public static partial class StorySceneActionProcessor
         GameObject spritePrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/1Story/Charcters/Eleanor/Eleanor.prefab");
         if (aria == null || spritePrefab == null)
         {
-            Debug.LogWarning("Aria's sprite data or the shared character prefab could not be found.");
             return;
         }
 

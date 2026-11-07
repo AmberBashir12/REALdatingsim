@@ -43,7 +43,7 @@ public static partial class StorySceneActionProcessor
             && speaker.sprites.Any(sprite => sprite != null);
     }
 
-    // Two characters sit at -200/200; larger casts spread evenly across -450..450.
+
     private static Dictionary<Speaker, Vector2> GetPositions(List<Speaker> cast)
     {
         Dictionary<Speaker, Vector2> positions = new Dictionary<Speaker, Vector2>();
@@ -69,7 +69,7 @@ public static partial class StorySceneActionProcessor
         return positions;
     }
 
-    // Decides when each character enters or leaves a scene from who speaks and from narrator cues.
+
     private sealed class SceneStager
     {
         private static readonly Regex ArrivalRegex = BuildCueRegex(
@@ -97,7 +97,7 @@ public static partial class StorySceneActionProcessor
         public readonly List<Speaker> Cast = new List<Speaker>();
         public int StagedLines;
 
-        // A null positions map makes this a dry run that only discovers the cast and never writes to the scene.
+
         public SceneStager(StoryScene scene, string assetPath, List<Speaker> candidates, HashSet<string> skippedSpeakers, Dictionary<Speaker, Vector2> positions)
         {
             this.scene = scene;
@@ -149,7 +149,7 @@ public static partial class StorySceneActionProcessor
             return positions != null ? staged : original;
         }
 
-        // A sprite index that is neither the generated pair nor an old soccer-outfit default was picked by hand.
+
         private int AuthoredExpression(List<SceneAction> existing, Speaker member, int neutralIndex, int talkIndex)
         {
             foreach (SceneAction action in existing ?? new List<SceneAction>())
@@ -237,7 +237,7 @@ public static partial class StorySceneActionProcessor
                 }
             }
 
-            // The player and anyone who is present without ever speaking or being cued are on screen from line one.
+
             Speaker player = speakers.Concat(actionSpeakers).FirstOrDefault(IsPlayer);
             if (player != null && IsRenderable(player))
             {
@@ -357,7 +357,7 @@ public static partial class StorySceneActionProcessor
             return actions;
         }
 
-        // After a choice only characters still on screen in every branch count as present.
+
         private void StageSentenceOptions(List<StoryScene.Sentence.ChoiceOption> options)
         {
             if (options == null)
@@ -475,7 +475,7 @@ public static partial class StorySceneActionProcessor
             }
         }
 
-        // The closest name before the cue is the one leaving, unless the clause is about "you".
+
         private Speaker NearestNameBefore(string sentenceText, int cueIndex)
         {
             Speaker best = null;

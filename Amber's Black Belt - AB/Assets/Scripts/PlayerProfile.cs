@@ -49,59 +49,8 @@ public static class PlayerProfile
         CharacterChoiceChanged?.Invoke(normalized);
     }
 
-    // Pronoun tokens requested by your dialogue system:
-    // {they} => he/she/they
-    // {their} => his/her/their
-    public static string PronounThey
-    {
-        get
-        {
-            switch (CharacterChoice)
-            {
-                case "Male":
-                    return "he";
-                case "Female":
-                    return "she";
-                case "Other":
-                default:
-                    return "they";
-            }
-        }
-    }
 
-    public static string PronounTheir
-    {
-        get
-        {
-            switch (CharacterChoice)
-            {
-                case "Male":
-                    return "his";
-                case "Female":
-                    return "her";
-                case "Other":
-                default:
-                    return "their";
-            }
-        }
-    }
 
-    public static string PronounTheirs
-    {
-        get
-        {
-            switch (CharacterChoice)
-            {
-                case "Male":
-                    return "his";
-                case "Female":
-                    return "hers";
-                case "Other":
-                default:
-                    return "theirs";
-            }
-        }
-    }
 
     public static string DisplayName
     {
@@ -123,11 +72,18 @@ public static class PlayerProfile
         NameChanged?.Invoke(normalized);
     }
 
-    public static void ClearName()
+    public static string ResolveText(string raw)
     {
-        cachedName = string.Empty;
-        PlayerPrefs.DeleteKey(PlayerNameKey);
-        PlayerPrefs.Save();
-        NameChanged?.Invoke(cachedName);
+        if (string.IsNullOrEmpty(raw))
+        {
+            return string.Empty;
+        }
+
+        string playerName = DisplayName;
+        return raw
+            .Replace("{playerName}", playerName)
+            .Replace("{PlayerName}", playerName)
+            .Replace("{player}", playerName)
+            .Replace("{Player}", playerName);
     }
 }
